@@ -19,6 +19,7 @@ import {
 import { NavComponent } from "./nav/nav.component";
 import { SearchComponent } from "./search/search.component";
 import { FavSectionComponent } from "./fav-section/fav-section.component";
+import { PeliculasComponent } from "./peliculas/peliculas.component";
 
 const routes: Routes = [
   {
@@ -42,7 +43,8 @@ const routes: Routes = [
   {
     path: "peliculas",
     component: SearchComponent
-  }
+  },
+  { path: "ver-peliculas", component: PeliculasComponent }
 ];
 
 @NgModule({
@@ -53,7 +55,8 @@ const routes: Routes = [
     MovieComponent,
     NavComponent,
     SearchComponent,
-    FavSectionComponent
+    FavSectionComponent,
+    PeliculasComponent
   ],
   imports: [
     BrowserModule,
