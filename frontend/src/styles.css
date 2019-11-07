@@ -12,11 +12,17 @@
   font-weight: 500;
 }
 .small {
-  font-size: 14px;
+  font-size: 16px;
 }
 .medium {
-  font-size: 30px;
+  font-size: 40px;
 }
 .big {
-  font-size: 60px;
+  font-size: 70px;
+}
+.white {
+  color: white;
+}
+.black {
+  color: black;
 }
