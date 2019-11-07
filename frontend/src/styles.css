@@ -15,11 +15,17 @@
 .small {
   font-size: 16px;
 }
+.normal {
+  font-size: 20px;
+}
 .medium {
-  font-size: 40px;
+  font-size: 30px;
+}
+.very-big {
+  font-size: 70px;
 }
 .big {
-  font-size: 70px;
+  font-size: 50px;
 }
 .white {
   color: white;
