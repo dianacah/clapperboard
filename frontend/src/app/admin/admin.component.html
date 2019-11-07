@@ -1,58 +1,36 @@
-<!-- <div class="admin">
+ <div class="admin">
+     <br>
     <button class="agregarPelicula">Agregar +</button>
-    <br />
-    <mat-table>
-        <ng-container>
-
-            <mat-row>
-                <th> Nombre de la pelicula</th>
-
-            </mat-row> -->
-<!-- MoveName Column -->
-<!-- <td> La vida es bella </td>
-            <td> La vida es bella </td>
-            <td> La vida es bella </td>
-            <td> La vida es bella </td> -->
-<!-- genero Column -->
-<!--   </ng-container>
-        <th> Genero</th>
-        <td> Drama </td>
-        <td> Drama </td>
-        <td> Drama </td>
-        <td> Drama </td> -->
-<!--button  Column -->
-<!--       <td>
-            <button class="botonEditar">
-                <img src="">
-            </button>
-        </td>
-        <td>
-            <button class="botonBorrar">
-                <img src="">
-            </button>
-        </td>
-
-    </mat-table>
-</div> -->
+<br>
+<br>
 <mat-table [dataSource]="dataSource">
 
+    <ng-container matColumnDef="imagen">
+                <mat-header-cell *matHeaderCellDef>
+                     <img width="20px" height="20px" src="../../assets/home/images/movie.png">
+                </mat-header-cell>
+                <mat-cell *matCellDef="let imagen">
+                    <img  class="cadauna" width="40px" height="30px"  src="../../assets/home/images/Drama/CisneNegro.jpg">
+                </mat-cell>
+    </ng-container>
     <ng-container matColumnDef="pelicula">
-        <mat-header-cell *matHeaderCellDef>Nombre pelicula</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef>Nombre Pelicula</mat-header-cell>
         <mat-cell *matCellDef="let pelicula">{{pelicula.nombre}}</mat-cell>
     </ng-container>
-    <!-- 
-    <ng-container matColumnDef="description">
-        <mat-header-cell *matHeaderCellDef>genero</mat-header-cell>
-        <mat-cell class="description-cell" *matCellDef="">drama</mat-cell>
-
+    <ng-container matColumnDef="genero">
+        <mat-header-cell *matHeaderCellDef>Género</mat-header-cell>
+        <mat-cell *matCellDef="let genero">{{genero.genero}}</mat-cell>
     </ng-container>
-
-    <ng-container matColumnDef="duration">
-        <mat-header-cell *matHeaderCellDef>Duration</mat-header-cell>
-        <mat-cell class="duration-cell" *matCellDef="">2 horas</mat-cell>
+    <ng-container matColumnDef="accion">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let accion"><button class="botonEditar "><img width="20px" height="20px" src="../../assets/home/images/carpeta.png"></button> <br>
+        <button  class="botonBorrar"><img  width="20px" height="20px" src="../../assets/home/images/x.png" ></button>
+        </mat-cell>
     </ng-container>
- -->
+   
+        
     <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
 
 </mat-table>
+</div>
