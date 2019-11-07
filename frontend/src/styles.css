@@ -20,8 +20,11 @@
 .medium {
   font-size: 30px;
 }
-.big {
+.very-big {
   font-size: 70px;
+}
+.big {
+  font-size: 50px;
 }
 .white {
   color: white;
