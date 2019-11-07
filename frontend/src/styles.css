@@ -14,8 +14,11 @@
 .small {
   font-size: 16px;
 }
+.normal {
+  font-size: 20px;
+}
 .medium {
-  font-size: 40px;
+  font-size: 30px;
 }
 .big {
   font-size: 70px;
