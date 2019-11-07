@@ -46,3 +46,5 @@ PeliculasRoute.delete("/peliculas/:id", (req, res, next) => {
     res.send(peliculas);
   }).catch.next;
 });
+
+module.exports = PeliculasRoute;
