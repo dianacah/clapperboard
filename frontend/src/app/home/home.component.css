@@ -81,5 +81,29 @@ button {
   height: 100vh;
   background-color: rgb(25, 18, 87);
   padding: 10vh 3vw;
+  grid-gap:10px;
+  background-image: linear-gradient(
+      rgba(25, 18, 87, 0.3),
+      rgba(25, 18, 87, 0.3)
+    ),url(../../assets/home/images/2467499.jpg);
+  background-size: cover;
   
+}
+.team {
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column: 1 / 3;
+  justify-items: center;
+}
+.teamTitle {
+  grid-column: 1 / 9;
+  justify-self: left;
+}
+.teamMemberPic {
+  width:120px;
+  border-radius: 50%;
+  justify-self: center;
+}
+.text-align-center {
+  text-align: center;
 }
