@@ -24,6 +24,7 @@ import { AuthenticationComponent } from "./authentication/authentication.compone
 import { LoginComponent } from "./authentication/login/login.component";
 import { SignupComponent } from "./authentication/signup/signup.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { PeliculasComponent } from "./peliculas/peliculas.component";
 
 const routes: Routes = [
   {
@@ -51,7 +52,8 @@ const routes: Routes = [
   {
     path: "welcome",
     component: AuthenticationComponent
-  }
+  },
+  { path: "ver-peliculas", component: PeliculasComponent }
 ];
 
 @NgModule({
@@ -65,7 +67,8 @@ const routes: Routes = [
     FavSectionComponent,
     AuthenticationComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    PeliculasComponent
   ],
   imports: [
     BrowserModule,

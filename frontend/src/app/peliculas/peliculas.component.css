@@ -1,0 +1,13 @@
+.contenedorGlobal {
+  background-image: linear-gradient(
+      rgba(25, 18, 87, 0.5),
+      rgba(25, 18, 87, 0.5)
+    ),
+    url(../../assets/home/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-width: fit-content;
+  display: grid;
+  justify-content: center;
+}
