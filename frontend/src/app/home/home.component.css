@@ -83,8 +83,8 @@ button {
   padding: 10vh 3vw;
   grid-gap:10px;
   background-image: linear-gradient(
-      rgba(25, 18, 87, 0.3),
-      rgba(25, 18, 87, 0.3)
+      rgba(25, 18, 87, 1),
+      rgba(25, 18, 87, 0.6)
     ),url(../../assets/home/images/2467499.jpg);
   background-size: cover;
   
