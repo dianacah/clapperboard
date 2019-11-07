@@ -1,21 +1,22 @@
-import { RouterModule, Routes } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from "@angular/router";
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-<<<<<<< HEAD
-import { AdminComponent } from './admin/admin.component';
-import { MovieComponent } from './movie/movie.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HomeComponent } from "./home/home.component";
+import { AdminComponent } from "./admin/admin.component";
+import { MovieComponent } from "./movie/movie.component";
 import {
-  MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
-  MatSortModule, MatTableModule
-} from '@angular/material';
-=======
-import { NavComponent } from './nav/nav.component';
-import { SearchComponent } from './search/search.component';
-import { FavSectionComponent } from './fav-section/fav-section.component';
+  MatInputModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSortModule,
+  MatTableModule
+} from "@angular/material";
+import { NavComponent } from "./nav/nav.component";
+import { SearchComponent } from "./search/search.component";
+import { FavSectionComponent } from "./fav-section/fav-section.component";
 
 const routes: Routes = [
   {
@@ -30,39 +31,39 @@ const routes: Routes = [
   {
     path: "fav-section",
     component: FavSectionComponent
+  },
+  { path: "reproductor", component: MovieComponent },
+  {
+    path: "admin",
+    component: AdminComponent
+  },
+  {
+    path: "peliculas",
+    component: SearchComponent
   }
-]
-
->>>>>>> 1960bd6c5e9fac70165a80a26b305b089467e82d
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-<<<<<<< HEAD
     AdminComponent,
     MovieComponent,
-=======
     NavComponent,
     SearchComponent,
     FavSectionComponent
->>>>>>> 1960bd6c5e9fac70165a80a26b305b089467e82d
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
     MatTableModule,
     MatInputModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
-    MatSortModule
-=======
-    RouterModule.forRoot(routes),
->>>>>>> 1960bd6c5e9fac70165a80a26b305b089467e82d
+    MatSortModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
-
+export class AppModule {}
