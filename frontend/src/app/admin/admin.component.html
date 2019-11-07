@@ -1,0 +1,58 @@
+<!-- <div class="admin">
+    <button class="agregarPelicula">Agregar +</button>
+    <br />
+    <mat-table>
+        <ng-container>
+
+            <mat-row>
+                <th> Nombre de la pelicula</th>
+
+            </mat-row> -->
+<!-- MoveName Column -->
+<!-- <td> La vida es bella </td>
+            <td> La vida es bella </td>
+            <td> La vida es bella </td>
+            <td> La vida es bella </td> -->
+<!-- genero Column -->
+<!--   </ng-container>
+        <th> Genero</th>
+        <td> Drama </td>
+        <td> Drama </td>
+        <td> Drama </td>
+        <td> Drama </td> -->
+<!--button  Column -->
+<!--       <td>
+            <button class="botonEditar">
+                <img src="">
+            </button>
+        </td>
+        <td>
+            <button class="botonBorrar">
+                <img src="">
+            </button>
+        </td>
+
+    </mat-table>
+</div> -->
+<mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="pelicula">
+        <mat-header-cell *matHeaderCellDef>Nombre pelicula</mat-header-cell>
+        <mat-cell *matCellDef="let pelicula">{{pelicula.nombre}}</mat-cell>
+    </ng-container>
+    <!-- 
+    <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef>genero</mat-header-cell>
+        <mat-cell class="description-cell" *matCellDef="">drama</mat-cell>
+
+    </ng-container>
+
+    <ng-container matColumnDef="duration">
+        <mat-header-cell *matHeaderCellDef>Duration</mat-header-cell>
+        <mat-cell class="duration-cell" *matCellDef="">2 horas</mat-cell>
+    </ng-container>
+ -->
+    <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
+
+</mat-table>
