@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/*barra de busqueda*/
+.contain{
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #191257;
+    color: seashell;
+    grid-area: contain;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px;
+}
+.row{
+    height: 100%;
+    grid-column: 1/6;
+}
+.row input{
+    width: 100%;
+
+}
+.row select{
+    width: 100%;
+
+}
+
+.table{
+    grid-column: 1/6;
+    grid-row: auto;
+
+}
