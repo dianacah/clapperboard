@@ -14,26 +14,6 @@ header {
   display: grid;
   justify-content: center;
 }
-nav {
-  height: 70px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  padding: 0 3vw;
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  align-items: center;
-  justify-items: center;
-}
-.logo {
-  height: 5vh;
-  width: auto;
-}
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
-.logIn {
-  grid-column: 8 / 9;
-}
 .mainText {
   padding: 0 3vw;
 }
@@ -48,7 +28,7 @@ button {
 }
 .benefitsSection {
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   height: 100vh;
   background: linear-gradient(rgba(25, 18, 87, 0.5), rgba(25, 18, 87, 0.5));
@@ -56,28 +36,74 @@ button {
 }
 .videoBackground {
   grid-column: 1 / 4;
-  min-height: 100vh;
+  max-height: 100vh;
   max-width: 100vw;
   z-index: -1;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top:100%;
+  bottom: 100%;
 }
 .benefitsText {
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column: 1 / 4;
-  padding: 5vh 3vw;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column: 1 / 6;
+  padding: 10vh 3vw;
   height: 100vh;
   grid-row: 1 / 3;
   justify-content: center;
 }
 .benefitsTitle {
-  grid-column: 1 / 4;
+  grid-column: 1 / 6;
 }
 .benefitImage {
   width: 180px;
   margin-bottom: 20px;
 }
-.benefit{
+.benefit1, .benefit2, .benefit3{
   display: grid;
   justify-items: center;
   align-content: baseline;
+}
+.benefit2 {
+  grid-column-start: 3;
+}
+.benefit3 {
+  grid-column-start: 5;
+}
+.benefitText {
+  text-align: center;
+}
+.about {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  background-color: rgb(25, 18, 87);
+  padding: 10vh 3vw;
+  grid-gap:10px;
+  background-image: linear-gradient(
+      rgba(25, 18, 87, 0.3),
+      rgba(25, 18, 87, 0.3)
+    ),url(../../assets/home/images/2467499.jpg);
+  background-size: cover;
+  
+}
+.team {
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column: 1 / 3;
+  justify-items: center;
+}
+.teamTitle {
+  grid-column: 1 / 9;
+  justify-self: left;
+}
+.teamMemberPic {
+  width:120px;
+  border-radius: 50%;
+  justify-self: center;
+}
+.text-align-center {
+  text-align: center;
 }

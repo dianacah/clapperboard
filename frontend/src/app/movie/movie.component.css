@@ -1,0 +1,18 @@
+*{
+    background:#191257  ;
+   }
+.general{
+display: flex;
+flex-direction: column;
+height: 500vh ;
+width: 100vw;
+justify-content: center;
+align-items: center;
+}
+.info{
+    background:#ff1180; 
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+   width: 90vw;
+    border-radius: 10px;
+ }
