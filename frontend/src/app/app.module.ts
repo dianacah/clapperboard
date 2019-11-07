@@ -5,6 +5,7 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
+
 import { AdminComponent } from "./admin/admin.component";
 import { MovieComponent } from "./movie/movie.component";
 import {
@@ -14,6 +15,7 @@ import {
   MatSortModule,
   MatTableModule
 } from "@angular/material";
+
 import { NavComponent } from "./nav/nav.component";
 import { SearchComponent } from "./search/search.component";
 import { FavSectionComponent } from "./fav-section/fav-section.component";
