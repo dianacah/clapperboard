@@ -47,7 +47,7 @@ button {
   font-family: "Roboto", sans-serif;
 }
 .benefitsSection {
-  display: grid;
+  display:grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   height: 100vh;
@@ -55,21 +55,29 @@ button {
   z-index: 1;
 }
 .videoBackground {
+  grid-column: 1 / 4;
   min-height: 100vh;
   max-width: 100vw;
   z-index: -1;
-  grid-column: 1 / 3;
-  position: relative;
-  top: 0;
-  left: 0;
+}
+.benefitsText {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / 4;
+  padding: 5vh 3vw;
+  height: 100vh;
+  grid-row: 1 / 3;
+  justify-content: center;
 }
 .benefitsTitle {
   grid-column: 1 / 4;
-  grid-row: 1/2;
-}
-.benefitsText {
-  padding: 5vh 3vw;
 }
 .benefitImage {
   width: 180px;
+  margin-bottom: 20px;
+}
+.benefit{
+  display: grid;
+  justify-items: center;
+  align-content: baseline;
 }
