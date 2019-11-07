@@ -1,0 +1,16 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  padding: 5vh 3vw;
+  color: white;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+}
+.loginImg {
+  background-image: linear-gradient(rgba(25, 18, 87, 1), rgba(25, 18, 87, 0.6)),
+    url(../../assets/auhtentication/login.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}

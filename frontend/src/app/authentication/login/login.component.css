@@ -1,0 +1,12 @@
+button {
+  border: none;
+  background-color: #ff1180;
+  border-radius: 5rem;
+  padding: 15px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+input {
+  border: none;
+  border-radius: 5%;
+}
