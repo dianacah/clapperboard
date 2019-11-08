@@ -4,31 +4,32 @@
     <div class="barraLateral white normal rbt-300">
       <ul>
         <li class="genero listaGenero">
-          <a href="#Drama" class="link white" target="_self">
+          <a href="#Drama" class="link gray genreTitleMenu" target="_self">
             Drama
           </a>
         </li>
         <li class="genero listaGenero">
-          <a href="#Comedia" class="link white">
+          <a href="#Comedia" class="link gray genreTitleMenu">
             Comedia
           </a>
         </li>
         <li class="genero listaGenero">
-          <a href="#Romance" class="link white">
+          <a href="#Romance" class="link gray genreTitleMenu">
             Romance
           </a>
         </li>
         <li class="genero listaGenero">
-          <a href="#Anime" class="link white">
+          <a href="#Anime" class="link gray genreTitleMenu">
             Anime
           </a>
         </li>
       </ul>
     </div>
-    <div>
+    <div class="content">
       <div class="padding20" id="Drama">
-        <p class="white big rbt-300">Drama</p>
+        <p class="white medium rbt-300 genreTitle">Drama</p>
         <div class="gridPeliculas">
+<<<<<<< HEAD
           <div
             *ngFor="let pelicula of drama"
             class="pelicula"
@@ -36,13 +37,18 @@
           >
             <img [src]="pelicula.image" alt="" class="imagenPelicula" />
             <p class="white normal rbt-300">{{ pelicula.title }}</p>
+=======
+          <div *ngFor="let pelicula of drama" class="pelicula">
+            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
+            <p class="white small rbt-300">{{ pelicula.nombre }}</p>
+>>>>>>> 5068c03b771a3974e7d49933a297c7c9090ca1e4
           </div>
         </div>
       </div>
-
       <div class="padding20" id="Comedia">
-        <p class="white big rbt-300">Comedia</p>
+        <p class="white medium rbt-300 genreTitle">Comedia</p>
         <div class="gridPeliculas">
+<<<<<<< HEAD
           <div
             *ngFor="let pelicula of drama"
             class="pelicula"
@@ -50,13 +56,18 @@
           >
             <img [src]="pelicula.image" alt="" class="imagenPelicula" />
             <p class="white normal rbt-300">{{ pelicula.title }}</p>
+=======
+          <div *ngFor="let pelicula of drama" class="pelicula">
+            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
+            <p class="white small rbt-300">{{ pelicula.nombre }}</p>
+>>>>>>> 5068c03b771a3974e7d49933a297c7c9090ca1e4
           </div>
         </div>
       </div>
-
-      <div class="padding20" name="Romance">
-        <p class="white big rbt-300">Romance</p>
+      <div class="padding20" id="Romance">
+        <p class="white medium rbt-300 genreTitle">Romance</p>
         <div class="gridPeliculas">
+<<<<<<< HEAD
           <div
             *ngFor="let pelicula of drama"
             class="pelicula"
@@ -64,13 +75,19 @@
           >
             <img [src]="pelicula.image" alt="" class="imagenPelicula" />
             <p class="white normal rbt-300">{{ pelicula.title }}</p>
+=======
+          <div *ngFor="let pelicula of drama" class="pelicula">
+            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
+            <p class="white small rbt-300">{{ pelicula.nombre }}</p>
+>>>>>>> 5068c03b771a3974e7d49933a297c7c9090ca1e4
           </div>
         </div>
       </div>
 
       <div class="padding20" id="Anime">
-        <p class="white big rbt-300">Anime</p>
+        <p class="white medium rbt-300 genreTitle">Anime</p>
         <div class="gridPeliculas">
+<<<<<<< HEAD
           <div
             *ngFor="let pelicula of drama"
             class="pelicula"
@@ -78,6 +95,11 @@
           >
             <img [src]="pelicula.image" alt="" class="imagenPelicula" />
             <p class="white normal rbt-300">{{ pelicula.title }}</p>
+=======
+          <div *ngFor="let pelicula of drama" class="pelicula">
+            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
+            <p class="white small rbt-300">{{ pelicula.nombre }}</p>
+>>>>>>> 5068c03b771a3974e7d49933a297c7c9090ca1e4
           </div>
         </div>
       </div>

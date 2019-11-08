@@ -7,49 +7,56 @@
   background-size: cover;
   background-position: center;
 }
-
 .genero {
   list-style: none;
 }
-
 .link {
   text-decoration: none;
 }
-
 .barraLateral {
   background-color: rgba(25, 18, 87, 1);
   height: 100vh;
-  width: 200px;
+  width: 10vw;
   padding-top: 10px;
   position: sticky;
   top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
 }
-
 .listaGenero {
   margin-bottom: 50%;
 }
-
 .barraYContenido {
   display: flex;
   flex-direction: row;
 }
-
 .imagenPelicula {
-  width: 17vw;
-
+  width: 12vw;
+  border-radius: 1%;
 }
-
 .gridPeliculas {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(auto-fill, min-max(200px, 1fr));
   gap: 20px;
 }
-
 .padding20 {
   padding: 20px;
 }
-
 .pelicula:hover {
   cursor: pointer;
+}
+.genreTitle {
+  margin-bottom: 15px;
+}
+.content {
+  width: 90vw;
+}
+.genreTitleMenu {
+  color: rgba(255, 255, 255, 0.2);
+}
+.genreTitleMenu:hover {
+  color: white;
 }
