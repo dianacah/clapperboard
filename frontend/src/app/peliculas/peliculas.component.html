@@ -29,9 +29,13 @@
       <div class="padding20" id="Drama">
         <p class="white big rbt-300">Drama</p>
         <div class="gridPeliculas">
-          <div *ngFor="let pelicula of drama" class="pelicula">
-            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
-            <p class="white normal rbt-300">{{ pelicula.nombre }}</p>
+          <div
+            *ngFor="let pelicula of drama"
+            class="pelicula"
+            (click)="mostrarPelicula(pelicula)"
+          >
+            <img [src]="pelicula.image" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ pelicula.title }}</p>
           </div>
         </div>
       </div>
@@ -39,9 +43,13 @@
       <div class="padding20" id="Comedia">
         <p class="white big rbt-300">Comedia</p>
         <div class="gridPeliculas">
-          <div *ngFor="let pelicula of drama" class="pelicula">
-            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
-            <p class="white normal rbt-300">{{ pelicula.nombre }}</p>
+          <div
+            *ngFor="let pelicula of drama"
+            class="pelicula"
+            (click)="mostrarPelicula(pelicula)"
+          >
+            <img [src]="pelicula.image" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ pelicula.title }}</p>
           </div>
         </div>
       </div>
@@ -49,9 +57,13 @@
       <div class="padding20" name="Romance">
         <p class="white big rbt-300">Romance</p>
         <div class="gridPeliculas">
-          <div *ngFor="let pelicula of drama" class="pelicula">
-            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
-            <p class="white normal rbt-300">{{ pelicula.nombre }}</p>
+          <div
+            *ngFor="let pelicula of drama"
+            class="pelicula"
+            (click)="mostrarPelicula(pelicula)"
+          >
+            <img [src]="pelicula.image" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ pelicula.title }}</p>
           </div>
         </div>
       </div>
@@ -59,9 +71,13 @@
       <div class="padding20" id="Anime">
         <p class="white big rbt-300">Anime</p>
         <div class="gridPeliculas">
-          <div *ngFor="let pelicula of drama" class="pelicula">
-            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
-            <p class="white normal rbt-300">{{ pelicula.nombre }}</p>
+          <div
+            *ngFor="let pelicula of drama"
+            class="pelicula"
+            (click)="mostrarPelicula(pelicula)"
+          >
+            <img [src]="pelicula.image" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ pelicula.title }}</p>
           </div>
         </div>
       </div>
