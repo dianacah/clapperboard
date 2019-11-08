@@ -78,7 +78,7 @@ const routes: Routes = [
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatSortModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes /* , { useHash: true } */),
     MatTabsModule,
     BrowserAnimationsModule
   ],

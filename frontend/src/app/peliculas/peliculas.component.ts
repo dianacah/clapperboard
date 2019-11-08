@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-peliculas",
@@ -7,6 +8,44 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PeliculasComponent implements OnInit {
   public generos = ["Drama", "Comedia", "Romance", "Anime"];
+  public drama = [
+    {
+      nombre: " A los trece",
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
+    },
+    {
+      nombre: " A los trece",
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
+    },
+    {
+      nombre: " A los trece",
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
+    },
+    {
+      nombre: " A los trece",
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
+    },
+    {
+      nombre: " A los trece",
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
+    },
+    {
+      nombre: " A los trece",
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
+    },
+    {
+      nombre: " A los trece",
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
+    },
+    {
+      nombre: " A los trece",
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
+    },
+    {
+      nombre: " A los trece",
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
+    }
+  ];
   constructor() {}
 
   ngOnInit() {}
