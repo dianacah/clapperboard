@@ -1,4 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+import { PopupNuevaPeliComponent } from "./../popup-nueva-peli/popup-nueva-peli.component";
+import {
+  MatDialog,
+  MatDialogConfig,
+  MatTableDataSource
+} from "@angular/material";
 
 @Component({
   selector: "app-admin",
@@ -22,32 +28,53 @@ export class AdminComponent implements OnInit {
       nombre: "Algo pasa con Mary",
       genero: "Comedia"
     },
-    { imagen: "../../assets/home/images/Drama/Amelie.jpg",
-       nombre: "Amelie", 
-      genero: "Drama" 
+    {
+      imagen: "../../assets/home/images/Drama/Amelie.jpg",
+      nombre: "Amelie",
+      genero: "Drama"
     },
-    { imagen: "../../assets/home/images/Romance/Titanic.jpg",
-       nombre: "Titanic", 
-      genero: "Romantica" 
+    {
+      imagen: "../../assets/home/images/Romance/Titanic.jpg",
+      nombre: "Titanic",
+      genero: "Romantica"
     },
-    { imagen: "../../assets/home/images/Comedia/ChicasMalas.jpg",
+    {
+      imagen: "../../assets/home/images/Comedia/ChicasMalas.jpg",
       nombre: "Chicas malas",
       genero: "Comedia"
-     },
-    { imagen: "../../assets/home/images/Drama/ALosTrece.jpg",
+    },
+    {
+      imagen: "../../assets/home/images/Drama/ALosTrece.jpg",
       nombre: "A los 13",
-       genero: "Drama" 
-      },
-    { imagen: "../../assets/home/images/Comedia/NoEsRomantico.jpg",
+      genero: "Drama"
+    },
+    {
+      imagen: "../../assets/home/images/Comedia/NoEsRomantico.jpg",
       nombre: "No es romantico",
-       genero: "Comedia"
-       },
-    { imagen: "../../assets/home/images/Comedia/ScaryMovie.jpg",
+      genero: "Comedia"
+    },
+    {
+      imagen: "../../assets/home/images/Comedia/ScaryMovie.jpg",
       nombre: "Scary movie",
-      genero: "Comedia" }
+      genero: "Comedia"
+    }
   ];
   tableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
-  constructor() {}
+  public popup;
+  agregarPelicula() {
+    let dialogConfig = this.openDialog();
+    this.popup = this.dialog.open(PopupNuevaPeliComponent, dialogConfig);
+  }
 
-  ngOnInit() {}
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "400px";
+    dialogConfig.height = "450px";
+    return dialogConfig;
+  }
+  constructor(private dialog: MatDialog) { }
+
+  ngOnInit() { }
 }

@@ -16,6 +16,10 @@
     padding: 20px;
 }
 
+.movieName {
+    font-size: 18px;
+}
+
 .title {
     grid-column: 1/6;
     grid-row: 1/2;
@@ -24,7 +28,6 @@
 }
 
 .movieReproductor {
-    /* margin-top: 100px; */
     grid-column: 2 / 2;
     grid-row: 1 / 2;
     color: white;
@@ -50,8 +53,7 @@
 .movieTitle {
     font-family: "Open Sans", sans-serif;
     color: #ced4da;
-    /* justify-self: left; */
-    font-size: 14px;
+    font-size: 22px;
 }
 
 .fav1 {
@@ -98,6 +100,10 @@
     justify-content: space-between;
 }
 
+video.movie {
+    height: 420px;
+}
+
 .movie {
     height: 500px;
     width: 600px;
@@ -108,7 +114,7 @@
 }
 
 .synopsis1 {
-    width: 520px;
+    width: 580px;
     text-align: justify;
     justify-content: center;
 }

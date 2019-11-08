@@ -1,0 +1,14 @@
+<form class="formularioAgregarPelicula">
+    <p>Ingresa los datos de la nueva canción</p>
+    <input formControlName="title" type="text" placeholder="Titulo de la película" />
+    <input formControlName="genre" type="text" placeholder="Género">
+    <input formControlName="director" type="text" placeholder="Director">
+    <input formControlName="duration" type="text" placeholder="Duración" />
+    <input formControlName="actors" type="text" placeholder="Reparto" />
+    <p class="selectFile">Selecciona el archivo de la película</p>
+    <input formControlName="file" type="file" placeholder="Seleccionar archivo" />
+    <p class="selectFile"></p>
+    <input formControlName="image" type="file" placeholder="Poster de la película" />
+    <input formControlName="synopsis" type="text" placeholder="Sinopsis de la película">
+    <button (click)="close()" class="botonAgregar small white">Agregar Película</button>
+</form>
