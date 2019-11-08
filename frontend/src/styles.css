@@ -12,6 +12,9 @@
 .rbt-500 {
   font-weight: 500;
 }
+.very-small {
+  font-size: 12px;
+}
 .small {
   font-size: 16px;
 }
@@ -37,5 +40,15 @@ body {
   overflow-x: hidden;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.gray {
+  color: lightgray;
+}

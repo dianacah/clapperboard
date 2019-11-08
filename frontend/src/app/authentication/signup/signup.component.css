@@ -1,0 +1,28 @@
+button {
+  border: none;
+  background-color: #ff1180;
+  border-radius: 5rem;
+  padding: 15px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0;
+  width: 50%;
+  align-self: center;
+}
+input {
+  border: 1px solid lightgray;
+  border-radius: 3rem;
+  padding: 15px;
+  margin: 10px 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  padding: 15px;
+}
+a {
+  text-decoration: none;
+  color: #ff1180;
+  align-self: center;
+}
