@@ -1,60 +1,74 @@
+.wrapper {
+  background-image: linear-gradient(
+      rgba(25, 18, 87, 0.5),
+      rgba(25, 18, 87, 0.5)
+    ),
+    url(../../assets/admin/background.jpg);
+    background-size: cover;
+}
 .agregarPelicula {
-    font-family: "Roboto", sans-serif;
-    border: none;
-    border-radius: 5rem;
-    color: gray;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #ff1180;
-    cursor: pointer;
-    font-weight: 100;
-    color: white;
-    height: 50px;
-    width: 90px;
-      }
-  .admin {
-    padding-left: 100px;
-    width: 100vw;
-    height: 1000vh;
-    background-color:#191257;
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: column;
-     }
-  td{
-    height: 40px;
-    font-family: "Roboto", sans-serif;
-  }
-  th{
-    font-weight: 500;
-    font-family: "Roboto", sans-serif;
-  }
-    
-  .botonEditar { height: 50px;
-    width: 50px;
-    border-radius: 6px;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-    margin: 10px;
-    background:white
-  }
-  
-  .botonBorrar {
-    height: 50px;
-    width: 50px;
-    border: none;
-    border-radius: 6px;
-    font-size: 15px;
-    cursor: pointer;
-    background:white
-      }
-  
-  mat-table{
-    width: 80%;
-    height: 100%;
-    text-align: center;
-  }
-  .cadauna{
-    box-sizing: border-box;
-  }
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 5rem;
+  color: gray;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ff1180;
+  cursor: pointer;
+  color: white;
+  height: 50px;
+  width: 150px;
+}
+.admin {
+  padding: 5vh 6vw;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+td {
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+}
+th {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+.botonEditar {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
+  background: white;
+}
+.botonBorrar {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  background: white;
+}
+mat-table {
+  width: 100%;
+  text-align: center;
+}
+.cadauna {
+  box-sizing: border-box;
+  width:80px;
+  height: 80px;
+  margin: 2%;
+}
+.adminHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+mat-icon {
+  color:lightgray;
+}

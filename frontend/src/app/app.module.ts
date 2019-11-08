@@ -16,6 +16,7 @@ import {
   MatSortModule,
   MatTableModule,
   MatTabsModule,
+  MatIconModule,
 } from "@angular/material";
 
 import { NavComponent } from "./nav/nav.component";
@@ -59,10 +60,6 @@ const routes: Routes = [
   {
     path: "perfil",
     component: ProfileComponent
-  },
-  {
-    path: "navegar-genero",
-    component: GenComponent
   }
 ];
 
@@ -93,6 +90,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { useHash: true }),
     MatTabsModule,
     BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
