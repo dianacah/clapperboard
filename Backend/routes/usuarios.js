@@ -7,8 +7,10 @@ const Usuarios = require("../models/usuarios");
 //POST
 usuariosRoute.post("/usuarios", (req, res, next) => {
   Usuarios.create(req.body)
-    .then(Usuarios => {
+  .then(Usuarios => {
+    console.log(Usuarios);
       res.json(Usuarios);
+      res.send(Usuarios);
     })
     .catch(next);
 });
