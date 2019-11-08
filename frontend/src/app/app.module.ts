@@ -13,12 +13,17 @@ import {
   MatPaginatorModule,
   MatProgressSpinnerModule,
   MatSortModule,
-  MatTableModule
+  MatTableModule,
+  MatTabsModule
 } from "@angular/material";
 
 import { NavComponent } from "./nav/nav.component";
 import { SearchComponent } from "./search/search.component";
 import { FavSectionComponent } from "./fav-section/fav-section.component";
+import { AuthenticationComponent } from "./authentication/authentication.component";
+import { LoginComponent } from "./authentication/login/login.component";
+import { SignupComponent } from "./authentication/signup/signup.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { PeliculasComponent } from "./peliculas/peliculas.component";
 
 const routes: Routes = [
@@ -44,6 +49,10 @@ const routes: Routes = [
     path: "peliculas",
     component: SearchComponent
   },
+  {
+    path: "welcome",
+    component: AuthenticationComponent
+  },
   { path: "ver-peliculas", component: PeliculasComponent }
 ];
 
@@ -56,6 +65,9 @@ const routes: Routes = [
     NavComponent,
     SearchComponent,
     FavSectionComponent,
+    AuthenticationComponent,
+    LoginComponent,
+    SignupComponent,
     PeliculasComponent
   ],
   imports: [
@@ -66,7 +78,9 @@ const routes: Routes = [
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatSortModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatTabsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

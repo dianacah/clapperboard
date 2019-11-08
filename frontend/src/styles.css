@@ -1,4 +1,4 @@
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 * {
   margin: 0;
   box-sizing: border-box;
@@ -11,6 +11,9 @@
 }
 .rbt-500 {
   font-weight: 500;
+}
+.very-small {
+  font-size: 12px;
 }
 .small {
   font-size: 16px;
@@ -32,4 +35,20 @@
 }
 .black {
   color: black;
+}
+body {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.gray {
+  color: lightgray;
 }
