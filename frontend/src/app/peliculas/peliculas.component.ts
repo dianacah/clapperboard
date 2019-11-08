@@ -27,22 +27,6 @@ export class PeliculasComponent implements OnInit {
     {
       nombre: " A los trece",
       imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
-    },
-    {
-      nombre: " A los trece",
-      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
-    },
-    {
-      nombre: " A los trece",
-      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
-    },
-    {
-      nombre: " A los trece",
-      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
-    },
-    {
-      nombre: " A los trece",
-      imagen: "../../assets/home/images/Drama/ALosTrece.jpg"
     }
   ];
   constructor() {}
