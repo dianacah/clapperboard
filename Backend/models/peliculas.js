@@ -27,7 +27,11 @@ const moviesSchema = new Schema({
     },
     image: {
         type: String
+    },
+    synopsis: {
+        type:String
     }
+
 });
 
 const Movies = mongoose.model('movies', moviesSchema);
