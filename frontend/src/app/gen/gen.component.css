@@ -1,0 +1,168 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/*"UNIFICAR NAV"*/
+
+nav {
+    height: 70px;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+    background: black;
+    padding: 0 3vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+  .logo {
+    height: 5vh;
+    width: auto;
+    grid-column: 1 / 2;
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    grid-column: 6 / 6;
+  }
+  
+
+/*"Fondo unificado con Erika"*/
+
+.wrapper {
+    font-family: "Roboto", sans-serif;
+  }
+  header {
+    background-image: linear-gradient(
+        rgba(25, 18, 87, 0.5),
+        rgba(25, 18, 87, 0.5)
+      ),
+      url(../../assets/home/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-width: fit-content;
+    display: grid;
+    justify-content: center;
+  }
+
+/*barra de busqueda*/
+.contain{
+    height: 100%;
+    width: 100%;
+    grid-area: contain;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 20px;
+    position: absolute;
+}
+.row{
+    height: 50%;
+    grid-column: 2/6;
+}
+.row input{
+    width: 60%;
+}
+
+.contain .row h2{
+    margin-top: 32px;
+}
+
+.sectionPeliculas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.peliculas {
+    align-self: center;
+    padding-left: 30px;
+}
+  
+.imgPeliculas {
+    width: 150px;
+    height: 200px;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    -webkit-box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 20px -5px rgba(0,0,0,0.75);
+}
+.imgPeliculas:hover {
+    box-shadow: 6px 7px 18px -3px;
+}
+
+.titulo {
+    justify-self: left; 
+    margin-top: 2%;
+
+  }
+  
+  .director {
+    justify-self: left;
+    font-weight: 500;
+}
+ 
+.movieSelector{
+    width: 50px;
+}
+
+.navega{
+    grid-column: 1/2;
+    grid-row: auto;
+    background-color: #191257;
+    position: absolute;
+    margin-top: 27PX;
+    line-height: 153px;
+    height: 95%;
+    width: 250px;
+    text-align: center;
+    
+}
+
+.reproduccion{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 25%;
+}
+.repro{
+    grid-column: 1/2;
+    grid-row: auto;
+}
+.repro img{
+    width: 350px;
+    height: 247px;
+}
+
+.reproDatos{
+    padding-left: 40px;
+    list-style: none;
+    grid-column: 2/4;
+}
+
+button {
+    margin-top: 10px;
+    border: none;
+    width: 25%;
+    height: 40px;
+    align-items: center;
+    background-color: #ff1180;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    -webkit-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75); 
+  }
+  button:hover{
+    box-shadow: 6px 7px 18px -3px whitesmoke;
+    transform: scale(1.05);  
+  }
+

@@ -6,12 +6,27 @@
 
 /*"UNIFICAR HEADER"*/
 
- /* para ajustar*/
- .encabezado{
-    height: 140px;
-    background-color: black;
-    color: blanchedalmond;
-}
+nav {
+    height: 70px;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+    background: black;
+    padding: 0 3vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+  .logo {
+    height: 5vh;
+    width: auto;
+    grid-column: 1 / 2;
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    grid-column: 6 / 6;
+  }
+
 
 /*barra de busqueda*/
 .contain{

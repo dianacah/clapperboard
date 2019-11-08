@@ -25,6 +25,7 @@ import { LoginComponent } from "./authentication/login/login.component";
 import { SignupComponent } from "./authentication/signup/signup.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { PeliculasComponent } from "./peliculas/peliculas.component";
+import { GenComponent } from './gen/gen.component';
 
 const routes: Routes = [
   {
@@ -53,7 +54,11 @@ const routes: Routes = [
     path: "welcome",
     component: AuthenticationComponent
   },
-  { path: "ver-peliculas", component: PeliculasComponent }
+  { path: "ver-peliculas", component: PeliculasComponent },
+  {
+    path: "coleccion",
+    component: GenComponent
+  }
 ];
 
 @NgModule({
@@ -68,7 +73,8 @@ const routes: Routes = [
     AuthenticationComponent,
     LoginComponent,
     SignupComponent,
-    PeliculasComponent
+    PeliculasComponent,
+    GenComponent
   ],
   imports: [
     BrowserModule,
