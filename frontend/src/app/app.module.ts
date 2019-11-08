@@ -1,4 +1,7 @@
-import { GenComponent } from './gen/gen.component';
+import { PopupEditarPeliComponent } from "./popup-editar-peli/popup-editar-peli.component";
+import { PopupNuevaPeliComponent } from "./popup-nueva-peli/popup-nueva-peli.component";
+import { PopupInfoPeliComponent } from "./popup-info-peli/popup-info-peli.component";
+import { GenComponent } from "./gen/gen.component";
 import { RouterModule, Routes } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -6,7 +9,7 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
-
+import { MatDialogModule } from "@angular/material";
 import { AdminComponent } from "./admin/admin.component";
 import { MovieComponent } from "./movie/movie.component";
 import {
@@ -16,7 +19,7 @@ import {
   MatSortModule,
   MatTableModule,
   MatTabsModule,
-  MatIconModule,
+  MatIconModule
 } from "@angular/material";
 
 import { NavComponent } from "./nav/nav.component";
@@ -83,7 +86,10 @@ const routes: Routes = [
     PeliculasComponent,
     ProfileComponent,
     GenComponent,
-    ReleasesComponent
+    ReleasesComponent,
+    PopupInfoPeliComponent,
+    PopupNuevaPeliComponent,
+    PopupEditarPeliComponent
   ],
   imports: [
     BrowserModule,
@@ -96,9 +102,15 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { useHash: true }),
     MatTabsModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    PopupNuevaPeliComponent,
+    PopupInfoPeliComponent,
+    PopupEditarPeliComponent
+  ]
 })
 export class AppModule {}
