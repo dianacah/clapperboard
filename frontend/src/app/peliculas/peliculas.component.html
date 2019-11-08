@@ -3,9 +3,15 @@
     aqui va el nav
   </div>
   <div>
-    <ul *ngfor="let genero; from: generos">
-      <li></li>
-    </ul>
+    <div class="barraLateral white normal rbt-300">
+      <ul *ngFor="let genero of generos">
+        <li class="genero">
+          <a href="#" class="link white">
+            {{ genero }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div></div>
   </div>
-  <div></div>
 </div>
