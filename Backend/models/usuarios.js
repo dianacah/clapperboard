@@ -24,7 +24,6 @@ const usuariosSchema = new Schema({
     image: {
         type: String,
         required: false,
-        default: "../../../assets/img/img-usuarios/user.png"
     },
     role: {
         type: String,

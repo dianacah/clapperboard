@@ -25,7 +25,7 @@ import { LoginComponent } from "./authentication/login/login.component";
 import { SignupComponent } from "./authentication/signup/signup.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { PeliculasComponent } from "./peliculas/peliculas.component";
-import { GenComponent } from './gen/gen.component';
+import { ProfileComponent } from "./profile/profile.component";
 
 const routes: Routes = [
   {
@@ -56,8 +56,8 @@ const routes: Routes = [
   },
   { path: "ver-peliculas", component: PeliculasComponent },
   {
-    path: "coleccion",
-    component: GenComponent
+    path: "perfil",
+    component: ProfileComponent
   }
 ];
 
@@ -74,7 +74,7 @@ const routes: Routes = [
     LoginComponent,
     SignupComponent,
     PeliculasComponent,
-    GenComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +84,7 @@ const routes: Routes = [
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatSortModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes /* , { useHash: true } */),
     MatTabsModule,
     BrowserAnimationsModule
   ],

@@ -1,0 +1,73 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  padding: 5vh 3vw;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+}
+.picImg {
+  background-color: rgb(25, 18, 87);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input {
+  border: 1px solid lightgray;
+  border-radius: 3rem;
+  padding: 15px;
+  margin: 10px 0;
+  width: 50%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  padding: 15px;
+  width: 100%;
+  align-items: center;
+}
+.submitButton {
+  border: none;
+  background-color: #ff1180;
+  border-radius: 5rem;
+  padding: 15px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0;
+  width: 20%;
+  justify-self: end;
+}
+.favButton {
+  border: 1px solid #ff1180;
+  background-color: rgb(25, 18, 87);
+  color: white;
+  border-radius: 5rem;
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0;
+  width: 20%;
+  justify-self: end;
+}
+.profilePic {
+  border-radius: 50%;
+  width: 200px;
+  margin-top: 10%;
+}
+a {
+  text-decoration: none;
+  color: white;
+  align-self: center;
+}
+.descriptionInput {
+  height: 160px;
+  border: 1px solid lightgray;
+  border-radius: 3rem;
+  padding: 15px;
+  margin: 10px 0;
+  width: 50%;
+}

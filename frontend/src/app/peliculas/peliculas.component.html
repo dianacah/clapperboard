@@ -1,11 +1,70 @@
 <div class="contenedorGlobal">
-  <div>
-    aqui va el nav
+  <app-nav></app-nav>
+  <div class="barraYContenido">
+    <div class="barraLateral white normal rbt-300">
+      <ul>
+        <li class="genero listaGenero">
+          <a href="#Romance" class="link white" target="_self">
+            Drama
+          </a>
+        </li>
+        <li class="genero listaGenero">
+          <a [href]="genero" class="link white">
+            Comedia
+          </a>
+        </li>
+        <li class="genero listaGenero">
+          <a [href]="genero" class="link white">
+            Romance
+          </a>
+        </li>
+        <li class="genero listaGenero">
+          <a [href]="genero" class="link white">
+            Anime
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="padding20" id="Drama">
+        <p class="white big rbt-500">Drama</p>
+        <div class="gridPeliculas">
+          <div *ngFor="let pelicula of drama" class="pelicula">
+            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ pelicula.nombre }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="padding20" id="Comedia">
+        <p class="white big rbt-500">Comedia</p>
+        <div class="gridPeliculas">
+          <div *ngFor="let pelicula of drama" class="pelicula">
+            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ pelicula.nombre }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="padding20" name="Romance">
+        <p class="white big rbt-500">Romance</p>
+        <div class="gridPeliculas">
+          <div *ngFor="let pelicula of drama" class="pelicula">
+            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ pelicula.nombre }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="padding20" id="Anime">
+        <p class="white big rbt-500">Anime</p>
+        <div class="gridPeliculas">
+          <div *ngFor="let pelicula of drama" class="pelicula">
+            <img [src]="pelicula.imagen" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ pelicula.nombre }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <ul *ngFor="let genero of generos">
-      <li></li>
-    </ul>
-  </div>
-  <div></div>
 </div>
