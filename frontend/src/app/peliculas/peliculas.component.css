@@ -1,4 +1,4 @@
-.contenedorGlobal {
+/* .contenedorGlobal {
   background-image: linear-gradient(
       rgba(25, 18, 87, 0.5),
       rgba(25, 18, 87, 0.5)
@@ -8,6 +8,20 @@
   background-position: center;
   height: 100vh;
   min-width: fit-content;
-  display: grid;
+  display: flex;
   justify-content: center;
+  flex-direction: column;
 }
+.genero {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.barraLateral {
+  background-color: #191257;
+  height: 90vh;
+  width: 10vw;
+}
+ */
+ 

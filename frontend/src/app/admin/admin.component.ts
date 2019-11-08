@@ -22,12 +22,29 @@ export class AdminComponent implements OnInit {
       nombre: "Algo pasa con Mary",
       genero: "Comedia"
     },
-    { nombre: "Amelie", genero: "Drama" },
-    { nombre: "Titanic", genero: "Romantica" },
-    { nombre: "Chicas malas", genero: "Comedia" },
-    { nombre: "A los 13", genero: "Drama" },
-    { nombre: "No es romantico", genero: "Comedia" },
-    { nombre: "Scary movie", genero: "Comedia" }
+    { imagen: "../../assets/home/images/Drama/Amelie.jpg",
+       nombre: "Amelie", 
+      genero: "Drama" 
+    },
+    { imagen: "../../assets/home/images/Romance/Titanic.jpg",
+       nombre: "Titanic", 
+      genero: "Romantica" 
+    },
+    { imagen: "../../assets/home/images/Comedia/ChicasMalas.jpg",
+      nombre: "Chicas malas",
+      genero: "Comedia"
+     },
+    { imagen: "../../assets/home/images/Drama/ALosTrece.jpg",
+      nombre: "A los 13",
+       genero: "Drama" 
+      },
+    { imagen: "../../assets/home/images/Comedia/NoEsRomantico.jpg",
+      nombre: "No es romantico",
+       genero: "Comedia"
+       },
+    { imagen: "../../assets/home/images/Comedia/ScaryMovie.jpg",
+      nombre: "Scary movie",
+      genero: "Comedia" }
   ];
   tableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
   constructor() {}
