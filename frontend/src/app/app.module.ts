@@ -28,6 +28,7 @@ import { SignupComponent } from "./authentication/signup/signup.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { PeliculasComponent } from "./peliculas/peliculas.component";
 import { ProfileComponent } from "./profile/profile.component";
+import { ReleasesComponent } from './releases/releases.component';
 
 const routes: Routes = [
   {
@@ -60,6 +61,10 @@ const routes: Routes = [
   {
     path: "perfil",
     component: ProfileComponent
+  },
+  {
+    path: "releases",
+    component: ReleasesComponent
   }
 ];
 
@@ -77,7 +82,8 @@ const routes: Routes = [
     SignupComponent,
     PeliculasComponent,
     ProfileComponent,
-    GenComponent
+    GenComponent,
+    ReleasesComponent
   ],
   imports: [
     BrowserModule,
