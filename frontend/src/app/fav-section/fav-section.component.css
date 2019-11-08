@@ -16,10 +16,6 @@
     padding: 20px;
 }
 
-.movieName {
-    font-size: 18px;
-}
-
 .title {
     grid-column: 1/6;
     grid-row: 1/2;
@@ -96,8 +92,7 @@
 
 .movieName {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 video.movie {
@@ -116,6 +111,18 @@ video.movie {
 .synopsis1 {
     width: 580px;
     text-align: justify;
+    justify-content: center;
+}
+
+.favIcon {
+    height: 20px;
+    width: 20px;
+    align-content: center;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
