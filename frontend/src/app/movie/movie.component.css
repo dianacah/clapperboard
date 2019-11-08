@@ -21,19 +21,22 @@
   width: 100%;
   margin-bottom: 5%;
 }
-/* .reproductor {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-} */
 .movieDesc {
-  /* grid-column: 1 / 2;
-  grid-row: 2 / 3; */
-  /* z-index: 1; */
   padding: 1%;
   background-color: rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 10fr 1fr;
 }
 .suggestionsTitle {
   grid-column: 1 /9;
   margin-bottom: 2%;
+}
+.fav {
+  justify-self: flex-end;
+}
+.fav:hover {
+  color: red;
+}
+.fav:active {
+  color: red;
 }
