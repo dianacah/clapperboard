@@ -1,3 +1,4 @@
+import { GenComponent } from './gen/gen.component';
 import { RouterModule, Routes } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -14,7 +15,7 @@ import {
   MatProgressSpinnerModule,
   MatSortModule,
   MatTableModule,
-  MatTabsModule
+  MatTabsModule,
 } from "@angular/material";
 
 import { NavComponent } from "./nav/nav.component";
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: "perfil",
     component: ProfileComponent
+  },
+  {
+    path: "navegar-genero",
+    component: GenComponent
   }
 ];
 
@@ -74,7 +79,8 @@ const routes: Routes = [
     LoginComponent,
     SignupComponent,
     PeliculasComponent,
-    ProfileComponent
+    ProfileComponent,
+    GenComponent
   ],
   imports: [
     BrowserModule,
@@ -84,9 +90,9 @@ const routes: Routes = [
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatSortModule,
-    RouterModule.forRoot(routes /* , { useHash: true } */),
+    RouterModule.forRoot(routes, { useHash: true }),
     MatTabsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
