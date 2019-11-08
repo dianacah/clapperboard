@@ -8,20 +8,16 @@ const Peliculas = require("../models/peliculas");
 PeliculasRoute.post("/peliculas", (req, res, next) => {
   Peliculas.create(req.body)
     .then(Peliculas => {
-      res.send(Peliculas);
+      res.json(Peliculas);
     })
     .catch(next);
 });
 
 //GET
 PeliculasRoute.get("/peliculas", (req, res, next) => {
-  Peliculas.find({}, req.body)
-    .then(() => {
-      const peliculas = Peliculas.find({});
-      return Peliculas;
-    })
-    .then(peliculas => {
-      res.status(200).send(peliculas);
+  Peliculas.find()
+    .then((peliculas) => {
+      res.json(peliculas)
     })
     .catch(next);
 });

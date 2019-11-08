@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 });
 
 mongoose.connect('mongodb://localhost:27017', {
-    dbName: DB, 
+    dbName: DB,
     useNewUrlParser: true,
     // user:'',
     //pasword: ''
@@ -38,7 +38,7 @@ app.use('/api',routePeliculas)
 app.use('/api',routeUsuarios)
 
 app.use((err, req, res, next)=>{
-    res.status(422).send({error: err.menssage})
+    res.status(422).json({error: err.menssage})
 })
 
 app.listen(PORT, ()=>{
