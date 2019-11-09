@@ -1,6 +1,9 @@
 import { PopupEditarPeliComponent } from "./popup-editar-peli/popup-editar-peli.component";
 import { PopupNuevaPeliComponent } from "./popup-nueva-peli/popup-nueva-peli.component";
 import { PopupInfoPeliComponent } from "./popup-info-peli/popup-info-peli.component";
+import { PopupNewFavComponent } from './popup-new-fav/popup-new-fav.component';
+
+
 import { GenComponent } from "./gen/gen.component";
 import { RouterModule, Routes } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
@@ -89,7 +92,8 @@ const routes: Routes = [
     ReleasesComponent,
     PopupInfoPeliComponent,
     PopupNuevaPeliComponent,
-    PopupEditarPeliComponent
+    PopupEditarPeliComponent,
+    PopupNewFavComponent
   ],
   imports: [
     BrowserModule,
@@ -110,7 +114,8 @@ const routes: Routes = [
   entryComponents: [
     PopupNuevaPeliComponent,
     PopupInfoPeliComponent,
-    PopupEditarPeliComponent
+    PopupEditarPeliComponent,
+    PopupNewFavComponent,
   ]
 })
 export class AppModule {}

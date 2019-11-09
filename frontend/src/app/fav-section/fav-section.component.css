@@ -90,13 +90,36 @@
     transform: scale(1.05);
 }
 
+.buttonAddFavs{
+    border: none;
+    background-color: #ff1180;
+    color: white;
+    padding: 5px;
+    margin-left: 5%;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    
+    align-items: flex-start;
+    -webkit-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+.buttonAddFavs:hover {
+    box-shadow: 6px 7px 18px -3px whitesmoke;
+    transform: scale(1.05);
+}
+
 .movieName {
     display: flex;
     flex-direction: column;
 }
 
 video.movie {
-    height: 420px;
+    height: 440px;
 }
 
 .movie {
@@ -114,12 +137,35 @@ video.movie {
     justify-content: center;
 }
 
-.favIcon {
+.favIcon1 {
     height: 20px;
     width: 20px;
     align-content: center;
+    background-image: url(../../assets/favSection/img/corazon.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
 }
 
+.favIcon1:hover {
+    background-image: url(../../assets/favSection/img/redheart.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+.favIcon2 {
+    height: 30px;
+    width: 30px;
+    align-content: center;
+    background-image: url(../../assets/favSection/img/estrella.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+.favIcon2:hover {
+    background-image: url(../../assets/favSection/img/yellowstar.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
 .icons {
     display: flex;
     flex-direction: row;

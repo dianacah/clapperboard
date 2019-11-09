@@ -6,6 +6,7 @@
     <div class="title">
         <h1 class="sectionTitle rbt-500">
             Mis Favoritos
+            <button class="buttonAddFavs" (click)="addMoviesFav()">Agregar +</button>
         </h1>
         <hr/>
     </div>
@@ -16,6 +17,10 @@
             <div class="movieName">
                 <p class="movieTitle rbt-400">nombre</p>
             </div>
+            <div class="icons">
+                    <div class="favIcon1"></div>
+                    <div class="favIcon2"></div>
+                </div>
         </div>
         <div class="fav2 ">
             <img src="../../assets/principal/images/comedia/AlgoPasaConMary.jpg" alt=" " class="imgFav " />
@@ -23,6 +28,10 @@
             <div class="movieName">
                 <p class="movieTitle rbt-400">nombre</p>
             </div>
+            <div class="icons">
+                    <div class="favIcon1"></div>
+                    <div class="favIcon2"></div>
+                </div>
         </div>
         <div class="fav3 ">
             <img src="../../assets/principal/images/comedia/ConFaldasYALoLoco.jpg" alt=" " class="imgFav " />
@@ -30,6 +39,10 @@
             <div class="movieName">
                 <p class="movieTitle rbt-400">nombre</p>
             </div>
+            <div class="icons">
+                    <div class="favIcon1"></div>
+                    <div class="favIcon2"></div>
+                </div>
         </div>
         <div class="fav4 ">
             <img src="../../assets/principal/images/comedia/CriminalesEnElMar.jpg" alt=" " class="imgFav " />
@@ -37,6 +50,10 @@
             <div class="movieName">
                 <p class="movieTitle rbt-400">nombre</p>
             </div>
+            <div class="icons">
+                    <div class="favIcon1"></div>
+                    <div class="favIcon2"></div>
+                </div>
         </div>
         <div class="fav5 ">
             <img src="../../assets/principal/images/comedia/DosRubiasDePeloEnPecho.jpg" alt=" " class="imgFav " />
@@ -44,6 +61,10 @@
             <div class="movieName">
                 <p class="movieTitle rbt-400">nombre</p>
             </div>
+            <div class="icons">
+                    <div class="favIcon1"></div>
+                    <div class="favIcon2"></div>
+                </div>
         </div>
         <div class="fav6 ">
             <img src="../../assets/principal/images/comedia/NoEsRomantico.jpg" alt=" " class="imgFav " />
@@ -51,9 +72,8 @@
             <div class="movieName">
                 <p class="movieTitle rbt-400">nombre</p>
                 <div class="icons">
-                    <img class="favIcon" src="../../assets/favSection/img/estrella.png" alt="">
-                    <img class="favIcon" src="../../assets/favSection/img/corazon.png" alt="">
-
+                    <div class="favIcon1"></div>
+                    <div class="favIcon2"></div>
                 </div>
             </div>
         </div>
@@ -61,11 +81,11 @@
     <div class="movieReproductor">
         <p class="movieName rbt-700">Nombre película</p>
         <div class="playMovie">
-            <video src="../../assets/home/videos/video.mp4" class="movie"></video>
+            <video src="../../assets/home/videos/video.mp4" controls class="movie"></video>
             <p class="synopsis1 rbt-300">Annie (Kristen Wiig) es una treintañera soltera del Medio Oeste, con una vida sentimental más bien precaria, a la que Lilliam, su mejor amiga (Maya Rudolph), le pide que sea su dama de honor. Sin embargo, aunque nunca ha ejercido esa función,
                 la pobre se esfuerza por dárselas de snob en la fiesta anterior a la boda. Mientras tanto, otra amiga de Lillian (Rose Byrne) hará todo lo posible por arrebatarle el papel a la inexperta Annie.</p>
         </div>
         <br>
-        <button class="botonReproducir rbt-400">Reproducir</button>
+        <button class="botonReproducir rbt-400" (click)="playMoviesFav()">Reproducir</button>
     </div>
 </main>
