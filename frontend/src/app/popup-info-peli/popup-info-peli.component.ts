@@ -18,14 +18,11 @@ export class PopupInfoPeliComponent implements OnInit {
   ) {
     this.movie = data;
     this.srcMovie = this.sanitizer.bypassSecurityTrustResourceUrl(data.trailer);
-    console.log(this.srcMovie);
   }
 
   close() {
     this.dialogRef.close(this.movie);
   }
 
-  ngOnInit() {
-    console.log(this.movie);
-  }
+  ngOnInit() {}
 }

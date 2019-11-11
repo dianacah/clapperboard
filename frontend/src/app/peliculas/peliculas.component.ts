@@ -27,46 +27,91 @@ export class PeliculasComponent implements OnInit {
       trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     },
     {
-      title: " A los trece",
+      title: " Amelie",
+      director: "Jean-Pierre Jeunet",
+      duration: "2:00",
+      genre: "Drama",
+      actors: "Audrey Tautou, Mathieu Kassovitz",
+      file: "./../",
+      image: "../../assets/home/images/Drama/Amelie.jpg",
+      synopsis:
+        "'Amélie' is a fanciful comedy about a young woman who discretely orchestrates the lives of the people around her, creating a world exclusively of her own making. Shot in over 80 Parisian locations, acclaimed director Jean-Pierre Jeunet (Delicatessen; The City of Lost Children) invokes his incomparable visionary style to capture the exquisite charm and mystery of modern-day Paris through the eyes of a beautiful ingenue",
+      trailer: "https://www.youtube.com/embed/HUECWi5pX7o"
+    },
+    {
+      title: " El cisne negro",
       director: "Christian",
       duration: "2:00",
       genre: "Drama",
       actors: "lllll, kkkkkk",
       file: "./../",
-      image: "../../assets/home/images/Drama/ALosTrece.jpg",
+      image: "../../assets/home/images/Drama/CisneNegro.jpg",
       synopsis: "Lorem ipsum lorem ipsum",
       trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     },
     {
-      title: " A los trece",
+      title: " La decicion de Anne",
       director: "Christian",
       duration: "2:00",
       genre: "Drama",
       actors: "lllll, kkkkkk",
       file: "./../",
-      image: "../../assets/home/images/Drama/ALosTrece.jpg",
+      image: "../../assets/home/images/Drama/LaDecisionDeAnne.jpg",
       synopsis: "Lorem ipsum lorem ipsum",
       trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     },
     {
-      title: " A los trece",
+      title: " Mentes Peligrosas",
       director: "Christian",
       duration: "2:00",
       genre: "Drama",
       actors: "lllll, kkkkkk",
       file: "./../",
-      image: "../../assets/home/images/Drama/ALosTrece.jpg",
+      image: "../../assets/home/images/Drama/MentesPeligrosas.jpg",
       synopsis: "Lorem ipsum lorem ipsum",
       trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     },
     {
-      title: " A los trece",
+      title: " Mi chica",
       director: "Christian",
       duration: "2:00",
       genre: "Drama",
       actors: "lllll, kkkkkk",
       file: "./../",
-      image: "../../assets/home/images/Drama/ALosTrece.jpg",
+      image: "../../assets/home/images/Drama/MiChica.jpg",
+      synopsis: "Lorem ipsum lorem ipsum",
+      trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
+    },
+    {
+      title: " Noviembre Dulce",
+      director: "Christian",
+      duration: "2:00",
+      genre: "Drama",
+      actors: "lllll, kkkkkk",
+      file: "./../",
+      image: "../../assets/home/images/Drama/NoviembreDulce.jpg",
+      synopsis: "Lorem ipsum lorem ipsum",
+      trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
+    },
+    {
+      title: " Orgullo y prejuicio",
+      director: "Christian",
+      duration: "2:00",
+      genre: "Drama",
+      actors: "lllll, kkkkkk",
+      file: "./../",
+      image: "../../assets/home/images/Drama/OrgulloYPrejuicio.jpg",
+      synopsis: "Lorem ipsum lorem ipsum",
+      trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
+    },
+    {
+      title: " Un paseo para recordar",
+      director: "Christian",
+      duration: "2:00",
+      genre: "Drama",
+      actors: "lllll, kkkkkk",
+      file: "./../",
+      image: "../../assets/home/images/Drama/UnPaseoParaRecordar.jpg",
       synopsis: "Lorem ipsum lorem ipsum",
       trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     }
@@ -98,7 +143,8 @@ export class PeliculasComponent implements OnInit {
     };
     this.popup = this.dialog.open(PopupInfoPeliComponent, dialogConfig);
     this.popup.afterClosed().subscribe(response => {
-      let respuesta = response.value;
+      let respuesta = response;
+      console.log(response);
     });
   }
 
