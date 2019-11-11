@@ -11,23 +11,67 @@
     </button>
     <a routerLink="/home" class="very-small rbt-300">Cerrar sesión</a>
   </div>
-  <form>
-    <input placeholder="Nombre" type="text" class="small rbt-300 input" />
+  <form [formGroup]="perfilForm">
     <input
+      formControlName="name"
+      placeholder="Nombre"
+      type="text"
+      class="small rbt-300 input"
+    />
+    <small
+      class="error"
+      *ngIf="
+        perfilForm.get('name').hasError('required') &&
+        perfilForm.get('name').touched
+      "
+      >Ups, por favor ingresa los datos para continuar</small
+    >
+    <br />
+    <input
+      formControlName="email"
       placeholder="Correo electrónico"
       type="email"
       class="small rbt-300 input"
     />
+    <small
+      class="error"
+      *ngIf="
+        perfilForm.get('email').hasError('required') &&
+        perfilForm.get('email').touched
+      "
+      >Ups, por favor ingresa los datos para continuar</small
+    >
+    <br />
     <input
+      formControlName="date"
       placeholder="Fecha de nacimiento"
       type="date"
       class="small rbt-300 input"
     />
+    <small
+      class="error"
+      *ngIf="
+        perfilForm.get('date').hasError('required') &&
+        perfilForm.get('date').touched
+      "
+      >Ups, por favor ingresa los datos para continuar</small
+    >
+    <br />
     <input
+      formControlName="password"
       placeholder="Contraseña"
       type="password"
       class="small rbt-300 input"
     />
+    <small
+      class="error"
+      *ngIf="
+        perfilForm.get('password').hasError('required') &&
+        perfilForm.get('password').touched
+      "
+      >Ups, por favor ingresa los datos para continuar</small
+    >
+    <br />
     <input
       placeholder="Descripción (opcional)"
       type="text"

@@ -1,14 +1,100 @@
-<form class="formularioAgregarPelicula">
-    <p>Ingresa los datos de la nueva canción</p>
-    <input formControlName="title" type="text" placeholder="Titulo de la película" />
-    <input formControlName="genre" type="text" placeholder="Género">
-    <input formControlName="director" type="text" placeholder="Director">
-    <input formControlName="duration" type="text" placeholder="Duración" />
-    <input formControlName="actors" type="text" placeholder="Reparto" />
-    <p class="selectFile">Selecciona el archivo de la película</p>
-    <input formControlName="file" type="file" placeholder="Seleccionar archivo" />
-    <p class="selectFile"></p>
-    <input formControlName="image" type="file" placeholder="Poster de la película" />
-    <input formControlName="synopsis" type="text" placeholder="Sinopsis de la película">
-    <button (click)="close()" class="botonAgregar small white">Agregar Película</button>
+<form class="formularioAgregarPelicula" [formGroup]="newMovieForm">
+  <p>Ingresa los datos de la nueva pelicula</p>
+  <input
+    formControlName="title"
+    type="text"
+    placeholder="Titulo de la película"
+  />
+  <small
+    class="error"
+    *ngIf="
+      newMovieForm.get('title').hasError('required') &&
+      newMovieForm.get('title').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <input formControlName="genre" type="text" placeholder="Género" />
+  <small
+    class="error"
+    *ngIf="
+      newMovieForm.get('genre').hasError('required') &&
+      newMovieForm.get('genre').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <input formControlName="director" type="text" placeholder="Director" />
+  <small
+    class="error"
+    *ngIf="
+      newMovieForm.get('director').hasError('required') &&
+      newMovieForm.get('director').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <input formControlName="duration" type="text" placeholder="Duración" />
+  <small
+    class="error"
+    *ngIf="
+      newMovieForm.get('duration').hasError('required') &&
+      newMovieForm.get('duration').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <input formControlName="actors" type="text" placeholder="Reparto" />
+  <small
+    class="error"
+    *ngIf="
+      newMovieForm.get('actors').hasError('required') &&
+      newMovieForm.get('actors').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <p class="selectFile">Selecciona el archivo de la película</p>
+  <input formControlName="file" type="file" placeholder="Seleccionar archivo" />
+  <small
+    class="error"
+    *ngIf="
+      newMovieForm.get('file').hasError('required') &&
+      newMovieForm.get('file').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <p class="selectFile"></p>
+  <input
+    formControlName="image"
+    type="file"
+    placeholder="Poster de la película"
+  />
+  <small
+    class="error"
+    *ngIf="
+      newMovieForm.get('image').hasError('required') &&
+      newMovieForm.get('image').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <input
+    formControlName="synopsis"
+    type="text"
+    placeholder="Sinopsis de la película"
+  />
+  <small
+    class="error"
+    *ngIf="
+      newMovieForm.get('synopsis').hasError('required') &&
+      newMovieForm.get('synopsis').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <button (click)="close()" class="botonAgregar small white">
+    Agregar Película
+  </button>
 </form>

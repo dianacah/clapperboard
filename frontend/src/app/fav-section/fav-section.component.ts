@@ -1,18 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig, MatTableDataSource } from '@angular/material';
-import { PopupNewFavComponent } from '../popup-new-fav/popup-new-fav.component';
-
+import { Component, OnInit } from "@angular/core";
+import {
+  MatDialog,
+  MatDialogConfig,
+  MatTableDataSource
+} from "@angular/material";
+import { PopupNewFavComponent } from "../popup-new-fav/popup-new-fav.component";
 
 @Component({
-  selector: 'fav-section',
-  templateUrl: './fav-section.component.html',
-  styleUrls: ['./fav-section.component.css']
+  selector: "fav-section",
+  templateUrl: "./fav-section.component.html",
+  styleUrls: ["./fav-section.component.css"]
 })
 export class FavSectionComponent implements OnInit {
-
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {}
 
   public popup;
+
   addMoviesFav(pelicula) {
     let dialogConfig = this.openDialog();
     this.popup = this.dialog.open(PopupNewFavComponent, dialogConfig);
@@ -21,7 +24,7 @@ export class FavSectionComponent implements OnInit {
     });
   }
 
-openDialog() {
+  openDialog() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = false;
@@ -30,11 +33,7 @@ openDialog() {
     return dialogConfig;
   }
 
-  playMoviesFav(){
-    
-  }
+  playMoviesFav() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

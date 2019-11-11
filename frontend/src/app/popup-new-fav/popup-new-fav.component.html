@@ -1,7 +1,29 @@
-<form class="formNewFav">
-        <p>Agregar película a favoritos</p>
-        <br>
-        <input formControlName="title" type="text" placeholder="Titulo de la película" />
-        <input formControlName="genre" type="text" placeholder="Género">
-        <button (click)="close()" class="botonAgregar small white">Agregar Película</button>
-    </form>
+<form class="formNewFav" [formGroup]="favForm">
+  <p>Agregar película a favoritos</p>
+  <br />
+  <input
+    formControlName="title"
+    type="text"
+    placeholder="Titulo de la película"
+  />
+  <small
+    class="error"
+    *ngIf="
+      favForm.get('title').hasError('required') && favForm.get('title').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <input formControlName="genre" type="text" placeholder="Género" />
+  <small
+    class="error"
+    *ngIf="
+      favForm.get('genre').hasError('required') && favForm.get('genre').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <button (click)="close()" class="botonAgregar small white">
+    Agregar Película
+  </button>
+</form>

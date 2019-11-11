@@ -1,6 +1,28 @@
-<form class="loginForm">
-  <input placeholder="Correo electrónico" type="email" />
-  <input placeholder="Contraseña" type="password" />
+<form class="loginForm" [formGroup]="loginForm">
+  <input
+    placeholder="Correo electrónico"
+    type="email"
+    formControlName="email"
+  />
+  <small
+    class="error"
+    *ngIf="
+      loginForm.get('email').hasError('required') &&
+      loginForm.get('email').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
+  <input placeholder="Contraseña" type="password" formControlName="password" />
+  <small
+    class="error"
+    *ngIf="
+      loginForm.get('password').hasError('required') &&
+      loginForm.get('password').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <br />
   <button class="white rbt-300 small" type="submit" routerLink="/perfil">
     Inicia sesión
   </button>
