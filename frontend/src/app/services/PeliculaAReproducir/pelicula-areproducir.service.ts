@@ -1,9 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class PeliculaAReproducirService {
+  public peliculaReproducir;
+  constructor() {}
 
-  constructor() { }
+  setMovie(movie) {
+    this.peliculaReproducir = movie;
+  }
+
+  getMovie() {
+    return this.peliculaReproducir;
+  }
 }

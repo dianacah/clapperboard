@@ -3,7 +3,7 @@
   <div class="wrapper">
     <div class="reproductor">
       <iframe
-        src="https://www.youtube.com/embed/Tw33Xs4Q2r4"
+        [src]="file"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; 
            gyroscope; picture-in-picture"
@@ -14,16 +14,11 @@
       <div class="movieDesc">
         <div>
           <p class="white rbt-300 medium">
-            Nombre de la película
+            {{ title }}
           </p>
-          <p class="white rbt-300 ">Género: Drama</p>
-          <p class="rbt-300 white">Duración: 02:02min</p>
-          <p class="white rbt-300">
-            Sinópsis: Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Amet vitae modi molestias perspiciatis exercitationem qui commodi,
-            error dolores fugiat a omnis ratione repellat deleniti saepe
-            distinctio, numquam nobis quod optio.
-          </p>
+          <p class="white rbt-300 ">Género: {{ genre }}</p>
+          <p class="rbt-300 white">Duración: {{ duration }}</p>
+          <p class="white rbt-300">Sinópsis: {{ synopsis }}</p>
         </div>
         <a href="" class="fav"
           ><mat-icon aria-hidden="false">favorite</mat-icon></a
