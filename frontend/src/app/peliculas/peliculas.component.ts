@@ -16,14 +16,15 @@ export class PeliculasComponent implements OnInit {
   public drama = [
     {
       title: " A los trece",
-      director: "Christian",
+      director: "Catherine Hardwicke",
       duration: "2:00",
       genre: "Drama",
-      actors: "lllll, kkkkkk",
+      actors: "Holly Hunter, Evan Rachel Wood, Nikki Reed, Jeremy Sisto",
       file: "./../",
       image: "../../assets/home/images/Drama/ALosTrece.jpg",
-      synopsis: "Lorem ipsum lorem ipsum",
-      trailer: "./../../"
+      synopsis:
+        "Honor student Tracy Freeland (Evan Rachel Wood) has a troubling home life, but she is close to her mother, Melanie (Holly Hunter). While trying to conceal her inner turmoil by excelling academically, she befriends the calculating Evie (Nikki Reed), her school's queen bee. Evie talks Tracy into experimenting with drugs, exploring her sexuality and pickpocketing strangers to finance shopping sprees -- but before long, Melanie realizes she must step in and stop her daughter's destructive lifestyle.",
+      trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     },
     {
       title: " A los trece",
@@ -34,7 +35,7 @@ export class PeliculasComponent implements OnInit {
       file: "./../",
       image: "../../assets/home/images/Drama/ALosTrece.jpg",
       synopsis: "Lorem ipsum lorem ipsum",
-      trailer: "./../../"
+      trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     },
     {
       title: " A los trece",
@@ -45,7 +46,7 @@ export class PeliculasComponent implements OnInit {
       file: "./../",
       image: "../../assets/home/images/Drama/ALosTrece.jpg",
       synopsis: "Lorem ipsum lorem ipsum",
-      trailer: "./../../"
+      trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     },
     {
       title: " A los trece",
@@ -56,7 +57,7 @@ export class PeliculasComponent implements OnInit {
       file: "./../",
       image: "../../assets/home/images/Drama/ALosTrece.jpg",
       synopsis: "Lorem ipsum lorem ipsum",
-      trailer: "./../../"
+      trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     },
     {
       title: " A los trece",
@@ -67,7 +68,7 @@ export class PeliculasComponent implements OnInit {
       file: "./../",
       image: "../../assets/home/images/Drama/ALosTrece.jpg",
       synopsis: "Lorem ipsum lorem ipsum",
-      trailer: "./../../"
+      trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
     }
   ];
   public popup;
@@ -77,8 +78,8 @@ export class PeliculasComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = false;
-    dialogConfig.width = "400px";
-    dialogConfig.height = "400px";
+    dialogConfig.width = "800px";
+    dialogConfig.height = "680px";
     return dialogConfig;
   }
 
