@@ -2,6 +2,7 @@ import { PopupEditarPeliComponent } from "./popup-editar-peli/popup-editar-peli.
 import { PopupNuevaPeliComponent } from "./popup-nueva-peli/popup-nueva-peli.component";
 import { PopupInfoPeliComponent } from "./popup-info-peli/popup-info-peli.component";
 import { PopupNewFavComponent } from "./popup-new-fav/popup-new-fav.component";
+import { HttpClientModule } from "@angular/common/http";
 
 import { GenComponent } from "./gen/gen.component";
 import { RouterModule, Routes } from "@angular/router";
@@ -109,6 +110,7 @@ const routes: Routes = [
     MatIconModule,
     MatDialogModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

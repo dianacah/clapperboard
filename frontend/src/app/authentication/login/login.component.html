@@ -23,7 +23,12 @@
     >Ups, por favor ingresa los datos para continuar</small
   >
   <br />
-  <button class="white rbt-300 small" type="submit" routerLink="/perfil">
+  <button
+    class="white rbt-300 small"
+    type="submit"
+    routerLink="/perfil"
+    (click)="getUsuario(loginForm)"
+  >
     Inicia sesión
   </button>
   <a routerLink="/home" class="very-small rbt-300">Regresar</a>
