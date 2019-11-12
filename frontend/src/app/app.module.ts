@@ -37,7 +37,7 @@ import { ProfileComponent } from "./profile/profile.component";
 import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { NavGendersComponent } from "./nav-genders/nav-genders.component";
-
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 const routes: Routes = [
   {
@@ -111,13 +111,14 @@ const routes: Routes = [
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatSortModule,
-    RouterModule.forRoot(routes, {useHash: true}),
+    RouterModule.forRoot(routes, { useHash: true }),
     MatTabsModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],

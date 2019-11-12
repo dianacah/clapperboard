@@ -18,3 +18,7 @@ a {
 .logIn {
   grid-column: 8 / 9;
 }
+
+a:hover {
+  color: #ff1180;
+}

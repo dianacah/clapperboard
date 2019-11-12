@@ -1,7 +1,8 @@
 .wrapper {
-    background-color: #191257;
-    height: 100vh;
+  background-color: #191257;
+  height: calc(100vh - 70px);
 }
 img {
-    height: 100vh;
+  height: calc(100vh - 70px);
+  width: 100%;
 }
