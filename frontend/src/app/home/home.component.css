@@ -123,3 +123,6 @@ a {
   display: flex;
   flex-direction: column;
 }
+a:hover {
+  color: #ff1180;
+}
