@@ -72,6 +72,10 @@ const routes: Routes = [
   {
     path: "releases",
     component: ReleasesComponent
+  },
+  {
+    path: "search",
+    component: SearchComponent
   }
 ];
 
