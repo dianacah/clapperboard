@@ -10,6 +10,7 @@ export class RegistryUserService {
   constructor(private http: HttpClient) { }
 
   postRegistry(users){
-    return this.http.post(this.URL, users)
+    console.log("usuario",users);
+    return this.http.post(this.URL, users);
   }
 }

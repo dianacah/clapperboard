@@ -1,3 +1,4 @@
+import { UserInformationService } from './../services/User-Information/user-information.service';
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
@@ -9,9 +10,15 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 })
 export class ProfileComponent implements OnInit {
 
- 
+  userInformation: any = [];
 
-  constructor(private builder: FormBuilder) {}
+  public user;
+  public name;
+  public email;
+  public date;
+  public password;
+
+  constructor(private builder: FormBuilder, private userInformationService : UserInformationService) {}
 
   perfilForm: FormGroup = this.builder.group({
     name: ["", Validators.required],
@@ -22,6 +29,7 @@ export class ProfileComponent implements OnInit {
   });
 
   ngOnInit() {
- 
+    this.user = this.userInformationService.getUser();
+    
   }
 }

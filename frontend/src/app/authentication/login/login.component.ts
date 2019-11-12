@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
     let user = usuario.value;
     let email = user.email;
     console.log(user);
-    this.loginService.getLogin(email).subscribe(e => {
+    /* this.loginService.getLogin(email).subscribe(e => {
       console.log(e);
-    });
+    }); */
   }
 
   ngOnInit() {}

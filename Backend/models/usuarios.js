@@ -9,7 +9,7 @@ const usuariosSchema = new Schema({
         type: String,
         required: true
     },
-    date_of_birth: {
+    date: {
         type: Date,
         required: true
     },
