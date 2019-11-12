@@ -2,6 +2,7 @@ import { PopupEditarPeliComponent } from "./popup-editar-peli/popup-editar-peli.
 import { PopupNuevaPeliComponent } from "./popup-nueva-peli/popup-nueva-peli.component";
 import { PopupInfoPeliComponent } from "./popup-info-peli/popup-info-peli.component";
 import { PopupNewFavComponent } from "./popup-new-fav/popup-new-fav.component";
+import { HttpClientModule } from "@angular/common/http";
 
 import { GenComponent } from "./gen/gen.component";
 import { RouterModule, Routes } from "@angular/router";
@@ -35,7 +36,8 @@ import { PeliculasComponent } from "./peliculas/peliculas.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NavGendersComponent } from "./nav-genders/nav-genders.component";
+
 
 const routes: Routes = [
   {
@@ -72,6 +74,10 @@ const routes: Routes = [
   {
     path: "releases",
     component: ReleasesComponent
+  },
+  {
+    path: "search",
+    component: SearchComponent
   }
 ];
 
@@ -94,7 +100,8 @@ const routes: Routes = [
     PopupInfoPeliComponent,
     PopupNuevaPeliComponent,
     PopupEditarPeliComponent,
-    PopupNewFavComponent
+    PopupNewFavComponent,
+    NavGendersComponent
   ],
   imports: [
     BrowserModule,
@@ -104,13 +111,13 @@ const routes: Routes = [
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatSortModule,
-    RouterModule.forRoot(routes, { useHash: true }),
+    RouterModule.forRoot(routes, {useHash: true}),
     MatTabsModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
     ReactiveFormsModule,
-    NgbModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

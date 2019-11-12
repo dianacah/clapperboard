@@ -1,12 +1,16 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
+
 @Component({
   selector: "app-profile",
   templateUrl: "./profile.component.html",
   styleUrls: ["./profile.component.css"]
 })
 export class ProfileComponent implements OnInit {
+
+ 
+
   constructor(private builder: FormBuilder) {}
 
   perfilForm: FormGroup = this.builder.group({
@@ -17,5 +21,7 @@ export class ProfileComponent implements OnInit {
     description: [""]
   });
 
-  ngOnInit() {}
+  ngOnInit() {
+ 
+  }
 }

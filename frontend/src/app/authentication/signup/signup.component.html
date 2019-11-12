@@ -1,7 +1,7 @@
 <form class="signupForm" [formGroup]="signupForm">
-  <input placeholder="Nombre" type="text" />
+  <input placeholder="Nombre" type="text" formControlName="name" />
   <small
-    formControlName="name"
+    
     class="error"
     *ngIf="
       signupForm.get('name').hasError('required') &&
@@ -10,9 +10,9 @@
     >Ups, por favor ingresa los datos para continuar</small
   >
   <br />
-  <input placeholder="Correo electrónico" type="email" />
+  <input placeholder="Correo electrónico" type="email" formControlName="email"/>
   <small
-    formControlName="email"
+    
     class="error"
     *ngIf="
       signupForm.get('email').hasError('required') &&
@@ -21,9 +21,9 @@
     >Ups, por favor ingresa los datos para continuar</small
   >
   <br />
-  <input placeholder="Fecha de nacimiento" type="date" />
+  <input placeholder="Fecha de nacimiento" type="date" formControlName="date" />
   <small
-    formControlName="date"
+    
     class="error"
     *ngIf="
       signupForm.get('date').hasError('required') &&
@@ -32,9 +32,9 @@
     >Ups, por favor ingresa los datos para continuar</small
   >
   <br />
-  <input placeholder="Contraseña" type="password" />
+  <input placeholder="Contraseña" type="password" formControlName="password"/>
   <small
-    formControlName="password"
+    
     class="error"
     *ngIf="
       signupForm.get('password').hasError('required') &&
@@ -43,7 +43,7 @@
     >Ups, por favor ingresa los datos para continuar</small
   >
   <br />
-  <button class="white rbt-300 small" type="submit" routerLink="/perfil">
+  <button (click)='guardarInformacion(signupForm)' class="white rbt-300 small" type="submit" routerLink="/perfil">
     Regístrate
   </button>
   <a routerLink="/home" class=" very-small rbt-300">Regresar</a>

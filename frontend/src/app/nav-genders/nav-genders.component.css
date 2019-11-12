@@ -14,11 +14,7 @@ nav {
 a {
   text-decoration: none;
   cursor: pointer;
-  color:white
 }
 .logIn {
   grid-column: 8 / 9;
-}
-a:hover {
-  color: #ff1180;
 }
