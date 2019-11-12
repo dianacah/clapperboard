@@ -14,7 +14,7 @@
       >
     </div>
   </header>
-  <div class="benefitsSection" id="benefitsAnchor">
+  <div class="benefitsSection" [attr.id] = "ids[0]">
     <video
       src="../../assets/home/videos/video.mp4"
       autoplay
@@ -60,7 +60,7 @@
       </div>
     </div>
   </div>
-  <div class="about" id="aboutAnchor">
+  <div class="about" [attr.id] = "ids[1]">
     <div class="mision">
       <p class="medium rbt-500 white">Misión</p>
       <p class="normal rbt-300 white">
@@ -157,8 +157,8 @@
   <div class="footer">
     <img class="companyLogo" src="../../assets/eight-devs_logo.png" alt="" />
     <div class="footerLinks">
-      <a href="#benefitsAnchor" class="white rbt-300">Vive la experiencia</a>
-      <a href="#aboutAnchor" class="white rbt-300">Quiénes somos</a>
+      <a [routerLink]='"."' [fragment] = "ids[0]" class="white rbt-300">Vive la experiencia</a>
+      <a [routerLink]='"."' [fragment] = "ids[1]" class="white rbt-300">Quiénes somos</a>
       <a routerLink="/welcome" class="white rbt-300"
         >¿Eres administrador? <span class="rbt-500"> Ingresa aquí </span></a
       >

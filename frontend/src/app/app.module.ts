@@ -5,7 +5,7 @@ import { PopupNewFavComponent } from "./popup-new-fav/popup-new-fav.component";
 import { HttpClientModule } from "@angular/common/http";
 
 import { GenComponent } from "./gen/gen.component";
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, Routes, ExtraOptions } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
@@ -36,6 +36,13 @@ import { PeliculasComponent } from "./peliculas/peliculas.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { NavGendersComponent } from "./nav-genders/nav-genders.component";
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: "enabled",
+  anchorScrolling: "enabled",
+  scrollOffset: [0, 64]
+};
 
 const routes: Routes = [
   {
@@ -94,7 +101,8 @@ const routes: Routes = [
     PopupInfoPeliComponent,
     PopupNuevaPeliComponent,
     PopupEditarPeliComponent,
-    PopupNewFavComponent
+    PopupNewFavComponent,
+    NavGendersComponent
   ],
   imports: [
     BrowserModule,
@@ -104,7 +112,7 @@ const routes: Routes = [
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatSortModule,
-    RouterModule.forRoot(routes, { useHash: true }),
+    RouterModule.forRoot(routes, routerOptions),
     MatTabsModule,
     BrowserAnimationsModule,
     MatIconModule,
