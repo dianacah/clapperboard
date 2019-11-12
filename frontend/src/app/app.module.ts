@@ -2,6 +2,7 @@ import { PopupEditarPeliComponent } from "./popup-editar-peli/popup-editar-peli.
 import { PopupNuevaPeliComponent } from "./popup-nueva-peli/popup-nueva-peli.component";
 import { PopupInfoPeliComponent } from "./popup-info-peli/popup-info-peli.component";
 import { PopupNewFavComponent } from "./popup-new-fav/popup-new-fav.component";
+import { HttpClientModule } from "@angular/common/http";
 
 import { GenComponent } from "./gen/gen.component";
 import { RouterModule, Routes } from "@angular/router";
@@ -36,7 +37,6 @@ import { ProfileComponent } from "./profile/profile.component";
 import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { NavGendersComponent } from "./nav-genders/nav-genders.component";
-
 
 
 const routes: Routes = [
@@ -112,7 +112,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
