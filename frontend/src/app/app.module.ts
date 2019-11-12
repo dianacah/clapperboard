@@ -35,7 +35,8 @@ import { PeliculasComponent } from "./peliculas/peliculas.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NavGendersComponent } from './nav-genders/nav-genders.component';
 
 const routes: Routes = [
   {
@@ -94,7 +95,8 @@ const routes: Routes = [
     PopupInfoPeliComponent,
     PopupNuevaPeliComponent,
     PopupEditarPeliComponent,
-    PopupNewFavComponent
+    PopupNewFavComponent,
+    NavGendersComponent
   ],
   imports: [
     BrowserModule,
