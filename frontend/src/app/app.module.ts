@@ -35,6 +35,7 @@ import { PeliculasComponent } from "./peliculas/peliculas.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { NavGendersComponent } from "./nav-genders/nav-genders.component";
 
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -100,7 +101,8 @@ const routes: Routes = [
     PopupInfoPeliComponent,
     PopupNuevaPeliComponent,
     PopupEditarPeliComponent,
-    PopupNewFavComponent
+    PopupNewFavComponent,
+    NavGendersComponent
   ],
   imports: [
     BrowserModule,
@@ -115,7 +117,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

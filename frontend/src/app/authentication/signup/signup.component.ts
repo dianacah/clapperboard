@@ -1,5 +1,7 @@
+import { UserInformationService } from './../../services/User-Information/user-information.service';
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+
 
 @Component({
   selector: "app-signup",
@@ -7,7 +9,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
   styleUrls: ["./signup.component.css"]
 })
 export class SignupComponent implements OnInit {
-  constructor(private builder: FormBuilder) {}
+  constructor(private builder: FormBuilder, private userInformationService: UserInformationService) {}
 
   signupForm: FormGroup = this.builder.group({
     name: ["", Validators.required],
@@ -18,6 +20,13 @@ export class SignupComponent implements OnInit {
       Validators.compose([Validators.required, Validators.minLength(6)])
     ]
   });
+
+  guardarInformacion(signupForm){
+    console.log(signupForm.value)
+    this.userInformationService.setInformation(signupForm)
+  }
+
+
 
   ngOnInit() {}
 }
