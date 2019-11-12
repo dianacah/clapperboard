@@ -26,10 +26,14 @@
   <button
     class="white rbt-300 small"
     type="submit"
-    routerLink="/perfil"
     (click)="getUsuario(loginForm)"
   >
     Inicia sesión
   </button>
+  <p *ngIf="wrongPass != false; then null; else mensajeError"></p>
+  <p class="error">
+    ¡Ups!, los datos que ingresaste no son correctos, por favor verifica tu
+    usuario y contraseña
+  </p>
   <a routerLink="/home" class="very-small rbt-300">Regresar</a>
 </form>

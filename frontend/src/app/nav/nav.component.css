@@ -11,9 +11,6 @@ nav {
   height: 5vh;
   width: auto;
 }
-li {
-  list-style: none;
-}
 a {
   text-decoration: none;
   cursor: pointer;
