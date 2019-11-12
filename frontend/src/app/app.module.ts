@@ -35,8 +35,7 @@ import { PeliculasComponent } from "./peliculas/peliculas.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { NavGendersComponent } from './nav-genders/nav-genders.component';
+import { NavGendersComponent } from "./nav-genders/nav-genders.component";
 
 const routes: Routes = [
   {
@@ -111,8 +110,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
-    ReactiveFormsModule,
-    NgbModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
