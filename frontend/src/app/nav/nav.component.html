@@ -1,10 +1,9 @@
 <nav>
-  <a routerLink="/home"
-    ><img class="logo" src="../../assets/logo.png" alt=""
-  /></a>
-  <li *ngFor = "let link of ids">
-    <a [routerLink]='"."' [fragment] = "link">{{link}}</a>
-  </li>
-  <a routerLink="/welcome" class="logIn white">Inicia sesión</a>
-  <a routerLink="/welcome" class="white">Regístrate</a>
-</nav>
+    <a routerLink="/home"
+      ><img class="logo" src="../../assets/logo.png" alt=""
+    /></a>
+    <a href="#benefitsAnchor" class="white">Vive la experiencia</a>
+    <a href="#aboutAnchor" class="white">Quiénes somos</a>
+    <a routerLink="/welcome" class="logIn white">Inicia sesión</a>
+    <a routerLink="/welcome" class="white">Regístrate</a>
+  </nav>

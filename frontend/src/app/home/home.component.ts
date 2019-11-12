@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   
-  ids: Array<String> = ['Vive la experiencia', 'Quiénes somos']
-
   constructor() { }
 
   ngOnInit() {

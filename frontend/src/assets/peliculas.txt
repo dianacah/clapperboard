@@ -1,0 +1,336 @@
+{
+      title: " A los trece",
+      director: "Catherine Hardwicke",
+      duration: "1:18",
+      genre: "Drama",
+      actors: "Holly Hunter, Evan Rachel Wood, Nikki Reed, Jeremy Sisto",
+      file: "https://www.youtube.com/embed/yg1U88BiZZ0",
+      image: "../../assets/home/images/Drama/ALosTrece.jpg",
+      synopsis:
+        "Honor student Tracy Freeland (Evan Rachel Wood) has a troubling home life, but she is close to her mother, Melanie (Holly Hunter). While trying to conceal her inner turmoil by excelling academically, she befriends the calculating Evie (Nikki Reed), her school's queen bee. Evie talks Tracy into experimenting with drugs, exploring her sexuality and pickpocketing strangers to finance shopping sprees -- but before long, Melanie realizes she must step in and stop her daughter's destructive lifestyle.",
+      trailer: "https://www.youtube.com/embed/TcQbMBfgZDs"
+    },
+    {
+      title: " Amelie",
+      director: "Jean-Pierre Jeunet",
+      duration: "1:32",
+      genre: "Drama",
+      actors: "Audrey Tautou, Mathieu Kassovitz",
+      file: "https://youtu.be/ZCRh1K7kYAo",
+      image: "../../assets/home/images/Drama/Amelie.jpg",
+      synopsis:
+        "'Amélie' is a fanciful comedy about a young woman who discretely orchestrates the lives of the people around her, creating a world exclusively of her own making. Shot in over 80 Parisian locations, acclaimed director Jean-Pierre Jeunet (Delicatessen; The City of Lost Children) invokes his incomparable visionary style to capture the exquisite charm and mystery of modern-day Paris through the eyes of a beautiful ingenue",
+      trailer: "https://www.youtube.com/embed/HUECWi5pX7o"
+    },
+    {
+      title: " El cisne negro",
+      director: "Darren Aronofsky",
+      duration: "1:26",
+      genre: "Drama",
+      actors: "Natalie Portman,Winona Ryder,Mila Kunis ",
+      file: "https://youtu.be/_ztdzJgMlj8",
+      image: "../../assets/home/images/Drama/CisneNegro.jpg",
+      synopsis: "Una bailarina empieza a perder el frágil sentido de la realidad cuando una compañera recién llegada amenaza con usurpar su posición en el papel principal de "El lago de los cisnes".",
+      trailer: "https://youtu.be/TL1YrE8ehx0"
+    },
+    {
+      title: "  La decisión de Anne",
+      director: "Nick Cassavetes",
+      duration: "1:34",
+      genre: "Drama",
+      actors: "Sofia Vassilieva, Olivia Hancock, Abigail Breslin, Cameron Díaz",
+      file: "https://youtu.be/iEQvfcX44SU",
+      image: "../../assets/home/images/Drama/LaDecisionDeAnne.jpg",
+      synopsis: "Concebida como donadora de médula ósea para su hermana enferma, Anna Fitzgerald ha sido sometida a innumerables cirugías y procedimientos médicos en su corta vida. A pesar de que no hay duda de que la vida de su hija mayor ha sido prolongada, la poca ortodoxa decisión de los padres de Anna ha sorprendido a toda la institución familiar. Cuando Anna demanda a sus padres por emancipación, la estabilidad de su familia se derrumba.",
+      trailer: "https://youtu.be/STNPvXvQBnk"
+    },
+    {
+      title: " Mentes Peligrosas",
+      director: "John N. Smith",
+      duration: "1:25",
+      genre: "Drama",
+      actors: "Michelle Pfeiffer, Wade Dominguez",
+      file: "https://youtu.be/PsEiuoVtNKs",
+      image: "../../assets/home/images/Drama/MentesPeligrosas.jpg",
+      synopsis: "Una profesora sin experiencia consigue un puesto de trabajo en una escuela en la que los jóvenes sufren muchos problemas sociales, pero, aún así, la maestra hará todo lo posible para que los estudiantes lleguen a graduarse.",
+      trailer: "https://youtu.be/e-_nWLGdIT0"
+    },
+    {
+      title: " Mi chica",
+      director: "Howard Zieff",
+      duration: "1:30",
+      genre: "Drama",
+      actors: "Anna Chlumsky, Jamie Lee Curtis",
+      file: "https://youtu.be/j0xj2IqOd3k",
+      image: "../../assets/home/images/Drama/MiChica.jpg",
+      synopsis: "Una hipocandríaca joven de 11 años experimenta seria confusión emocional, cuando su padre viudo se enamora de una mujer.",
+      trailer: "https://youtu.be/GreDP22A-0k"
+    },
+    {
+      title: " Noviembre Dulce",
+      director: "Pat O'Connor",
+      duration: "1:34",
+      genre: "Drama",
+      actors: "Charlize Theron, Keanu Reeves",
+      file: "https://youtu.be/LqIjAPVqHxI",
+      image: "../../assets/home/images/Drama/NoviembreDulce.jpg",
+      synopsis: "Un publicista fanático de su trabajo conoce a una encantadora chica quien promete cambiarle la vida en tan solo un mes.",
+      trailer: "https://youtu.be/9S5D2L-F7jc"
+    },
+    {
+      title: " Orgullo y prejuicio",
+      director: "Joe Wright",
+      duration: "1:23",
+      genre: "Drama",
+      actors: "Keira Knightley, Rosamund Pike ,Matthew Macfadyen",
+      file: "https://youtu.be/ibYVj0yNovw",
+      image: "../../assets/home/images/Drama/OrgulloYPrejuicio.jpg",
+      synopsis: "La señora Bennet ha criado a sus cinco hijas con el único deseo de encontrar marido. La llegada al vecindario de Charles Bingley, un joven rico y soltero, con algunas amistades despierta el interés de las hermanas Bennet y de las familias vecinas, que verán una excelente oportunidad para cumplir su propósito. Elizabeth, una de las hijas de los Bennet, empezará una singular relación con Darcy, uno de los amigos de Bingley, que desencadenará esta historia de orgullo y prejuicios entre los dos hasta llegar a conocer el verdadero amor. ",
+      trailer: "https://youtu.be/66scnTKeyYY"
+    },
+    {
+      title: " Un paseo para recordar",
+      director: "Adam Shankman",
+      duration: "1:41",
+      genre: "Drama",
+      actors: "Mandy Moore, Lauren German , Shane West",
+      file: "https://youtu.be/5hwjWgtcEGk",
+      image: "../../assets/home/images/Drama/UnPaseoParaRecordar.jpg",
+      synopsis: "Landon Carter se enamora de Jamie, la hija del reverendo. Es una historia de amor difícil entre dos chicos jóvenes que viven su primer noviazgo. Todo empieza en una inocente amistad que acaba en amor, pero un secreto que guarda Jamie en su interior hará que la relación de un giro inesperado. Un giro que Landon tendrá que asumir tomando una decisión rápida y determinante.",
+      trailer: "https://youtu.be/JxPI047J7Wc"
+  },
+---------------
+ {
+      title: " Algo pasa con Mary",
+      director: "Peter Farrelly, Bobby Farrelly",
+      duration: "2:14",
+      genre: "Comedia",
+      actors: "Cameron Diaz ,Ben Stiller,Matt Dillon",
+      file: "https://youtu.be/mYjM50llT9c",
+      image: "../../assets/home/images/Comedia/AlgoPasaConMary.jpg",
+      synopsis: "Ted Strohehmann ha vivido angustiado durante 14 años de su vida. La razón de su desgracia no es otra que la famosa Mary Jensen, la chica a la que todos desean y con la que por fin consigue tener una cita en la fiesta de graduación. Pero un desgraciado accidente con la cremallera del pantalón arruina sus planes. Ahora parece que tendrá otra oportunidad.",
+      trailer: "https://youtu.be/lW0RiZFJons"
+    },
+{
+      title: " Con faldas y a lo loco ",
+      director: " Billy Wilder",
+      duration: "2:12",
+      genre: "Comedia",
+      actors: "Marilyn Monroe,Tony Curtis",
+      file: "https://youtu.be/i8CF4NWihUU",
+      image: "../../assets/home/images/Comedia/ConFaldaYALoLoco.jpg",
+      synopsis: "Dos testigos de asesinatos se disfrazan de miembros de una banda de mujeres para confundir a la mafia que los persigue.",
+      trailer: "https://youtu.be/7R0DOhIQSWc"
+    },
+{
+      title: "Scary Movie",
+      director: "Keenen Ivory Wayans",
+      duration: "1:30",
+      genre: "Comedia",
+      actors: "Anna Faris, Regina Hal,Marlon Wayans",
+      file: "https://youtu.be/jFUFUmk5AQc",
+      image: "../../assets/home/images/Comedia/ScaryMovie.jpg",
+      synopsis: "Una parodia de los filmes de asesinatos donde un homicida vengativo acecha a un grupo de adolescentes.",
+      trailer: "https://youtu.be/Vn1uwEiTfMM"
+    },
+{
+      title: "Chicas Malas",
+      director: " Mark Waters",
+      duration: "1:37",
+      genre: "Comedia",
+      actors: "Lindsay Lohan,Tina Fey ,Rachel McAdams",
+      file: "https://youtu.be/U4oXGeOWCo4",
+      image: "../../assets/home/images/Comedia/ChicasMalas.jpg",
+      synopsis: "Recién entrando a la prepa, una adolescente entabla amistad con tres populares, pero también manipuladoras estudiantes.",
+      trailer: "https://youtu.be/zqeoAJp2MRs"
+    },
+{
+      title: " La boda de mi mejor amiga",
+      director: "Paul Feig",
+      duration: "2:12",
+      genre: "Comedia",
+      actors: "Kristen Wiig, Melissa McCarthy,Maya Rudolph",
+      file: "https://youtu.be/17ic5hibgjE",
+      image: "../../assets/home/images/Comedia/LaBodaDeMiMejorAmiga.jpg",
+      synopsis: "Annie es una mujer soltera cuya vida es un desastre, pero cuando ella descubre que su mejor amiga, Lillian, está comprometida, no tiene otra elección que ser su dama de honor. A pesar de estar soltera y sin dinero, Annie se enfrenta a los rituales extraños y caros asociados a sus responsabilidades como acompañante de la novia.",
+      trailer: "https://youtu.be/NQuoFfRpdSo"
+    },
+{
+      title: " Criminales en el mar ",
+      director: "Kyle Newacheck",
+      duration: "1:37",
+      genre: "Comedia",
+      actors: "Jennifer Aniston , Gemma Arterton ,Shiori Kutsuna",
+      file: "https://youtu.be/sTU2dPXEQnc",
+      image: "../../assets/home/images/Comedia/CriminalesEnElMar.jpg",
+      synopsis: "Un policía de Nueva York y su esposa se van de vacaciones a Europa para revitalizar el amor en su matrimonio. Un encuentro casual los lleva a ser acusados del asesinato de un billonario anciano.",
+      trailer: "https://youtu.be/sTU2dPXEQnc"
+    },
+{
+      title: " No es romantico ?",
+      director: "Todd Strauss-Schulson",
+      duration: "1:29",
+      genre: "Comedia",
+      actors: "Rebel Wilson, Priyanka Chopra,Adam DeVine",
+      file: "https://youtu.be/K7nXNL5vSbM",
+      image: "../../assets/home/images/Comedia/NoEsRomantico.jpg",
+      synopsis: "Natalie es una arquitecta neoyorquina que siempre ha tratado el amor con cinismo. Su peor pesadilla se convierte en realidad cuando, después de quedar inconsciente al ser atacada en el metro, despierta atrapada en una comedia romántica",
+      trailer: "https://youtu.be/cD-XeEqKz00"
+    },
+{
+      title: "Dos rubias de pelo en pecho",
+      director: " Keenen Ivory Wayans",
+      duration: "1:55",
+      genre: "Comedia",
+      actors: "Maitland Ward , Busy Philipps ,Marlon Wayans ,Shawn Wayans",
+      file: "https://youtu.be/Y9gkr34y1AY",
+      image: "../../assets/home/images/Comedia/DosRubiasDePechoEnPecho.jpg",
+      synopsis: "Dos torpes agentes del FBI se hacen pasar por dos chicas de la alta sociedad para investigar una serie de secuestros. No obstante, mientras preparan su plan, descubren que irrumpir en la clase privilegiada es mucho más duro de lo que creían.",
+      trailer: "https://youtu.be/UxER50XHW-I"
+    },
+{
+      title: " The babysister",
+      director: "Joseph McGinty Nichol",
+      duration: "1:25",
+      genre: "Comedia",
+      actors: "Samara Weaving, Bella Thorne ,Judah Lewis",
+      file: "https://youtu.be/Nl_t8h5KYbk",
+      image: "../../assets/home/images/Comedia/TheBabySyster.jpg",
+      synopsis: "Cole descubre que su niñera forma parte de una secta satánica y hará lo que sea necesario para que él no la delate.",
+      trailer: "https://youtu.be/UC7sX17JJ98"
+    },
+------------------------
+
+{
+      title: "El diario de Noa",
+      director: " Nick Cassavetes",
+      duration: "2:04",
+      genre: "Romance",
+      actors: "Rachel McAdams,Ryan Gosling,Gena Rowlands",
+      file: "https://youtu.be/QoC8q9Oc2w8",
+      image: "../../assets/home/images/Romance/ElDiarioDeNoa.jpg",
+      synopsis: "Un hombre le cuenta a una mujer la historia de dos jóvenes que se volvieron amantes en la Carolina del Norte de 1940.",
+      trailer: "https://youtu.be/QoC8q9Oc2w8"
+    },
+{
+      title: "Pretty Woman ",
+      director: "Garry Marshall",
+      duration: "2:05",
+      genre: "Romance",
+      actors: "Julia Roberts,Laura San Giacomo,Richard Gere",
+      file: "https://youtu.be/U6sYHNalJ94",
+      image: "../../assets/home/images/Romance/PrettyWoman.jpg",
+      synopsis: "Un elegante empresario hace el esmerado intento de adaptar a una mujer a las reglas de una sofisticada empresa de negocios.",
+      trailer: "https://youtu.be/vs1FJiwLGY8"
+    },
+{
+      title: "10 razones para odiarte ",
+      director: "Gil Junger",
+      duration: "1:39 ",
+      genre: "Romance",
+      actors: "Julia Stiles,Gabrielle Union,Joseph Gordon‑L,Heath Ledger",
+      file: "https://youtu.be/R2GH5rFuj3I",
+      image: "../../assets/home/images/Romance/10RazonesParaOdiarte.jpg",
+      synopsis: "Las hermanas Stratford son muy distintas. La bella y popular Bianca nunca ha salido con un chico, pero lo está deseando, y Kat, su hermana mayor, es arisca y con mal genio. Su padre no deja que Bianca tenga novio hasta que Kat consiga uno.",
+      trailer: "https://youtu.be/M-xbLGjpDNk"
+    },
+{
+      title: "Titanic ",
+      director: " James Cameron",
+      duration: "3:16",
+      genre: "Romance",
+      actors: "Kate Winslet,Leonardo DiCaprio,Gloria Stuart",
+      file: "https://youtu.be/a8_CTURkRVM",
+      image: "../../assets/home/images/Romance/Titanic.jpg",
+      synopsis: "Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural.",
+      trailer: "https://youtu.be/2e-eXJ6HgkQ"
+    },
+{
+      title: "500 días juntos",
+      director: "Marc Webb",
+      duration: "1:37",
+      genre: "Romance",
+      actors: "Zooey Deschanel, Joseph Gordon, Chloë Grace Moretz",
+      file: "https://youtu.be/NBB-1AP-wMo",
+      image: "../../assets/home/images/Romance/500DiasConElla.jpg",
+      synopsis: "Tom, un escritor de tarjetas de felicitación y un romántico desesperado, se sorprende totalmente cuando su novia, Summer, repentinamente lo abandona. Él analiza los 500 días que pasaron juntos para intentar descubrir en que parte falló su relación amorosa y en el proceso, Tom redescubre sus verdaderas pasiones en la vida.",
+      trailer: "https://youtu.be/PEdNyYpFprw"
+    },
+{
+      title: "La boda de mi mejor amigo ",
+      director: "P. J. Hogan",
+      duration: "1:44",
+      genre: "Romance",
+      actors: "Julia Roberts, Dermot Mulroney,Cameron Diaz",
+      file: "https://youtu.be/tkpEk7XaWKo",
+      image: "../../assets/home/images/Romance/LaBodaDeMiMejorAmigo.jpg",
+      synopsis: "Una chica se percata que ama a su mejor amigo y trata de arruinar su boda con una heredera de buen carácter.",
+      trailer: "https://youtu.be/as4XBR9uhMc"
+    },
+{
+      title: "Lo que el viento se llevo ",
+      director: "Victor Fleming",
+      duration: "3:58",
+      genre: "Romance",
+      actors: "Vivien Leigh, Clark Gable, Olivia de Havilland",
+      file: "https://youtu.be/Qu_eo3t6bRM",
+      image: "../../assets/home/images/Romance/LoQueElVientoSeLlevo.jpg",
+      synopsis: "Este drama épico de la Guerra Civil se centra en la vida de la petulante belleza sureña Scarlett O'Hara. Desde la idílica hospitalidad de su gran plantación, la película narra su supervivencia a través de la historia trágica del Sur durante la Guerra Civil y la Reconstrucción, y sus enredados amorosos con Ashley Wilkes y Rhett Butler.",
+      trailer: "https://youtu.be/UAO0gEi4Nqc"
+    },
+{
+      title: "Love Actually ",
+      director: "Richard Curtis",
+      duration: "2:25",
+      genre: "Romance",
+      actors: "Keira Knightley,Hugh Grant,Liam Neeson",
+      file: "https://youtu.be/B7u6bMBlCXw",
+      image: "../../assets/home/images/Romance/LoveActually.jpg",
+      synopsis: "Un primer ministro, un empleado de oficina, una estrella pop, un escritor y otros más lidian con su relación en Londres.",
+      trailer: "https://youtu.be/fOS-HMiVejo"
+    },
+{
+      title: " Ghost",
+      director: "Jerry Zucker",
+      duration: "2:09",
+      genre: "Romance",
+      actors: "Demi Moore,Whoopi Goldberg",
+      file: "https://youtu.be/b9bYucT9IX8",
+      image: "../../assets/home/images/Romance/Ghost.jpg",
+      synopsis: "Un joven asesinado de Manhattan entra en contacto con su querida amada gracias a la ayuda de una misteriosa mujer que puede hablar con los muertos.",
+      trailer: "https://youtu.be/LuX3-aJTiZA"
+    },
+    ------------------
+    {
+      title: " El viaje de Chihiro",
+      director: "Hayao Miyazaki",
+      duration: "2:05",
+      genre: "Anime",
+      actors: "Haku,Kaonashi,Bō",
+      file: "https://youtu.be/YdqqYlYaXi0",
+      image: "../../assets/home/images/Anime/ElViajeDeChihiro.jpg",
+      synopsis: "Perdida en el bosque, una niña (Rumi Hîragi) de 10 años conoce animales, fantasmas y criaturas extrañas.",
+      trailer: "https://youtu.be/YgO6g_gHtaE"
+    },
+{
+      title: "Mi vecino Totoro",
+      director: "Hayao Miyazaki",
+      duration: "1:40",
+      genre: "Anime",
+      actors: "Gatobús,Mei Kusakabe,Satsuki Kusakabe,Tatsuo Kusakabe",
+      file: "https://youtu.be/92a7Hj0ijLs",
+      image: "../../assets/home/images/Anime/MiVecinoTotoro.jpg",
+      synopsis: "Esta historia animada del director Hayao Miyazaki sigue a las estudiantes y hermanas Satsuke y Mei mientras se establecen en su casa de campo con su padre y esperan a que su madre se recupere de una enfermedad en un hospital del área. Cuando las hermanas exploran su nueva casa, descubren y hacen amistad con unos duendes juguetones, y en el bosque cercano encuentran a una enorme criatura conocida como Totoro.",
+      trailer: "https://youtu.be/PCpekfjA-xE"
+    },
+{
+      title: "La princesa Mononoke ",
+      director: "Hayao Miyazaki",
+      duration: "2:14",
+      genre: "Anime",
+      actors: "Gillian Anderson,Claire Danes",
+      file: "https://youtu.be/4OiMOHRDs14",
+      image: "../../assets/home/images/Anime/LaPrincesaMononoke.jpg",
+      synopsis: "Un príncipe se ve involucrado en un conflicto entre una princesa del bosque y el abuso de la mecanización.",
+      trailer: "https://youtu.be/A_vKi1q34NE"
+    },
