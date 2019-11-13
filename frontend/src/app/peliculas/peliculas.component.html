@@ -1,69 +1,85 @@
 <div class="contenedorGlobal">
-    <app-nav-genders></app-nav-genders>
-    <app-releases></app-releases>
-    <div class="barraYContenido">
-        <div class="barraLateral white normal rbt-300">
-            <ul>
-                <li class="genero listaGenero">
-                    <a href="#Drama" class="link gray genreTitleMenu" target="_self">
-                        Drama
-                    </a>
-                </li>
-                <li class="genero listaGenero">
-                    <a href="#Comedia" class="link gray genreTitleMenu">
-                        Comedia
-                    </a>
-                </li>
-                <li class="genero listaGenero">
-                    <a href="#Romance" class="link gray genreTitleMenu">
-                        Romance
-                    </a>
-                </li>
-                <li class="genero listaGenero">
-                    <a href="#Anime" class="link gray genreTitleMenu">
-                        Anime
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="padding20" id="Drama">
-                <p class="white medium rbt-300 genreTitle">Drama</p>
-                <div class="gridPeliculas">
-                    <div *ngFor="let dramaMovie of dramaMovies" class="pelicula" (click)="mostrarPelicula(dramaMovie)">
-                        <img [src]="dramaMovie.image" alt="" class="imagenPelicula" />
-                        <p class="white normal rbt-300">{{ dramaMovie.title }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="padding20" id="Comedia">
-                <p class="white medium rbt-300 genreTitle">Comedia</p>
-                <div class="gridPeliculas">
-                    <div *ngFor="let comedyMovie of comedyMovies" class="pelicula" (click)="mostrarPelicula(comedyMovie)">
-                        <img [src]="comedyMovie.image" alt="" class="imagenPelicula" />
-                        <p class="white normal rbt-300">{{ comedyMovie.title }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="padding20" id="Romance">
-                <p class="white medium rbt-300 genreTitle">Romance</p>
-                <div class="gridPeliculas">
-                    <div *ngFor="let romanceMovie of romanceMovies" class="pelicula" (click)="mostrarPelicula(romanceMovie)">
-                        <img [src]="romanceMovie.image" alt="" class="imagenPelicula" />
-                        <p class="white normal rbt-300">{{ romanceMovie.title }}</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="padding20" id="Anime">
-                <p class="white medium rbt-300 genreTitle">Anime</p>
-                <div class="gridPeliculas">
-                    <div *ngFor="let animeMovie of animeMovies" class="pelicula" (click)="mostrarPelicula(animeMovie)">
-                        <img [src]="animeMovie.image" alt="" class="imagenPelicula" />
-                        <p class="white normal rbt-300">{{ animeMovie.title }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <app-nav-genders></app-nav-genders>
+  <app-releases></app-releases>
+  <div class="barraYContenido">
+    <div class="barraLateral white normal rbt-300">
+      <ul>
+        <li class="genero listaGenero">
+          <a href="#Drama" class="link gray genreTitleMenu" target="_self">
+            Drama
+          </a>
+        </li>
+        <li class="genero listaGenero">
+          <a href="#Comedia" class="link gray genreTitleMenu">
+            Comedia
+          </a>
+        </li>
+        <li class="genero listaGenero">
+          <a href="#Romance" class="link gray genreTitleMenu">
+            Romance
+          </a>
+        </li>
+        <li class="genero listaGenero">
+          <a href="#Anime" class="link gray genreTitleMenu">
+            Anime
+          </a>
+        </li>
+      </ul>
     </div>
+    <div class="content">
+      <div class="padding20" id="Drama">
+        <p class="white medium rbt-300 genreTitle">Drama</p>
+        <div class="gridPeliculas">
+          <div
+            *ngFor="let dramaMovie of dramaMovies"
+            class="pelicula"
+            (click)="mostrarPelicula(dramaMovie)"
+          >
+            <img [src]="dramaMovie.image" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ dramaMovie.title }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="padding20" id="Comedia">
+        <p class="white medium rbt-300 genreTitle">Comedia</p>
+        <div class="gridPeliculas">
+          <div
+            *ngFor="let comedyMovie of comedyMovies"
+            class="pelicula"
+            (click)="mostrarPelicula(comedyMovie)"
+          >
+            <img [src]="comedyMovie.image" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ comedyMovie.title }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="padding20" id="Romance">
+        <p class="white medium rbt-300 genreTitle">Romance</p>
+        <div class="gridPeliculas">
+          <div
+            *ngFor="let romanceMovie of romanceMovies"
+            class="pelicula"
+            (click)="mostrarPelicula(romanceMovie)"
+          >
+            <img [src]="romanceMovie.image" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ romanceMovie.title }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="padding20" id="Anime">
+        <p class="white medium rbt-300 genreTitle">Anime</p>
+        <div class="gridPeliculas">
+          <div
+            *ngFor="let animeMovie of animeMovies"
+            class="pelicula"
+            (click)="mostrarPelicula(animeMovie)"
+          >
+            <img [src]="animeMovie.image" alt="" class="imagenPelicula" />
+            <p class="white normal rbt-300">{{ animeMovie.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
