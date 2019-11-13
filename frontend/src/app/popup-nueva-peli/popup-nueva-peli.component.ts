@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 
 @Component({
   selector: "app-popup-nueva-peli",
@@ -7,7 +8,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
   styleUrls: ["./popup-nueva-peli.component.css"]
 })
 export class PopupNuevaPeliComponent implements OnInit {
-  constructor(private builder: FormBuilder) {}
+  constructor(private builder: FormBuilder, private dialogRef: MatDialogRef<PopupNuevaPeliComponent>) { }
 
   newMovieForm: FormGroup = this.builder.group({
     title: ["", Validators.required],
@@ -20,5 +21,24 @@ export class PopupNuevaPeliComponent implements OnInit {
     synopsis: ["", Validators.required]
   });
 
-  ngOnInit() {}
+  ngOnInit() { }
+  onSubmit() {
+    const dataobj = {
+      title: this.newMovieForm.value.title,
+      genre: this.newMovieForm.value.genre,
+      director: this.newMovieForm.value.director,
+      duration: this.newMovieForm.value.duration,
+      actors: this.newMovieForm.value.actors,
+      file: this.newMovieForm.value.file,
+      image: this.newMovieForm.value.image,
+      synopsis: this.newMovieForm.value.synopsis
+    }
+
+    console.log('-----', dataobj);
+    this.close();
+  }
+
+  close() {
+    this.dialogRef.close(this.newMovieForm);
+  }
 }

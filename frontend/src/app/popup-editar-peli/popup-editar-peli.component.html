@@ -1,1 +1,22 @@
-<p>popup-editar-peli works!</p>
+<form [formGroup]="actualizarPeliForm" class="formularioActuPelicula">
+
+    <label class="selectFile">Titulo de la película</label>
+    <input formControlName="title" type="text" [value]="tituloPelicula" />
+
+    <label class="selectFile">Género</label>
+    <input formControlName="genre" type="text" [value]="genre" />
+
+    <label class="selectFile">Director</label>
+    <input formControlName="director" type="text" [value]="director" />
+
+    <label class="selectFile">Duración</label>
+    <input formControlName="duration" type="text" [value]="duration" />
+
+    <label class="selectFile">Protagonistas</label>
+    <input formControlName="actors" type="text" [value]="actors" />
+
+    <label class="selectFile">Sinopsis</label>
+    <input formControlName="synopsis" type="text" [value]="synopsis" />
+
+    <button (click)="onSubmit()" class="botonGuardar small white">Guardar</button>
+</form>
