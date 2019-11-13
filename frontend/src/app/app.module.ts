@@ -22,7 +22,8 @@ import {
   MatSortModule,
   MatTableModule,
   MatTabsModule,
-  MatIconModule
+  MatIconModule,
+  MatMenuModule
 } from "@angular/material";
 
 import { NavComponent } from "./nav/nav.component";
@@ -118,7 +119,8 @@ const routes: Routes = [
     MatDialogModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],

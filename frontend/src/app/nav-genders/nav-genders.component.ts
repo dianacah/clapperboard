@@ -13,8 +13,8 @@ export class NavGendersComponent implements OnInit {
   constructor(private userInformationService: UserInformationService) {}
 
   ngOnInit() {
-    /*     this.user = this.userInformationService.getInformation();
+    this.user = this.userInformationService.getUser();
     this.userName = this.user.name;
- */
+ 
   }
 }

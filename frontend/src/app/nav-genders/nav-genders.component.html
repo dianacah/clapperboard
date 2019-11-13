@@ -1,10 +1,14 @@
 <nav>
-    <a routerLink="/home"><img class="logo" src="../../assets/logo.png" alt="" /></a>
+    <a routerLink="/ver-peliculas"><img class="logo" src="../../assets/logo.png" alt="" /></a>
     <a href="#Drama" class="white">Drama</a>
     <a href="#Comedia" class="white">Comedia</a>
     <a href="#Romance" class="white">Romance</a>
     <a href="#Anime" class="white">Anime</a>
     <a routerLink="/search" class="logIn white">Buscar</a>
-    <a routerLink="/perfil" class="white">{{userName}}</a>
+    <button mat-button [matMenuTriggerFor]="menu">{{userName}}</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/perfil">Perfil</button>
+        <button mat-menu-item routerLink="/home">Cerrar Sesión</button>
+    </mat-menu>
 
 </nav>
