@@ -9,7 +9,7 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   public passwordDB;
-  public wrongPass: boolean = true;
+  public wrongPass: boolean = false;
   public noRegistrado: boolean = true;
 
   constructor(
@@ -29,16 +29,26 @@ export class LoginComponent implements OnInit {
     this.loginService.getLogin(email).subscribe((response: any) => {
       console.log("usuario", response);
       if (response == null) {
-      }
-      this.passwordDB = response.password;
-      if (user.password != this.passwordDB) {
-        this.router.navigate(["/welcome"]);
         this.wrongPass = false;
-      } else {
-        this.router.navigate(["/perfil"]);
+        this.noRegistrado = false;
+        console.log("validacion null");
+      } else if (response != null) {
+        this.passwordDB = response.password;
+        this.noRegistrado = true;
+        console.log("no es null");
+        if (user.password != this.passwordDB) {
+          console.log("validacion", user.password != this.passwordDB);
+          /*  this.router.navigate(["/welcome"]); */
+          this.wrongPass = true;
+        } else {
+          console.log("ingreso correcto");
+          this.router.navigate(["/perfil"]);
+        }
       }
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.wrongPass, this.noRegistrado);
+  }
 }
