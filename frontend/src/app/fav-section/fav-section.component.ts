@@ -7,7 +7,6 @@ import {
 } from "@angular/material";
 import { PutFavoritosService } from "./../services/putfavoritos/put-favoritos.service";
 
-
 @Component({
   selector: "fav-section",
   templateUrl: "./fav-section.component.html",
@@ -16,14 +15,13 @@ import { PutFavoritosService } from "./../services/putfavoritos/put-favoritos.se
 export class FavSectionComponent implements OnInit {
   constructor(
     private dialog: MatDialog,
-    private userInformationService: UserInformationService, 
+    private userInformationService: UserInformationService,
     private putFavoritosService: PutFavoritosService
-
   ) {}
 
   public popup;
   public user;
-  public peliculasFavoritas: any =[];
+  public peliculasFavoritas: any = [];
 
   /* addMoviesFav(pelicula) {
     let dialogConfig = this.openDialog();
@@ -42,13 +40,11 @@ export class FavSectionComponent implements OnInit {
     return dialogConfig;
   } */
 
-
   ngOnInit() {
     this.user = this.userInformationService.getUser();
-    console.log(this.user);
+    console.log("usuario", this.user);
 
-    this.peliculasFavoritas = this.user.peliculasFavoritas
-    console.log(this.user.peliculasFavoritas);
-     }
+    this.peliculasFavoritas = this.user.favoriteMovies;
+    console.log(this.user.favoriteMovies);
   }
-
+}
