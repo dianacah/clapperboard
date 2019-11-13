@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 export class UserInformationService {
   private userInfo: any = {};
 
-  constructor() {}
+  constructor() { }
 
   setUser(user) {
     this.userInfo = user;
@@ -14,6 +14,10 @@ export class UserInformationService {
 
   getUser() {
     return this.userInfo;
+  }
+
+  putUser() {
+    return this.userInfo
   }
   /* 
   setInformation(user) {

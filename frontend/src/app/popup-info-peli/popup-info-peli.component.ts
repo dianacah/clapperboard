@@ -1,3 +1,4 @@
+import { UserInformationService } from './../services/User-Information/user-information.service';
 import { Component, OnInit, Inject } from "@angular/core";
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 import { DomSanitizer } from "@angular/platform-browser";
@@ -11,9 +12,12 @@ export class PopupInfoPeliComponent implements OnInit {
   public movie;
   public srcMovie;
 
+  enviarPeliculaFav: any = {};
+
   constructor(
     private sanitizer: DomSanitizer,
     private dialogRef: MatDialogRef<PopupInfoPeliComponent>,
+    private userInformationService: UserInformationService,
     @Inject(MAT_DIALOG_DATA) data
   ) {
     this.movie = data;
@@ -24,5 +28,12 @@ export class PopupInfoPeliComponent implements OnInit {
     this.dialogRef.close(this.movie);
   }
 
-  ngOnInit() {}
+  enviarFavorito(movie) {
+    console.log(movie);
+    /* this.userInformationService.putUser().subscribe((response = {}) => {
+     this.enviarPeliculaFav = response;
+     console.log("respuesta", this.enviarPeliculaFav)
+   });  */
+  }
+  ngOnInit() { }
 }
