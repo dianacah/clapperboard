@@ -1,3 +1,4 @@
+import { GetMovieService } from './../services/getMovie/get-movie.service';
 import { Component, OnInit } from "@angular/core";
 import { NgbCarouselConfig } from "@ng-bootstrap/ng-bootstrap";
 
@@ -8,7 +9,12 @@ import { NgbCarouselConfig } from "@ng-bootstrap/ng-bootstrap";
   providers: [NgbCarouselConfig]
 })
 export class ReleasesComponent implements OnInit {
-  constructor(config: NgbCarouselConfig) {
+
+  infoMovies: any = {}
+
+  constructor(
+    private getMovieService: GetMovieService,
+    config: NgbCarouselConfig) {
     config.showNavigationIndicators = false;
   }
 
@@ -61,5 +67,12 @@ export class ReleasesComponent implements OnInit {
     }
   ];
 
-  ngOnInit() {}
+  getInfoMovie(movie) {
+    this.getMovieService.getMovie().subscribe((res = {}) => {
+      this.infoMovies = res;
+      console.log("respuesta", this.infoMovies)
+    })
+  }
+
+  ngOnInit() { }
 }

@@ -30,9 +30,9 @@
             <div class="padding20" id="Drama">
                 <p class="white medium rbt-300 genreTitle">Drama</p>
                 <div class="gridPeliculas">
-                    <div *ngFor="let pelicula of drama" class="pelicula" (click)="mostrarPelicula(pelicula)">
-                        <img [src]="pelicula.image" alt="" class="imagenPelicula" />
-                        <p class="white normal rbt-300">{{ pelicula.title }}</p>
+                    <div *ngFor="let movie of infoMovies" class="pelicula" (click)="mostrarPelicula(movie)">
+                        <img [src]="movie.image" alt="" class="imagenPelicula" />
+                        <p class="white normal rbt-300">{{ movie.title }}</p>
                     </div>
                 </div>
             </div>

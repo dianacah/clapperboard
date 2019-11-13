@@ -1,3 +1,4 @@
+import { GetMovieService } from './../services/getMovie/get-movie.service';
 import { Component, OnInit } from "@angular/core";
 import {
   MatDialog,
@@ -13,6 +14,9 @@ import { PeliculaAReproducirService } from "./../services/PeliculaAReproducir/pe
   styleUrls: ["./peliculas.component.css"]
 })
 export class PeliculasComponent implements OnInit {
+  
+  public infoMovies: any = [];
+
   public generos = ["Drama", "Comedia", "Romance", "Anime"];
   public drama = [
     {
@@ -119,6 +123,7 @@ export class PeliculasComponent implements OnInit {
   ];
   public popup;
   constructor(
+    private getMovieService: GetMovieService,
     private dialog: MatDialog,
     private peliculaAReproducirService: PeliculaAReproducirService
   ) {}
@@ -152,5 +157,13 @@ export class PeliculasComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  getInfoMovie() {
+    this.getMovieService.getMovie().subscribe((res = {}) => {
+      this.infoMovies = res;
+      console.log("respuesta", this.infoMovies)
+    })
+  }
+  ngOnInit() {
+    this.getInfoMovie()
+  }
 }
