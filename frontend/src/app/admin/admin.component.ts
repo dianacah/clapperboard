@@ -1,3 +1,4 @@
+import { GetMovieService } from './../services/getMovie/get-movie.service';
 import { Component, OnInit } from "@angular/core";
 import { PopupNuevaPeliComponent } from "./../popup-nueva-peli/popup-nueva-peli.component";
 import {
@@ -5,6 +6,8 @@ import {
   MatDialogConfig,
   MatTableDataSource
 } from "@angular/material";
+import { PopupEditarPeliComponent } from '../popup-editar-peli/popup-editar-peli.component';
+
 
 @Component({
   selector: "app-admin",
@@ -12,6 +15,9 @@ import {
   styleUrls: ["./admin.component.css"]
 })
 export class AdminComponent implements OnInit {
+
+  public infoMovies: any = [];
+
   public dataSource = [
     {
       imagen: "../../assets/home/images/Drama/CisneNegro.jpg",
@@ -61,10 +67,10 @@ export class AdminComponent implements OnInit {
   ];
   tableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
   public popup;
-  agregarPelicula() {
-    let dialogConfig = this.openDialog();
-    this.popup = this.dialog.open(PopupNuevaPeliComponent, dialogConfig);
-  }
+
+  constructor(
+    private dialog: MatDialog,
+    private getMovieService: GetMovieService) { }
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -74,7 +80,26 @@ export class AdminComponent implements OnInit {
     dialogConfig.height = "450px";
     return dialogConfig;
   }
-  constructor(private dialog: MatDialog) { }
 
-  ngOnInit() { }
+  agregarPelicula() {
+    let dialogConfig = this.openDialog();
+    this.popup = this.dialog.open(PopupNuevaPeliComponent, dialogConfig);
+  }
+  editarPelicula(event) {
+    console.log(event);
+    let dialogConfig = this.openDialog();
+    this.popup = this.dialog.open(PopupEditarPeliComponent, dialogConfig);
+  }
+
+  getInfoMovie() {
+    this.getMovieService.getMovie().subscribe((res = {}) => {
+      this.infoMovies = res;
+      console.log("funciona", this.infoMovies)
+    })
+  }
+
+
+  ngOnInit() {
+    this.getInfoMovie()
+  }
 }
