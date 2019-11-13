@@ -1,17 +1,15 @@
 import { Component, OnInit } from "@angular/core";
+import { NgbCarouselConfig } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-releases",
   templateUrl: "./releases.component.html",
-  styleUrls: ["./releases.component.css"]
+  styleUrls: ["./releases.component.css"],
+  providers: [NgbCarouselConfig]
 })
 export class ReleasesComponent implements OnInit {
-  public images: Array<string>;
-
-  constructor() {
-    this.images = [944, 1011, 984].map(
-      n => `https://picsum.photos/id/${n}/900/500`
-    );
+  constructor(config: NgbCarouselConfig) {
+    config.showNavigationIndicators = false;
   }
 
   public movies = [

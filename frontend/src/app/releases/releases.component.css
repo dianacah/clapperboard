@@ -1,8 +1,15 @@
 .wrapper {
-  background-color: #191257;
   height: calc(100vh - 70px);
 }
-img {
+.releaseImg {
   height: calc(100vh - 70px);
   width: 100%;
+}
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: left;
+  line-height: 20px;
+  justify-items: center;
 }
