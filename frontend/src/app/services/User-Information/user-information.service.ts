@@ -1,20 +1,18 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class UserInformationService {
+  private userInfo: any = {};
 
-  private userInfo;
-  public userInformation;
+  constructor() {}
 
-  constructor() { }
-  
-   setUser(user){
+  setUser(user) {
     this.userInfo = user;
   }
 
-    getUser(){
+  getUser() {
     return this.userInfo;
   }
   /* 
