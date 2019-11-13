@@ -14,8 +14,13 @@ import { PeliculaAReproducirService } from "./../services/PeliculaAReproducir/pe
   styleUrls: ["./peliculas.component.css"]
 })
 export class PeliculasComponent implements OnInit {
-  
-  public infoMovies: any = [];
+
+  public infoMovies: any = []
+  public dramaMovies: any = []
+  public comedyMovies: any = []
+  public romanceMovies: any = []
+  public animeMovies: any = []
+
 
   public generos = ["Drama", "Comedia", "Romance", "Anime"];
   public drama = [
@@ -126,7 +131,7 @@ export class PeliculasComponent implements OnInit {
     private getMovieService: GetMovieService,
     private dialog: MatDialog,
     private peliculaAReproducirService: PeliculaAReproducirService
-  ) {}
+  ) { }
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -161,9 +166,30 @@ export class PeliculasComponent implements OnInit {
     this.getMovieService.getMovie().subscribe((res = {}) => {
       this.infoMovies = res;
       console.log("respuesta", this.infoMovies)
+
+      this.dramaMovies = this.infoMovies.filter( movie => {
+        movie.genre == "Drama"
+        return this.dramaMovies
+      })
+
+      this.comedyMovies = this.infoMovies.filter( movie => {
+        movie.genre == "Comedia"
+        return this.comedyMovies
+      })
+
+      this.romanceMovies = this.infoMovies.filter( movie => {
+        movie.genre == "Romance"
+        return this.romanceMovies
+      })
+
+      this.animeMovies = this.infoMovies.filter( movie => {
+        movie.genre == "Anime"
+        return this.animeMovies
+      })
     })
   }
+
   ngOnInit() {
-    this.getInfoMovie()
+    this.getInfoMovie();   
   }
 }

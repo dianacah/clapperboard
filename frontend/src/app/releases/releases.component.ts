@@ -11,6 +11,10 @@ import { NgbCarouselConfig } from "@ng-bootstrap/ng-bootstrap";
 export class ReleasesComponent implements OnInit {
 
   infoMovies: any = {}
+  dramaMovies: any = {}
+  comedyMovies: any = {}
+  romanceMovies: any = {}
+  animeMovies: any = {}
 
   constructor(
     private getMovieService: GetMovieService,
