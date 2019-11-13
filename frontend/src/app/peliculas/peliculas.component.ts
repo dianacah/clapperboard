@@ -22,7 +22,7 @@ export class PeliculasComponent implements OnInit {
   public animeMovies: any = []
 
   public popup;
-  
+
   constructor(
     private getMovieService: GetMovieService,
     private dialog: MatDialog,
@@ -49,7 +49,8 @@ export class PeliculasComponent implements OnInit {
       file: pelicula.file,
       image: pelicula.image,
       synopsis: pelicula.synopsis,
-      trailer: pelicula.trailer
+      trailer: pelicula.trailer,
+      movieId: pelicula._id
     };
     this.popup = this.dialog.open(PopupInfoPeliComponent, dialogConfig);
     this.popup.afterClosed().subscribe(response => {
@@ -63,25 +64,25 @@ export class PeliculasComponent implements OnInit {
       this.infoMovies = res;
       console.log("respuesta", this.infoMovies)
 
-      this.dramaMovies = this.infoMovies.filter( movie => {
+      this.dramaMovies = this.infoMovies.filter(movie => {
         return movie.genre == "Drama"
       })
 
-      this.comedyMovies = this.infoMovies.filter( movie => {
+      this.comedyMovies = this.infoMovies.filter(movie => {
         return movie.genre == "Comedia"
       })
 
-      this.romanceMovies = this.infoMovies.filter( movie => {
+      this.romanceMovies = this.infoMovies.filter(movie => {
         return movie.genre == "Romance"
       })
 
-      this.animeMovies = this.infoMovies.filter( movie => {
+      this.animeMovies = this.infoMovies.filter(movie => {
         return movie.genre == "Anime"
       })
     })
   }
 
   ngOnInit() {
-    this.getInfoMovie();   
+    this.getInfoMovie();
   }
 }
