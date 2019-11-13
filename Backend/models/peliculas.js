@@ -30,6 +30,9 @@ const moviesSchema = new Schema({
     },
     synopsis: {
         type:String
+    },
+    release: {
+        type:Boolean
     }
 
 });
