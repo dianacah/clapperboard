@@ -30,10 +30,14 @@
   >
     Inicia sesión
   </button>
-  <p *ngIf="wrongPass != false; then null; else mensajeError"></p>
-  <p class="error">
+  <p *ngIf="wrongPass != false" class="error">
     ¡Ups!, los datos que ingresaste no son correctos, por favor verifica tu
     usuario y contraseña
   </p>
+
+  <p *ngIf="noRegistrado == false" class="error">
+    ¡Ups!, usuario no registrado
+  </p>
+
   <a routerLink="/home" class="very-small rbt-300">Regresar</a>
 </form>
