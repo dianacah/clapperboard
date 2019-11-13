@@ -1,9 +1,8 @@
-import { RegistryUserService } from './../../services/Registry/registry-user.service';
-import { UserInformationService } from './../../services/User-Information/user-information.service';
+import { RegistryUserService } from "./../../services/Registry/registry-user.service";
+import { UserInformationService } from "./../../services/User-Information/user-information.service";
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-
 
 @Component({
   selector: "app-signup",
@@ -11,14 +10,14 @@ import { Router } from "@angular/router";
   styleUrls: ["./signup.component.css"]
 })
 export class SignupComponent implements OnInit {
-
-  guardarInformacion: any = {}
+  guardarInformacion: any = {};
 
   constructor(
-    private builder: FormBuilder, 
+    private builder: FormBuilder,
     private userInformationService: UserInformationService,
     private registryUserService: RegistryUserService,
-    private router: Router ) {}
+    private router: Router
+  ) {}
 
   signupForm: FormGroup = this.builder.group({
     name: ["", Validators.required],
@@ -30,17 +29,15 @@ export class SignupComponent implements OnInit {
     ]
   });
 
-  enviarInformacion(signupForm){
-    /* this.registryUserService.postRegistry(signupForm); */
-    let usuarioNuevo = signupForm.value
-    this.registryUserService.postRegistry(usuarioNuevo).subscribe((response = {})=>{
-      this.guardarInformacion = response;
-      console.log("respuesta", this.guardarInformacion)
-     /*  let imgUsuario = localStorage.setItem("image", this.guardarInformacion.image*/
-     this.userInformationService.setUser(this.guardarInformacion );
-   /*  this.router.navigate(["/#/perfil"]) */
-  });
-}
+  enviarInformacion(signupForm) {
+    let usuarioNuevo = signupForm.value;
+    this.registryUserService
+      .postRegistry(usuarioNuevo)
+      .subscribe((response = {}) => {
+        this.guardarInformacion = response;
+        this.userInformationService.setUser(this.guardarInformacion);
+      });
+  }
 
   ngOnInit() {}
 }

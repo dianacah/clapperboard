@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { UserInformationService } from "./../services/User-Information/user-information.service";
 import {
   MatDialog,
   MatDialogConfig,
@@ -12,9 +13,13 @@ import { PopupNewFavComponent } from "../popup-new-fav/popup-new-fav.component";
   styleUrls: ["./fav-section.component.css"]
 })
 export class FavSectionComponent implements OnInit {
-  constructor(private dialog: MatDialog) {}
+  constructor(
+    private dialog: MatDialog,
+    private userInformationService: UserInformationService
+  ) {}
 
   public popup;
+  public user;
 
   addMoviesFav(pelicula) {
     let dialogConfig = this.openDialog();
@@ -35,5 +40,8 @@ export class FavSectionComponent implements OnInit {
 
   playMoviesFav() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.user = this.userInformationService.getUser();
+    console.log(this.user);
+  }
 }
