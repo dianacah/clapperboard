@@ -7,8 +7,7 @@ const Usuarios = require("../models/usuarios");
 //POST
 usuariosRoute.post("/usuarios", (req, res, next) => {
   Usuarios.create(req.body)
-  .then(Usuarios => {
-    console.log(Usuarios);
+    .then(Usuarios => {
       res.json(Usuarios);
       res.send(Usuarios);
     })
@@ -21,9 +20,9 @@ usuariosRoute.get("/usuarios/:email", (req, res, next) => {
   Usuarios.findOne({ email: req.params.email }, (err, usuarioExistente) => {
     if (usuarioExistente !== null) {
       Usuarios.findOne({ email: req.params.email }, req.body)
-        .populate('favoriteMovies')
-        .then((usuario) => {
-          res.json(usuario)
+        .populate("favoriteMovies")
+        .then(usuario => {
+          res.json(usuario);
         })
         .catch(next);
     } else {
@@ -36,62 +35,66 @@ usuariosRoute.get("/usuarios/:email", (req, res, next) => {
 
 usuariosRoute.get("/usuarios", (req, res, next) => {
   Usuarios.find()
-    .populate('favoriteMovies')
-    .then((usuarios) => {
-      res.json(usuarios)
+    .populate("favoriteMovies")
+    .then(usuarios => {
+      res.json(usuarios);
     })
-    .catch(next);})
+    .catch(next);
+});
 
 //PUT
 usuariosRoute.put("/usuarios/:email", (req, res, next) => {
-  Usuarios.findOneAndUpdate({ email: req.params.email }, req.body,
-    {
-      new: true,
-      xuseFindAndModify: false,
-    }
-  )
-    .then((usuario) => {
-      res.json(usuario)
+  Usuarios.findOneAndUpdate({ email: req.params.email }, req.body, {
+    new: true,
+    xuseFindAndModify: false
+  })
+    .then(usuario => {
+      res.json(usuario);
     })
     .catch(next);
 });
 
 //PATCH
 usuariosRoute.patch("/usuarios/:email/movies", (req, res, next) => {
-  Usuarios.findOneAndUpdate({ email: req.params.email },
+  console.log("peticion", req.params.email, req.body.movieId);
+  Usuarios.findOneAndUpdate(
+    { email: req.params.email },
     {
       $push: {
         favoriteMovies: req.body.movieId
-      },
+      }
     },
     {
       new: true,
-      xuseFindAndModify: false,
+      xuseFindAndModify: false
     }
   )
-  .populate('favoriteMovies')
-  .then((usuario) => {
-    res.json(usuario)
-  }).catch(next)
+    .populate("favoriteMovies")
+    .then(usuario => {
+      res.json(usuario);
+    })
+    .catch(next);
 });
 
 //DELETE PARA SACAR LAS PELICULAS DE FAVORITOS
 usuariosRoute.delete("/usuarios/:email/movies", (req, res, next) => {
-  Usuarios.findOneAndUpdate({ email: req.params.email },
+  Usuarios.findOneAndUpdate(
+    { email: req.params.email },
     {
       $pull: {
         favoriteMovies: req.body.movieId
-      },
+      }
     },
     {
       new: true,
-      xuseFindAndModify: false,
+      xuseFindAndModify: false
     }
   )
-  .populate('favoriteMovies')
-  .then((usuario) => {
-    res.json(usuario)
-  }).catch(next)
+    .populate("favoriteMovies")
+    .then(usuario => {
+      res.json(usuario);
+    })
+    .catch(next);
 });
 
 //LLAMANDO

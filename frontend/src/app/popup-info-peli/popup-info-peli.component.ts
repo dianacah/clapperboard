@@ -37,6 +37,7 @@ export class PopupInfoPeliComponent implements OnInit {
     let useri = this.userInformationService.getUser();
     console.log(movie.movieId);
     let peliFav = { movieId: movie.movieId };
+    console.log(peliFav);
     this.putFavoritosService
       .putFavorito(useri.email, peliFav)
       .subscribe((response = {}) => {
