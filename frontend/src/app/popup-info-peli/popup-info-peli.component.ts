@@ -1,9 +1,9 @@
-import { PutFavoritosService } from './../services/putfavoritos/put-favoritos.service';
-import { UserInformationService } from './../services/User-Information/user-information.service';
+import { PutFavoritosService } from "./../services/putfavoritos/put-favoritos.service";
+import { UserInformationService } from "./../services/User-Information/user-information.service";
 import { Component, OnInit, Inject } from "@angular/core";
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 import { DomSanitizer } from "@angular/platform-browser";
-import { userInfo } from 'os';
+/* import { userInfo } from 'os'; */
 
 @Component({
   selector: "app-popup-info-peli",
@@ -24,6 +24,7 @@ export class PopupInfoPeliComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) data
   ) {
     this.movie = data;
+    console.log(data);
     this.srcMovie = this.sanitizer.bypassSecurityTrustResourceUrl(data.trailer);
   }
 
@@ -33,11 +34,15 @@ export class PopupInfoPeliComponent implements OnInit {
 
   enviarFavorito(movie) {
     console.log(movie);
-    this.userInformationService.getUser();
-    this.putFavoritosService.putFavorito(userInfo, movie.movieId).subscribe((response = {}) => {
-      /* revisar que quede bien importado el servicio de userInformationService */
-      console.log("respuesta", response)
-    });
+    let useri = this.userInformationService.getUser();
+    console.log(movie.movieId);
+    let peliFav = { movieId: movie.movieId };
+    this.putFavoritosService
+      .putFavorito(useri.email, peliFav)
+      .subscribe((response = {}) => {
+        /* revisar que quede bien importado el servicio de userInformationService */
+        console.log("respuesta", response);
+      });
   }
-  ngOnInit() { }
+  ngOnInit() {}
 }

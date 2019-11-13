@@ -1,4 +1,4 @@
-import { GetMovieService } from './../services/getMovie/get-movie.service';
+import { GetMovieService } from "./../services/getMovie/get-movie.service";
 import { Component, OnInit } from "@angular/core";
 import {
   MatDialog,
@@ -14,12 +14,11 @@ import { PeliculaAReproducirService } from "./../services/PeliculaAReproducir/pe
   styleUrls: ["./peliculas.component.css"]
 })
 export class PeliculasComponent implements OnInit {
-
-  public infoMovies: any = []
-  public dramaMovies: any = []
-  public comedyMovies: any = []
-  public romanceMovies: any = []
-  public animeMovies: any = []
+  public infoMovies: any = [];
+  public dramaMovies: any = [];
+  public comedyMovies: any = [];
+  public romanceMovies: any = [];
+  public animeMovies: any = [];
 
   public popup;
 
@@ -27,7 +26,7 @@ export class PeliculasComponent implements OnInit {
     private getMovieService: GetMovieService,
     private dialog: MatDialog,
     private peliculaAReproducirService: PeliculaAReproducirService
-  ) { }
+  ) {}
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -39,6 +38,7 @@ export class PeliculasComponent implements OnInit {
   }
 
   mostrarPelicula(pelicula) {
+    console.log("pelicula", pelicula);
     let dialogConfig = this.openDialog();
     dialogConfig.data = {
       title: pelicula.title,
@@ -62,24 +62,24 @@ export class PeliculasComponent implements OnInit {
   getInfoMovie() {
     this.getMovieService.getMovie().subscribe((res = {}) => {
       this.infoMovies = res;
-      console.log("respuesta", this.infoMovies)
+      console.log("respuesta", this.infoMovies);
 
       this.dramaMovies = this.infoMovies.filter(movie => {
-        return movie.genre == "Drama"
-      })
+        return movie.genre == "Drama";
+      });
 
       this.comedyMovies = this.infoMovies.filter(movie => {
-        return movie.genre == "Comedia"
-      })
+        return movie.genre == "Comedia";
+      });
 
       this.romanceMovies = this.infoMovies.filter(movie => {
-        return movie.genre == "Romance"
-      })
+        return movie.genre == "Romance";
+      });
 
       this.animeMovies = this.infoMovies.filter(movie => {
-        return movie.genre == "Anime"
-      })
-    })
+        return movie.genre == "Anime";
+      });
+    });
   }
 
   ngOnInit() {

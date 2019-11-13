@@ -5,38 +5,40 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const moviesSchema = new Schema({
-    title: {
-        type: String,
-        required: true
-    },
-    director: {
-        type: String
-    },
-    duration: {
-        type: String
-    },
-    genre: {
-        type: String,
-        required: true
-    },
-    actors: {
-        type: String,
-    },
-    file: {
-        type: String
-    },
-    image: {
-        type: String
-    },
-    synopsis: {
-        type:String
-    },
-    release: {
-        type:Boolean
-    }
-
+  title: {
+    type: String,
+    required: true
+  },
+  director: {
+    type: String
+  },
+  duration: {
+    type: String
+  },
+  genre: {
+    type: String,
+    required: true
+  },
+  actors: {
+    type: String
+  },
+  file: {
+    type: String
+  },
+  image: {
+    type: String
+  },
+  synopsis: {
+    type: String
+  },
+  release: {
+    type: Boolean
+  },
+  trailer: {
+    type: String
+  }
 });
 
-const Movies = mongoose.model('movies', moviesSchema);
+const Movies = mongoose.model("movies", moviesSchema);
 
 module.exports = Movies;
