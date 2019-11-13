@@ -5,7 +5,8 @@ import {
   MatDialogConfig,
   MatTableDataSource
 } from "@angular/material";
-import { PopupNewFavComponent } from "../popup-new-fav/popup-new-fav.component";
+import { PutFavoritosService } from "./../services/putfavoritos/put-favoritos.service";
+
 
 @Component({
   selector: "fav-section",
@@ -15,33 +16,39 @@ import { PopupNewFavComponent } from "../popup-new-fav/popup-new-fav.component";
 export class FavSectionComponent implements OnInit {
   constructor(
     private dialog: MatDialog,
-    private userInformationService: UserInformationService
+    private userInformationService: UserInformationService, 
+    private putFavoritosService: PutFavoritosService
+
   ) {}
 
   public popup;
   public user;
+  public peliculasFavoritas: any =[];
 
-  addMoviesFav(pelicula) {
+  /* addMoviesFav(pelicula) {
     let dialogConfig = this.openDialog();
     this.popup = this.dialog.open(PopupNewFavComponent, dialogConfig);
     this.popup.afterClosed().subscribe(response => {
       let respuesta = response.value;
     });
-  }
+  } */
 
-  openDialog() {
+  /* openDialog() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = false;
     dialogConfig.width = "400px";
     dialogConfig.height = "250px";
     return dialogConfig;
-  }
+  } */
 
-  playMoviesFav() {}
 
   ngOnInit() {
     this.user = this.userInformationService.getUser();
     console.log(this.user);
+
+    this.peliculasFavoritas = this.user.peliculasFavoritas
+    console.log(this.user.peliculasFavoritas);
+     }
   }
-}
+
