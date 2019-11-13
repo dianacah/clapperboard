@@ -1,7 +1,6 @@
 <form class="signupForm" [formGroup]="signupForm">
   <input placeholder="Nombre" type="text" formControlName="name" />
   <small
-    
     class="error"
     *ngIf="
       signupForm.get('name').hasError('required') &&
@@ -10,9 +9,12 @@
     >Ups, por favor ingresa los datos para continuar</small
   >
   <br />
-  <input placeholder="Correo electrónico" type="email" formControlName="email"/>
+  <input
+    placeholder="Correo electrónico"
+    type="email"
+    formControlName="email"
+  />
   <small
-    
     class="error"
     *ngIf="
       signupForm.get('email').hasError('required') &&
@@ -23,7 +25,6 @@
   <br />
   <input placeholder="Fecha de nacimiento" type="date" formControlName="date" />
   <small
-    
     class="error"
     *ngIf="
       signupForm.get('date').hasError('required') &&
@@ -32,9 +33,8 @@
     >Ups, por favor ingresa los datos para continuar</small
   >
   <br />
-  <input placeholder="Contraseña" type="password" formControlName="password"/>
+  <input placeholder="Contraseña" type="password" formControlName="password" />
   <small
-    
     class="error"
     *ngIf="
       signupForm.get('password').hasError('required') &&
@@ -43,8 +43,15 @@
     >Ups, por favor ingresa los datos para continuar</small
   >
   <br />
-  <button (click)='enviarInformacion(signupForm)' class="white rbt-300 small" type="submit" routerLink="/perfil">
+  <button
+    (click)="enviarInformacion(signupForm)"
+    class="white rbt-300 small"
+    type="submit"
+  >
     Regístrate
   </button>
+  <p *ngIf="menorEdad == true" class="error">
+    ¡Ups!, eres menor de edad
+  </p>
   <a routerLink="/home" class=" very-small rbt-300">Regresar</a>
 </form>
