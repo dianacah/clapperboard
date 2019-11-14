@@ -10,6 +10,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
   styleUrls: ['./popup-editar-peli.component.css']
 })
 export class PopupEditarPeliComponent implements OnInit {
+  public genres = ['Drama', 'Romance', 'Comedia', 'Anime']
 
   tituloPelicula: string;
   genre: string;

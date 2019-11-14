@@ -1,3 +1,4 @@
+import { UserInformationService } from './../services/User-Information/user-information.service';
 import { GetMovieService } from './../services/getMovie/get-movie.service';
 import { Component, OnInit } from "@angular/core";
 import { PopupNuevaPeliComponent } from "./../popup-nueva-peli/popup-nueva-peli.component";
@@ -18,16 +19,20 @@ import { UpdateMoviesService } from "./../services/update-movies.service"
 })
 export class AdminComponent implements OnInit {
 
+  public name;
+  public user;
+  public id;
+
   constructor(
     private updateMoviesService: UpdateMoviesService,
     private dialog: MatDialog,
     private getMovieService: GetMovieService,
-    private postMovieService: PostMovieService) { }
+    private userInformationService: UserInformationService,
+    private postMovieService: PostMovieService, ) { }
 
   public infoMovies: any = [];
   tableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
   public popup;
-  public id;
   public dataSource = [this.infoMovies];
 
   openDialog() {
@@ -35,7 +40,7 @@ export class AdminComponent implements OnInit {
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
     dialogConfig.width = "400px";
-    dialogConfig.height = "450px";
+    dialogConfig.height = "400px";
     return dialogConfig;
   }
 
@@ -45,14 +50,15 @@ export class AdminComponent implements OnInit {
     this.popup = this.dialog.open(PopupNuevaPeliComponent, dialogConfig);
     this.popup.afterClosed().subscribe(res => {
       let respuesta = res.value;
+      let genre = respuesta.genre;
       let pathImagen = "../../../assets/home/images/";
       let nombreImagen = respuesta.image.substr(12, respuesta.image.length);
-      respuesta.image = pathImagen + nombreImagen;
+      respuesta.image = pathImagen + genre + '/' + nombreImagen;
       console.log("respuesta", respuesta);
       this.addInfoMovie(respuesta);
     });
-
   }
+
   editarPelicula(dataEdit) {
     this.id = dataEdit._id
     let dialogConfig = this.openDialog();
@@ -63,20 +69,16 @@ export class AdminComponent implements OnInit {
       duration: dataEdit.duration,
       file: dataEdit.file,
       genre: dataEdit.genre,
-      // image: dataEdit.image,
+      image: dataEdit.image,
       synopsis: dataEdit.synopsis,
       title: dataEdit.title,
-      // trailer: dataEdit.trailer,
+      trailer: dataEdit.trailer,
       disableClose: false,
       autoFocus: true,
       width: "400px",
       height: "450px",
     };
     this.popup = this.dialog.open(PopupEditarPeliComponent, dialogConfig);
-    this.popup.afterClosed().subscribe(response => {
-      console.log("respuesta del popup", response);
-      this.updateMovie(response.value)
-    })
   }
   updateMovie(dataFormulario) {
     this.updateMoviesService.updateMovie(this.id, dataFormulario).subscribe(response => {
@@ -117,7 +119,17 @@ export class AdminComponent implements OnInit {
     })
   }
 
+  getUser() {
+    setTimeout(() => {
+      this.user = this.userInformationService.getUser();
+      console.log("respuesta servicio", this.user);
+      this.name = this.user.name;
+      this.ngOnInit();
+    }, 200);
+  }
+
   ngOnInit() {
-    this.getInfoMovie()
+    this.getInfoMovie();
+    this.getUser();
   }
 }

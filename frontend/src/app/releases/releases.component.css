@@ -29,7 +29,7 @@ button {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   margin: 10px 0;
-  width: 80%;
+  width: 100%;
   align-self: center;
   color: white;
 }
