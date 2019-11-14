@@ -6,6 +6,7 @@ import {
   MatTableDataSource
 } from "@angular/material";
 import { PutFavoritosService } from "./../services/putfavoritos/put-favoritos.service";
+import { DeleteFavMovieService } from '../services/deleteFavMovie/delete-fav-movie.service';
 
 @Component({
   selector: "fav-section",
@@ -16,7 +17,8 @@ export class FavSectionComponent implements OnInit {
   constructor(
     private dialog: MatDialog,
     private userInformationService: UserInformationService,
-    private putFavoritosService: PutFavoritosService
+    private putFavoritosService: PutFavoritosService,
+    private deleteFavMovieService:DeleteFavMovieService,
   ) {}
 
   public popup;
@@ -39,6 +41,11 @@ export class FavSectionComponent implements OnInit {
     dialogConfig.height = "250px";
     return dialogConfig;
   } */
+
+  deleteMovie(peliculaFavorita){
+
+  }
+
 
   ngOnInit() {
     this.user = this.userInformationService.getUser();

@@ -9,15 +9,14 @@
     <hr />
   </div>
   <div class="moviesFav">
-    <div class="fav1 ">
+    
       <div *ngFor="let peliculaFavorita of peliculasFavoritas" class="pelicula">
         <img [src]="peliculaFavorita.image" alt=" " class="imgFav " />
-        <h1 class="nombre rbt-400">{{ peliculaFavorita.title }}</h1>
+        <h1 class="nombre rbt-400 medium">{{ peliculaFavorita.title }}</h1>
         <div class="movieName">
-          <p class="movieTitle rbt-400">{{ peliculaFavorita.genre }}</p>
+          <p class="movieTitle rbt-400 small">{{ peliculaFavorita.genre }}</p>
         </div>
-        <div class="favIcon1"></div>
-      </div>
+        <div class="favIcon1" (click)="deleteMovie(peliculaFavorita)"></div>
     </div>
   </div>
   <div class="movieReproductor">
