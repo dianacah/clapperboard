@@ -12,7 +12,7 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
-import { MatDialogModule } from "@angular/material";
+import { MatDialogModule, MatSelectModule } from "@angular/material";
 import { AdminComponent } from "./admin/admin.component";
 import { MovieComponent } from "./movie/movie.component";
 import {
@@ -120,7 +120,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

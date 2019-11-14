@@ -83,7 +83,7 @@ export class AdminComponent implements OnInit {
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
     dialogConfig.width = "400px";
-    dialogConfig.height = "450px";
+    dialogConfig.height = "400px";
     return dialogConfig;
   }
 
@@ -92,16 +92,17 @@ export class AdminComponent implements OnInit {
   agregarPelicula(movie) {
     let dialogConfig = this.openDialog();
     this.popup = this.dialog.open(PopupNuevaPeliComponent, dialogConfig);
-    this.popup.afterClosed().subscribe(res => {
+    this.popup.afterClosed().subscribe(res => { 
       let respuesta = res.value;
+      let genre = respuesta.genre;
       let pathImagen = "../../../assets/home/images/";
       let nombreImagen = respuesta.image.substr(12, respuesta.image.length);
-      respuesta.image = pathImagen + nombreImagen;
+      respuesta.image =  pathImagen + genre + '/' + nombreImagen;
       console.log("respuesta", respuesta);
       this.addInfoMovie(respuesta);
-    });
-  
+    });  
   }
+
   editarPelicula(dataEdit) {
     let dialogConfig = this.openDialog();
     dialogConfig.data = {

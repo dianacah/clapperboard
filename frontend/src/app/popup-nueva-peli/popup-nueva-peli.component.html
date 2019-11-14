@@ -1,55 +1,68 @@
 <form class="formularioAgregarPelicula" [formGroup]="newMovieForm">
-  <p>Ingresa los datos de la nueva pelicula</p>
-  <input formControlName="title" type="text" placeholder="Titulo de la película" />
+  <p class="rbt-300 formTitle">Ingresa los datos de la nueva pelicula</p>
+  <!-- <input formControlName="title" type="text" placeholder="Título de la película" /> -->
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Título de la película" formControlName="title">
+    </mat-form-field>  
   <small class="error" *ngIf="
       newMovieForm.get('title').hasError('required') &&
       newMovieForm.get('title').touched
     ">Ups, por favor ingresa los datos para continuar</small>
-  <br />
-  <input formControlName="genre" type="text" placeholder="Género" />
+  <mat-form-field>
+      <mat-label>Género</mat-label>
+      <mat-select formControlName="genre">
+        <mat-option *ngFor="let genre of genres" [value]="genre">
+          {{genre}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   <small class="error" *ngIf="
       newMovieForm.get('genre').hasError('required') &&
       newMovieForm.get('genre').touched
     ">Ups, por favor ingresa los datos para continuar</small>
-  <br />
-  <input formControlName="director" type="text" placeholder="Director" />
+  <!-- <input formControlName="director" type="text" placeholder="Director" /> -->
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Director" formControlName="director">
+    </mat-form-field>
   <small class="error" *ngIf="
       newMovieForm.get('director').hasError('required') &&
       newMovieForm.get('director').touched
     ">Ups, por favor ingresa los datos para continuar</small>
-  <br />
-  <input formControlName="duration" type="text" placeholder="Duración" />
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Duración" formControlName="duration">
+    </mat-form-field>
   <small class="error" *ngIf="
       newMovieForm.get('duration').hasError('required') &&
       newMovieForm.get('duration').touched
     ">Ups, por favor ingresa los datos para continuar</small>
-  <br />
-  <input formControlName="actors" type="text" placeholder="Reparto" />
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Reparto" formControlName="actors">
+    </mat-form-field>
   <small class="error" *ngIf="
       newMovieForm.get('actors').hasError('required') &&
       newMovieForm.get('actors').touched
     ">Ups, por favor ingresa los datos para continuar</small>
-  <br />
-  <p class="selectFile">Selecciona el archivo de la película</p>
-  <input formControlName="file" type="file" placeholder="Seleccionar archivo" />
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="URL de la película" formControlName="file">
+    </mat-form-field>
   <small class="error" *ngIf="
       newMovieForm.get('file').hasError('required') &&
       newMovieForm.get('file').touched
     ">Ups, por favor ingresa los datos para continuar</small>
-  <br />
-  <p class="selectFile"></p>
+  <p class="selectFile rbt-300">Selecciona la imagen</p>
   <input formControlName="image" type="file" placeholder="Poster de la película" />
   <small class="error" *ngIf="
       newMovieForm.get('image').hasError('required') &&
       newMovieForm.get('image').touched
     ">Ups, por favor ingresa los datos para continuar</small>
-  <br />
-  <input formControlName="synopsis" type="text" placeholder="Sinopsis de la película" />
+  <!-- <input formControlName="synopsis" type="text" placeholder="Sinópsis de la película" /> -->
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Sinópsis de la película" formControlName="synopsis">
+    </mat-form-field>
   <small class="error" *ngIf="
       newMovieForm.get('synopsis').hasError('required') &&
       newMovieForm.get('synopsis').touched
     ">Ups, por favor ingresa los datos para continuar</small>
-  <br />
   <button (click)="onSubmit()" class="botonAgregar small white">
     Agregar Película
   </button>
