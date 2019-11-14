@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { HttpClient} from "@angular/common/http"
 
 @Injectable({
   providedIn: "root"
@@ -6,7 +7,7 @@ import { Injectable } from "@angular/core";
 export class UserInformationService {
   private userInfo: any = {};
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
   setUser(user) {
     this.userInfo = user;
@@ -16,16 +17,7 @@ export class UserInformationService {
     return this.userInfo;
   }
 
-  putUser() {
-    return this.userInfo
+  putUser(email) {
+    return this.http.put(this.userInfo, email)
   }
-  /* 
-  setInformation(user) {
-    this.userInformation = user;
-    console.log(this.userInformation)
-  }
-  
-  getInformation() {
-    return this.userInformation;
-  }  */
 }

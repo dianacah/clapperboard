@@ -1,17 +1,5 @@
-<nav>
-    <a routerLink="/ver-peliculas"><img class="logo" src="../../assets/logo.png" alt="" /></a>
-    <a routerLink="/ver-peliculas" class="logIn white">Inicio</a>
-    <a routerLink="/home" class="white">Cerrar Sesión</a>
-</nav>
-<div class="wrapper">
-    <div class="picImg">
-        <p class="white rbt-300 medium">Hola {{ name }} !</p>
-        <img src="../../assets/profile/profile_test_pic.jpg" class="profilePic" alt="" />
-        <button class="white rbt-300 small favButton" type="submit" routerLink="/fav-section">
-            Ir a Favoritos
-        </button>
-        <a routerLink="/home" class="very-small rbt-300">Cerrar sesión</a>
-    </div>
+<div class="contenedorPopupEditUser">
+  <h1 class="editarUser margin5">Editar Usuario</h1>
     <form [formGroup]="perfilForm">
         <input formControlName="name" placeholder="Nombre" type="text" class="small rbt-300 input" />
         <small class="error" *ngIf="
@@ -37,8 +25,8 @@
         perfilForm.get('password').touched
       ">Ups, por favor ingresa los datos para continuar</small>
         <br />
-        <input placeholder="Descripción (opcional)" type="text" class="small rbt-300 descriptionInput" />
-        <button class="white rbt-300 small submitButton" (click)="mostarUsuario()">
+        <input formControlName="description" placeholder="Descripción (opcional)" type="text" class="small rbt-300 descriptionInput" />
+        <button class="white rbt-300 small submitButton" type="submit" (click)="OnSubmit()" routerLink="/perfil">
             Actualizar
         </button>
     </form>
