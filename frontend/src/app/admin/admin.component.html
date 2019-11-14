@@ -7,7 +7,47 @@
         Agregar +
       </button>
     </div>
-    <mat-table [dataSource]="dataSource">
+    <mat-table [dataSource]="infoMovies">
+
+      <ng-container matColumnDef="imagen">
+        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+        <mat-cell *matCellDef="let pelicula">
+          <img class="cadauna" [src]="pelicula.image" />
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="pelicula">
+        <mat-header-cell *matHeaderCellDef class="small"
+          >Nombre</mat-header-cell>
+        <mat-cell *matCellDef="let pelicula" class="rbt-400">{{
+          pelicula.title
+        }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="genero">
+        <mat-header-cell *matHeaderCellDef class="small"
+          >Género</mat-header-cell
+        >
+        <mat-cell *matCellDef="let pelicula">{{ pelicula.genre }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="accion">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let accion"
+          ><button class="botonEditar" (click)="editarPelicula(event)">
+            <mat-icon aria-hidden="false">edit</mat-icon>
+          </button>
+          <br />
+          <button class="botonBorrar" (click)="borrarPelicula(movie)">
+            <mat-icon aria-hidden="false">delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
+    </mat-table>
+    <!-- <mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="imagen">
         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
         <mat-cell *matCellDef="let imagen">
@@ -31,11 +71,11 @@
       <ng-container matColumnDef="accion">
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
         <mat-cell *matCellDef="let accion"
-          ><button class="botonEditar ">
+          ><button class="botonEditar" (click)="editarPelicula(event)">
             <mat-icon aria-hidden="false">edit</mat-icon>
           </button>
           <br />
-          <button class="botonBorrar">
+          <button class="botonBorrar" (click)="borrarPelicula(movie)">
             <mat-icon aria-hidden="false">delete</mat-icon>
           </button>
         </mat-cell>
@@ -43,6 +83,6 @@
 
       <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
-    </mat-table>
+    </mat-table> -->
   </div>
 </div>
