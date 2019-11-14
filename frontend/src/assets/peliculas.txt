@@ -174,7 +174,8 @@
       "file": "https://youtube/K7nXNL5vSbM",
       "image": "../../assets/home/images/Comedia/NoEsRomantico.jpg",
       "synopsis": "Natalie es una arquitecta neoyorquina que siempre ha tratado el amor con cinismo. Su peor pesadilla se convierte en realidad cuando, después de quedar inconsciente al ser atacada en el metro, despierta atrapada en una comedia romántica",
-      "trailer": "https://youtube/cD-XeEqKz00"
+      "trailer": "https://youtube/cD-XeEqKz00",
+      "release":true
     },
 {
       "title": "Dos rubias de pelo en pecho",
@@ -274,7 +275,8 @@
       "file": "https://youtube/Qu_eo3t6bRM",
       "image": "../../assets/home/images/Romance/LoQueElVientoSeLlevo.jpg",
       "synopsis": "Este drama épico de la Guerra Civil se centra en la vida de la petulante belleza sureña Scarlett O'Hara. Desde la idílica hospitalidad de su gran plantación, la película narra su supervivencia a través de la historia trágica del Sur durante la Guerra Civil y la Reconstrucción, y sus enredados amorosos con Ashley Wilkes y Rhett Butler.",
-      "trailer": "https://youtube/UAO0gEi4Nqc"
+      "trailer": "https://youtube/UAO0gEi4Nqc",
+      "release":true
     },
 {
       "title": "Love Actually ",

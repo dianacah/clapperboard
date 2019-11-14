@@ -3,13 +3,36 @@
 }
 .releaseImg {
   height: calc(100vh - 70px);
-  width: 100%;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 .carousel-caption {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  background-color: rgba(0, 0, 0, 0.2);
   text-align: left;
-  line-height: 20px;
-  justify-items: center;
+  padding: 20px !important;
+  height: auto;
+  line-height: initial;
+}
+.carousel-caption > p {
+  margin-bottom: 0;
+  line-height: initial;
+}
+button {
+  border: none;
+  background-color: #ff1180;
+  border-radius: 5rem;
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0;
+  width: 80%;
+  align-self: center;
+  color: white;
+}
+.playMovie {
+  align-self: baseline;
 }

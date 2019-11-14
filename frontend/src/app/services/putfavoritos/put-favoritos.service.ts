@@ -7,9 +7,12 @@ import { HttpClient } from "@angular/common/http";
 export class PutFavoritosService {
   private URL = "http://localhost:3000/api/usuarios/";
   private finalruta = "/movies";
+  constructor(private http: HttpClient) {}
+
   putFavorito(email, data) {
     console.log(email, data);
-    return this.http.patch(this.URL + email + this.finalruta, data);
+    let fullURL = this.URL + email + this.finalruta;
+    console.log(fullURL);
+    return this.http.patch(fullURL, data);
   }
-  constructor(private http: HttpClient) {}
 }

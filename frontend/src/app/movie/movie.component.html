@@ -27,77 +27,10 @@
     </div>
     <div class="suggestions">
       <p class="white normal suggestionsTitle rbt-300">Te podría interesar</p>
-      <div>
-        <img
-          src="../../assets/principal/images/comedia/ChicasMalas.jpg"
-          alt=""
-          class="movieImg"
-        />
-        <p class="rbt-300 small white">Nombre de la película</p>
-        <p class="rbt-300 very-small white">Duración: 02:30min</p>
-      </div>
-      <div>
-        <img
-          src="../../assets/principal/images/comedia/ChicasMalas.jpg"
-          alt=""
-          class="movieImg"
-        />
-        <p class="rbt-300 small white">Nombre de la película</p>
-        <p class="rbt-300 very-small white">Duración: 02:30min</p>
-      </div>
-      <div>
-        <img
-          src="../../assets/principal/images/comedia/ChicasMalas.jpg"
-          alt=""
-          class="movieImg"
-        />
-        <p class="rbt-300 small white">Nombre de la película</p>
-        <p class="rbt-300 very-small white">Duración: 02:30min</p>
-      </div>
-      <div>
-        <img
-          src="../../assets/principal/images/comedia/ChicasMalas.jpg"
-          alt=""
-          class="movieImg"
-        />
-        <p class="rbt-300 small white">Nombre de la película</p>
-        <p class="rbt-300 very-small white">Duración: 02:30min</p>
-      </div>
-      <div>
-        <img
-          src="../../assets/principal/images/comedia/ChicasMalas.jpg"
-          alt=""
-          class="movieImg"
-        />
-        <p class="rbt-300 small white">Nombre de la película</p>
-        <p class="rbt-300 very-small white">Duración: 02:30min</p>
-      </div>
-      <div>
-        <img
-          src="../../assets/principal/images/comedia/ChicasMalas.jpg"
-          alt=""
-          class="movieImg"
-        />
-        <p class="rbt-300 small white">Nombre de la película</p>
-        <p class="rbt-300 very-small white">Duración: 02:30min</p>
-      </div>
-      <div>
-        <img
-          src="../../assets/principal/images/comedia/ChicasMalas.jpg"
-          alt=""
-          class="movieImg"
-        />
-        <p class="rbt-300 small white">Nombre de la película</p>
-        <p class="rbt-300 very-small white">Duración: 02:30min</p>
-      </div>
-      <div>
-        <img
-          src="../../assets/principal/images/comedia/ChicasMalas.jpg"
-          alt=""
-          class="movieImg"
-        />
-        <p class="rbt-300 small white">Nombre de la película</p>
-        <p class="rbt-300 very-small white">Duración: 02:30min</p>
+      <div *ngFor="let movie of interestingMovies">
+        <img [src]="movie.image" alt="" class="movieImg" />
+        <p class="rbt-300 small white">{{ movie.title }}</p>
+        <p class="rbt-300 very-small white">{{ movie.duration }}</p>
       </div>
     </div>
   </div>
