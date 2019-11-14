@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   public passwordDB;
   public wrongPass: boolean = false;
   public noRegistrado: boolean = true;
+  public role;
 
   constructor(
     private builder: FormBuilder,
@@ -42,7 +43,12 @@ export class LoginComponent implements OnInit {
         } else {
           console.log("ingreso correcto");
           this.userInformationService.setUser(response);
-          this.router.navigate(["/perfil"]);
+          this.role = response.role;
+          if (this.role == "normal") {
+            this.router.navigate(["/ver-peliculas"]);
+          } else {
+            this.router.navigate(["/admin"]);
+          }
         }
       }
     });

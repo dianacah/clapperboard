@@ -1,9 +1,13 @@
 import { UserInformationService } from "./../services/User-Information/user-information.service";
-import { PopupEditUserComponent} from "./../popup-edit-user/popup-edit-user.component";
+import { PopupEditUserComponent } from "./../popup-edit-user/popup-edit-user.component";
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { MatDialog, MatDialogConfig, MatTableDataSource} from "@angular/material";
-import { from } from 'rxjs';
+import {
+  MatDialog,
+  MatDialogConfig,
+  MatTableDataSource
+} from "@angular/material";
+import { from } from "rxjs";
 
 @Component({
   selector: "app-profile",
@@ -51,7 +55,7 @@ export class ProfileComponent implements OnInit {
       this.ngOnInit();
     }, 200);
   }
-  putUser(){
+  putUser() {
     setTimeout(() => {
       this.user = this.userInformationService.putUser(this.user);
       console.log("respuesta servicio", this.user);
@@ -75,7 +79,7 @@ export class ProfileComponent implements OnInit {
     return dialogConfig;
   }
 
-  mostarUsuario(user){
+  mostarUsuario(user) {
     let dialogConfig = this.openDialog();
     /* dialogConfig.data = {
       name: user.name,
@@ -85,7 +89,7 @@ export class ProfileComponent implements OnInit {
       description: user.description,
     };  */
     this.popup = this.dialog.open(PopupEditUserComponent, dialogConfig);
-    this.popup.afterClosed().subscribe(response =>{
+    this.popup.afterClosed().subscribe(response => {
       let respuesta = response.value;
       this.userInformationService.getUser();
       this.getUser();

@@ -1,5 +1,5 @@
-import { UserInformationService } from './../services/User-Information/user-information.service';
-import { GetMovieService } from './../services/getMovie/get-movie.service';
+import { UserInformationService } from "./../services/User-Information/user-information.service";
+import { GetMovieService } from "./../services/getMovie/get-movie.service";
 import { Component, OnInit } from "@angular/core";
 import { PopupNuevaPeliComponent } from "./../popup-nueva-peli/popup-nueva-peli.component";
 import {
@@ -7,10 +7,11 @@ import {
   MatDialogConfig,
   MatTableDataSource
 } from "@angular/material";
-import { PopupEditarPeliComponent } from '../popup-editar-peli/popup-editar-peli.component';
-import { PostMovieService } from '../services/postMovie/post-movie.service';
-import { DataSource } from '@angular/cdk/table';
-import { UpdateMoviesService } from "./../services/update-movies.service"
+import { PopupEditarPeliComponent } from "../popup-editar-peli/popup-editar-peli.component";
+import { PostMovieService } from "../services/postMovie/post-movie.service";
+import { DataSource } from "@angular/cdk/table";
+import { UpdateMoviesService } from "./../services/update-movies.service";
+import { GetUsersService } from "../services/getUsers/get-users.service";
 
 @Component({
   selector: "app-admin",
@@ -18,22 +19,27 @@ import { UpdateMoviesService } from "./../services/update-movies.service"
   styleUrls: ["./admin.component.css"]
 })
 export class AdminComponent implements OnInit {
-
   public name;
   public user;
   public id;
+  public role;
 
   constructor(
     private updateMoviesService: UpdateMoviesService,
     private dialog: MatDialog,
     private getMovieService: GetMovieService,
     private userInformationService: UserInformationService,
-    private postMovieService: PostMovieService, ) { }
+    private postMovieService: PostMovieService,
+    private getUsersService: GetUsersService
+  ) {}
+
+  public infoUsers: any = [];
+  usersTableColumns: string[] = ["icono", "nombre", "correo"];
 
   public infoMovies: any = [];
-  tableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
+  moviesTableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
   public popup;
-  public dataSource = [this.infoMovies];
+  // public dataSource = [this.infoMovies];
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -53,14 +59,14 @@ export class AdminComponent implements OnInit {
       let genre = respuesta.genre;
       let pathImagen = "../../../assets/home/images/";
       let nombreImagen = respuesta.image.substr(12, respuesta.image.length);
-      respuesta.image = pathImagen + genre + '/' + nombreImagen;
+      respuesta.image = pathImagen + genre + "/" + nombreImagen;
       console.log("respuesta", respuesta);
       this.addInfoMovie(respuesta);
     });
   }
 
   editarPelicula(dataEdit) {
-    this.id = dataEdit._id
+    this.id = dataEdit._id;
     let dialogConfig = this.openDialog();
     dialogConfig.data = {
       id: dataEdit._id,
@@ -76,15 +82,17 @@ export class AdminComponent implements OnInit {
       disableClose: false,
       autoFocus: true,
       width: "400px",
-      height: "450px",
+      height: "450px"
     };
     this.popup = this.dialog.open(PopupEditarPeliComponent, dialogConfig);
   }
   updateMovie(dataFormulario) {
-    this.updateMoviesService.updateMovie(this.id, dataFormulario).subscribe(response => {
-      console.log(response);
-      this.ngOnInit();
-    })
+    this.updateMoviesService
+      .updateMovie(this.id, dataFormulario)
+      .subscribe(response => {
+        console.log(response);
+        this.ngOnInit();
+      });
   }
   // this.postMovieService.updateMoviedb(movie, datos).subscribe((res = {}) => {
   //   this.infoMovies = res;
@@ -93,11 +101,9 @@ export class AdminComponent implements OnInit {
 
   borrarPelicula(movie) {
     console.log(movie);
-    this.postMovieService
-      .deleteMovie(movie.title)
-      .subscribe(response => {
-        console.log(response);
-      });
+    this.postMovieService.deleteMovie(movie.title).subscribe(response => {
+      console.log(response);
+    });
     this.ngOnInit();
   }
   //servicios
@@ -105,8 +111,8 @@ export class AdminComponent implements OnInit {
   getInfoMovie() {
     this.getMovieService.getMovie().subscribe((res = {}) => {
       this.infoMovies = res;
-      console.log("funciona get", this.infoMovies)
-    })
+      // console.log("funciona get", this.infoMovies);
+    });
   }
   addInfoMovie(movie) {
     this.postMovieService.addMovie(movie).subscribe(res => {
@@ -115,21 +121,28 @@ export class AdminComponent implements OnInit {
   }
   deleteInfoMovie(idMovie) {
     this.postMovieService.deleteMovie(idMovie).subscribe(res => {
-      this.ngOnInit()
-    })
+      this.ngOnInit();
+    });
   }
 
   getUser() {
     setTimeout(() => {
       this.user = this.userInformationService.getUser();
-      console.log("respuesta servicio", this.user);
       this.name = this.user.name;
+      this.role = this.user.role;
       this.ngOnInit();
     }, 200);
+  }
+
+  getAllUsers() {
+    this.getUsersService.getUsers().subscribe((res = []) => {
+      this.infoUsers = res;
+    });
   }
 
   ngOnInit() {
     this.getInfoMovie();
     this.getUser();
+    this.getAllUsers();
   }
 }

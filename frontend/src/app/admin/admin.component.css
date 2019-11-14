@@ -3,8 +3,9 @@
       rgba(25, 18, 87, 0.5),
       rgba(25, 18, 87, 0.5)
     ),
-    url(../../assets/admin/background.jpg);
+    url(../../assets/admin/background-1.jpg);
   background-size: cover;
+  background-position: center;
 }
 .agregarPelicula {
   font-family: "Roboto", sans-serif;
@@ -18,13 +19,15 @@
   color: white;
   height: 50px;
   width: 150px;
+  justify-self: end;
 }
 .admin {
-  padding: 5vh 6vw;
+  padding: 5vh 12vw;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: calc(100vh - 70px);
 }
 td {
   height: 40px;
@@ -56,6 +59,7 @@ th {
 mat-table {
   width: 100%;
   text-align: center;
+  height: 65vh;
 }
 .cadauna {
   box-sizing: border-box;
@@ -64,11 +68,22 @@ mat-table {
   margin: 2%;
 }
 .adminHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
   margin-bottom: 2%;
 }
 mat-icon {
   color: lightgray;
+}
+:host ::ng-deep .mat-tab-label {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+}
+.adminHeader > p {
+  margin-bottom: 0;
+}
+:host ::ng-deep .mat-tab-body.mat-tab-body-active {
+  background-color: white;
+  padding: 15px 100px;
 }
