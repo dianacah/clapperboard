@@ -4,7 +4,7 @@
       rgba(25, 18, 87, 0.5)
     ),
     url(../../assets/admin/background.jpg);
-    background-size: cover;
+  background-size: cover;
 }
 .agregarPelicula {
   font-family: "Roboto", sans-serif;
@@ -59,7 +59,7 @@ mat-table {
 }
 .cadauna {
   box-sizing: border-box;
-  width:80px;
+  width: 80px;
   height: 80px;
   margin: 2%;
 }
@@ -70,5 +70,5 @@ mat-table {
   margin-bottom: 2%;
 }
 mat-icon {
-  color:lightgray;
+  color: lightgray;
 }

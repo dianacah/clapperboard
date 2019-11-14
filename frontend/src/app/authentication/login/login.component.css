@@ -28,4 +28,6 @@ a {
 }
 .error {
   color: #ff1180;
+  max-width: 300px;
+  text-align: center;
 }
