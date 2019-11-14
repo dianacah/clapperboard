@@ -11,11 +11,10 @@ export class PostMovieService {
   constructor(private http: HttpClient) { }
 
   getMovie(){
-    console.log("funciona");
     return this.http.get(this.URL);
   }
-  deleteMovie(idMovie) {
-    return this.http.delete(this.URL + idMovie);
+  deleteMovie(titleMovie) {
+    return this.http.delete(this.URL + titleMovie);
   }
   updateMoviedb(movie, datos) {
     console.log("movie", movie, datos);

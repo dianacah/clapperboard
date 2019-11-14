@@ -102,15 +102,32 @@ export class AdminComponent implements OnInit {
     });
   
   }
-  editarPelicula(event) {
-    console.log(event);
+  editarPelicula(dataEdit) {
     let dialogConfig = this.openDialog();
+    dialogConfig.data = {
+      id      : dataEdit._id,
+      actors  : dataEdit.actors,
+      director: dataEdit.director,
+      duration: dataEdit.duration,
+      file    : dataEdit.file,
+      genre   : dataEdit.genre,
+      image   : dataEdit.image,
+      synopsis: dataEdit.synopsis,
+      title   : dataEdit.title,
+      trailer : dataEdit.trailer,
+      disableClose: false,
+      autoFocus: true,
+      width:"400px",
+      height: "450px",
+    };
+
     this.popup = this.dialog.open(PopupEditarPeliComponent, dialogConfig);
+    
   }
   borrarPelicula(movie) {
     console.log(movie);
     this.postMovieService
-      .deleteMovie(movie._id)
+      .deleteMovie(movie.title)
       .subscribe(response => {
         console.log(response);
       });

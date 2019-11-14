@@ -34,15 +34,16 @@
       <ng-container matColumnDef="accion">
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
         <mat-cell *matCellDef="let accion"
-          ><button class="botonEditar" (click)="editarPelicula(event)">
+          ><button class="botonEditar" (click)="editarPelicula(accion)">
             <mat-icon aria-hidden="false">edit</mat-icon>
           </button>
           <br />
-          <button class="botonBorrar" (click)="borrarPelicula(movie)">
+          <button class="botonBorrar" (click)="borrarPelicula(accion)">
             <mat-icon aria-hidden="false">delete</mat-icon>
           </button>
         </mat-cell>
       </ng-container>
+
 
       <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
