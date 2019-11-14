@@ -39,6 +39,7 @@ import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { NavGendersComponent } from "./nav-genders/nav-genders.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { PopupEditUserComponent } from './popup-edit-user/popup-edit-user.component';
 
 const routes: Routes = [
   {
@@ -102,7 +103,8 @@ const routes: Routes = [
     PopupNuevaPeliComponent,
     PopupEditarPeliComponent,
     PopupNewFavComponent,
-    NavGendersComponent
+    NavGendersComponent,
+    PopupEditUserComponent
   ],
   imports: [
     BrowserModule,
@@ -128,7 +130,8 @@ const routes: Routes = [
     PopupNuevaPeliComponent,
     PopupInfoPeliComponent,
     PopupEditarPeliComponent,
-    PopupNewFavComponent
+    PopupNewFavComponent,
+    PopupEditUserComponent
   ]
 })
 export class AppModule {}
