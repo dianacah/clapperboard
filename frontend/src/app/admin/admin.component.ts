@@ -9,7 +9,7 @@ import {
 import { PopupEditarPeliComponent } from '../popup-editar-peli/popup-editar-peli.component';
 import { PostMovieService } from '../services/postMovie/post-movie.service';
 import { DataSource } from '@angular/cdk/table';
-
+import { UpdateMoviesService } from "./../services/update-movies.service"
 
 @Component({
   selector: "app-admin",
@@ -19,6 +19,7 @@ import { DataSource } from '@angular/cdk/table';
 export class AdminComponent implements OnInit {
 
   constructor(
+    private updateMoviesService: UpdateMoviesService,
     private dialog: MatDialog,
     private getMovieService: GetMovieService,
     private postMovieService: PostMovieService) { }
@@ -26,57 +27,8 @@ export class AdminComponent implements OnInit {
   public infoMovies: any = [];
   tableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
   public popup;
-
-  public dataSource = [ this.infoMovies
-    // {
-    //   imagen: "../../assets/home/images/Drama/CisneNegro.jpg",
-    //   nombre: "Cisne Negro",
-    //   genero: "Drama"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Romance/500DiasConElla.jpg",
-    //   nombre: "500 días con ella",
-    //   genero: "Romantica"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Comedia/AlgoPasaConMary.jpg",
-    //   nombre: "Algo pasa con Mary",
-    //   genero: "Comedia"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Drama/Amelie.jpg",
-    //   nombre: "Amelie",
-    //   genero: "Drama"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Romance/Titanic.jpg",
-    //   nombre: "Titanic",
-    //   genero: "Romantica"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Comedia/ChicasMalas.jpg",
-    //   nombre: "Chicas malas",
-    //   genero: "Comedia"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Drama/ALosTrece.jpg",
-    //   nombre: "A los 13",
-    //   genero: "Drama"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Comedia/NoEsRomantico.jpg",
-    //   nombre: "No es romantico",
-    //   genero: "Comedia"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Comedia/ScaryMovie.jpg",
-    //   nombre: "Scary movie",
-    //   genero: "Comedia"
-    // }
-  ];
-  
-
-  
+  public id;
+  public dataSource = [this.infoMovies];
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -87,8 +39,7 @@ export class AdminComponent implements OnInit {
     return dialogConfig;
   }
 
-  
-//click
+  //click
   agregarPelicula(movie) {
     let dialogConfig = this.openDialog();
     this.popup = this.dialog.open(PopupNuevaPeliComponent, dialogConfig);
@@ -100,30 +51,44 @@ export class AdminComponent implements OnInit {
       console.log("respuesta", respuesta);
       this.addInfoMovie(respuesta);
     });
-  
+
   }
   editarPelicula(dataEdit) {
+    this.id = dataEdit._id
     let dialogConfig = this.openDialog();
     dialogConfig.data = {
-      id      : dataEdit._id,
-      actors  : dataEdit.actors,
+      id: dataEdit._id,
+      actors: dataEdit.actors,
       director: dataEdit.director,
       duration: dataEdit.duration,
-      file    : dataEdit.file,
-      genre   : dataEdit.genre,
-      image   : dataEdit.image,
+      file: dataEdit.file,
+      genre: dataEdit.genre,
+      // image: dataEdit.image,
       synopsis: dataEdit.synopsis,
-      title   : dataEdit.title,
-      trailer : dataEdit.trailer,
+      title: dataEdit.title,
+      // trailer: dataEdit.trailer,
       disableClose: false,
       autoFocus: true,
-      width:"400px",
+      width: "400px",
       height: "450px",
     };
-
     this.popup = this.dialog.open(PopupEditarPeliComponent, dialogConfig);
-    
+    this.popup.afterClosed().subscribe(response => {
+      console.log("respuesta del popup", response);
+      this.updateMovie(response.value)
+    })
   }
+  updateMovie(dataFormulario) {
+    this.updateMoviesService.updateMovie(this.id, dataFormulario).subscribe(response => {
+      console.log(response);
+      this.ngOnInit();
+    })
+  }
+  // this.postMovieService.updateMoviedb(movie, datos).subscribe((res = {}) => {
+  //   this.infoMovies = res;
+  //   console.log("actualizando", this.infoMovies)
+  // })
+
   borrarPelicula(movie) {
     console.log(movie);
     this.postMovieService
@@ -133,7 +98,7 @@ export class AdminComponent implements OnInit {
       });
     this.ngOnInit();
   }
-//servicios
+  //servicios
 
   getInfoMovie() {
     this.getMovieService.getMovie().subscribe((res = {}) => {
@@ -146,8 +111,8 @@ export class AdminComponent implements OnInit {
       this.ngOnInit();
     });
   }
-  deleteInfoMovie(idMovie){
-    this.postMovieService.deleteMovie(idMovie).subscribe(res =>{
+  deleteInfoMovie(idMovie) {
+    this.postMovieService.deleteMovie(idMovie).subscribe(res => {
       this.ngOnInit()
     })
   }

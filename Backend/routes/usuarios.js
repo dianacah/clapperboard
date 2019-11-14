@@ -44,10 +44,15 @@ usuariosRoute.get("/usuarios", (req, res, next) => {
 
 //PUT
 usuariosRoute.put("/usuarios/:email", (req, res, next) => {
-  Usuarios.findOneAndUpdate({ email: req.params.email }, req.body, {
-    new: true,
-    xuseFindAndModify: false
-  })
+  Usuarios.findOneAndUpdate(
+    {
+      email: req.params.email
+    },
+    req.body,
+    {
+      new: true,
+      useFindAndModify: false
+    })
     .then(usuario => {
       res.json(usuario);
     })
@@ -66,7 +71,7 @@ usuariosRoute.patch("/usuarios/:email/movies", (req, res, next) => {
     },
     {
       new: true,
-      xuseFindAndModify: false
+      useFindAndModify: false
     }
   )
     .populate("favoriteMovies")
@@ -77,17 +82,17 @@ usuariosRoute.patch("/usuarios/:email/movies", (req, res, next) => {
 });
 
 //DELETE PARA SACAR LAS PELICULAS DE FAVORITOS
-usuariosRoute.delete("/usuarios/:email/movies", (req, res, next) => {
+usuariosRoute.delete("/usuarios/:email/movies/:movieId", (req, res, next) => {
   Usuarios.findOneAndUpdate(
     { email: req.params.email },
     {
       $pull: {
-        favoriteMovies: req.body.movieId
+        favoriteMovies: req.params.movieId
       }
     },
     {
       new: true,
-      xuseFindAndModify: false
+      useFindAndModify: false
     }
   )
     .populate("favoriteMovies")
