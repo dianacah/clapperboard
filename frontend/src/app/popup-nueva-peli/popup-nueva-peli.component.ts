@@ -8,6 +8,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
   styleUrls: ["./popup-nueva-peli.component.css"]
 })
 export class PopupNuevaPeliComponent implements OnInit {
+
   constructor(private builder: FormBuilder, private dialogRef: MatDialogRef<PopupNuevaPeliComponent>) { }
 
   newMovieForm: FormGroup = this.builder.group({

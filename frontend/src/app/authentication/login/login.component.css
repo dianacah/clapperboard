@@ -18,7 +18,7 @@ input {
 form {
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 65vh;
   padding: 15px;
 }
 a {

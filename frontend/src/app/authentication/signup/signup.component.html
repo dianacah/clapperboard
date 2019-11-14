@@ -8,7 +8,6 @@
     "
     >Ups, por favor ingresa los datos para continuar</small
   >
-  <br />
   <input
     placeholder="Correo electrónico"
     type="email"
@@ -25,7 +24,6 @@
   <small class="error" *ngIf="signupForm.get('email').hasError('email')">
     Ingresa un correo valido
   </small>
-  <br />
   <input placeholder="Fecha de nacimiento" type="date" formControlName="date" />
   <small
     class="error"
@@ -35,7 +33,6 @@
     "
     >Ups, por favor ingresa los datos para continuar</small
   >
-  <br />
   <input placeholder="Contraseña" type="password" formControlName="password" />
   <small
     class="error"
@@ -48,7 +45,6 @@
   <small class="error" *ngIf="signupForm.get('password').hasError('minlength')">
     la contraseña es demasiado corta minimo 6 caracteres
   </small>
-  <br />
   <button
     (click)="enviarInformacion(signupForm)"
     class="white rbt-300 small"
