@@ -56,7 +56,6 @@ usuariosRoute.put("/usuarios/:email", (req, res, next) => {
 
 //PATCH
 usuariosRoute.patch("/usuarios/:email/movies", (req, res, next) => {
-  console.log("peticion", req.params.email, req.body.movieId);
   Usuarios.findOneAndUpdate(
     { email: req.params.email },
     {
@@ -77,12 +76,13 @@ usuariosRoute.patch("/usuarios/:email/movies", (req, res, next) => {
 });
 
 //DELETE PARA SACAR LAS PELICULAS DE FAVORITOS
-usuariosRoute.delete("/usuarios/:email/movies", (req, res, next) => {
+usuariosRoute.delete("/usuarios/:email/movies/:movieId", (req, res, next) => {
+  console.log("peticion del delete", req.params.email, req.body);
   Usuarios.findOneAndUpdate(
     { email: req.params.email },
     {
       $pull: {
-        favoriteMovies: req.body.movieId
+        favoriteMovies: req.params.movieId
       }
     },
     {
