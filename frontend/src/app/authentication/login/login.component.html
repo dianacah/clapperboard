@@ -12,6 +12,9 @@
     "
     >Ups, por favor ingresa los datos para continuar</small
   >
+  <small class="error" *ngIf="loginForm.get('email').hasError('email')">
+    Ingresa un correo valido
+  </small>
   <br />
   <input placeholder="Contraseña" type="password" formControlName="password" />
   <small
@@ -27,6 +30,7 @@
     class="white rbt-300 small"
     type="submit"
     (click)="getUsuario(loginForm)"
+    [disabled]="loginForm.invalid"
   >
     Inicia sesión
   </button>
