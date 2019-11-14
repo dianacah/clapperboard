@@ -1,38 +1,45 @@
 <div class="fondoNav">
-
-    <app-nav-genders></app-nav-genders>
+  <app-nav-genders></app-nav-genders>
 </div>
 <main class="main">
-    <div class="title">
-        <h1 class="sectionTitle rbt-500">
-            Mis Favoritos
-        </h1>
-        <hr />
+  <div class="title">
+    <h1 class="sectionTitle rbt-500">
+      Mis Favoritos
+    </h1>
+    <hr />
+  </div>
+  <div class="moviesFav">
+    
+      <div *ngFor="let peliculaFavorita of peliculasFavoritas" class="pelicula">
+        <img [src]="peliculaFavorita.image" alt=" " class="imgFav " />
+        <h1 class="nombre rbt-400 medium">{{ peliculaFavorita.title }}</h1>
+        <div class="movieName">
+          <p class="movieTitle rbt-400 small">{{ peliculaFavorita.genre }}</p>
+        </div>
+        <div class="favIcon1" (click)="deleteMovie(peliculaFavorita)"></div>
     </div>
-    <div class="moviesFav">
-        <div class="fav1 ">
-                <div *ngFor="let peliculaFavorita of peliculasFavoritas" class="pelicula">
-                    <img src="pelicula.image" alt=" " class="imgFav " />
-            <h1 class="nombre rbt-400">{{pelicula.title}}</h1>
-            <div class="movieName">
-                <p class="movieTitle rbt-400">{{pelicula.genre}}</p>
-            </div>
-            <div class="favIcon1"></div>
-              
-                </div>
-        </div>
-        </div>
-    <div class="movieReproductor">
-        <p class="movieName rbt-700">Nombre película</p>
-        <div class="playMovie">
-            <video src="../../assets/home/videos/video.mp4" controls class="movie"></video>
-            <p class="synopsis1 rbt-300">Annie (Kristen Wiig) es una treintañera soltera del Medio Oeste, con una vida
-                sentimental más bien precaria, a la que Lilliam, su mejor amiga (Maya Rudolph), le pide que sea su dama
-                de honor. Sin embargo, aunque nunca ha ejercido esa función,
-                la pobre se esfuerza por dárselas de snob en la fiesta anterior a la boda. Mientras tanto, otra amiga de
-                Lillian (Rose Byrne) hará todo lo posible por arrebatarle el papel a la inexperta Annie.</p>
-        </div>
-        <br>
-        <button class="botonReproducir rbt-400" (click)="playMoviesFav()">Reproducir</button>
+  </div>
+  <div class="movieReproductor">
+    <p class="movieName rbt-700">Nombre película</p>
+    <div class="playMovie">
+      <video
+        src="../../assets/home/videos/video.mp4"
+        controls
+        class="movie"
+      ></video>
+      <p class="synopsis1 rbt-300">
+        Annie (Kristen Wiig) es una treintañera soltera del Medio Oeste, con una
+        vida sentimental más bien precaria, a la que Lilliam, su mejor amiga
+        (Maya Rudolph), le pide que sea su dama de honor. Sin embargo, aunque
+        nunca ha ejercido esa función, la pobre se esfuerza por dárselas de snob
+        en la fiesta anterior a la boda. Mientras tanto, otra amiga de Lillian
+        (Rose Byrne) hará todo lo posible por arrebatarle el papel a la
+        inexperta Annie.
+      </p>
     </div>
+    <br />
+    <button class="botonReproducir rbt-400" (click)="playMoviesFav()">
+      Reproducir
+    </button>
+  </div>
 </main>

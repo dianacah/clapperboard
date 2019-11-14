@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { LoginService } from "./../../services/Login/login.service";
 import { Router } from "@angular/router";
+import { UserInformationService } from "./../../services/User-Information/user-information.service";
+
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -15,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private builder: FormBuilder,
     private loginService: LoginService,
-    private router: Router
+    private router: Router,
+    private userInformationService: UserInformationService
   ) {}
 
   loginForm: FormGroup = this.builder.group({
@@ -31,17 +34,14 @@ export class LoginComponent implements OnInit {
       if (response == null) {
         this.wrongPass = false;
         this.noRegistrado = false;
-        console.log("validacion null");
       } else if (response != null) {
         this.passwordDB = response.password;
         this.noRegistrado = true;
-        console.log("no es null");
         if (user.password != this.passwordDB) {
-          console.log("validacion", user.password != this.passwordDB);
-          /*  this.router.navigate(["/welcome"]); */
           this.wrongPass = true;
         } else {
           console.log("ingreso correcto");
+          this.userInformationService.setUser(response);
           this.router.navigate(["/perfil"]);
         }
       }
