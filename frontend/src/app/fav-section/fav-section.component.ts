@@ -6,7 +6,7 @@ import {
   MatTableDataSource
 } from "@angular/material";
 import { PutFavoritosService } from "./../services/putfavoritos/put-favoritos.service";
-import { DeleteFavMovieService } from '../services/deleteFavMovie/delete-fav-movie.service';
+import { DeleteFavMovieService } from "../services/deleteFavMovie/delete-fav-movie.service";
 
 @Component({
   selector: "fav-section",
@@ -18,7 +18,7 @@ export class FavSectionComponent implements OnInit {
     private dialog: MatDialog,
     private userInformationService: UserInformationService,
     private putFavoritosService: PutFavoritosService,
-    private deleteFavMovieService:DeleteFavMovieService,
+    private deleteFavMovieService: DeleteFavMovieService
   ) {}
 
   public popup;
@@ -41,15 +41,19 @@ export class FavSectionComponent implements OnInit {
     dialogConfig.height = "250px";
     return dialogConfig;
   } */
-
-  deleteMovie(peliculaFavorita){
-
-  /* this.deleteFavMovieService.deleteFavorito(this.user.email,this.user.data)
-  .subscribe((response = {}) => {
-  this.user.deleteFavMovie = response;
-  console.log("respuesta", this.user.deleteFavMovie);
-  } */
-
+  public idPelicula: any = {};
+  deleteMovie(peliculaFavorita) {
+    let email = this.user.email;
+    this.idPelicula = { movieId: peliculaFavorita._id };
+    console.log("requerimientos peticion", email, this.idPelicula.movieId);
+    console.log(peliculaFavorita);
+    this.deleteFavMovieService
+      .deleteFavorito(email, this.idPelicula.movieId)
+      .subscribe(response => {
+        this.userInformationService.setUser(response);
+        console.log("respuesta del delete", response);
+        this.ngOnInit();
+      });
   }
   ngOnInit() {
     this.user = this.userInformationService.getUser();

@@ -10,7 +10,7 @@ import {
 import { PopupEditarPeliComponent } from '../popup-editar-peli/popup-editar-peli.component';
 import { PostMovieService } from '../services/postMovie/post-movie.service';
 import { DataSource } from '@angular/cdk/table';
-
+import { UpdateMoviesService } from "./../services/update-movies.service"
 
 @Component({
   selector: "app-admin",
@@ -21,17 +21,18 @@ export class AdminComponent implements OnInit {
 
   public name;
   public user;
+  public id;
 
   constructor(
+    private updateMoviesService: UpdateMoviesService,
     private dialog: MatDialog,
     private getMovieService: GetMovieService,
     private userInformationService: UserInformationService,
-    private postMovieService: PostMovieService,) { }
+    private postMovieService: PostMovieService, ) { }
 
   public infoMovies: any = [];
   tableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
   public popup;
-
   public dataSource = [this.infoMovies];
 
   openDialog() {
@@ -42,7 +43,6 @@ export class AdminComponent implements OnInit {
     dialogConfig.height = "400px";
     return dialogConfig;
   }
-
 
   //click
   agregarPelicula(movie) {
@@ -60,6 +60,7 @@ export class AdminComponent implements OnInit {
   }
 
   editarPelicula(dataEdit) {
+    this.id = dataEdit._id
     let dialogConfig = this.openDialog();
     dialogConfig.data = {
       id: dataEdit._id,
@@ -77,10 +78,19 @@ export class AdminComponent implements OnInit {
       width: "400px",
       height: "450px",
     };
-
     this.popup = this.dialog.open(PopupEditarPeliComponent, dialogConfig);
-
   }
+  updateMovie(dataFormulario) {
+    this.updateMoviesService.updateMovie(this.id, dataFormulario).subscribe(response => {
+      console.log(response);
+      this.ngOnInit();
+    })
+  }
+  // this.postMovieService.updateMoviedb(movie, datos).subscribe((res = {}) => {
+  //   this.infoMovies = res;
+  //   console.log("actualizando", this.infoMovies)
+  // })
+
   borrarPelicula(movie) {
     console.log(movie);
     this.postMovieService
@@ -117,7 +127,7 @@ export class AdminComponent implements OnInit {
       this.ngOnInit();
     }, 200);
   }
-  
+
   ngOnInit() {
     this.getInfoMovie();
     this.getUser();

@@ -53,32 +53,33 @@ PeliculasRoute.get("/peliculas/:genre", (req, res, next) => {
 });
 
 //PUT por id
-/* PeliculasRoute.put("/peliculas/:id", (req, res, next) => {
+PeliculasRoute.put("/peliculas/:id", (req, res, next) => {
   console.log("peticion", req, res);
-  Peliculas.findOneAndUpdate(req.params, req.body)
-    .then(() => {
-      const peliculas = Peliculas.findOneAndUpdate(req.params._id, req.body);
-      return peliculas;
+  Peliculas.findOneAndUpdate({ _id: req.params.id },
+    req.body,
+    {
+      new: true,
+      useFindAndModify: false
     })
     .then(peliculas => {
-      res.send(peliculas);
-    })
-    .catch(next);
-}); */
-
-//PUT por title
-PeliculasRoute.put("/peliculas/:title", (req, res, next) => {
-  console.log("peticion", req, res);
-  Peliculas.findOneAndUpdate(req.params, req.body)
-    .then(() => {
-      const peliculas = Peliculas.findOneAndUpdate(req.params.title, req.body);
-      return peliculas;
-    })
-    .then(peliculas => {
-      res.send(peliculas);
+      res.json(peliculas);
     })
     .catch(next);
 });
+
+//PUT por title
+// PeliculasRoute.put("/peliculas/:title", (req, res, next) => {
+//   console.log("peticion", req, res);
+//   Peliculas.findOneAndUpdate(req.params, req.body)
+//     .then(() => {
+//       const peliculas = Peliculas.findOneAndUpdate(req.params.title, req.body);
+//       return peliculas;
+//     })
+//     .then(peliculas => {
+//       res.send(peliculas);
+//     })
+//     .catch(next);
+// });
 
 //Delete
 /* PeliculasRoute.delete("/peliculas/:id", (req, res, next) => {
