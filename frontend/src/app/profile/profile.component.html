@@ -10,74 +10,18 @@
     <p class="white rbt-300 medium">¡Hola {{ name }}!</p>
     <img src="../../assets/profile/avatar.png" class="profilePic" alt="" />
   </div>
-  <form [formGroup]="perfilForm">
-    <input
-      formControlName="name"
-      placeholder="Nombre"
-      type="text"
-      class="small rbt-300 input"
-    />
-    <small
-      class="error"
-      *ngIf="
-        perfilForm.get('name').hasError('required') &&
-        perfilForm.get('name').touched
-      "
-      >Ups, por favor ingresa los datos para continuar</small
-    >
-    <br />
-    <input
-      formControlName="email"
-      placeholder="Correo electrónico"
-      type="email"
-      class="small rbt-300 input"
-    />
-    <small
-      class="error"
-      *ngIf="
-        perfilForm.get('email').hasError('required') &&
-        perfilForm.get('email').touched
-      "
-      >Ups, por favor ingresa los datos para continuar</small
-    >
-    <br />
-    <input
-      formControlName="date"
-      placeholder="Fecha de nacimiento"
-      type="date"
-      class="small rbt-300 input"
-    />
-    <small
-      class="error"
-      *ngIf="
-        perfilForm.get('date').hasError('required') &&
-        perfilForm.get('date').touched
-      "
-      >Ups, por favor ingresa los datos para continuar</small
-    >
-    <br />
-    <input
-      formControlName="password"
-      placeholder="Contraseña"
-      type="password"
-      class="small rbt-300 input"
-    />
-    <small
-      class="error"
-      *ngIf="
-        perfilForm.get('password').hasError('required') &&
-        perfilForm.get('password').touched
-      "
-      >Ups, por favor ingresa los datos para continuar</small
-    >
-    <br />
-    <input
-      placeholder="Descripción (opcional)"
-      type="text"
-      class="small rbt-300 descriptionInput"
-    />
+  <div >
+    <div>Nombre:</div>
+    <div>{{name}}</div>
+    <div>Email:</div>
+    <div>{{email}}</div>
+    <div>Fecha de nacimiento:</div>
+    <div>{{date}}</div>
+    <div>Descripción:</div>
+    <div>{{description}}</div>
+ 
     <button class="white rbt-300 small submitButton" (click)="mostarUsuario()">
       Actualizar
     </button>
-  </form>
+  </div>
 </div>

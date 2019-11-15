@@ -39,8 +39,6 @@ export class PopupEditarPeliComponent implements OnInit {
     director: [this.dialogRef],
     duration: [this.duration],
     actors: [this.actors],
-    //file: [""],
-    // image: [""],
     synopsis: [this.synopsis]
   });
 
@@ -55,8 +53,6 @@ export class PopupEditarPeliComponent implements OnInit {
       director: this.actualizarPeliForm.value.director,
       duration: this.actualizarPeliForm.value.duration,
       actors: this.actualizarPeliForm.value.actors,
-      // file: this.actualizarPeliForm.value.file,
-      // image: this.actualizarPeliForm.value.image,
       synopsis: this.actualizarPeliForm.value.synopsis
     }
 
