@@ -31,7 +31,7 @@ export class AdminComponent implements OnInit {
     private userInformationService: UserInformationService,
     private postMovieService: PostMovieService,
     private getUsersService: GetUsersService
-  ) {}
+  ) { }
 
   public infoUsers: any = [];
   usersTableColumns: string[] = ["icono", "nombre", "correo"];
@@ -39,7 +39,7 @@ export class AdminComponent implements OnInit {
   public infoMovies: any = [];
   moviesTableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
   public popup;
-  // public dataSource = [this.infoMovies];
+  //public dataSource = [this.infoMovies];
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -73,9 +73,9 @@ export class AdminComponent implements OnInit {
       actors: dataEdit.actors,
       director: dataEdit.director,
       duration: dataEdit.duration,
-      file: dataEdit.file,
+      // file: dataEdit.file,
       genre: dataEdit.genre,
-      image: dataEdit.image,
+      // image: dataEdit.image,
       synopsis: dataEdit.synopsis,
       title: dataEdit.title,
       trailer: dataEdit.trailer,
@@ -85,10 +85,17 @@ export class AdminComponent implements OnInit {
       height: "450px"
     };
     this.popup = this.dialog.open(PopupEditarPeliComponent, dialogConfig);
+    this.popup.afterClosed().subscribe(response => {
+      /* console.log("respuesta", response.value);
+      this.updateMoviesService.updateMovie(this.id, response.value);
+      this.ngOnInit(); */
+      this.updateMovie(response);
+    });
   }
   updateMovie(dataFormulario) {
+    console.log("informacion del formulario", dataFormulario);
     this.updateMoviesService
-      .updateMovie(this.id, dataFormulario)
+      .updateMovie(this.id, dataFormulario.value)
       .subscribe(response => {
         console.log(response);
         this.ngOnInit();
