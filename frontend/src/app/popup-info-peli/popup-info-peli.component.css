@@ -1,56 +1,72 @@
 .contenedorPopUpInfo {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .nombrePelicula {
-  align-self: center;
+    align-self: center;
 }
 
 .margin5 {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.intermedioSize {
+    font-size: 13px;
+}
+
+.text {
+    text-align: justify;
+}
+
+iframe {
+    align-self: center;
 }
 
 .botonVerPelicula {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #ff1180;
-  color: white;
-  height: 45px;
-  width: 200px;
-  border-radius: 5rem;
-  align-self: center;
+    padding: 10px;
+    font-size: 12px;
+    background-color: #ff1180;
+    color: white;
+    height: 40px;
+    width: 200px;
+    border-radius: 5rem;
+    align-self: center;
 }
 
 .botonVerPelicula:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .favIcon1 {
-  height: 20px;
-  width: 20px;
-  align-content: center;
-  background-image: url(../../assets/favSection/img/redheart.png);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  font-size: 10px;
+    height: 20px;
+    width: 20px;
+    align-content: center;
+    background-image: url(../../assets/favSection/img/redheart.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    font-size: 10px;
 }
+
 .favIcon2 {
-  height: 20px;
-  width: 20px;
-  align-content: center;
-  background-image: url(../../assets/favSection/img/corazon.png);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  font-size: 10px;
+    height: 20px;
+    width: 20px;
+    align-content: center;
+    background-image: url(../../assets/favSection/img/corazon.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    font-size: 10px;
 }
+
 .favIcon1:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 .favIcon2:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 .footerPopup {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }

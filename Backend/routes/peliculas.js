@@ -54,7 +54,7 @@ PeliculasRoute.get("/peliculas/:genre", (req, res, next) => {
 
 //PUT por id
 PeliculasRoute.put("/peliculas/:id", (req, res, next) => {
-  console.log("peticion", req, res);
+  console.log("peticion", req.params, req.body);
   Peliculas.findOneAndUpdate({ _id: req.params.id },
     req.body,
     {

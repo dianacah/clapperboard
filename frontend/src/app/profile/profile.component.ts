@@ -36,7 +36,7 @@ export class ProfileComponent implements OnInit {
     setTimeout(() => {
       this.user = this.userInformationService.getUser();
       console.log("respuesta servicio", this.user);
-      this.name = this.user.name;
+      this.name = this.user.name.split(" ", 1);
       this.email = this.user.email;
       this.date = this.user.date;
       this.password = this.user.password;
