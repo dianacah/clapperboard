@@ -29,18 +29,51 @@
     <div class="content">
       <div class="padding20" id="Drama">
         <p class="white medium rbt-300 genreTitle">Drama</p>
-        <div class="gridPeliculas">
-          <div
-            *ngFor="let dramaMovie of dramaMovies"
-            class="pelicula"
-            (click)="mostrarPelicula(dramaMovie)"
-          >
-            <img [src]="dramaMovie.image" alt="" class="imagenPelicula" />
-            <p class="white small rbt-300">
-              {{ dramaMovie.title | titlecase }}
-            </p>
-          </div>
-        </div>
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <div class="moviesCarousel">
+              <div *ngFor="let dramaMovie of dramaMovies">
+                <img
+                  [src]="dramaMovie.image"
+                  alt=""
+                  class="imagenPelicula"
+                  (click)="mostrarPelicula(dramaMovie)"
+                />
+                <p class="white small rbt-300">
+                  {{ dramaMovie.title | titlecase }}
+                </p>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="moviesCarousel">
+              <img
+                src="../../assets/home/images/Drama/ALosTrece.jpg"
+                alt=""
+                class="imagenPelicula"
+                (click)="mostrarPelicula(dramaMovie)"
+              />
+              <img
+                src="../../assets/home/images/Drama/ALosTrece.jpg"
+                alt=""
+                class="imagenPelicula"
+                (click)="mostrarPelicula(dramaMovie)"
+              />
+              <img
+                src="../../assets/home/images/Drama/ALosTrece.jpg"
+                alt=""
+                class="imagenPelicula"
+                (click)="mostrarPelicula(dramaMovie)"
+              />
+              <img
+                src="../../assets/home/images/Drama/ALosTrece.jpg"
+                alt=""
+                class="imagenPelicula"
+                (click)="mostrarPelicula(dramaMovie)"
+              />
+            </div>
+          </ng-template>
+        </ngb-carousel>
       </div>
       <div class="padding20" id="Comedia">
         <p class="white medium rbt-300 genreTitle">Comedia</p>
