@@ -128,7 +128,7 @@ export class AdminComponent implements OnInit {
   getUser() {
     setTimeout(() => {
       this.user = this.userInformationService.getUser();
-      this.name = this.user.name;
+      this.name = this.user.name.split(" ", 1);
       this.role = this.user.role;
       this.ngOnInit();
     }, 200);
@@ -137,6 +137,11 @@ export class AdminComponent implements OnInit {
   getAllUsers() {
     this.getUsersService.getUsers().subscribe((res = []) => {
       this.infoUsers = res;
+
+      this.infoUsers = this.infoUsers.filter(user => {
+        return user.name != this.name;
+      });
+      console.log(this.name, this.infoUsers);
     });
   }
 
