@@ -1,23 +1,33 @@
 <form [formGroup]="actualizarPeliForm" class="formularioActuPelicula">
-
-    <label class="selectFile">Titulo de la película</label>
-    <input formControlName="title" type="text" [value]="tituloPelicula" />
+    <mat-form-field>
+        <label class="selectFile">Titulo de la película</label>
+        <input matInput formControlName="title" type="text" [value]="tituloPelicula" />
+    </mat-form-field>
     
+    <mat-form-field>
+        <label class="selectFile">Género</label>
+        <input matInput formControlName="genre" type="text" [value]="genre" />
+    </mat-form-field>
 
-    <label class="selectFile">Género</label>
-    <input formControlName="genre" type="text" [value]="genre" />
+    <mat-form-field>
+        <label class="selectFile">Director</label>
+        <input matInput formControlName="director" type="text" [value]="director" />
+    </mat-form-field>
 
-    <label class="selectFile">Director</label>
-    <input formControlName="director" type="text" [value]="director" />
+    <mat-form-field>
+        <label class="selectFile">Duración</label>
+        <input matInput formControlName="duration" type="text" [value]="duration" />
+    </mat-form-field>
 
-    <label class="selectFile">Duración</label>
-    <input formControlName="duration" type="text" [value]="duration" />
+    <mat-form-field>
+        <label class="selectFile">Protagonistas</label>
+        <input matInput formControlName="actors" type="text" [value]="actors" />
+    </mat-form-field>
 
-    <label class="selectFile">Protagonistas</label>
-    <input formControlName="actors" type="text" [value]="actors" />
-
-    <label class="selectFile">Sinopsis</label>
-    <input formControlName="synopsis" type="text" [value]="synopsis" />
+    <mat-form-field>
+        <label class="selectFile">Sinopsis</label>
+        <input matInput formControlName="synopsis" type="text" [value]="synopsis" />
+    </mat-form-field>
 
     <button (click)="onSubmit()" class="botonGuardar small white">Guardar</button>
 </form>

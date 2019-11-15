@@ -22,14 +22,6 @@
   margin: 10px 0;
   width: 50%;
 }
-form {
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-  padding: 15px;
-  width: 100%;
-  align-items: center;
-}
 .submitButton {
   border: none;
   background-color: #ff1180;
@@ -38,7 +30,7 @@ form {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   margin: 10px 0;
-  width: 20%;
+  width: 70%;
   justify-self: end;
 }
 .favButton {
@@ -63,14 +55,7 @@ a {
   color: white;
   align-self: center;
 }
-.descriptionInput {
-  height: 160px;
-  border: 1px solid lightgray;
-  border-radius: 3rem;
-  padding: 15px;
-  margin: 10px 0;
-  width: 50%;
-}
+
 .error {
   color: #ff1180;
 }
@@ -98,3 +83,20 @@ a {
 a:hover {
   color: #ff1180;
 }
+body{
+  background-image: linear-gradient(
+    rgba(25, 18, 87, 0.5),
+    rgba(25, 18, 87, 0.5)
+  ),
+  url(../../assets/profile/fondoPerfil.jpg);
+background-size: cover;
+background-position: center;
+height: 100vh; 
+min-width: fit-content; 
+justify-content: center;
+
+}
+div{
+  color: #fff;
+}
+

@@ -50,7 +50,7 @@ export class ProfileComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = false;
-    dialogConfig.width = "700px";
+    dialogConfig.width = "500px";
     dialogConfig.height = "550px";
     dialogConfig.data = {
       user: this.user

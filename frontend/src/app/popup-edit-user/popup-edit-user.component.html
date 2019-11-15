@@ -1,31 +1,37 @@
 <div class="contenedorPopupEditUser">
-  <h1 class="editarUser margin5">Editar Usuario</h1>
+  <h3 class="rbt-300 formTitle">Editar Usuario</h3>
     <form [formGroup]="perfilForm">
-        <input formControlName="name" type="text" class="small rbt-300 input" [value]="user.name" />
+        <mat-form-field>
+        <input matInput formControlName="name" type="text" [value]="user.name" />
         <small class="error" *ngIf="
         perfilForm.get('name').hasError('required') &&
         perfilForm.get('name').touched
       ">Ups, por favor ingresa los datos para continuar</small>
-        <br />
-        <input formControlName="email" type="email" class="small rbt-300 input" [value]="user.email" />
+        </mat-form-field>
+        <mat-form-field>
+        <input matInput formControlName="email" type="email" [value]="user.email" />
         <small class="error" *ngIf="
         perfilForm.get('email').hasError('required') &&
         perfilForm.get('email').touched
       ">Ups, por favor ingresa los datos para continuar</small>
-        <br />
-        <input formControlName="date" type="date" class="small rbt-300 input"  [value]="user.date"/>
+        </mat-form-field>
+        <mat-form-field>
+        <input matInput formControlName="date" type="date" [value]="user.date"/>
         <small class="error" *ngIf="
         perfilForm.get('date').hasError('required') &&
         perfilForm.get('date').touched
       ">Ups, por favor ingresa los datos para continuar</small>
-        <br />
-        <input formControlName="password" type="password" class="small rbt-300 input"  [value]="user.password" />
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput formControlName="password" type="password" [value]="user.password" />
         <small class="error" *ngIf="
         perfilForm.get('password').hasError('required') &&
         perfilForm.get('password').touched
       ">Ups, por favor ingresa los datos para continuar</small>
-        <br />
-        <input formControlName="description" placeholder="Descripción (opcional)" type="text" class="small rbt-300 descriptionInput"  [value]="user.description"/>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput formControlName="description" placeholder="Descripción (opcional)" type="text" [value]="user.description"/>
+      </mat-form-field> 
         <button class="white rbt-300 small submitButton" type="submit" (click)="OnSubmit(perfilForm)" routerLink="/perfil">
             Actualizar
         </button>
