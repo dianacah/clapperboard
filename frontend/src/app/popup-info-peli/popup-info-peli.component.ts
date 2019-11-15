@@ -5,8 +5,6 @@ import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 import { DomSanitizer } from "@angular/platform-browser";
 import { DeleteFavMovieService } from "../services/deleteFavMovie/delete-fav-movie.service";
 
-/* import { userInfo } from 'os'; */
-
 @Component({
   selector: "app-popup-info-peli",
   templateUrl: "./popup-info-peli.component.html",
@@ -80,3 +78,4 @@ export class PopupInfoPeliComponent implements OnInit {
     this.validarFavorito();
   }
 }
+

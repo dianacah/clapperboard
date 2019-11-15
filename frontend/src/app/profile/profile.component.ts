@@ -15,8 +15,7 @@ import { from } from "rxjs";
   styleUrls: ["./profile.component.css"]
 })
 export class ProfileComponent implements OnInit {
-  userInformation: any = [];
-
+  
   public user;
   public name;
   public email;
@@ -33,14 +32,6 @@ export class ProfileComponent implements OnInit {
     private userInformationService: UserInformationService
   ) {}
 
-  /*  perfilForm: FormGroup = this.builder.group({
-    name: [this.user.name, Validators.required],
-    email: ["", Validators.compose([Validators.required, Validators.email])],
-    date: ["", Validators.required],
-    password: ["", Validators.required],
-    description: [""]
-  }); */
-
   getUser() {
     setTimeout(() => {
       this.user = this.userInformationService.getUser();
@@ -52,47 +43,31 @@ export class ProfileComponent implements OnInit {
       this.description = this.user.description;
       console.log("nombre", this.name, "bandera", this.carga);
       this.carga = false;
-      this.ngOnInit();
-    }, 200);
-  }
-  putUser() {
-    setTimeout(() => {
-      this.user = this.userInformationService.putUser(this.user);
-      console.log("respuesta servicio", this.user);
-      this.name = this.user.name;
-      this.email = this.user.email;
-      this.date = this.user.date;
-      this.password = this.user.password;
-      this.description = this.user.description;
-      console.log("nombre", this.name, "bandera", this.carga);
-      this.carga = false;
-      this.ngOnInit();
-    }, 200);
+    }, 0);
   }
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = false;
-    dialogConfig.width = "800px";
-    dialogConfig.height = "680px";
+    dialogConfig.width = "700px";
+    dialogConfig.height = "550px";
+    dialogConfig.data = {
+      user: this.user
+    }
     return dialogConfig;
   }
 
   mostarUsuario(user) {
     let dialogConfig = this.openDialog();
-    /* dialogConfig.data = {
-      name: user.name,
-      email: user.email,
-      date: user.date,
-      password: user.password,
-      description: user.description,
-    };  */
     this.popup = this.dialog.open(PopupEditUserComponent, dialogConfig);
     this.popup.afterClosed().subscribe(response => {
-      let respuesta = response.value;
-      this.userInformationService.getUser();
-      this.getUser();
+     console.log(response);
+     this.userInformationService.putUser(this.user.email,response.value).subscribe(response=>{
+       console.log(response);
+       this.userInformationService.setUser(response);
+       this.ngOnInit();
+     })
     });
   }
   mostrarInfo(user) {
@@ -102,18 +77,6 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.carga) {
-      this.getUser();
-    }
-    this.perfilForm = this.builder.group({
-      name: [this.name, Validators.required],
-      email: [
-        this.email,
-        Validators.compose([Validators.required, Validators.email])
-      ],
-      date: [this.date, Validators.required],
-      password: [this.password, Validators.required],
-      description: [this.description]
-    });
+    this.getUser();
   }
 }

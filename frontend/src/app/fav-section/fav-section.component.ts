@@ -21,7 +21,7 @@ export class FavSectionComponent implements OnInit {
     private userInformationService: UserInformationService,
     private putFavoritosService: PutFavoritosService,
     private deleteFavMovieService: DeleteFavMovieService
-  ) {}
+  ) { }
 
   public popup;
   public user;
@@ -29,9 +29,15 @@ export class FavSectionComponent implements OnInit {
   public idPelicula: any = {};
   public peliculaFav;
   public trailer;
+  public isTrue: boolean = false;
+
   deleteMovie(peliculaFavorita) {
     let email = this.user.email;
     this.idPelicula = { movieId: peliculaFavorita._id };
+    if (peliculaFavorita.title == this.peliculaFav.title) {
+      this.peliculaFav = "";
+      this.isTrue = false;
+    }
     this.deleteFavMovieService
       .deleteFavorito(email, this.idPelicula.movieId)
       .subscribe(response => {
@@ -41,11 +47,14 @@ export class FavSectionComponent implements OnInit {
   }
   mostrarInfoPeliculaFav(peliculaFavorita) {
     console.log(peliculaFavorita);
-    this.peliculaFav = peliculaFavorita;
+
+    this.isTrue = true,
+      this.peliculaFav = peliculaFavorita;
     this.trailer = this.sanitizer.bypassSecurityTrustResourceUrl(
-      this.peliculaFav.trailer
+      this.peliculaFav.trailer,
     );
   }
+
   ngOnInit() {
     this.user = this.userInformationService.getUser();
     this.peliculasFavoritas = this.user.favoriteMovies;

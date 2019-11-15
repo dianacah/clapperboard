@@ -6,6 +6,7 @@ import { HttpClient} from "@angular/common/http"
 })
 export class UserInformationService {
   private userInfo: any = {};
+  private URL = "http://localhost:3000/api/usuarios/";
 
   constructor(private http : HttpClient) { }
 
@@ -17,7 +18,7 @@ export class UserInformationService {
     return this.userInfo;
   }
 
-  putUser(email) {
-    return this.http.put(this.userInfo, email)
+  putUser(email,data) {
+    return this.http.put(this.URL+ email, data)
   }
 }
