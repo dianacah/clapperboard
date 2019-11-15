@@ -17,7 +17,6 @@ export class MovieComponent implements OnInit {
   public movie;
   public title;
   public genre;
-  public myGenre;
   public duration;
   public synopsis;
   public file;
@@ -40,11 +39,6 @@ export class MovieComponent implements OnInit {
       this.interestingMovies = this.infoMovies.filter(isMovie => {
         return isMovie.genre == this.genre;
       });
-      console.log(
-        "estas son las películas de interes",
-        this.genre,
-        this.interestingMovies
-      );
     });
   }
 
