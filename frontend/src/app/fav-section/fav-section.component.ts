@@ -7,6 +7,7 @@ import {
 } from "@angular/material";
 import { PutFavoritosService } from "./../services/putfavoritos/put-favoritos.service";
 import { DeleteFavMovieService } from "../services/deleteFavMovie/delete-fav-movie.service";
+import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
   selector: "fav-section",
@@ -15,6 +16,7 @@ import { DeleteFavMovieService } from "../services/deleteFavMovie/delete-fav-mov
 })
 export class FavSectionComponent implements OnInit {
   constructor(
+    private sanitizer: DomSanitizer,
     private dialog: MatDialog,
     private userInformationService: UserInformationService,
     private putFavoritosService: PutFavoritosService,
@@ -24,24 +26,9 @@ export class FavSectionComponent implements OnInit {
   public popup;
   public user;
   public peliculasFavoritas: any = [];
-
-  /* addMoviesFav(pelicula) {
-    let dialogConfig = this.openDialog();
-    this.popup = this.dialog.open(PopupNewFavComponent, dialogConfig);
-    this.popup.afterClosed().subscribe(response => {
-      let respuesta = response.value;
-    });
-  } */
-
-  /* openDialog() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = false;
-    dialogConfig.autoFocus = false;
-    dialogConfig.width = "400px";
-    dialogConfig.height = "250px";
-    return dialogConfig;
-  } */
   public idPelicula: any = {};
+  public peliculaFav;
+  public trailer;
   deleteMovie(peliculaFavorita) {
     let email = this.user.email;
     this.idPelicula = { movieId: peliculaFavorita._id };
@@ -51,6 +38,13 @@ export class FavSectionComponent implements OnInit {
         this.userInformationService.setUser(response);
         this.ngOnInit();
       });
+  }
+  mostrarInfoPeliculaFav(peliculaFavorita) {
+    console.log(peliculaFavorita);
+    this.peliculaFav = peliculaFavorita;
+    this.trailer = this.sanitizer.bypassSecurityTrustResourceUrl(
+      this.peliculaFav.trailer
+    );
   }
   ngOnInit() {
     this.user = this.userInformationService.getUser();

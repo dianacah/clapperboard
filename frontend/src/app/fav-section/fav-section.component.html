@@ -9,32 +9,39 @@
     <hr />
   </div>
   <div class="moviesFav">
-    
-      <div *ngFor="let peliculaFavorita of peliculasFavoritas" class="pelicula">
-        <img [src]="peliculaFavorita.image" alt=" " class="imgFav " />
-        <h1 class="nombre rbt-400 medium">{{ peliculaFavorita.title }}</h1>
-        <div class="movieName">
-          <p class="movieTitle rbt-400 small">{{ peliculaFavorita.genre }}</p>
-        </div>
-        <div class="favIcon1" (click)="deleteMovie(peliculaFavorita)"></div>
+    <div *ngFor="let peliculaFavorita of peliculasFavoritas" class="pelicula">
+      <img
+        [src]="peliculaFavorita.image"
+        alt=" "
+        class="imgFav "
+        (click)="mostrarInfoPeliculaFav(peliculaFavorita)"
+      />
+      <h1 class="nombre rbt-400 medium">{{ peliculaFavorita.title }}</h1>
+      <div class="movieName">
+        <p class="movieTitle rbt-400 small">{{ peliculaFavorita.genre }}</p>
+      </div>
+      <div class="favIcon1" (click)="deleteMovie(peliculaFavorita)"></div>
     </div>
   </div>
   <div class="movieReproductor">
-    <p class="movieName rbt-700">Nombre película</p>
+    <p class="movieName rbt-700">{{ peliculaFav.title }}</p>
     <div class="playMovie">
-      <video
+      <!-- <video
         src="../../assets/home/videos/video.mp4"
         controls
         class="movie"
-      ></video>
+      ></video> -->
+      <iframe
+        width="100%"
+        height="350px"
+        [src]="trailer"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        class="margin5"
+      ></iframe>
       <p class="synopsis1 rbt-300">
-        Annie (Kristen Wiig) es una treintañera soltera del Medio Oeste, con una
-        vida sentimental más bien precaria, a la que Lilliam, su mejor amiga
-        (Maya Rudolph), le pide que sea su dama de honor. Sin embargo, aunque
-        nunca ha ejercido esa función, la pobre se esfuerza por dárselas de snob
-        en la fiesta anterior a la boda. Mientras tanto, otra amiga de Lillian
-        (Rose Byrne) hará todo lo posible por arrebatarle el papel a la
-        inexperta Annie.
+        {{ peliculaFav.synopsis }}
       </p>
     </div>
     <br />
