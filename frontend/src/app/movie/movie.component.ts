@@ -14,6 +14,7 @@ export class MovieComponent implements OnInit {
 
   public title;
   public genre;
+  public myGenre;
   public duration;
   public synopsis;
   public file;
@@ -24,13 +25,28 @@ export class MovieComponent implements OnInit {
     private peliculaAReproducirService: PeliculaAReproducirService
   ) {}
 
-  getInfoMovie() {
+  getInteresting() {
+    setTimeout(() => {
+      let myMovie = this.peliculaAReproducirService.getMovie();
+      this.myGenre = myMovie.genre;
+    }, 200);
+  }
+
+  getMovies() {
     this.getMovieService.getMovie().subscribe((res = {}) => {
       this.infoMovies = res;
 
-      this.interestingMovies = this.infoMovies.filter(movie => {
-        return movie.genre == "Drama";
-      });
+      setTimeout(() => {
+        this.interestingMovies = this.infoMovies.filter(isMovie => {
+          return isMovie.genre == '"' + this.myGenre + '"';
+        });
+
+        console.log(
+          "estas son las películas de interes",
+          '"' + this.myGenre + '"',
+          this.interestingMovies
+        );
+      }, 400);
     });
   }
 
@@ -44,6 +60,7 @@ export class MovieComponent implements OnInit {
       this.file = this.sanitizer.bypassSecurityTrustResourceUrl(movie.file);
     }, 500);
 
-    this.getInfoMovie();
+    this.getInteresting();
+    this.getMovies();
   }
 }

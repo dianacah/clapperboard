@@ -62,7 +62,6 @@ export class PeliculasComponent implements OnInit {
   getInfoMovie() {
     this.getMovieService.getMovie().subscribe((res = {}) => {
       this.infoMovies = res;
-      console.log("respuesta", this.infoMovies);
 
       this.dramaMovies = this.infoMovies.filter(movie => {
         return movie.genre == "Drama";
