@@ -199,6 +199,118 @@
 		  "synopsis": "Cole descubre que su niñera forma parte de una secta satánica y hará lo que sea necesario para que él no la delate.",
 		  "trailer": "https://youtube.com/embed/UC7sX17JJ98"
 		},
+		{
+		  "title": "Y dónde están las rubias",
+		  "director": "Keenen Ivory Wayans",
+		  "duration": "1:09",
+		  "genre": "Comedia",
+		  "actors": "Shawn Wayans,Drew Barrymore",
+		  "file": "https://youtube.com/embed/UxER50XHW-I",
+		  "image": "../../assets/home/images/Anime/DondeEstanlasrubias.jpg",
+		  "synopsis": "Dos torpes agentes del FBI se hacen pasar por dos chicas de la alta sociedad para investigar una serie de secuestros. No obstante, mientras preparan su plan, descubren que irrumpir en la clase privilegiada es mucho más duro de lo que creían.",
+		   "trailer": "https://youtube.com/embed/3ksls7_rqgE"
+		},
+{
+		  "title": "Luna de miel en familia",
+		  "director": "Frank Coraci",
+		  "duration": "1:18	",
+		  "genre": "Comedia",
+		  "actors": "Adam Sandler,Marlon Wayans",
+		  "file": "https://youtube.com/embed/CmJSWMNG5ec",
+		  "image": "../../assets/home/images/Anime/LunaDeMielEnFamilia.jpg",
+		  "synopsis": "Poco después de que una cita a ciegas acaba con resultados desastrosos, dos padres solteros y sus niños terminan atrapados juntos en un centro turístico africano.",
+		   "trailer": "https://youtube.com/embed/loGO3eJ_er8"
+		},
+		{
+		  "title": "Locura de amor en Las Vegas",
+		  "director": "Tom Vaughan",
+		  "duration": "99	",
+		  "genre": "Comedia",
+		  "actors": "Cameron Diaz,Ashton Kutcher",
+		  "file": "https://youtube.com/embed/UT87bpFJKRQ",
+		  "image": "../../assets/home/images/Anime/LocuraDeAmorEnLasVegas.jpg",
+		  "synopsis": "Jack Fuller acaba de ser despedido de la empresa de su propio padre. Por otro lado, a la atractiva Joy McNally, su novio le ha dejado plantada. Ambos deciden irse a Las Vegas, donde terminan casados tras una noche de locura y descontrol.",
+		   "trailer": "https://youtube.com/embed/6Bwv4cbuLe8"
+		},
+			{
+		  "title": "La Propuesta",
+		  "director": "Anne Fletcher",
+		  "duration": "1:07",
+		  "genre": "Comedia",
+		  "actors": "Sandra Bullock,Ryan Reynolds",
+		  "file": "https://youtube.com/embed/rCs8skCWF98",
+		  "image": "../../assets/home/images/Anime/LaPropuesta.jpg",
+		  "synopsis": "Margaret, una famosa e influyente editora de Nueva York, está a punto de ser deportada a Canadá. Para evitarlo, declara que está comprometida con su ayudante Andrew. Él está dispuesto a participar en la farsa, pero imponiendo ciertas condiciones.",
+		   "trailer": "https://youtube.com/embed/j_x2I3J7rVw"
+		},
+			{
+		  "title": "¡Mujeres al ataque!",
+		  "director": "Anne Fletcher",
+		  "duration": "1:09",
+		  "genre": "Comedia",
+		  "actors": "Cameron Diaz,Leslie Mann,
+		  "file": "https://youtube.com/embed/OhRSZP9mS3w",
+		  "image": "../../assets/home/images/Anime/MujereAlAtaque.jpg",
+		  "synopsis": "Tres mujeres unen fuerzas para vengarse de un hombre canalla, mentiroso e infiel que las traicionó a todas.",
+		   "trailer": "https://youtube.com/embed/NMLtvnUowJo"
+		},
+			{
+		  "title": "Miss Simpatía",
+		  "director": "	Donald Petrie",
+		  "duration": "1:09",
+		  "genre": "Comedia",
+		  "actors": "Sandra Bullock,Michael Caine,
+		  "file": "https://youtube.com/embed/5rBmtii4CFA",
+		  "image": "../../assets/home/images/Anime/MissSimpatia.jpg",
+		  "synopsis": "Una ruda agente del FBI debe participar de incógnito en el concurso de Miss Estados Unidos para atrapar a un terrorista.",
+		   "trailer": "https://youtube.com/embed/htQGSAfyFyM"
+		},
+		
+		{
+		  "title": "Ella en mi cuerpo y él en el mío",
+		  "director": "	Nick Hurran",
+		  "duration": "93",
+		  "genre": "Comedia",
+		  "actors": "Samaire Armstrong,Kevin Zegers",
+		  "file": "https://youtube.com/embed/70oVFAWdzGA",
+		  "image": "../../assets/home/images/Anime/EllaEnMiCuerpoElEnElMio.jpg",
+		  "synopsis": "Dos enemigos de toda la vida despiertan una mañana para descubrir que han intercambiado cuerpos y géneros, y ambos se preparan para arruinar la reputación del otro en la preparatoria..",
+		   "trailer": "https://youtube.com/embed/70oVFAWdzGA"
+		},
+		
+		{
+		  "title": "Este cuerpo no es mío",
+		  "director": "Tom Brady",
+		  "duration": "1:04",
+		  "genre": "Comedia",
+		  "actors": "Rob Schneider,Anna Faris",
+		  "file": "https://youtube.com/embed/6z5zbY-0QCA",
+		  "image": "../../assets/home/images/Anime/EsteCuerpoNoEsMio.jpg",
+		  "synopsis": "Una porrista y un vulgar ladrón intercambian cuerpos mágicamente y deben encontrar una manera de revertir el encanto.",
+		   "trailer": "https://youtube.com/embed/I5z64Gq-rCw"
+		},
+		{
+		  "title": "Viernes de locos",
+		  "director": "Mark Waters",
+		  "duration": "97",
+		  "genre": "Comedia",
+		  "actors": "Jamie Lee Curtis,Lindsay Lohan",
+		  "file": "https://youtube.com/embed/nZ8KJ4MzzOw",
+		  "image": "../../assets/home/images/Anime/ViernesDeLocos.jpg",
+		  "synopsis": "Dos galletas de la suerte provocan que una psicoterapeuta comprometida y su hija adolescente intercambien mágicamente sus cuerpos.",
+		   "trailer": "https://youtube.com/embed/v80uh3NCOXo"
+		},
+		{
+		  "title": "Devuélveme mi suerte ",
+		  "director": "Donald Petrie",
+		  "duration": "1:03",
+		  "genre": "Comedia",
+		  "actors": "Lindsay Lohan,Chris Pine"
+		  "file": "https://youtube.com/embed/-1SVqqyrskE",
+		  "image": "../../assets/home/images/Anime/DevuelvemeMiSuerte.jpg",
+		  "synopsis": "Dos galletas de la suerte provocan que una psicoterapeuta comprometida y su hija adolescente intercambien mágicamente sus cuerpos.",
+		   "trailer": "https://youtube.com/embed/qGXdZ4g2gTM"
+		},
 
 	{
 		  "title": "El diario de Noa",
@@ -377,7 +489,7 @@
 		  "image": "../../assets/home/images/Anime/Arriety.jpg",
 		  "synopsis": "Arrietty, una pequeña joven, vive con sus padres en una casa de los suburbios, a escondidas del dueño y la ama de casa. Como otros de su especie, Arrietty se mantiene oculta de sus anfitriones humanos, pero ocasionalmente se aventura más allá de los pisos en busca de azúcar y otros suministros. Una amistad secreta se forma cuando Shawn, de 12 años, conoce a Arrietty, pero su relación podría ser peligrosa para la familia de Arrietty.",
 		  "trailer": "https://youtube.com/embed/aeSbQg_JwhQ"
-		}
+		},
 		 {
 		  "title": "El castillo ambulante",
 		  "director": "Hayao Miyazaki",
@@ -386,9 +498,9 @@
 		  "actors": "Takuya Kimura,Chieko Baishō",
 		  "file": "https://youtube.com/embed/piiZ70NmZRM",
 		  "image": "../../assets/home/images/Anime/elCastilloAmbulante.jpg",
-		  "synopsis": "Sophie, una joven de 18 años que trabaja en una sombrerería en una ciudad de Europa. Le cuesta socializar y hacer amigos debido a su timidez y su personalidad tímida e inocente. Un día, mientras va a visitar a su hermana, un misterioso joven la rescata del acoso de dos soldados que se encuentran en horas de servicio ya que el continente está en guerra. En la cafetería, la gente advierte a Sophie de la existencia de Howl, un mago que roba el alma de las mujeres jóvenes. Por la noche, Sophie recibe una maldición por parte de la malvada Bruja del Páramo que hace que se convierta en una anciana de 90 años. Sophie decide buscar ayuda en el castillo ambulante, el lugar donde vive el mago Howl."
+		  "synopsis": "Sophie, una joven de 18 años que trabaja en una sombrerería en una ciudad de Europa. Le cuesta socializar y hacer amigos debido a su timidez y su personalidad tímida e inocente. Un día, mientras va a visitar a su hermana, un misterioso joven la rescata del acoso de dos soldados que se encuentran en horas de servicio ya que el continente está en guerra. En la cafetería, la gente advierte a Sophie de la existencia de Howl, un mago que roba el alma de las mujeres jóvenes. Por la noche, Sophie recibe una maldición por parte de la malvada Bruja del Páramo que hace que se convierta en una anciana de 90 años. Sophie decide buscar ayuda en el castillo ambulante, el lugar donde vive el mago Howl.",
 		   "trailer": "https://youtube.com/embed//hTA4-HTcank"
-		}
+		},
 		{
 		  "title": " Kimi no na wa",
 		  "director": "Makoto Shinkai",
@@ -397,9 +509,9 @@
 		  "actors": "Ryūnosuke Kamiki ,Masami Nagasawa",
 		  "file": "https://youtu.com/embed/EgbOehz2qqc",
 		  "image": "../../assets/home/images/Anime/KimiNoNaWa.jpg",
-		  "synopsis": "El joven Taki vive en Tokio: la joven Mitsuha, en un pequeño pueblo en las montañas. Durante el sueño, los cuerpos de ambos se intercambian. Recluidos en un cuerpo que les resulta extraño, comienzan a comunicarse."
+		  "synopsis": "El joven Taki vive en Tokio: la joven Mitsuha, en un pequeño pueblo en las montañas. Durante el sueño, los cuerpos de ambos se intercambian. Recluidos en un cuerpo que les resulta extraño, comienzan a comunicarse.",
 		   "trailer": "https://youtube.com/embed/80NDy5fbQFc "
-		}
+		},
 		{
 		  "title": " El niño y la bestia",
 		  "director": "Mamoru Hosoda",
@@ -408,9 +520,9 @@
 		  "actors": "Kōji Yakusho ,	Shōta Sometani",
 		  "file": "https://youtu.com/embed/A1PCUW3fh38",
 		  "image": "../../assets/home/images/Anime/elNiñoyLaBestia.jpg",
-		  "synopsis": "Kyuta es un niño solitario que vive en Tokio y Kumatetsu es una criatura sobrenatural aislada en un mundo imaginario. Un día el niño cruza la frontera el mundo imaginario y entabla amistad con Kumatetsu, que se convierte en su amigo y guía espiritual. Este encuentro les llevará a multitud de aventuras."
+		  "synopsis": "Kyuta es un niño solitario que vive en Tokio y Kumatetsu es una criatura sobrenatural aislada en un mundo imaginario. Un día el niño cruza la frontera el mundo imaginario y entabla amistad con Kumatetsu, que se convierte en su amigo y guía espiritual. Este encuentro les llevará a multitud de aventuras.",
 		   "trailer": "https://youtu.com/embed/FEnzhKVNH98"
-		}
+		},
 		{
 		  "title": "Kiki entregas a domicilio",
 		  "director": "	Hayao Miyazaki",
@@ -419,9 +531,9 @@
 		  "actors": "Minami Takayama ,Kappei Yamaguchi",
 		  "file": "https://youtube.com/embed/4bG17OYs-GA",
 		  "image": "../../assets/home/images/Anime/kiki.jpg",
-		  "synopsis": "Al cumplir los 13 años, la brujita Kiki debe, como manda la tradición, abandonar su casa y, así, llega a una ciudad donde un panadero la contrata para repartir el pan con su escoba. Un día, Kiki descubre que ya no puede hacer levitar su escoba."
+		  "synopsis": "Al cumplir los 13 años, la brujita Kiki debe, como manda la tradición, abandonar su casa y, así, llega a una ciudad donde un panadero la contrata para repartir el pan con su escoba. Un día, Kiki descubre que ya no puede hacer levitar su escoba.",
 		   "trailer": "https://youtube.com/embed/SYnnV3PHHIE"
-		}
+		},
 		{
 		  "title": "	Haru en el reino de los gatos",
 		  "director": "	Hiroyuki Morita",
@@ -432,7 +544,7 @@
 		  "image": "../../assets/home/images/Anime/haru.jpg",
 		  "synopsis": "Una estudiante de una escuela secundaria encuentra un mundo mágico de gatos que hablan después de salvar a un príncipe felino de un camión que se aproxima."
 		   "trailer": "https://youtube.com/embed/NTXIRUQf8WI"
-		}
+		},
 		{
 		  "title": "Susurros al corazón",
 		  "director": "Yoshifumi Kondō",
@@ -441,6 +553,52 @@
 		  "actors": "Brittany Snow,	David Gallagher",
 		  "file": "https://youtube.com/embed/ywFbbZXMsGs",
 		  "image": "../../assets/home/images/Anime/susurrosAlCorazon.jpg",
-		  "synopsis": "Una joven estudiante amante de los libros descubre que todos los libros que ha elegido en la biblioteca han sido elegidos anteriormente por la misma persona. Así conoce a Seiji, un joven que está aprendiendo a fabricar violines."
+		  "synopsis": "Una joven estudiante amante de los libros descubre que todos los libros que ha elegido en la biblioteca han sido elegidos anteriormente por la misma persona. Así conoce a Seiji, un joven que está aprendiendo a fabricar violines.",
 		   "trailer": "https://youtube.com/embed/M2s3nDI9KMM"
+		},
+		
+		{
+		  "title": "Mary y la flor de la bruja",
+		  "director": "Hiromasa Yonebayashi",
+		  "duration": "1:02",
+		  "genre": "Anime",
+		  "actors": "Yūki Amami,Hana Sugisaki",
+		  "file": "https://youtube.com/embed/1e3jJeYT6Sk",
+		  "image": "../../assets/home/images/Anime/MaryYLaFlorDeLaBrujao.jpg",
+		  "synopsis": "Mary sigue a un gato misterioso hacia un bosque, descubre una planta rara que florece una vez cada siete años y la transporta lejos de su escuela de magia.",
+		   "trailer": "https://youtube.com/embed/ziM1cqVaERs"
+		},
+		
+		{
+		  "title": "La tumba de las luciérnagas",
+		  "director": "Isao Takahata",
+		  "duration": "89",
+		  "genre": "Anime",
+		  "actors": "Tsutomu Tatsumi,Ayano Shiraishi",
+		  "file": "https://youtube.com/embed/4Y9_rTYKvm4",
+		  "image": "../../assets/home/images/Anime/LaTumbaDeLasLuciernagas.jpg",
+		  "synopsis": "Un adolescente se ve obligado a cuidar a su hermana menor después de que un bombardeo aliado durante la Segunda Guerra Mundial destruye su casa y mata a su madre.",
+		   "trailer": "https://youtube.com/embed/3YeP-UMHVaE"
+		},
+		{
+		  "title": "El castillo en el cielo",
+		  "director": "Hayao Miyazaki",
+		  "duration": "1:26",
+		  "genre": "Anime",
+		  "actors": "Mayumi Tanaka,Keiko Yokozawa",
+		  "file": "https://youtube.com/embed/z4pkn5k9y_A",
+		  "image": "../../assets/home/images/Anime/ElCastilloEnElCielo.jpg",
+		  "synopsis": "Dos huérfanos, uno de ellos con una piedra de levitación, buscan un tesoro perdido y la clave para su pasado en una legendaria ciudad flotante.",
+		   "trailer": "https://youtube.com/embed/FgWd39ziFe8"
+		},
+		{
+		  "title": "Viaje a Agartha",
+		  "director": "Makoto Shinkai",
+		  "duration": "1:16",
+		  "genre": "Anime",
+		  "actors": "Hisako Kanemoto,Kazuhiko Inoue"
+		  "file": "https://youtube.com/embed/mO0AnRK88qw",
+		  "image": "../../assets/home/images/Anime/ViajeAAgartha.jpg",
+		  "synopsis": "Dos galletas de la suerte provocan que una psicoterapeuta comprometida y su hija adolescente intercambien mágicamente sus cuerpos.",
+		   "trailer": "https://youtube.com/embed/9HRyw7ThD7k"
 		}
