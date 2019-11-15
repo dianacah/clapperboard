@@ -1,58 +1,62 @@
 /* Fav Section */
 
 * {
-    font-family: "roboto";
-    /*  background-color: #191257; */
+  font-family: "roboto";
+  /*  background-color: #191257; */
 }
 
 .main {
-    height: calc(100vh - 67px);
-    /* background-color: #191257; */
-    background-image: linear-gradient( rgba(25, 18, 87, 0.5), rgba(25, 18, 87, 0.5)), url(../../assets/home/images/background.jpg);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto-fill, min-max(100px, 1fr));
-    grid-gap: 10px;
-    padding: 20px;
+  height: calc(100vh - 67px);
+  /* background-color: #191257; */
+  background-image: linear-gradient(
+      rgba(25, 18, 87, 0.5),
+      rgba(25, 18, 87, 0.5)
+    ),
+    url(../../assets/home/images/background.jpg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, min-max(100px, 1fr));
+  grid-gap: 10px;
+  padding: 20px;
 }
 
 .title {
-    grid-column: 1/6;
-    grid-row: 1/2;
-    color: white;
-    font-family: "Roboto Slab", serif;
+  grid-column: 1/6;
+  grid-row: 1/2;
+  color: white;
+  font-family: "Roboto Slab", serif;
 }
 
 .movieReproductor {
-    grid-column: 2 / 2;
-    grid-row: 1 / 2;
-    color: white;
-    font-family: "Roboto Slab", serif;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+  grid-column: 2 / 2;
+  grid-row: 1 / 2;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 .moviesFav {
-    display: grid;
-    margin-top: 15%;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  margin-top: 15%;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(auto-fill, min-max(200px, 1fr));
   gap: 20px;
   /*  grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fill, min-max(200px, 1fr)); */
-    color: white;
-   grid-row: 1 / 2;
-    grid-column: 1 / 2; 
+  color: white;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 
 .sectionTitle {
-    margin-bottom: 1.5%;
+  margin-bottom: 1.5%;
 }
 
 .movieTitle {
-    font-family: "Open Sans", sans-serif;
-    color: #ced4da;
-    font-size: 22px;
+  font-family: "Open Sans", sans-serif;
+  color: #ced4da;
+  font-size: 22px;
 }
 
 /* .fav1 {
@@ -60,118 +64,115 @@
 } */
 
 .imgFav {
-    height: 200px;
-    width: 150px;
-    border-radius: 7px;
-    -webkit-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
+  height: 200px;
+  width: 150px;
+  border-radius: 7px;
+  -webkit-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
 }
 
 .imgFav:hover {
-    box-shadow: 6px 7px 18px -3px;
+  box-shadow: 6px 7px 18px -3px;
 }
 
 .botonReproducir {
-    border: none;
-    background-color: #ff1180;
-    color: white;
-    padding: 5px;
-    margin-left: 5%;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    width: 50%;
-    height: 40px;
-    align-items: center;
+  border: none;
+  background-color: #ff1180;
+  color: white;
+  padding: 5px;
+  margin-left: 5%;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  width: 50%;
+  height: 40px;
+  align-items: center;
 }
 
 .botonReproducir:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.buttonAddFavs{
-    border: none;
-    background-color: #ff1180;
-    color: white;
-    padding: 5px;
-    margin-left: 5%;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    width: 200px;
-    height: 40px;
-    
-    align-items: flex-start;
+.buttonAddFavs {
+  border: none;
+  background-color: #ff1180;
+  color: white;
+  padding: 5px;
+  margin-left: 5%;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
 
+  align-items: flex-start;
 }
-
 
 .buttonAddFavs:hover {
-    box-shadow: 6px 7px 18px -3px whitesmoke;
-    transform: scale(1.05);
+  box-shadow: 6px 7px 18px -3px whitesmoke;
+  transform: scale(1.05);
 }
 
 .movieName {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 video.movie {
-    height: 40vh;
+  height: 40vh;
 }
 
 .movie {
-    height: 500px;
-    width: 600px;
-    /* -webkit-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
+  height: 500px;
+  width: 600px;
+  /* -webkit-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75); */
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .synopsis1 {
-    width: 580px;
-    text-align: justify;
-    justify-content: center;
+  width: 580px;
+  text-align: justify;
+  justify-content: center;
 }
 
 .favIcon1 {
-    height: 20px;
-    width: 20px;
-    align-content: center;
-    background-image: url(../../assets/favSection/img/corazon.png);
-    background-size: 20px;
-    background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  align-content: center;
+  background-image: url(../../assets/favSection/img/redheart.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
 }
 
 .favIcon1:hover {
-    background-image: url(../../assets/favSection/img/redheart.png);
-    background-size: 20px;
-    background-repeat: no-repeat;
+  background-image: url(../../assets/favSection/img/corazon.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .favIcon2 {
-    height: 30px;
-    width: 30px;
-    align-content: center;
-    background-image: url(../../assets/favSection/img/estrella.png);
-    background-size: 20px;
-    background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  align-content: center;
+  background-image: url(../../assets/favSection/img/estrella.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
 }
 
 .favIcon2:hover {
-    background-image: url(../../assets/favSection/img/yellowstar.png);
-    background-size: 20px;
-    background-repeat: no-repeat;
+  background-image: url(../../assets/favSection/img/yellowstar.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
 }
 .icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-
 /* encabezado */
-
 
 /* .wrapper {
     font-family: "Roboto", sans-serif;
@@ -182,9 +183,7 @@ video.movie {
     min-width: fit-content; 
 } */
 
-
 /*"UNIFICAR HEADER"*/
-
 
 /* nav {
     height: 70px;
@@ -196,7 +195,6 @@ video.movie {
     align-items: center;
     justify-items: center;
 } */
-
 
 /* .logo {
     height: 5vh;
@@ -211,5 +209,5 @@ a {
 } */
 
 .fondoNav {
-    background-color: #191257;
+  background-color: #191257;
 }
