@@ -20,9 +20,16 @@
           <p class="rbt-300 white">Duración: {{ duration }}</p>
           <p class="white rbt-300">Sinópsis: {{ synopsis }}</p>
         </div>
-        <a href="" class="fav"
-          ><mat-icon aria-hidden="false">favorite</mat-icon></a
-        >
+        <div
+          class="favIcon1"
+          (click)="enviarFavorito()"
+          *ngIf="esFavorito"
+        ></div>
+        <div
+          class="favIcon2"
+          (click)="enviarFavorito(movie)"
+          *ngIf="!esFavorito"
+        ></div>
       </div>
     </div>
     <div class="suggestions">
