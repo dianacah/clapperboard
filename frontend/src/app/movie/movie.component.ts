@@ -34,30 +34,20 @@ export class MovieComponent implements OnInit {
     private peliculaAReproducirService: PeliculaAReproducirService
   ) {}
 
-  getInteresting() {
-    setTimeout(() => {
-      let myMovie = this.peliculaAReproducirService.getMovie();
-      this.myGenre = myMovie.genre;
-    }, 200);
-  }
-
   getMovies() {
     this.getMovieService.getMovie().subscribe((res = {}) => {
       this.infoMovies = res;
-
-      setTimeout(() => {
-        this.interestingMovies = this.infoMovies.filter(isMovie => {
-          return isMovie.genre == '"' + this.myGenre + '"';
-        });
-
-        console.log(
-          "estas son las películas de interes",
-          '"' + this.myGenre + '"',
-          this.interestingMovies
-        );
-      }, 400);
+      this.interestingMovies = this.infoMovies.filter(isMovie => {
+        return isMovie.genre == this.genre;
+      });
+      console.log(
+        "estas son las películas de interes",
+        this.genre,
+        this.interestingMovies
+      );
     });
   }
+
   enviarFavorito() {
     if (this.esFavorito) {
       this.eliminarFavorito(this.movie);
@@ -108,9 +98,7 @@ export class MovieComponent implements OnInit {
         this.movie.file
       );
       this.validarFavorito();
+      this.getMovies();
     }, 200);
-
-    this.getInteresting();
-    this.getMovies();
   }
 }
