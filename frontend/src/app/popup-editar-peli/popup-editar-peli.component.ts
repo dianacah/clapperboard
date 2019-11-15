@@ -65,6 +65,7 @@ export class PopupEditarPeliComponent implements OnInit {
   }
 
   close() {
+    console.log(this.actualizarPeliForm);
     this.dialogRef.close(this.actualizarPeliForm);
   }
 
