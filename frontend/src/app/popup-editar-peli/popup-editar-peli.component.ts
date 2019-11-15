@@ -18,32 +18,33 @@ export class PopupEditarPeliComponent implements OnInit {
   actors: string;
   synopsis: string;
   public pelicula;
+  actualizarPeliForm: FormGroup;
 
   constructor(
     private builder: FormBuilder,
     private dialogRef: MatDialogRef<PopupEditarPeliComponent>,
-    @Inject(MAT_DIALOG_DATA) data,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private updateMoviesService: UpdateMoviesService
-  ) {
-    this.pelicula = data;
-    this.tituloPelicula = data.title;
-    this.genre = data.genre;
-    this.director = data.director;
-    this.duration = data.duration;
-    this.actors = data.actors;
-    this.synopsis = data.synopsis;
+  ) {}
+
+  ngOnInit() {
+    console.log(this.data);
+    this.pelicula = this.data;
+    this.tituloPelicula = this.data.title;
+    this.genre = this.data.genre;
+    this.director = this.data.director;
+    this.duration = this.data.duration;
+    this.actors = this.data.actors;
+    this.synopsis = this.data.synopsis;
+    this.actualizarPeliForm = this.builder.group({
+      title: [this.tituloPelicula, Validators.compose([Validators.required])],
+      genre: [this.genre],
+      director: [this.director],
+      duration: [this.duration],
+      actors: [this.actors],
+      synopsis: [this.synopsis]
+    });
   }
-
-  actualizarPeliForm: FormGroup = this.builder.group({
-    title: [this.tituloPelicula, Validators.compose([Validators.required])],
-    genre: [this.genre],
-    director: [this.dialogRef],
-    duration: [this.duration],
-    actors: [this.actors],
-    synopsis: [this.synopsis]
-  });
-
-  ngOnInit() {}
 
   onSubmit() {
     const dataAct = {
