@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
     let user = usuario.value;
     let email = user.email;
     this.loginService.getLogin(email).subscribe((response: any) => {
-      console.log("usuario", response);
       if (response == null) {
         this.wrongPass = false;
         this.noRegistrado = false;
@@ -41,7 +40,6 @@ export class LoginComponent implements OnInit {
         if (user.password != this.passwordDB) {
           this.wrongPass = true;
         } else {
-          console.log("ingreso correcto");
           this.userInformationService.setUser(response);
           this.role = response.role;
           if (this.role == "normal") {
@@ -54,7 +52,5 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    console.log(this.wrongPass, this.noRegistrado);
-  }
+  ngOnInit() {}
 }

@@ -23,6 +23,7 @@ export class AdminComponent implements OnInit {
   public user;
   public id;
   public role;
+  public cargar: boolean = true;
 
   constructor(
     private updateMoviesService: UpdateMoviesService,
@@ -31,7 +32,7 @@ export class AdminComponent implements OnInit {
     private userInformationService: UserInformationService,
     private postMovieService: PostMovieService,
     private getUsersService: GetUsersService
-  ) { }
+  ) {}
 
   public infoUsers: any = [];
   usersTableColumns: string[] = ["icono", "nombre", "correo"];
@@ -60,7 +61,6 @@ export class AdminComponent implements OnInit {
       let pathImagen = "../../../assets/home/images/";
       let nombreImagen = respuesta.image.substr(12, respuesta.image.length);
       respuesta.image = pathImagen + genre + "/" + nombreImagen;
-      console.log("respuesta", respuesta);
       this.addInfoMovie(respuesta);
     });
   }
@@ -86,31 +86,19 @@ export class AdminComponent implements OnInit {
     };
     this.popup = this.dialog.open(PopupEditarPeliComponent, dialogConfig);
     this.popup.afterClosed().subscribe(response => {
-      /* console.log("respuesta", response.value);
-      this.updateMoviesService.updateMovie(this.id, response.value);
-      this.ngOnInit(); */
       this.updateMovie(response);
     });
   }
   updateMovie(dataFormulario) {
-    console.log("informacion del formulario", dataFormulario);
     this.updateMoviesService
       .updateMovie(this.id, dataFormulario.value)
       .subscribe(response => {
-        console.log(response);
         this.ngOnInit();
       });
   }
-  // this.postMovieService.updateMoviedb(movie, datos).subscribe((res = {}) => {
-  //   this.infoMovies = res;
-  //   console.log("actualizando", this.infoMovies)
-  // })
 
   borrarPelicula(movie) {
-    console.log(movie);
-    this.postMovieService.deleteMovie(movie.title).subscribe(response => {
-      console.log(response);
-    });
+    this.postMovieService.deleteMovie(movie._id).subscribe(response => {});
     this.ngOnInit();
   }
   //servicios
@@ -118,16 +106,10 @@ export class AdminComponent implements OnInit {
   getInfoMovie() {
     this.getMovieService.getMovie().subscribe((res = {}) => {
       this.infoMovies = res;
-      // console.log("funciona get", this.infoMovies);
     });
   }
   addInfoMovie(movie) {
     this.postMovieService.addMovie(movie).subscribe(res => {
-      this.ngOnInit();
-    });
-  }
-  deleteInfoMovie(idMovie) {
-    this.postMovieService.deleteMovie(idMovie).subscribe(res => {
       this.ngOnInit();
     });
   }
@@ -137,6 +119,7 @@ export class AdminComponent implements OnInit {
       this.user = this.userInformationService.getUser();
       this.name = this.user.name.split(" ", 1);
       this.role = this.user.role;
+      this.cargar = false;
       this.ngOnInit();
     }, 200);
   }
@@ -144,17 +127,17 @@ export class AdminComponent implements OnInit {
   getAllUsers() {
     this.getUsersService.getUsers().subscribe((res = []) => {
       this.infoUsers = res;
-
       this.infoUsers = this.infoUsers.filter(user => {
         return user.name != this.name;
       });
-      console.log(this.name, this.infoUsers);
     });
   }
 
   ngOnInit() {
     this.getInfoMovie();
-    this.getUser();
+    if (this.cargar == true) {
+      this.getUser();
+    }
     this.getAllUsers();
   }
 }

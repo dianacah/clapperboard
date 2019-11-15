@@ -1,16 +1,15 @@
-import { UpdateMoviesService } from './../services/update-movies.service';
-import { Component, OnInit, Inject } from '@angular/core';
+import { UpdateMoviesService } from "./../services/update-movies.service";
+import { Component, OnInit, Inject } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 
-
 @Component({
-  selector: 'app-popup-editar-peli',
-  templateUrl: './popup-editar-peli.component.html',
-  styleUrls: ['./popup-editar-peli.component.css']
+  selector: "app-popup-editar-peli",
+  templateUrl: "./popup-editar-peli.component.html",
+  styleUrls: ["./popup-editar-peli.component.css"]
 })
 export class PopupEditarPeliComponent implements OnInit {
-  public genres = ['Drama', 'Romance', 'Comedia', 'Anime']
+  public genres = ["Drama", "Romance", "Comedia", "Anime"];
 
   tituloPelicula: string;
   genre: string;
@@ -20,10 +19,12 @@ export class PopupEditarPeliComponent implements OnInit {
   synopsis: string;
   public pelicula;
 
-  constructor(private builder: FormBuilder,
+  constructor(
+    private builder: FormBuilder,
     private dialogRef: MatDialogRef<PopupEditarPeliComponent>,
     @Inject(MAT_DIALOG_DATA) data,
-    private updateMoviesService: UpdateMoviesService) {
+    private updateMoviesService: UpdateMoviesService
+  ) {
     this.pelicula = data;
     this.tituloPelicula = data.title;
     this.genre = data.genre;
@@ -42,9 +43,7 @@ export class PopupEditarPeliComponent implements OnInit {
     synopsis: [this.synopsis]
   });
 
-  ngOnInit() {
-    console.log("peli", this.pelicula)
-  }
+  ngOnInit() {}
 
   onSubmit() {
     const dataAct = {
@@ -54,17 +53,12 @@ export class PopupEditarPeliComponent implements OnInit {
       duration: this.actualizarPeliForm.value.duration,
       actors: this.actualizarPeliForm.value.actors,
       synopsis: this.actualizarPeliForm.value.synopsis
-    }
+    };
 
-    console.log('-----', dataAct);
     this.close();
   }
 
   close() {
-    console.log(this.actualizarPeliForm);
     this.dialogRef.close(this.actualizarPeliForm);
   }
-
-
-
 }
