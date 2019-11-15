@@ -413,6 +413,116 @@
 		  "trailer": "https://youtube.com/embed/LuX3-aJTiZA"
 		},
 		{
+		  "title": "Mi primer amor",
+		  "director": " Rob Reiner",
+		  "duration": "90",
+		  "genre": "Romance",
+		  "actors": "Madeline Carroll,Callan McAuliffe",
+		  "file": "https://youtube.com/embed//CBF4IfiZ0mQ",
+		  "image": "../../assets/home/images/Romance/Flippe.jpg",
+		  "synopsis": "Juli y Bryce son dos niños de siete años, compañeros de clase y vecinos. Juli se enamora perdidamente de Bryce pero el jovencito no comparte sus sentimientos. Todo parece cambiar cuando ambos comienzan a estudiar en la escuela secundaria.",
+		  "trailer": "https://youtube.com/embed/q40GxY5n2Dg"
+		},
+		{
+		  "title": "Cuestion De Tiempo",
+		  "director": "Richard Curtis",
+		  "duration": "1:23",
+		  "genre": "Romance",
+		  "actors": "Domhnall Gleeson,Rachel McAdams,Bill Nighy",
+		  "file": "https://youtube.com/embed/QoC8q9Oc2w8",
+		  "image": "../../assets/home/images/Romance/CuestionDeTimpo.jpg",
+		  "synopsis": "Un hombre le cuenta a una mujer la historia de dos jóvenes que se volvieron amantes en la Carolina del Norte de 1940.",
+		  "trailer": "https://youtube.com/embed/a2ZPebMXWKQ"
+		},
+		{
+		  "title": "Orgullo y prejuicio",
+		  "director": "Joe Wright",
+		  "duration": "1:29",
+		  "genre": "Romance",
+		  "actors": "Keira Knightley,Matthew Macfadyen",
+		  "file": "https://youtube.com/embed/66scnTKeyYY",
+		  "image": "../../assets/home/images/Romance/OrgulloYPrejuicio.jpg",
+		  "synopsis": "Un peligroso flirteo comienza entre una joven y bella mujer y el apuesto amigo de un adinerado soltero.",
+		  "trailer": "https://youtube.com/embed/POxA0ctR1PE"
+		},
+		{
+		  "title": "La última canción",
+		  "director": " Julie Anne Robinson",
+		  "duration": "1:07",
+		  "genre": "Romance",
+		  "actors": "Miley Cyrus,Liam Hemsworth",
+		  "file": "https://youtube.com/embed/kpptweH8Vng",
+		  "image": "../../assets/home/images/Romance/LaUltimaCancion.jpg",
+		  "synopsis": "En una ciudad de playa del sur, un hombre intenta entrar en contacto con su hija distanciada a través de su amor compartido por la música.",
+		  "trailer": "https://youtube.com/embed/6axHz4YlU5Y"
+		},
+		{
+		  "title": "Votos de amor",
+		  "director": " Michael Sucsy",
+		  "duration": "1:04",
+		  "genre": "Romance",
+		  "actors": "Rachel McAdams,Channing Tatum",
+		  "file": "https://youtube.com/embed/mLS0wTLNjno",
+		  "image": "../../assets/home/images/Romance/VotosDeAmor.jpg",
+		  "synopsis": "Después de que su esposa despierta de un estado de coma con amnesia, un hombre intenta hacer que recupere su memoria y recuperar su relación.",
+		  "trailer": "https://youtube.com/embed/PG5PvKjTGsI"
+		},
+		{
+		  "title": El viaje más largo",
+		  "director": "	George Tillman Jr.",
+		  "duration": "1:39",
+		  "genre": "Romance",
+		  "actors": "Britt Robertson,Scott Eastwood",
+		  "file": "https://youtube.com/embed/yOgXTYetHm4",
+		  "image": "../../assets/home/images/Romance/ElViajeMasLArgo.jpg",
+		  "synopsis": "Una joven pareja encuentra inspiración en la historia romántica de un anciano mientras su propia relación es desafiada.",
+		  "trailer": "https://youtube.com/embed/CGPHepwo0xI"
+		},
+		{
+		  "title": "El espacio entre nosotros",
+		  "director": "Peter Chelsom",
+		  "duration": "2:04",
+		  "genre": "Romance",
+		  "actors": "Asa Butterfield,Britt Robertson,
+		  "file": "https://youtube.com/embed/oK19XzYlRFE",
+		  "image": "../../assets/home/images/Romance/UnEspacioEntreNosotros.jpg",
+		  "synopsis": "El primer chico nacido en Marte ya tiene 16 años y comienza a escribirse por Internet con una chica de Colorado. Finalmente, decide viajar a la Tierra para conocer a su amiga en persona y averiguar la verdad sobre su padre y sobre sí mismo.",
+		  "trailer": "https://youtube.com/embed/GueNFlyRR-M"
+		},
+		{
+		  "title": "POSDATA, TE AMO",
+		  "director": "Richard LaGravenese",
+		  "duration": "1:25",
+		  "genre": "Romance",
+		  "actors": "Hilary Swank,Gerard Butler",
+		  "file": "https://youtube.com/embed/zIH-TNkb8ws",
+		  "image": "../../assets/home/images/Romance/PosdataTeamo.jpg",
+		  "synopsis": "Una viuda (Hilary Swank) apenada encuentra una serie de mensajes que le dejó su marido fallecido para ayudarle a disminuir su dolor y alentarla a iniciar una nueva vida por sí misma.",
+		  "trailer": "https://youtube.com/embed/Ilg5hNUzZCs"
+		},
+		{
+		  "title": "Querido John",
+		  "director": "Lasse Hallström",
+		  "duration": "1:07",
+		  "genre": "Romance",
+		  "actors": "Channing Tatum,Amanda Seyfried",
+		  "file": "https://youtube.com/embed/EpparvNu7uE",
+		  "image": "../../assets/home/images/Romance/QueridoJohn.jpg",
+		  "synopsis": "Un soldado y una universitaria idealistas se enamoran, pero su amor queda marcado por los múltiples y peligrosos destinos a los que envían a John, el soldado. Durante siete años se comunican habitualmente por carta, pero esto acaba trayendo consecuencias inesperadas.",
+		  "trailer": "https://youtube.com/embed/YX52PKt-jtA"
+		},
+		{
+		  "title": "Lo mejor de mí",
+		  "director": "Michael Hoffman",
+		  "duration": "1:18",
+		  "genre": "Romance",
+		  "actors": "James Marsden,Michelle Monaghan",
+		  "file": "https://youtube.com/embed/uefIQcwabBg",
+		  "image": "../../assets/home/images/Romance/LoMejorDeMi.jpg",
+		  "synopsis": "El funeral de un amigo cercano reúne a dos enamorados de la escuela secundaria, quienes descubren que se aman después de 20 años de estar separados",
+		  "trailer": "https://youtube.com/embed/uefIQcwabBg"
+		},
+		{
 		  "title": " El viaje de Chihiro",
 		  "director": "Hayao Miyazaki",
 		  "duration": "2:05",
