@@ -1,42 +1,56 @@
-        .contenedorPopUpInfo {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .nombrePelicula {
-            align-self: center;
-        }
-        
-        .margin5 {
-            margin-bottom: 5px;
-        }
-        
-        .botonVerPelicula {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #ff1180;
-            color: white;
-            height: 45px;
-            width: 200px;
-            border-radius: 5rem;
-            align-self: center;
-        }
-        
-        .botonVerPelicula:hover {
-            cursor: pointer;
-        }
-        
-        .favIcon1 {
-            height: 20px;
-            width: 20px;
-            align-content: center;
-            background-image: url(../../assets/favSection/img/corazon.png);
-            background-size: 20px;
-            background-repeat: no-repeat;
-            font-size: 10px;
-        }
-        
-        .footerPopup {
-            display: flex;
-            flex-direction: column;
-        }
+.contenedorPopUpInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.nombrePelicula {
+  align-self: center;
+}
+
+.margin5 {
+  margin-bottom: 5px;
+}
+
+.botonVerPelicula {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ff1180;
+  color: white;
+  height: 45px;
+  width: 200px;
+  border-radius: 5rem;
+  align-self: center;
+}
+
+.botonVerPelicula:hover {
+  cursor: pointer;
+}
+
+.favIcon1 {
+  height: 20px;
+  width: 20px;
+  align-content: center;
+  background-image: url(../../assets/favSection/img/redheart.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  font-size: 10px;
+}
+.favIcon2 {
+  height: 20px;
+  width: 20px;
+  align-content: center;
+  background-image: url(../../assets/favSection/img/corazon.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  font-size: 10px;
+}
+.favIcon1:hover {
+  cursor: pointer;
+}
+.favIcon2:hover {
+  cursor: pointer;
+}
+.footerPopup {
+  display: flex;
+  flex-direction: column;
+}

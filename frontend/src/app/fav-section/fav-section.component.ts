@@ -45,21 +45,15 @@ export class FavSectionComponent implements OnInit {
   deleteMovie(peliculaFavorita) {
     let email = this.user.email;
     this.idPelicula = { movieId: peliculaFavorita._id };
-    console.log("requerimientos peticion", email, this.idPelicula.movieId);
-    console.log(peliculaFavorita);
     this.deleteFavMovieService
       .deleteFavorito(email, this.idPelicula.movieId)
       .subscribe(response => {
         this.userInformationService.setUser(response);
-        console.log("respuesta del delete", response);
         this.ngOnInit();
       });
   }
   ngOnInit() {
     this.user = this.userInformationService.getUser();
-    console.log("usuario", this.user);
-
     this.peliculasFavoritas = this.user.favoriteMovies;
-    console.log(this.user.favoriteMovies);
   }
 }
