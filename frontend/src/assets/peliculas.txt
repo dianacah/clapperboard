@@ -418,7 +418,7 @@
 		  "duration": "90",
 		  "genre": "Romance",
 		  "actors": "Madeline Carroll,Callan McAuliffe",
-		  "file": "https://youtube.com/embed//CBF4IfiZ0mQ",
+		  "file": "https://youtube.com/embed/CBF4IfiZ0mQ",
 		  "image": "../../assets/home/images/Romance/Flippe.jpg",
 		  "synopsis": "Juli y Bryce son dos niños de siete años, compañeros de clase y vecinos. Juli se enamora perdidamente de Bryce pero el jovencito no comparte sus sentimientos. Todo parece cambiar cuando ambos comienzan a estudiar en la escuela secundaria.",
 		  "trailer": "https://youtube.com/embed/q40GxY5n2Dg"
@@ -522,6 +522,117 @@
 		  "synopsis": "El funeral de un amigo cercano reúne a dos enamorados de la escuela secundaria, quienes descubren que se aman después de 20 años de estar separados",
 		  "trailer": "https://youtube.com/embed/uefIQcwabBg"
 		},
+		{
+		  "title": "Joker",
+		  "director": "Todd Phillips",
+		  "duration": "1:23",
+		  "genre": "Drama",
+		  "actors": "Joaquin Phoenix,Robert De Niro",
+		  "file": "https://youtube.com/embed/IfB65qjLbwc",
+		  "image": "../../assets/home/images/Drama/joker.jpg",
+		  "synopsis": "La pasión de Arthur Fleck, un hombre ignorado por la sociedad, es hacer reír a la gente. Sin embargo, una serie de trágicos sucesos harán que su visión del mundo se distorsione considerablemente convirtiéndolo en un brillante criminal.",
+		  "trailer": "https://youtube.com/embed/EIyZqNbZQI8"
+		},
+		{
+		  "title": "Siempre a tu lado",
+		  "director": "Lasse Hallström",
+		  "duration": "93",
+		  "genre": "Drama",
+		  "actors": "Richard Gere,Joan Allen,
+		  "file": "https://youtube.com/embed/pypFfRYMgvM",
+		  "image": "../../assets/home/images/Drama/SiempreAtuLado.jpg",
+		  "synopsis": "Un perro fiel llamado Hachiko acompaña cada mañana a su amo a la estación de tren y regresa cada tarde para darle la bienvenida después del trabajo. Sin embargo, esta rutina se ve rota por una desgracia.",
+		  "trailer": "https://youtube.com/embed/ie1CmJBMHsI"
+		},
+		{
+		  "title": "la vida es bella",
+		  "director": "Roberto Benigni",
+		  "duration": "93",
+		  "genre": "Drama",
+		  "actors": "Roberto Benigni,Nicoletta Braschi,Giorgio Cantarini",
+		  "file": "https://youtube.com/embed/pypFfRYMgvM",
+		  "image": "../../assets/home/images/Drama/LaVidaEsBella.jpg",
+		  "synopsis": "Un perro fiel llamado Hachiko acompaña cada mañana a su amo a la estación de tren y regresa cada tarde para darle la bienvenida después del trabajo. Sin embargo, esta rutina se ve rota por una desgracia.",
+		  "trailer": "https://youtube.com/embed/Tw33Xs4Q2r4"
+		},
+		{
+		  "title": "la vida es bella",
+		  "director": "	Eric Bress",
+		  "duration": "1:20",
+		  "genre": "Drama",
+		  "actors": "Ashton Kutcher,Amy Smart",
+		  "file": "https://youtuube.com/embed/9sAU7RkGHAk",
+		  "image": "../../assets/home/images/Drama/ElEfectoMariposa.jpg",
+		  "synopsis": "Un joven estudiante de psicología viaja en el tiempo para transformar el pasado y alterar el futuro de sus amigos.",
+		  "trailer": "https://youtuube.com/embed/9sAU7RkGHAk"
+		},
+		{
+		  "title": "Desde mi cielo",
+		  "director": "Peter Jackson",
+		  "duration": "1:20",
+		  "genre": "Drama",
+		  "actors": "Mark Wahlberg,Rachel Weisz,Saoirse Ronan",
+		  "file": "https://youtube.com/embed/TvsuLL2_AT4",
+		  "image": "../../assets/home/images/Drama/DesdeMiCielo.jpg",
+		  "synopsis": "Después de que es violada y asesinada, una joven de 14 años vigila desde el cielo mientras su familia intenta superar lo acontecido y el homicida continúa con su oscuro camino.",
+		  "trailer": "https://youtube.com/embed/NlX29VNWGW4"
+		},
+		{
+		  "title": "Más allá del cielo",
+		  "director": "Burr Steers",
+		  "duration": "99",
+		  "genre": "Drama",
+		  "actors": "Zac Efron,Charlie Tahan,Amanda Crew",
+		  "file": "https://youtube.com/embed/Xxltat2zIG4",
+		  "image": "../../assets/home/images/Drama/MasAllaDelCielo.jpg",
+		  "synopsis": "Charlie aceptó un trabajo en el cementerio en el que está enterrado su hermano pequeño, y cada noche habla y juega con él. Cuando una chica se cruza en su camino, Charlie deberá decidir si seguir a su enamorada o permanecer fiel a su hermano.",
+		  "trailer": "https://youtube.com/embed/MzgOvvMi8Lg"
+		},
+		{
+		  "title": "Si decido quedarme",
+		  "director": "Burr Steers",
+		  "duration": "1:00",
+		  "genre": "Drama",
+		  "actors": "Zac Efron,Charlie Tahan,Amanda Crew",
+		  "file": "https://youtube.com/embed/B0chmofGqpk",
+		  "image": "../../assets/home/images/Drama/SiDecidoQuedarme.jpg",
+		  "synopsis": "Después de que un accidente automovilístico la deja entre la vida y la muerte, una adolescente enfrenta una decisión que determinará su destino final.",
+		  "trailer": "https://youtube.com/embed/wx4SVl7GnLs"
+		},
+		{
+		  "title": "Si no despierto",
+		  "director": "Ry Russo-Young",
+		  "duration": "99",
+		  "genre": "Drama",
+		  "actors": "Zoey Deutch,Halston Sage",
+		  "file": "https://youtube.com/embed/8uDS8U9xxTM",
+		  "image": "../../assets/home/images/Drama/SiNoDespierto.jpg",
+		  "synopsis": "Después de un trágico accidente automovilístico, una adolescente despierta para descubrir que está condenada a vivir el día de su muerte una y otra vez.",
+		  "trailer": "https://youtube.com/embed/gc6Kz64HeUE"
+		},
+		{
+		  "title": "En busca de la felicidad",
+		  "director": "Omar Montes",
+		  "duration": "1:17",
+		  "genre": "Drama",
+		  "actors": "Will Smith,Jaden Smith",
+		  "file": "https://youtube.com/embed/8uDS8U9xxTM",
+		  "image": "../../assets/home/images/Drama/EnBuscaDeLaFelicidad.jpg",
+		  "synopsis": "La vida es una lucha para Chris Gardner. Expulsado de su apartamento, él y su joven hijo se encuentran solos sin ningún lugar a donde ir. A pesar de que Chris eventualmente consigue trabajo como interno en una prestigiada firma financiera, la posición no le da dinero. El dúo debe vivir en un albergue y enfrentar muchas dificultades, pero Chris no se da por vencido y lucha por conseguir una vida mejor para él y su hijo.",
+		  "trailer": "https://youtube.com/embed/7Tm7i563eMo"
+		},
+		{
+		  "title": "Un paseo para recordar",
+		  "director": "Adam Shankman",
+		  "duration": "98",
+		  "genre": "Drama",
+		  "actors": "Mandy Moore,Shane West",
+			  "file": "https://youtube.com/embed/JxPI047J7Wc",
+			  "image": "../../assets/home/images/Drama/UnPaseoParaRecordar.jpg",
+			  "synopsis": "Un delincuente joven es forzado a actuar en una obra de la escuela y comienza un romance con la hija del reverendo del pueblo.",
+			  "trailer": "https://youtube.com/embed/JxPI047J7Wc"
+			},
+			
 		{
 		  "title": " El viaje de Chihiro",
 		  "director": "Hayao Miyazaki",
