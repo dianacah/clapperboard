@@ -1,19 +1,23 @@
 <div class="contenedorPopUpInfo">
-  <h1 class="nombrePelicula margin5 medium">{{ movie.title | titlecase }}</h1>
-  <br />
-  <div class="agregarFav">
-    <div
-      class="favIcon1"
-      (click)="enviarFavorito(movie)"
-      *ngIf="esFavorito"
-    ></div>
-    <div
-      class="favIcon2"
-      (click)="enviarFavorito(movie)"
-      *ngIf="!esFavorito"
-    ></div>
-    <div class="infoUser intermedioSize">Agregar a favoritos</div>
+  <div class ="encabezadoPopup">
+    <h1 class="nombrePelicula margin5 medium">{{ movie.title | titlecase }}</h1>
+    <div class="agregarFav">
+      <div class ="icons">
+        <div
+          class="favIcon1"
+          (click)="enviarFavorito(movie)"
+          *ngIf="esFavorito"
+        ></div>
+        <div
+          class="favIcon2"
+          (click)="enviarFavorito(movie)"
+          *ngIf="!esFavorito"
+        ></div>
+        <div class="infoUser intermedioSize">Agregar a favoritos</div>
+      </div>
+    </div>
   </div>
+  <br />
   <p class="margin5 small"><b>Género:</b> {{ movie.genre }}</p>
   <p class="margin5"><b>Director:</b> {{ movie.director }}</p>
   <p class="margin5"><b>Actores:</b> {{ movie.actors }}</p>
