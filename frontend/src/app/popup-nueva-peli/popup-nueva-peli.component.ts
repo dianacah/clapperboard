@@ -8,7 +8,6 @@ import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
   styleUrls: ["./popup-nueva-peli.component.css"]
 })
 export class PopupNuevaPeliComponent implements OnInit {
-  releaseValue = true;
   public guardarPelicula: any = {};
   public genres = ["Drama", "Romance", "Comedia", "Anime"];
 

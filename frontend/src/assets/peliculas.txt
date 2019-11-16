@@ -204,7 +204,7 @@
 		 "genre":"Comedia",
 		 "actors":"Shawn Wayans,Drew Barrymore",
 		 "file":"https://youtube.com/embed/UxER50XHW-I",
-		 "image":"../../assets/home/images/Anime/DondeEstanlasrubias.jpg",
+		 "image":"../../assets/home/images/Comedia/DondeEstanlasrubias.jpg",
 		 "synopsis":"Dos torpes agentes del FBI se hacen pasar por dos chicas de la alta sociedad para investigar una serie de secuestros. No obstante, mientras preparan su plan, descubren que irrumpir en la clase privilegiada es mucho más duro de lo que creían.",
 		"trailer":"https://youtube.com/embed/3ksls7_rqgE"
 		},
@@ -215,7 +215,7 @@
 		 "genre":"Comedia",
 		 "actors":"Adam Sandler,Marlon Wayans",
 		 "file":"https://youtube.com/embed/CmJSWMNG5ec",
-		 "image":"../../assets/home/images/Anime/LunaDeMielEnFamilia.jpg",
+		 "image":"../../assets/home/images/Comedia/LunaDeMielEnFamilia.jpg",
 		 "synopsis":"Poco después de que una cita a ciegas acaba con resultados desastrosos, dos padres solteros y sus niños terminan atrapados juntos en un centro turístico africano.",
 		"trailer":"https://youtube.com/embed/loGO3eJ_er8"
 		},
@@ -237,7 +237,7 @@
 		 "genre":"Comedia",
 		 "actors":"Sandra Bullock,Ryan Reynolds",
 		 "file":"https://youtube.com/embed/rCs8skCWF98",
-		 "image":"../../assets/home/images/Anime/LaPropuesta.jpg",
+		 "image":"../../assets/home/images/Comedia/LaPropuesta.jpg",
 		 "synopsis":"Margaret, una famosa e influyente editora de Nueva York, está a punto de ser deportada a Canadá. Para evitarlo, declara que está comprometida con su ayudante Andrew. Él está dispuesto a participar en la farsa, pero imponiendo ciertas condiciones.",
 		"trailer":"https://youtube.com/embed/j_x2I3J7rVw"
 		},
@@ -248,7 +248,7 @@
 		 "genre":"Comedia",
 		 "actors":"Cameron Diaz,Leslie Mann",
 		 "file":"https://youtube.com/embed/OhRSZP9mS3w",
-		 "image":"../../assets/home/images/Anime/MujereAlAtaque.jpg",
+		 "image":"../../assets/home/images/Comedia/MujereAlAtaque.jpg",
 		 "synopsis":"Tres mujeres unen fuerzas para vengarse de un hombre canalla, mentiroso e infiel que las traicionó a todas.",
 		"trailer":"https://youtube.com/embed/NMLtvnUowJo"
 		},
@@ -259,7 +259,7 @@
 		 "genre":"Comedia",
 		 "actors":"Sandra Bullock,Michael Caine",
 		 "file":"https://youtube.com/embed/5rBmtii4CFA",
-		 "image":"../../assets/home/images/Anime/MissSimpatia.jpg",
+		 "image":"../../assets/home/images/Comedia/MissSimpatia.jpg",
 		 "synopsis":"Una ruda agente del FBI debe participar de incógnito en el concurso de Miss Estados Unidos para atrapar a un terrorista.",
 		"trailer":"https://youtube.com/embed/htQGSAfyFyM"
 		},		
@@ -270,7 +270,7 @@
 		 "genre":"Comedia",
 		 "actors":"Samaire Armstrong,Kevin Zegers",
 		 "file":"https://youtube.com/embed/70oVFAWdzGA",
-		 "image":"../../assets/home/images/Anime/EllaEnMiCuerpoElEnElMio.jpg",
+		 "image":"../../assets/home/images/Comedia/EllaEnMiCuerpoElEnElMio.jpg",
 		 "synopsis":"Dos enemigos de toda la vida despiertan una mañana para descubrir que han intercambiado cuerpos y géneros, y ambos se preparan para arruinar la reputación del otro en la preparatoria..",
 		"trailer":"https://youtube.com/embed/70oVFAWdzGA"
 		},
@@ -281,7 +281,7 @@
 		 "genre":"Comedia",
 		 "actors":"Rob Schneider,Anna Faris",
 		 "file":"https://youtube.com/embed/6z5zbY-0QCA",
-		 "image":"../../assets/home/images/Anime/EsteCuerpoNoEsMio.jpg",
+		 "image":"../../assets/home/images/Comedia/EsteCuerpoNoEsMio.jpg",
 		 "synopsis":"Una porrista y un vulgar ladrón intercambian cuerpos mágicamente y deben encontrar una manera de revertir el encanto.",
 		"trailer":"https://youtube.com/embed/I5z64Gq-rCw"
 		},
@@ -292,7 +292,7 @@
 		 "genre":"Comedia",
 		 "actors":"Jamie Lee Curtis,Lindsay Lohan",
 		 "file":"https://youtube.com/embed/nZ8KJ4MzzOw",
-		 "image":"../../assets/home/images/Anime/ViernesDeLocos.jpg",
+		 "image":"../../assets/home/images/Comedia/ViernesDeLocos.jpg",
 		 "synopsis":"Dos galletas de la suerte provocan que una psicoterapeuta comprometida y su hija adolescente intercambien mágicamente sus cuerpos.",
 		"trailer":"https://youtube.com/embed/v80uh3NCOXo"
 		},
@@ -303,7 +303,7 @@
 		 "genre":"Comedia",
 		 "actors":"Lindsay Lohan,Chris Pine",
 		 "file":"https://youtube.com/embed/-1SVqqyrskE",
-		 "image":"../../assets/home/images/Anime/DevuelvemeMiSuerte.jpg",
+		 "image":"../../assets/home/images/Comedia/DevuelvemeMiSuerte.jpg",
 		 "synopsis":"Dos galletas de la suerte provocan que una psicoterapeuta comprometida y su hija adolescente intercambien mágicamente sus cuerpos.",
 		"trailer":"https://youtube.com/embed/qGXdZ4g2gTM"
 		},
@@ -414,7 +414,7 @@
 		 "genre":"Romance",
 		 "actors":"Madeline Carroll,Callan McAuliffe",
 		 "file":"https://youtube.com/embed/CBF4IfiZ0mQ",
-		 "image":"../../assets/home/images/Romance/Flippe.jpg",
+		 "image":"../../assets/home/images/Romance/Flipped.jpg",
 		 "synopsis":"Juli y Bryce son dos niños de siete años, compañeros de clase y vecinos. Juli se enamora perdidamente de Bryce pero el jovencito no comparte sus sentimientos. Todo parece cambiar cuando ambos comienzan a estudiar en la escuela secundaria.",
 		 "trailer":"https://youtube.com/embed/q40GxY5n2Dg"
 		},
@@ -778,7 +778,7 @@
 		 "genre":"Anime",
 		 "actors":"Yūki Amami,Hana Sugisaki",
 		 "file":"https://youtube.com/embed/1e3jJeYT6Sk",
-		 "image":"../../assets/home/images/Anime/MaryYLaFlorDeLaBrujao.jpg",
+		 "image":"../../assets/home/images/Anime/MaryYLaFlorDeLaBruja.jpg",
 		 "synopsis":"Mary sigue a un gato misterioso hacia un bosque, descubre una planta rara que florece una vez cada siete años y la transporta lejos de su escuela de magia.",
 		"trailer":"https://youtube.com/embed/ziM1cqVaERs"
 		},
