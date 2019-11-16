@@ -24,6 +24,7 @@ export class AdminComponent implements OnInit {
   public id;
   public role;
   public cargar: boolean = true;
+  public release;
 
   constructor(
     private updateMoviesService: UpdateMoviesService,
@@ -73,6 +74,7 @@ export class AdminComponent implements OnInit {
       actors: dataEdit.actors,
       director: dataEdit.director,
       duration: dataEdit.duration,
+      release: dataEdit.release,
       // file: dataEdit.file,
       genre: dataEdit.genre,
       // image: dataEdit.image,
