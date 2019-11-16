@@ -3,12 +3,15 @@
     <label class="selectFile">Título de la película</label>
     <input matInput formControlName="title" type="text" />
   </mat-form-field>
-
   <mat-form-field>
-    <label class="selectFile">Género</label>
-    <input matInput formControlName="genre" type="text" />
+    <mat-label>Género</mat-label>
+    <mat-select formControlName="genre">
+      <mat-option *ngFor="let genre of genres" [value]="genre">
+        {{ genre }}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
-
+  
   <mat-form-field>
     <label class="selectFile">Director</label>
     <input matInput formControlName="director" type="text" />
