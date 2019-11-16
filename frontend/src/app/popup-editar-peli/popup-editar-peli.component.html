@@ -29,5 +29,9 @@
     <input matInput formControlName="synopsis" type="text" />
   </mat-form-field>
 
+  <mat-slide-toggle [checked]="releaseValue" formControlName="release">
+    <p class="rbt-300">Esta película es un estreno</p>
+  </mat-slide-toggle>
+
   <button (click)="onSubmit()" class="botonGuardar small white">Guardar</button>
 </form>

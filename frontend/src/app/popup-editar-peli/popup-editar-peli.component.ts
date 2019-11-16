@@ -17,6 +17,7 @@ export class PopupEditarPeliComponent implements OnInit {
   duration: string;
   actors: string;
   synopsis: string;
+  release: string;
   public pelicula;
   actualizarPeliForm: FormGroup;
 
@@ -36,14 +37,17 @@ export class PopupEditarPeliComponent implements OnInit {
     this.duration = this.data.duration;
     this.actors = this.data.actors;
     this.synopsis = this.data.synopsis;
+    this.release = this.data.release;
     this.actualizarPeliForm = this.builder.group({
       title: [this.tituloPelicula, Validators.compose([Validators.required])],
       genre: [this.genre],
       director: [this.director],
       duration: [this.duration],
       actors: [this.actors],
-      synopsis: [this.synopsis]
+      synopsis: [this.synopsis],
+      release: [this.release]
     });
+    console.log(this.release);
   }
 
   onSubmit() {
@@ -53,7 +57,8 @@ export class PopupEditarPeliComponent implements OnInit {
       director: this.actualizarPeliForm.value.director,
       duration: this.actualizarPeliForm.value.duration,
       actors: this.actualizarPeliForm.value.actors,
-      synopsis: this.actualizarPeliForm.value.synopsis
+      synopsis: this.actualizarPeliForm.value.synopsis,
+      release: this.actualizarPeliForm.value.release
     };
 
     this.close();
