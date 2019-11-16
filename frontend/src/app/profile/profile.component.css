@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   padding: 5vh 3vw;
-  height: calc(100vh - 70px);
+ 
   justify-items: center;
   align-items: center;
 }
@@ -45,6 +45,7 @@
   width: 130px;
   justify-self: end;
 }
+
 .profilePic {
   border-radius: 50%;
   width: 200px;
@@ -99,4 +100,25 @@ justify-content: center;
 div{
   color: #fff;
 }
+/* estilo datos del perfil css */
+.datos{
+  text-align: left;
+  background: rgba(235, 234, 243, 0.3);
+  padding: 5vh 3vw;
+  height: 99%;
+ width: 80%;
+ position:relative;
+ padding: 5%;
+ }
+div#act{
+  margin: auto;
+  /* margin-top: 50px; */
+  margin-right: 30%;
+  margin-left: 35%;
+}
 
+
+hr {
+   
+  height: 1px;
+}
