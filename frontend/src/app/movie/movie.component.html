@@ -14,7 +14,7 @@
       <div class="movieDesc">
         <div>
           <p class="white rbt-300 medium">
-            {{ title }}
+            {{ title | titlecase }}
           </p>
           <p class="white rbt-300 ">Género: {{ genre }}</p>
           <p class="rbt-300 white">Duración: {{ duration }}</p>
@@ -33,10 +33,12 @@
       </div>
     </div>
     <div class="suggestions">
-      <p class="white normal suggestionsTitle rbt-300">Te podría interesar</p>
+      <p class="white normal suggestionsTitle rbt-300">
+        Más películas de {{ genre }} que te podrían interesar
+      </p>
       <div *ngFor="let movie of interestingMovies">
         <img [src]="movie.image" alt="" class="movieImg" />
-        <p class="rbt-300 small white">{{ movie.title }}</p>
+        <p class="rbt-300 small white">{{ movie.title | titlecase }}</p>
       </div>
     </div>
   </div>

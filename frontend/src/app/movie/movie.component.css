@@ -19,7 +19,11 @@
 }
 .movieImg {
   width: 100%;
+  height: 180px;
   margin-bottom: 5%;
+}
+.movieImg:hover {
+  cursor: pointer;
 }
 .movieDesc {
   padding: 1%;
@@ -49,6 +53,7 @@
   background-size: 20px;
   background-repeat: no-repeat;
   font-size: 10px;
+  justify-self: end;
 }
 .favIcon2 {
   height: 20px;
@@ -58,6 +63,7 @@
   background-size: 20px;
   background-repeat: no-repeat;
   font-size: 10px;
+  justify-self: end;
 }
 .favIcon1:hover {
   cursor: pointer;

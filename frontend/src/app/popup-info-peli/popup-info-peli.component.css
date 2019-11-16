@@ -11,15 +11,24 @@
   margin-bottom: 5px;
 }
 
+.text {
+  text-align: justify;
+}
+
+iframe {
+  align-self: center;
+}
+
 .botonVerPelicula {
   padding: 10px;
-  font-size: 16px;
+  font-size: 12px;
   background-color: #ff1180;
   color: white;
-  height: 45px;
-  width: 200px;
+  height: 40px;
+  width: 130px;
   border-radius: 5rem;
   align-self: center;
+  border: none;
 }
 
 .botonVerPelicula:hover {
@@ -30,13 +39,48 @@
   height: 20px;
   width: 20px;
   align-content: center;
+  background-image: url(../../assets/favSection/img/redheart.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.favIcon2 {
+  height: 20px;
+  width: 20px;
+  align-content: center;
   background-image: url(../../assets/favSection/img/corazon.png);
   background-size: 20px;
   background-repeat: no-repeat;
   font-size: 10px;
+  margin-right: 5px;
+}
+
+.favIcon1:hover {
+  cursor: pointer;
+}
+
+.favIcon2:hover {
+  cursor: pointer;
 }
 
 .footerPopup {
   display: flex;
   flex-direction: column;
+}
+.agregarFav {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(25, 18, 87);
+  border-radius: 5rem;
+  width: 155px;
+  justify-content: center;
+  align-items: center;
+  justify-self: end;
+  height: 35px;
+}
+.popupHeader {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }

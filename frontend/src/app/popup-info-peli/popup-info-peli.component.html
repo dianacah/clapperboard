@@ -1,26 +1,30 @@
 <div class="contenedorPopUpInfo">
-  <h1 class="nombrePelicula margin5 medium">{{ movie.title | titlecase }}</h1>
-  <br />
-  <div class="agregarFav">
-    <div
-      class="favIcon1"
-      (click)="enviarFavorito(movie)"
-      *ngIf="esFavorito"
-    ></div>
-    <div
-      class="favIcon2"
-      (click)="enviarFavorito(movie)"
-      *ngIf="!esFavorito"
-    ></div>
-    <div class="infoUser intermedioSize">Agregar a favoritos</div>
+  <h1 class="nombrePelicula margin5 rbt-500 small">
+    {{ movie.title | titlecase }}
+  </h1>
+
+  <div class="popupHeader">
+    <div>
+      <p class="margin5 very-small"><b>Género:</b> {{ movie.genre }}</p>
+      <p class="margin5 very-small"><b>Director:</b> {{ movie.director }}</p>
+    </div>
+    <div class="agregarFav">
+      <div
+        class="favIcon1"
+        (click)="enviarFavorito(movie)"
+        *ngIf="esFavorito"
+      ></div>
+      <div
+        class="favIcon2"
+        (click)="enviarFavorito(movie)"
+        *ngIf="!esFavorito"
+      ></div>
+      <div class="infoUser white very-small">Agregar a favoritos</div>
+    </div>
   </div>
-  <p class="margin5 small"><b>Género:</b> {{ movie.genre }}</p>
-  <p class="margin5"><b>Director:</b> {{ movie.director }}</p>
-  <p class="margin5"><b>Actores:</b> {{ movie.actors }}</p>
-  <p class="margin5"><b>Duración:</b> {{ movie.duration }}</p>
-  <p class="margin5 intermedioSize text">
-    <b>Sinopsis:</b> {{ movie.synopsis }}
-  </p>
+  <p class="margin5 very-small"><b>Actores:</b> {{ movie.actors }}</p>
+  <p class="margin5 very-small"><b>Duración:</b> {{ movie.duration }}</p>
+  <p class="margin5 very-small text"><b>Sinópsis:</b> {{ movie.synopsis }}</p>
   <iframe
     width="75%"
     height="310px"
