@@ -8,22 +8,29 @@
 </nav>
 <div class="wrapper">
   <div class="picImg">
-    <p class="white rbt-300 medium">¡Hola {{ name }}!</p>
+    <p class="white rbt-300 medium">¡Hola {{name}}!</p>
     <img src="../../assets/profile/avatar.png" class="profilePic" alt="" />
   </div>
-  <div >
-    <div>Nombre:</div>
+  <div class="datos" >
+    <div id="name">Nombre</div>
+    <hr>
     <div>{{name}}</div>
-    <div>Email:</div>
+    <hr>
+    <div id="email">Email</div>
+    <hr>
     <div>{{email}}</div>
-    <div>Fecha de nacimiento:</div>
+    <hr>
+    <div>Fecha de nacimiento</div>
+    <hr>
     <div>{{date}}</div>
-    <div>Descripción:</div>
+    <hr>
+    <div>Descripción</div>
+    <hr>
     <div>{{description}}</div>
- 
-    <button class="white rbt-300 small submitButton" (click)="mostarUsuario()">
+    <hr>
+   <div id="act"> <button  class="white rbt-300 small submitButton " (click)="mostarUsuario()">
       Actualizar
-    </button>
+    </button></div>
   </div>
 </div>
 </body>
