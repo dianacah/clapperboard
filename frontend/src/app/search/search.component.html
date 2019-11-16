@@ -5,12 +5,15 @@
 <!--Contiene la imagen del fondo de página-->
 <div class="wrapper">
     <header class="rbt-300 white">
-
+        <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>
         <!--BARRA DE BUSQUEDA TITULO Y FILTRO POR GENERO, VISTA DE CONTENIDO-->
 
         <div class="contain white">
             <div class="row medium">
-                Búsqueda:
+
+                <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>
+                
+                <!-- Búsqueda:
                 <br>
                 <input type="text" class="movieSelector form-control normal" placeholder="Ingrese su búsqueda">
                 <br>
@@ -23,7 +26,7 @@
                     <option value="anime">Anime</option>
                 </select>
                 <br>
-                <br>
+                <br> -->
             </div>
             <!--Cuerpo Peliculas-->
             <div class="content">

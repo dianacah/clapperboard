@@ -1,6 +1,7 @@
 import { from } from 'rxjs';
-import { GetMovieService } from './../services/getMovie/get-movie.service';
+//import { GetMovieService } from './../services/getMovie/get-movie.service';
 import { Component, OnInit } from "@angular/core";
+import { SearchService } from './../services/searchMovie/search.service';
 
 @Component({
   selector: "app-search",
@@ -8,21 +9,44 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./search.component.css"]
 })
 export class SearchComponent implements OnInit {
-  public infoMovies: any = [];
-
-
+  infoMovies: any [];
+   
   constructor(
-    private getMovieService: GetMovieService
+    private searchService: SearchService
   ) { }
 
+//Llamando al servicio
+ngOnInit() {
+  this.searchService.getMovie().subscribe(movies => {
+    this.infoMovies = movies
+    this.searchService.infoMovies = movies
+  });
+}
 
-  getInfoMovie() {
-    this.getMovieService.getMovie().subscribe((res = {}) => {
-      this.infoMovies = res;
-      //console.log("respuesta", this.infoMovies);
-    });
+onSelectedOption(e) {
+  this.getFilteredExpenseList();
+}
+
+getFilteredExpenseList() {
+  if (this.searchService.searchOption.length > 0)
+    this.infoMovies = this.searchService.filteredListOptions();
+  else {
+    this.infoMovies = this.searchService.infoMovies;
   }
-  ngOnInit() {
-    this.getInfoMovie();
-  }
+
+  console.log(this.infoMovies)
+}
+
+  // getInfoMovie() {
+  //   this.getMovieService.getMovie().subscribe((res = {}) => {
+  //     this.infoMovies = res;
+  //     //console.log("respuesta", this.infoMovies);
+  //   });
+  // }
+  //copiado
+  //
+  //fin copiado
+  // ngOnInit() {
+  //   this.getInfoMovie();
+  // }
 }
