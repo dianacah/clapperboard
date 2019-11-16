@@ -28,14 +28,18 @@
     </div>
     <div class="content">
       <div class="padding20" id="Drama">
+        <p class="light-white rbt-300 medium">
+          Descubre y disfruta tus películas favoritas
+        </p>
         <p class="white medium rbt-300 genreTitle">Drama</p>
         <div class="gridPeliculas">
-          <div
-            *ngFor="let dramaMovie of dramaMovies"
-            class="pelicula"
-            (click)="mostrarPelicula(dramaMovie)"
-          >
-            <img [src]="dramaMovie.image" alt="" class="imagenPelicula" />
+          <div *ngFor="let dramaMovie of dramaMovies" class="movieWrapper">
+            <img
+              [src]="dramaMovie.image"
+              alt=""
+              class="imagenPelicula"
+              (click)="mostrarPelicula(dramaMovie)"
+            />
             <p class="white small rbt-300">
               {{ dramaMovie.title | titlecase }}
             </p>
@@ -45,12 +49,13 @@
       <div class="padding20" id="Comedia">
         <p class="white medium rbt-300 genreTitle">Comedia</p>
         <div class="gridPeliculas">
-          <div
-            *ngFor="let comedyMovie of comedyMovies"
-            class="pelicula"
-            (click)="mostrarPelicula(comedyMovie)"
-          >
-            <img [src]="comedyMovie.image" alt="" class="imagenPelicula" />
+          <div *ngFor="let comedyMovie of comedyMovies" class="movieWrapper">
+            <img
+              [src]="comedyMovie.image"
+              alt=""
+              class="imagenPelicula"
+              (click)="mostrarPelicula(comedyMovie)"
+            />
             <p class="white small rbt-300">
               {{ comedyMovie.title | titlecase }}
             </p>
@@ -60,12 +65,13 @@
       <div class="padding20" id="Romance">
         <p class="white medium rbt-300 genreTitle">Romance</p>
         <div class="gridPeliculas">
-          <div
-            *ngFor="let romanceMovie of romanceMovies"
-            class="pelicula"
-            (click)="mostrarPelicula(romanceMovie)"
-          >
-            <img [src]="romanceMovie.image" alt="" class="imagenPelicula" />
+          <div class="movieWrapper" *ngFor="let romanceMovie of romanceMovies">
+            <img
+              [src]="romanceMovie.image"
+              alt=""
+              class="imagenPelicula"
+              (click)="mostrarPelicula(romanceMovie)"
+            />
             <p class="white small rbt-300">
               {{ romanceMovie.title | titlecase }}
             </p>
@@ -76,12 +82,13 @@
       <div class="padding20" id="Anime">
         <p class="white medium rbt-300 genreTitle">Anime</p>
         <div class="gridPeliculas">
-          <div
-            *ngFor="let animeMovie of animeMovies"
-            class="pelicula"
-            (click)="mostrarPelicula(animeMovie)"
-          >
-            <img [src]="animeMovie.image" alt="" class="imagenPelicula" />
+          <div *ngFor="let animeMovie of animeMovies" class="movieWrapper">
+            <img
+              [src]="animeMovie.image"
+              alt=""
+              class="imagenPelicula"
+              (click)="mostrarPelicula(animeMovie)"
+            />
             <p class="white small rbt-300">
               {{ animeMovie.title | titlecase }}
             </p>

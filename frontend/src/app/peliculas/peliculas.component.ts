@@ -7,6 +7,7 @@ import {
 } from "@angular/material";
 import { PopupInfoPeliComponent } from "./../popup-info-peli/popup-info-peli.component";
 import { PeliculaAReproducirService } from "./../services/PeliculaAReproducir/pelicula-areproducir.service";
+import { NgbCarouselConfig } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: "app-peliculas",
@@ -25,8 +26,12 @@ export class PeliculasComponent implements OnInit {
   constructor(
     private getMovieService: GetMovieService,
     private dialog: MatDialog,
-    private peliculaAReproducirService: PeliculaAReproducirService
-  ) {}
+    private peliculaAReproducirService: PeliculaAReproducirService,
+    config: NgbCarouselConfig
+  ) {
+    config.interval = 3000;
+    config.showNavigationIndicators = false;
+  }
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
@@ -62,7 +67,6 @@ export class PeliculasComponent implements OnInit {
   getInfoMovie() {
     this.getMovieService.getMovie().subscribe((res = {}) => {
       this.infoMovies = res;
-      console.log("respuesta", this.infoMovies);
 
       this.dramaMovies = this.infoMovies.filter(movie => {
         return movie.genre == "Drama";
@@ -81,6 +85,7 @@ export class PeliculasComponent implements OnInit {
       });
     });
   }
+
   ngOnInit() {
     this.getInfoMovie();
   }

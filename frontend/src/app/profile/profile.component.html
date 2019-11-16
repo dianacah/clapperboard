@@ -1,45 +1,36 @@
+<body>
 <nav>
-    <a routerLink="/ver-peliculas"><img class="logo" src="../../assets/logo.png" alt="" /></a>
-    <a routerLink="/ver-peliculas" class="logIn white">Inicio</a>
-    <a routerLink="/home" class="white">Cerrar Sesión</a>
+  <a routerLink="/ver-peliculas"
+    ><img class="logo" src="../../assets/logo.png" alt=""
+  /></a>
+  <a routerLink="/ver-peliculas" class="logIn white">Inicio</a>
+  <a routerLink="/home" class="white">Cerrar Sesión</a>
 </nav>
 <div class="wrapper">
-    <div class="picImg">
-        <p class="white rbt-300 medium">Hola {{ name }} !</p>
-        <img src="../../assets/profile/profile_test_pic.jpg" class="profilePic" alt="" />
-        <button class="white rbt-300 small favButton" type="submit" routerLink="/fav-section">
-            Ir a Favoritos
-        </button>
-        <a routerLink="/home" class="very-small rbt-300">Cerrar sesión</a>
-    </div>
-    <form [formGroup]="perfilForm">
-        <input formControlName="name" placeholder="Nombre" type="text" class="small rbt-300 input" />
-        <small class="error" *ngIf="
-        perfilForm.get('name').hasError('required') &&
-        perfilForm.get('name').touched
-      ">Ups, por favor ingresa los datos para continuar</small>
-        <br />
-        <input formControlName="email" placeholder="Correo electrónico" type="email" class="small rbt-300 input" />
-        <small class="error" *ngIf="
-        perfilForm.get('email').hasError('required') &&
-        perfilForm.get('email').touched
-      ">Ups, por favor ingresa los datos para continuar</small>
-        <br />
-        <input formControlName="date" placeholder="Fecha de nacimiento" type="date" class="small rbt-300 input" />
-        <small class="error" *ngIf="
-        perfilForm.get('date').hasError('required') &&
-        perfilForm.get('date').touched
-      ">Ups, por favor ingresa los datos para continuar</small>
-        <br />
-        <input formControlName="password" placeholder="Contraseña" type="password" class="small rbt-300 input" />
-        <small class="error" *ngIf="
-        perfilForm.get('password').hasError('required') &&
-        perfilForm.get('password').touched
-      ">Ups, por favor ingresa los datos para continuar</small>
-        <br />
-        <input placeholder="Descripción (opcional)" type="text" class="small rbt-300 descriptionInput" />
-        <button class="white rbt-300 small submitButton" type="submit">
-            Actualizar
-        </button>
-    </form>
+  <div class="picImg">
+    <p class="white rbt-300 medium">¡Hola {{name}}!</p>
+    <img src="../../assets/profile/avatar.png" class="profilePic" alt="" />
+  </div>
+  <div class="datos" >
+    <div id="name">Nombre</div>
+    <hr>
+    <div>{{name}}</div>
+    <hr>
+    <div id="email">Email</div>
+    <hr>
+    <div>{{email}}</div>
+    <hr>
+    <div>Fecha de nacimiento</div>
+    <hr>
+    <div>{{date}}</div>
+    <hr>
+    <div>Descripción</div>
+    <hr>
+    <div>{{description}}</div>
+    <hr>
+   <div id="act"> <button  class="white rbt-300 small submitButton " (click)="mostarUsuario()">
+      Actualizar
+    </button></div>
+  </div>
 </div>
+</body>

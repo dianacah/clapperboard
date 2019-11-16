@@ -1,9 +1,5 @@
 .contenedorGlobal {
-  background-image: linear-gradient(
-      rgba(25, 18, 87, 0.9),
-      rgba(25, 18, 87, 0.9)
-    ),
-    url(../../assets/main-view-movies/background-movies.jpg);
+  background-image: linear-gradient(rgba(25, 18, 87, 1), rgba(25, 18, 87, 1));
   background-size: cover;
   background-position: center;
 }
@@ -33,22 +29,20 @@
   flex-direction: row;
 }
 .imagenPelicula {
-  width: 12vw;
-  height: 250px;
+  width: 11vw;
+  height: 200px;
   border-radius: 1%;
-  margin-bottom: 1vh;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
-.gridPeliculas {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(auto-fill, min-max(200px, 1fr));
-  gap: 20px;
+.imagenPelicula:hover {
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid white;
+  opacity: 1;
 }
 .padding20 {
   padding: 20px;
-}
-.pelicula:hover {
-  cursor: pointer;
 }
 .genreTitle {
   margin-bottom: 15px;
@@ -61,4 +55,11 @@
 }
 .genreTitleMenu:hover {
   color: white;
+}
+.gridPeliculas {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.movieWrapper {
+  width: 100px;
 }

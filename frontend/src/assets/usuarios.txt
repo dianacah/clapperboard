@@ -1,0 +1,16 @@
+{
+		"name":"Alejandra López",
+		"date": "1981-10-08",
+		"email": "alejandra@gmail.com",
+		"password": "alejandra",
+		"image": "",
+		"role": "admin"
+	},
+		{
+		"name":"Alejandro López",
+		"date": "1981-10-08",
+		"email": "alejandro@gmail.com",
+		"password": "alejandro",
+		"image": "",
+		"role": "normal"
+	}

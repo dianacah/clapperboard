@@ -7,7 +7,7 @@
 }
 
 .botonAgregar {
-  margin-top: 10px;
+  margin-top: 30px;
   border: none;
   width: 40%;
   height: 40px;
@@ -16,19 +16,24 @@
   border-radius: 1.5rem;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
-  -webkit-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 6px 6px 20px -5px rgba(0, 0, 0, 0.75);
-}
-.botonAgregar:hover {
-  box-shadow: 6px 7px 18px -3px whitesmoke;
-  transform: scale(1.05);
 }
 input {
   border-radius: 5px;
-  border: 1px solid lightgray;
   padding: 5px;
 }
 .error {
   color: #ff1180;
+}
+p {
+  margin-bottom: 0;
+}
+.formTitle {
+  margin-bottom: 2vh;
+}
+:host ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: rgba(255, 17, 128, 0.5);
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: rgb(255, 17, 128);
 }

@@ -28,6 +28,7 @@ export class ReleasesComponent implements OnInit {
       this.releases = this.infoMovies.filter(movie => {
         return movie.release == true;
       });
+      console.log("Los estrenos", this.releases);
     });
   }
 

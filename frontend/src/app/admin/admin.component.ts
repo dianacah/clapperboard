@@ -1,4 +1,5 @@
-import { GetMovieService } from './../services/getMovie/get-movie.service';
+import { UserInformationService } from "./../services/User-Information/user-information.service";
+import { GetMovieService } from "./../services/getMovie/get-movie.service";
 import { Component, OnInit } from "@angular/core";
 import { PopupNuevaPeliComponent } from "./../popup-nueva-peli/popup-nueva-peli.component";
 import {
@@ -6,10 +7,11 @@ import {
   MatDialogConfig,
   MatTableDataSource
 } from "@angular/material";
-import { PopupEditarPeliComponent } from '../popup-editar-peli/popup-editar-peli.component';
-import { PostMovieService } from '../services/postMovie/post-movie.service';
-import { DataSource } from '@angular/cdk/table';
-
+import { PopupEditarPeliComponent } from "../popup-editar-peli/popup-editar-peli.component";
+import { PostMovieService } from "../services/postMovie/post-movie.service";
+import { DataSource } from "@angular/cdk/table";
+import { UpdateMoviesService } from "./../services/update-movies.service";
+import { GetUsersService } from "../services/getUsers/get-users.service";
 
 @Component({
   selector: "app-admin",
@@ -17,125 +19,127 @@ import { DataSource } from '@angular/cdk/table';
   styleUrls: ["./admin.component.css"]
 })
 export class AdminComponent implements OnInit {
+  public name;
+  public user;
+  public id;
+  public role;
+  public cargar: boolean = true;
+  public release;
 
   constructor(
+    private updateMoviesService: UpdateMoviesService,
     private dialog: MatDialog,
     private getMovieService: GetMovieService,
-    private postMovieService: PostMovieService) { }
+    private userInformationService: UserInformationService,
+    private postMovieService: PostMovieService,
+    private getUsersService: GetUsersService
+  ) {}
+
+  public infoUsers: any = [];
+  usersTableColumns: string[] = ["icono", "nombre", "correo"];
 
   public infoMovies: any = [];
-  tableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
+  moviesTableColumns: string[] = ["imagen", "pelicula", "genero", "accion"];
   public popup;
-
-  public dataSource = [ this.infoMovies
-    // {
-    //   imagen: "../../assets/home/images/Drama/CisneNegro.jpg",
-    //   nombre: "Cisne Negro",
-    //   genero: "Drama"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Romance/500DiasConElla.jpg",
-    //   nombre: "500 días con ella",
-    //   genero: "Romantica"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Comedia/AlgoPasaConMary.jpg",
-    //   nombre: "Algo pasa con Mary",
-    //   genero: "Comedia"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Drama/Amelie.jpg",
-    //   nombre: "Amelie",
-    //   genero: "Drama"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Romance/Titanic.jpg",
-    //   nombre: "Titanic",
-    //   genero: "Romantica"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Comedia/ChicasMalas.jpg",
-    //   nombre: "Chicas malas",
-    //   genero: "Comedia"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Drama/ALosTrece.jpg",
-    //   nombre: "A los 13",
-    //   genero: "Drama"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Comedia/NoEsRomantico.jpg",
-    //   nombre: "No es romantico",
-    //   genero: "Comedia"
-    // },
-    // {
-    //   imagen: "../../assets/home/images/Comedia/ScaryMovie.jpg",
-    //   nombre: "Scary movie",
-    //   genero: "Comedia"
-    // }
-  ];
-  
-
-  
+  //public dataSource = [this.infoMovies];
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
     dialogConfig.width = "400px";
-    dialogConfig.height = "450px";
+    dialogConfig.height = "400px";
     return dialogConfig;
   }
 
-  
-//click
+  //click
   agregarPelicula(movie) {
     let dialogConfig = this.openDialog();
     this.popup = this.dialog.open(PopupNuevaPeliComponent, dialogConfig);
     this.popup.afterClosed().subscribe(res => {
       let respuesta = res.value;
+      let genre = respuesta.genre;
       let pathImagen = "../../../assets/home/images/";
       let nombreImagen = respuesta.image.substr(12, respuesta.image.length);
-      respuesta.image = pathImagen + nombreImagen;
-      console.log("respuesta", respuesta);
+      respuesta.image = pathImagen + genre + "/" + nombreImagen;
       this.addInfoMovie(respuesta);
     });
-  
   }
-  editarPelicula(event) {
-    console.log(event);
+
+  editarPelicula(dataEdit) {
+    this.id = dataEdit._id;
     let dialogConfig = this.openDialog();
+    dialogConfig.data = {
+      id: dataEdit._id,
+      actors: dataEdit.actors,
+      director: dataEdit.director,
+      duration: dataEdit.duration,
+      release: dataEdit.release,
+      // file: dataEdit.file,
+      genre: dataEdit.genre,
+      // image: dataEdit.image,
+      synopsis: dataEdit.synopsis,
+      title: dataEdit.title,
+      trailer: dataEdit.trailer,
+      disableClose: false,
+      autoFocus: true,
+      width: "400px",
+      height: "450px"
+    };
     this.popup = this.dialog.open(PopupEditarPeliComponent, dialogConfig);
+    this.popup.afterClosed().subscribe(response => {
+      this.updateMovie(response);
+    });
   }
-  borrarPelicula(movie) {
-    console.log(movie);
-    this.postMovieService
-      .deleteMovie(movie._id)
+  updateMovie(dataFormulario) {
+    this.updateMoviesService
+      .updateMovie(this.id, dataFormulario.value)
       .subscribe(response => {
-        console.log(response);
+        this.ngOnInit();
       });
+  }
+
+  borrarPelicula(movie) {
+    this.postMovieService.deleteMovie(movie._id).subscribe(response => {});
     this.ngOnInit();
   }
-//servicios
+  //servicios
 
   getInfoMovie() {
     this.getMovieService.getMovie().subscribe((res = {}) => {
       this.infoMovies = res;
-      console.log("funciona get", this.infoMovies)
-    })
+    });
   }
   addInfoMovie(movie) {
     this.postMovieService.addMovie(movie).subscribe(res => {
       this.ngOnInit();
     });
   }
-  deleteInfoMovie(idMovie){
-    this.postMovieService.deleteMovie(idMovie).subscribe(res =>{
-      this.ngOnInit()
-    })
+
+  getUser() {
+    setTimeout(() => {
+      this.user = this.userInformationService.getUser();
+      this.name = this.user.name.split(" ", 1);
+      this.role = this.user.role;
+      this.cargar = false;
+      this.ngOnInit();
+    }, 200);
+  }
+
+  getAllUsers() {
+    this.getUsersService.getUsers().subscribe((res = []) => {
+      this.infoUsers = res;
+      this.infoUsers = this.infoUsers.filter(user => {
+        return user.name != this.name;
+      });
+    });
   }
 
   ngOnInit() {
-    this.getInfoMovie()
+    this.getInfoMovie();
+    if (this.cargar == true) {
+      this.getUser();
+    }
+    this.getAllUsers();
   }
 }

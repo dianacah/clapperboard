@@ -8,7 +8,12 @@ import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
   styleUrls: ["./popup-nueva-peli.component.css"]
 })
 export class PopupNuevaPeliComponent implements OnInit {
-  constructor(private builder: FormBuilder, private dialogRef: MatDialogRef<PopupNuevaPeliComponent>) { }
+  public genres = ["Drama", "Romance", "Comedia", "Anime"];
+
+  constructor(
+    private builder: FormBuilder,
+    private dialogRef: MatDialogRef<PopupNuevaPeliComponent>
+  ) {}
 
   newMovieForm: FormGroup = this.builder.group({
     title: ["", Validators.required],
@@ -18,10 +23,11 @@ export class PopupNuevaPeliComponent implements OnInit {
     actors: ["", Validators.required],
     file: ["", Validators.required],
     image: ["", Validators.required],
-    synopsis: ["", Validators.required]
+    synopsis: ["", Validators.required],
+    release: ["", Validators.required]
   });
 
-  ngOnInit() { }
+  ngOnInit() {}
   onSubmit() {
     const dataobj = {
       title: this.newMovieForm.value.title,
@@ -31,10 +37,10 @@ export class PopupNuevaPeliComponent implements OnInit {
       actors: this.newMovieForm.value.actors,
       file: this.newMovieForm.value.file,
       image: this.newMovieForm.value.image,
-      synopsis: this.newMovieForm.value.synopsis
-    }
+      synopsis: this.newMovieForm.value.synopsis,
+      release: this.newMovieForm.value.release
+    };
 
-    console.log('-----', dataobj);
     this.close();
   }
 

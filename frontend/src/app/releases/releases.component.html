@@ -4,17 +4,15 @@
       <div
         [ngStyle]="{
           'background-image':
-            'linear-gradient(175deg, rgba(25,18,87,0.2553396358543417) 0%, rgba(9,9,121,0.7931547619047619) 100%) , url(' +
+            'linear-gradient(175deg, rgba(25,18,87,0.2553396358543417) 0%, rgba(0,0,0,0.7931547619047619) 100%) , url(' +
             movie.image +
             ')'
         }"
         class="releaseImg"
-      >
-        <!-- <img [src]="movie.image" alt="Random first slide"  /> -->
-      </div>
+      ></div>
       <div class="carousel-caption">
         <div>
-          <p class="big rbt-500">{{ movie.title | titlecase }}</p>
+          <p class="medium rbt-500">{{ movie.title | titlecase }}</p>
           <p class="normal rbt-300">Género: {{ movie.genre }}</p>
           <p class="normal rbt-300">Duración: {{ movie.duration }}</p>
         </div>

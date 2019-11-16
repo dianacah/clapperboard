@@ -10,7 +10,7 @@ const usuariosSchema = new Schema({
         required: true
     },
     date: {
-        type: Date,
+        type: String,
         required: true
     },
     email: {
@@ -32,6 +32,10 @@ const usuariosSchema = new Schema({
     favoriteMovies: {
         type: [{ type: Schema.Types.ObjectId, ref: 'movies' }],
         required: false
+    },
+    description:{
+        type: String,
+        default:""
     }
 });
 

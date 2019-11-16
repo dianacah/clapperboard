@@ -1,12 +1,14 @@
 import { Injectable } from "@angular/core";
+import { HttpClient} from "@angular/common/http"
 
 @Injectable({
   providedIn: "root"
 })
 export class UserInformationService {
   private userInfo: any = {};
+  private URL = "http://localhost:3000/api/usuarios/";
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
   setUser(user) {
     this.userInfo = user;
@@ -16,16 +18,7 @@ export class UserInformationService {
     return this.userInfo;
   }
 
-  putUser() {
-    return this.userInfo
+  putUser(email,data) {
+    return this.http.put(this.URL+ email, data)
   }
-  /* 
-  setInformation(user) {
-    this.userInformation = user;
-    console.log(this.userInformation)
-  }
-  
-  getInformation() {
-    return this.userInformation;
-  }  */
 }

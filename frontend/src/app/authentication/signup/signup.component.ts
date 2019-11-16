@@ -31,7 +31,6 @@ export class SignupComponent implements OnInit {
   });
 
   enviarInformacion(signupForm) {
-    console.log(this.fechaActual);
     let fechaRegistro = signupForm.value.date;
     let añoRegistro = parseInt(fechaRegistro.substr(0, 4));
     let mesRegistro = parseInt(fechaRegistro.substr(5, 2));
@@ -42,7 +41,7 @@ export class SignupComponent implements OnInit {
     let años = añoActual - añoRegistro;
     let meses = mesActual - mesRegistro;
     let dia = diaActual - diaRegistro;
-    console.log("año", años, "mes", meses, "dia", dia);
+
     let usuarioNuevo = signupForm.value;
     if (años >= 18) {
       this.registryUserService

@@ -5,10 +5,9 @@
     <a href="#Romance" class="white">Romance</a>
     <a href="#Anime" class="white">Anime</a>
     <a routerLink="/search" class="logIn white">Buscar</a>
-    <button mat-button [matMenuTriggerFor]="menu">{{userName}}</button>
+    <button mat-button [matMenuTriggerFor]="menu" class="userBtn">{{userName}}</button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item routerLink="/perfil">Perfil</button>
         <button mat-menu-item routerLink="/home">Cerrar Sesión</button>
     </mat-menu>
-
 </nav>

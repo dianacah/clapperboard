@@ -6,7 +6,8 @@ import {
   MatTableDataSource
 } from "@angular/material";
 import { PutFavoritosService } from "./../services/putfavoritos/put-favoritos.service";
-import { DeleteFavMovieService } from '../services/deleteFavMovie/delete-fav-movie.service';
+import { DeleteFavMovieService } from "../services/deleteFavMovie/delete-fav-movie.service";
+import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
   selector: "fav-section",
@@ -15,47 +16,47 @@ import { DeleteFavMovieService } from '../services/deleteFavMovie/delete-fav-mov
 })
 export class FavSectionComponent implements OnInit {
   constructor(
+    private sanitizer: DomSanitizer,
     private dialog: MatDialog,
     private userInformationService: UserInformationService,
     private putFavoritosService: PutFavoritosService,
-    private deleteFavMovieService:DeleteFavMovieService,
-  ) {}
+    private deleteFavMovieService: DeleteFavMovieService
+  ) { }
 
   public popup;
   public user;
   public peliculasFavoritas: any = [];
+  public idPelicula: any = {};
+  public peliculaFav;
+  public trailer;
+  public isTrue: boolean = false;
 
-  /* addMoviesFav(pelicula) {
-    let dialogConfig = this.openDialog();
-    this.popup = this.dialog.open(PopupNewFavComponent, dialogConfig);
-    this.popup.afterClosed().subscribe(response => {
-      let respuesta = response.value;
-    });
-  } */
-
-  /* openDialog() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = false;
-    dialogConfig.autoFocus = false;
-    dialogConfig.width = "400px";
-    dialogConfig.height = "250px";
-    return dialogConfig;
-  } */
-
-  deleteMovie(peliculaFavorita){
-
-  /* this.deleteFavMovieService.deleteFavorito(this.user.email,this.user.data)
-  .subscribe((response = {}) => {
-  this.user.deleteFavMovie = response;
-  console.log("respuesta", this.user.deleteFavMovie);
-  } */
-
+  deleteMovie(peliculaFavorita) {
+    let email = this.user.email;
+    this.idPelicula = { movieId: peliculaFavorita._id };
+    if (peliculaFavorita.title == this.peliculaFav.title) {
+      this.peliculaFav = "";
+      this.isTrue = false;
+    }
+    this.deleteFavMovieService
+      .deleteFavorito(email, this.idPelicula.movieId)
+      .subscribe(response => {
+        this.userInformationService.setUser(response);
+        this.ngOnInit();
+      });
   }
+  mostrarInfoPeliculaFav(peliculaFavorita) {
+    console.log(peliculaFavorita);
+
+    this.isTrue = true,
+      this.peliculaFav = peliculaFavorita;
+    this.trailer = this.sanitizer.bypassSecurityTrustResourceUrl(
+      this.peliculaFav.trailer,
+    );
+  }
+
   ngOnInit() {
     this.user = this.userInformationService.getUser();
-    console.log("usuario", this.user);
-
     this.peliculasFavoritas = this.user.favoriteMovies;
-    console.log(this.user.favoriteMovies);
   }
 }

@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   public passwordDB;
   public wrongPass: boolean = false;
   public noRegistrado: boolean = true;
+  public role;
 
   constructor(
     private builder: FormBuilder,
@@ -30,7 +31,6 @@ export class LoginComponent implements OnInit {
     let user = usuario.value;
     let email = user.email;
     this.loginService.getLogin(email).subscribe((response: any) => {
-      console.log("usuario", response);
       if (response == null) {
         this.wrongPass = false;
         this.noRegistrado = false;
@@ -40,15 +40,17 @@ export class LoginComponent implements OnInit {
         if (user.password != this.passwordDB) {
           this.wrongPass = true;
         } else {
-          console.log("ingreso correcto");
           this.userInformationService.setUser(response);
-          this.router.navigate(["/perfil"]);
+          this.role = response.role;
+          if (this.role == "normal") {
+            this.router.navigate(["/ver-peliculas"]);
+          } else {
+            this.router.navigate(["/admin"]);
+          }
         }
       }
     });
   }
 
-  ngOnInit() {
-    console.log(this.wrongPass, this.noRegistrado);
-  }
+  ngOnInit() {}
 }

@@ -1,22 +1,37 @@
 <form [formGroup]="actualizarPeliForm" class="formularioActuPelicula">
+  <mat-form-field>
+    <label class="selectFile">Título de la película</label>
+    <input matInput formControlName="title" type="text" />
+  </mat-form-field>
 
-    <label class="selectFile">Titulo de la película</label>
-    <input formControlName="title" type="text" [value]="tituloPelicula" />
-
+  <mat-form-field>
     <label class="selectFile">Género</label>
-    <input formControlName="genre" type="text" [value]="genre" />
+    <input matInput formControlName="genre" type="text" />
+  </mat-form-field>
 
+  <mat-form-field>
     <label class="selectFile">Director</label>
-    <input formControlName="director" type="text" [value]="director" />
+    <input matInput formControlName="director" type="text" />
+  </mat-form-field>
 
+  <mat-form-field>
     <label class="selectFile">Duración</label>
-    <input formControlName="duration" type="text" [value]="duration" />
+    <input matInput formControlName="duration" type="text" />
+  </mat-form-field>
 
+  <mat-form-field>
     <label class="selectFile">Protagonistas</label>
-    <input formControlName="actors" type="text" [value]="actors" />
+    <input matInput formControlName="actors" type="text" />
+  </mat-form-field>
 
-    <label class="selectFile">Sinopsis</label>
-    <input formControlName="synopsis" type="text" [value]="synopsis" />
+  <mat-form-field>
+    <label class="selectFile">Sinópsis</label>
+    <input matInput formControlName="synopsis" type="text" />
+  </mat-form-field>
 
-    <button (click)="onSubmit()" class="botonGuardar small white">Guardar</button>
+  <mat-slide-toggle [checked]="releaseValue" formControlName="release">
+    <p class="rbt-300">Esta película es un estreno</p>
+  </mat-slide-toggle>
+
+  <button (click)="onSubmit()" class="botonGuardar small white">Guardar</button>
 </form>

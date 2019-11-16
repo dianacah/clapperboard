@@ -1,0 +1,65 @@
+<div class="contenedorPopupEditUser">
+  <h3 class="rbt-300 formTitle">Editar Usuario</h3>
+  <form [formGroup]="perfilForm">
+    <mat-form-field>
+      <input matInput formControlName="name" type="text" />
+      <small
+        class="error"
+        *ngIf="
+          perfilForm.get('name').hasError('required') &&
+          perfilForm.get('name').touched
+        "
+        >Ups, por favor ingresa los datos para continuar</small
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="email" type="email" />
+      <small
+        class="error"
+        *ngIf="
+          perfilForm.get('email').hasError('required') &&
+          perfilForm.get('email').touched
+        "
+        >Ups, por favor ingresa los datos para continuar</small
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="date" type="date" />
+      <small
+        class="error"
+        *ngIf="
+          perfilForm.get('date').hasError('required') &&
+          perfilForm.get('date').touched
+        "
+        >Ups, por favor ingresa los datos para continuar</small
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="password" type="password" />
+      <small
+        class="error"
+        *ngIf="
+          perfilForm.get('password').hasError('required') &&
+          perfilForm.get('password').touched
+        "
+        >Ups, por favor ingresa los datos para continuar</small
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="description"
+        placeholder="Descripción (opcional)"
+        type="text"
+      />
+    </mat-form-field>
+    <button
+      class="white rbt-300 small submitButton"
+      type="submit"
+      (click)="OnSubmit(perfilForm)"
+      routerLink="/perfil"
+    >
+      Actualizar
+    </button>
+  </form>
+</div>

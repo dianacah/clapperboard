@@ -2,87 +2,88 @@
   <app-nav></app-nav>
   <div class="admin">
     <div class="adminHeader">
-      <p class="white rbt-300 medium">Hola, admin_name</p>
+      <p class="white rbt-300 medium">Bienvenida {{ name }},</p>
       <button class="agregarPelicula rbt-300" (click)="agregarPelicula()">
         Agregar +
       </button>
+      <p class="rbt-300 normal white">
+        Este es tu espacio para explorar
+      </p>
     </div>
-    <mat-table [dataSource]="infoMovies">
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab label="Películas">
+        <mat-table [dataSource]="infoMovies">
+          <ng-container matColumnDef="imagen">
+            <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <mat-cell *matCellDef="let pelicula">
+              <img class="cadauna" [src]="pelicula.image" />
+            </mat-cell>
+          </ng-container>
 
-      <ng-container matColumnDef="imagen">
-        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-        <mat-cell *matCellDef="let pelicula">
-          <img class="cadauna" [src]="pelicula.image" />
-        </mat-cell>
-      </ng-container>
+          <ng-container matColumnDef="pelicula">
+            <mat-header-cell *matHeaderCellDef class="small"
+              >Nombre</mat-header-cell
+            >
+            <mat-cell *matCellDef="let pelicula" class="rbt-400">{{
+              pelicula.title
+            }}</mat-cell>
+          </ng-container>
 
-      <ng-container matColumnDef="pelicula">
-        <mat-header-cell *matHeaderCellDef class="small"
-          >Nombre</mat-header-cell>
-        <mat-cell *matCellDef="let pelicula" class="rbt-400">{{
-          pelicula.title
-        }}</mat-cell>
-      </ng-container>
+          <ng-container matColumnDef="genero">
+            <mat-header-cell *matHeaderCellDef class="small"
+              >Género</mat-header-cell
+            >
+            <mat-cell *matCellDef="let pelicula">{{ pelicula.genre }}</mat-cell>
+          </ng-container>
 
-      <ng-container matColumnDef="genero">
-        <mat-header-cell *matHeaderCellDef class="small"
-          >Género</mat-header-cell
-        >
-        <mat-cell *matCellDef="let pelicula">{{ pelicula.genre }}</mat-cell>
-      </ng-container>
+          <ng-container matColumnDef="accion">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let accion"
+              ><button class="botonEditar" (click)="editarPelicula(accion)">
+                <mat-icon aria-hidden="false">edit</mat-icon>
+              </button>
+              <br />
+              <button class="botonBorrar" (click)="borrarPelicula(accion)">
+                <mat-icon aria-hidden="false">delete</mat-icon>
+              </button>
+            </mat-cell>
+          </ng-container>
 
-      <ng-container matColumnDef="accion">
-        <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let accion"
-          ><button class="botonEditar" (click)="editarPelicula(event)">
-            <mat-icon aria-hidden="false">edit</mat-icon>
-          </button>
-          <br />
-          <button class="botonBorrar" (click)="borrarPelicula(movie)">
-            <mat-icon aria-hidden="false">delete</mat-icon>
-          </button>
-        </mat-cell>
-      </ng-container>
+          <mat-header-row
+            *matHeaderRowDef="moviesTableColumns"
+          ></mat-header-row>
+          <mat-row *matRowDef="let row; columns: moviesTableColumns"></mat-row>
+        </mat-table>
+      </mat-tab>
+      <mat-tab label="Usuarios">
+        <mat-table [dataSource]="infoUsers">
+          <ng-container matColumnDef="icono">
+            <mat-header-cell *matHeaderCellDef class="small"></mat-header-cell>
+            <mat-cell *matCellDef="let usuario" class="rbt-400">
+              <mat-icon aria-hidden="false">person</mat-icon>
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="nombre">
+            <mat-header-cell *matHeaderCellDef class="small"
+              >Nombre</mat-header-cell
+            >
+            <mat-cell *matCellDef="let usuario" class="rbt-400">{{
+              usuario.name
+            }}</mat-cell>
+          </ng-container>
 
-      <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
-    </mat-table>
-    <!-- <mat-table [dataSource]="dataSource">
-      <ng-container matColumnDef="imagen">
-        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-        <mat-cell *matCellDef="let imagen">
-          <img class="cadauna" [src]="imagen.imagen" />
-        </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="pelicula">
-        <mat-header-cell *matHeaderCellDef class="small"
-          >Nombre</mat-header-cell
-        >
-        <mat-cell *matCellDef="let pelicula" class="rbt-400">{{
-          pelicula.nombre
-        }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="genero">
-        <mat-header-cell *matHeaderCellDef class="small"
-          >Género</mat-header-cell
-        >
-        <mat-cell *matCellDef="let genero">{{ genero.genero }}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="accion">
-        <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let accion"
-          ><button class="botonEditar" (click)="editarPelicula(event)">
-            <mat-icon aria-hidden="false">edit</mat-icon>
-          </button>
-          <br />
-          <button class="botonBorrar" (click)="borrarPelicula(movie)">
-            <mat-icon aria-hidden="false">delete</mat-icon>
-          </button>
-        </mat-cell>
-      </ng-container>
-
-      <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
-    </mat-table> -->
+          <ng-container matColumnDef="correo">
+            <mat-header-cell *matHeaderCellDef class="small"
+              >Correo electrónico</mat-header-cell
+            >
+            <mat-cell *matCellDef="let usuario" class="rbt-400">{{
+              usuario.email
+            }}</mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="usersTableColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: usersTableColumns"></mat-row>
+        </mat-table>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </div>
