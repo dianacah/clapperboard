@@ -30,7 +30,7 @@ import {
   MatMenuModule,
   MatAutocompleteModule,
   MatChipsModule,
-  MatFormFieldModule,
+  MatFormFieldModule
 } from "@angular/material";
 
 import { NavComponent } from "./nav/nav.component";
@@ -46,12 +46,8 @@ import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { NavGendersComponent } from "./nav-genders/nav-genders.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-<<<<<<< HEAD
-import { PopupEditUserComponent } from './popup-edit-user/popup-edit-user.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-=======
 import { PopupEditUserComponent } from "./popup-edit-user/popup-edit-user.component";
->>>>>>> ff21fbda1c960595b74215a8c405453cdb3c6e45
+import { SearchBarComponent } from "./search-bar/search-bar.component";
 
 const routes: Routes = [
   {
@@ -136,15 +132,11 @@ const routes: Routes = [
     HttpClientModule,
     NgbModule,
     MatMenuModule,
-<<<<<<< HEAD
-    MatSelectModule, 
-    MatAutocompleteModule, 
+    MatSelectModule,
+    MatAutocompleteModule,
     MatChipsModule,
     MatFormFieldModule,
-=======
-    MatSelectModule,
     MatSlideToggleModule
->>>>>>> ff21fbda1c960595b74215a8c405453cdb3c6e45
   ],
   providers: [],
   bootstrap: [AppComponent],

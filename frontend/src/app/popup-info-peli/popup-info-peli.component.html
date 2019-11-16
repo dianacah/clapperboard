@@ -1,20 +1,42 @@
 <div class="contenedorPopUpInfo">
-    <h1 class="nombrePelicula margin5 medium">{{ movie.title }}</h1>
-    <br>
-    <div class="agregarFav">
-        <div class="favIcon1" (click)="enviarFavorito(movie)" *ngIf="esFavorito"></div>
-        <div class="favIcon2" (click)="enviarFavorito(movie)" *ngIf="!esFavorito"></div>
-        <div class="infoUser intermedioSize">Agregar a favoritos</div>
-    </div>
-    <p class="margin5 small"><b>Género:</b> {{ movie.genre }}</p>
-    <p class="margin5"><b>Director:</b> {{ movie.director }}</p>
-    <p class="margin5"><b>Actores:</b> {{ movie.actors }}</p>
-    <p class="margin5"><b>Duración:</b> {{ movie.duration }}</p>
-    <p class="margin5 intermedioSize text"><b>Sinopsis:</b> {{ movie.synopsis }}</p>
-    <iframe width="75%" height="310px" [src]="srcMovie" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="margin5"></iframe>
-    <div class="footerPopup">
-        <button class="botonVerPelicula normal" (click)="close()" routerLink="/reproductor">
+  <h1 class="nombrePelicula margin5 medium">{{ movie.title | titlecase }}</h1>
+  <br />
+  <div class="agregarFav">
+    <div
+      class="favIcon1"
+      (click)="enviarFavorito(movie)"
+      *ngIf="esFavorito"
+    ></div>
+    <div
+      class="favIcon2"
+      (click)="enviarFavorito(movie)"
+      *ngIf="!esFavorito"
+    ></div>
+    <div class="infoUser intermedioSize">Agregar a favoritos</div>
+  </div>
+  <p class="margin5 small"><b>Género:</b> {{ movie.genre }}</p>
+  <p class="margin5"><b>Director:</b> {{ movie.director }}</p>
+  <p class="margin5"><b>Actores:</b> {{ movie.actors }}</p>
+  <p class="margin5"><b>Duración:</b> {{ movie.duration }}</p>
+  <p class="margin5 intermedioSize text">
+    <b>Sinopsis:</b> {{ movie.synopsis }}
+  </p>
+  <iframe
+    width="75%"
+    height="310px"
+    [src]="srcMovie"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    class="margin5"
+  ></iframe>
+  <div class="footerPopup">
+    <button
+      class="botonVerPelicula normal"
+      (click)="close()"
+      routerLink="/reproductor"
+    >
       Ver película
     </button>
-    </div>
+  </div>
 </div>

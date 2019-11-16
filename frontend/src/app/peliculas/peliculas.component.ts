@@ -85,6 +85,7 @@ export class PeliculasComponent implements OnInit {
       });
     });
   }
+
   ngOnInit() {
     this.getInfoMovie();
   }
