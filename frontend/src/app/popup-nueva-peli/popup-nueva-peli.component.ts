@@ -9,6 +9,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
 })
 export class PopupNuevaPeliComponent implements OnInit {
   public genres = ["Drama", "Romance", "Comedia", "Anime"];
+
   constructor(
     private builder: FormBuilder,
     private dialogRef: MatDialogRef<PopupNuevaPeliComponent>
@@ -22,7 +23,8 @@ export class PopupNuevaPeliComponent implements OnInit {
     actors: ["", Validators.required],
     file: ["", Validators.required],
     image: ["", Validators.required],
-    synopsis: ["", Validators.required]
+    synopsis: ["", Validators.required],
+    release: ["", Validators.required]
   });
 
   ngOnInit() {}
@@ -35,10 +37,10 @@ export class PopupNuevaPeliComponent implements OnInit {
       actors: this.newMovieForm.value.actors,
       file: this.newMovieForm.value.file,
       image: this.newMovieForm.value.image,
-      synopsis: this.newMovieForm.value.synopsis
+      synopsis: this.newMovieForm.value.synopsis,
+      release: this.newMovieForm.value.release
     };
 
-    console.log("-----", dataobj);
     this.close();
   }
 

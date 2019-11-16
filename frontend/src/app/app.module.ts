@@ -12,7 +12,11 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
-import { MatDialogModule, MatSelectModule } from "@angular/material";
+import {
+  MatDialogModule,
+  MatSelectModule,
+  MatSlideToggleModule
+} from "@angular/material";
 import { AdminComponent } from "./admin/admin.component";
 import { MovieComponent } from "./movie/movie.component";
 import {
@@ -42,8 +46,12 @@ import { ReleasesComponent } from "./releases/releases.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { NavGendersComponent } from "./nav-genders/nav-genders.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+<<<<<<< HEAD
 import { PopupEditUserComponent } from './popup-edit-user/popup-edit-user.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+=======
+import { PopupEditUserComponent } from "./popup-edit-user/popup-edit-user.component";
+>>>>>>> ff21fbda1c960595b74215a8c405453cdb3c6e45
 
 const routes: Routes = [
   {
@@ -128,10 +136,15 @@ const routes: Routes = [
     HttpClientModule,
     NgbModule,
     MatMenuModule,
+<<<<<<< HEAD
     MatSelectModule, 
     MatAutocompleteModule, 
     MatChipsModule,
     MatFormFieldModule,
+=======
+    MatSelectModule,
+    MatSlideToggleModule
+>>>>>>> ff21fbda1c960595b74215a8c405453cdb3c6e45
   ],
   providers: [],
   bootstrap: [AppComponent],

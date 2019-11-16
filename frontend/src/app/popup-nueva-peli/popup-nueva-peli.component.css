@@ -7,7 +7,7 @@
 }
 
 .botonAgregar {
-  margin-top: 10px;
+  margin-top: 30px;
   border: none;
   width: 40%;
   height: 40px;
@@ -19,7 +19,6 @@
 }
 input {
   border-radius: 5px;
-  /* border: 1px solid lightgray; */
   padding: 5px;
 }
 .error {
@@ -30,4 +29,11 @@ p {
 }
 .formTitle {
   margin-bottom: 2vh;
+}
+:host ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: rgba(255, 17, 128, 0.5);
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: rgb(255, 17, 128);
 }
