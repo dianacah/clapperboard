@@ -1,92 +1,93 @@
 .contenedorPopUpInfo {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.encabezadoPopup{
-    display: flex;
-    flex-direction: column;
+.encabezadoPopup {
+  display: flex;
+  flex-direction: column;
 }
 
-.icons{
-    display: grid;
-    grid-template-columns: 7fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+.icons {
+  display: grid;
+  grid-template-columns: 7fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .nombrePelicula {
-    align-self: center;
+  align-self: center;
 }
 
 .margin5 {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .intermedioSize {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .text {
-    text-align: justify;
+  text-align: justify;
 }
 
 iframe {
-    align-self: center;
+  align-self: center;
 }
 
 .botonVerPelicula {
-    padding: 10px;
-    font-size: 12px;
-    background-color: #ff1180;
-    color: white;
-    height: 40px;
-    width: 200px;
-    border-radius: 5rem;
-    align-self: center;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #ff1180;
+  color: white;
+  height: 40px;
+  width: 200px;
+  border-radius: 5rem;
+  align-self: center;
+  border: none;
 }
 
-.infoUser{
-    grid-column: 2/3 ;
-    grid-row: 2/3;
-    justify-items: right;
+.infoUser {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-items: right;
 }
 .botonVerPelicula:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .favIcon1 {
-    height: 20px;
-    width: 20px;
-    align-content: center;
-    background-image: url(../../assets/favSection/img/redheart.png);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    font-size: 10px;
-    grid-column: 3/4 ;
-    grid-row: 2/3;
+  height: 20px;
+  width: 20px;
+  align-content: center;
+  background-image: url(../../assets/favSection/img/redheart.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  font-size: 10px;
+  grid-column: 3/4;
+  grid-row: 2/3;
 }
 
 .favIcon2 {
-    height: 20px;
-    width: 20px;
-    align-content: center;
-    background-image: url(../../assets/favSection/img/corazon.png);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    font-size: 10px;
-    grid-column: 3/4 ;;
-    grid-row: 2/3;
+  height: 20px;
+  width: 20px;
+  align-content: center;
+  background-image: url(../../assets/favSection/img/corazon.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  font-size: 10px;
+  grid-column: 3/4;
+  grid-row: 2/3;
 }
 
 .favIcon1:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .favIcon2:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .footerPopup {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

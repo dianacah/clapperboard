@@ -14,9 +14,10 @@ export class SearchBarComponent implements OnInit {
   myControl = new FormControl();
   filteredOptions: Observable<string[]>;
   allMovies: any [];
-  autoCompleteList: any[]
-
-  @ViewChild('autoCompleteInput', {static: false}) autocompleteInput: ElementRef;
+  autoCompleteList: any[];
+  public infoMovies: any [];  
+  
+  @ViewChild('autocompleteInput', {static: false}) autocompleteInput: ElementRef;
   @Output() onSelectedOption = new EventEmitter();
 
   constructor(
@@ -33,10 +34,11 @@ export class SearchBarComponent implements OnInit {
     })
 
   }
-    private autoCompleteExpenseList(input) {
+  private autoCompleteExpenseList(input) {
     let categoryList = this.filterCategoryList(input)
     this.autoCompleteList = categoryList;
   }
+
   filterCategoryList(val) {
     var categoryList = []
     if (typeof val != "string") {
@@ -48,6 +50,7 @@ export class SearchBarComponent implements OnInit {
     return val ? this.allMovies.filter(s => s.title.toLowerCase().indexOf(val.toLowerCase()) != -1)
       : this.allMovies;
   }
+  
   displayFn(movie: any) {
     let k = movie ? movie.title : movie;
     return k;
@@ -68,22 +71,22 @@ export class SearchBarComponent implements OnInit {
         
         this.focusOnPlaceInput();
 
-}
+  }
 
 
-removeOption(option) {
-        
-  let index = this.searchService.searchOption.indexOf(option);
-  if (index >= 0)
-      this.searchService.searchOption.splice(index, 1);
-      this.focusOnPlaceInput();
+  removeOption(option) {
+          
+    let index = this.searchService.searchOption.indexOf(option);
+    if (index >= 0)
+        this.searchService.searchOption.splice(index, 1);
+        this.focusOnPlaceInput();
 
-      this.onSelectedOption.emit(this.searchService.searchOption)
-}
+        this.onSelectedOption.emit(this.searchService.searchOption)
+  } 
 
-focusOnPlaceInput() {
-  this.autocompleteInput.nativeElement.focus();
-  this.autocompleteInput.nativeElement.value = '';
-}
+  focusOnPlaceInput() {
+    this.autocompleteInput.nativeElement.focus();
+    this.autocompleteInput.nativeElement.value = '';
+  }
 
 }
