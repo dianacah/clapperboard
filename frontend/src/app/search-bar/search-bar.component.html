@@ -1,21 +1,33 @@
+<mat-form-field class="form">
+  <mat-chip-list #chipList>
+    <mat-chip
+      *ngFor="let option of this.searchService.searchOption"
+      (removed)="removeOption(option)"
+    >
+      <span>{{ option.title }}</span>
 
-        <mat-form-field class="form" >
-          <mat-chip-list  #chipList>
-            <mat-chip *ngFor="let option of this.searchService.searchOption" (removed)="removeOption(option)">
-        
-              <span>{{option.title}}</span>
-              
-              <mat-icon matChipRemove>cancel</mat-icon>
-            </mat-chip>
-            <input class="white small" #autocompleteInput type="text" placeholder="Ingrese título" aria-label="Number" matInput [formControl]="myControl"
-              [matAutocomplete]="auto" [matChipInputFor]="chipList">
-            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-              <mat-option *ngFor="let option of autoCompleteList" [value]="option" (onSelectionChange)="filterMovieList($event)">
-                {{option.title}}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-chip-list>
-        
-        </mat-form-field>
-        
-     
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+    <input
+      class="white small"
+      #autocompleteInput
+      placeholder="¿Qué quieres ver?"
+      type="text"
+      aria-label="Number"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+      [matChipInputFor]="chipList"
+    />
+    <mat-icon>search</mat-icon>
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <mat-option
+        *ngFor="let option of autoCompleteList"
+        [value]="option"
+        (onSelectionChange)="filterMovieList($event)"
+      >
+        {{ option.title }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-chip-list>
+</mat-form-field>

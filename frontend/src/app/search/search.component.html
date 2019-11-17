@@ -1,34 +1,39 @@
 <!--Fondo para Nav importado-->
 <div class="fondo">
-    <app-nav></app-nav>
+  <app-nav></app-nav>
 </div>
 
 <!--Contiene la imagen del fondo de página-->
 <div class="wrapper">
-    <header class="rbt-300 white">
- 
-        <!--BARRA DE BUSQUEDA TITULO-->
-        <div class="contain white">
-            <div class="row medium">
-                <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>   
+  <header class="rbt-300 white">
+    <!--BARRA DE BUSQUEDA TITULO-->
+    <div class="white">
+      <div class="row medium">
+        <app-search-bar
+          (onSelectedOption)="onSelectedOption($event)"
+        ></app-search-bar>
+      </div>
+      <!--Cuerpo Peliculas-->
+      <div class="content">
+        <div class="padding20">
+          <p class="white small rbt-300">
+            Resultado de la búsqueda
+          </p>
+          <div class="gridPeliculas">
+            <div *ngFor="let movie of infoMovies" class="pelicula">
+              <img
+                src="images/{{ movie.image }}"
+                alt=""
+                class="imgPeliculas"
+                id="0"
+                (click)="mostrarPelicula(movie)"
+              />
+              <p class="titulo white small rbt-400">{{ movie.title }}</p>
+              <p class="director white small rbt-300">{{ movie.director }}</p>
             </div>
-            <!--Cuerpo Peliculas-->
-            <div class="content">
-                <div class="padding20">
-                    <p class="white medium rbt-300 genreTitle">Resultado de la búsqueda</p>
-                    <div class="gridPeliculas">
-                        <div *ngFor="let movie of infoMovies" class="pelicula">
-                            <img src="images/{{movie.image}}" 
-                                 alt="" 
-                                 class="imgPeliculas"
-                                 (click)="mostrarPelicula(movie)"/>
-                            <p class="titulo white small rbt-300"> {{ movie.title }} </p>
-                            <p class="director white small rbt-300">{{ movie.director }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 </div>
