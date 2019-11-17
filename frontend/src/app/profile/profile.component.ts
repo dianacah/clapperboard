@@ -15,7 +15,7 @@ import { from } from "rxjs";
   styleUrls: ["./profile.component.css"]
 })
 export class ProfileComponent implements OnInit {
-  
+  public userForm;
   public user;
   public name;
   public email;
@@ -36,7 +36,8 @@ export class ProfileComponent implements OnInit {
     setTimeout(() => {
       this.user = this.userInformationService.getUser();
       console.log("respuesta servicio", this.user);
-      this.name = this.user.name.split(" ", 1);
+      this.userForm = this.user.name.split(" ", 1);
+      this.name = this.user.name;
       this.email = this.user.email;
       this.date = this.user.date;
       this.password = this.user.password;
@@ -54,7 +55,7 @@ export class ProfileComponent implements OnInit {
     dialogConfig.height = "550px";
     dialogConfig.data = {
       user: this.user
-    }
+    };
     return dialogConfig;
   }
 
@@ -62,12 +63,14 @@ export class ProfileComponent implements OnInit {
     let dialogConfig = this.openDialog();
     this.popup = this.dialog.open(PopupEditUserComponent, dialogConfig);
     this.popup.afterClosed().subscribe(response => {
-     console.log(response);
-     this.userInformationService.putUser(this.user.email,response.value).subscribe(response=>{
-       console.log(response);
-       this.userInformationService.setUser(response);
-       this.ngOnInit();
-     })
+      console.log(response);
+      this.userInformationService
+        .putUser(this.user.email, response.value)
+        .subscribe(response => {
+          console.log(response);
+          this.userInformationService.setUser(response);
+          this.ngOnInit();
+        });
     });
   }
   mostrarInfo(user) {
