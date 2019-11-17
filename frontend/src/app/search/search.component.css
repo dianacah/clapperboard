@@ -21,29 +21,14 @@ header {
   );
   background-size: cover;
   background-position: center;
-  height: 820vh;
+  height: 88.7vh;
   min-width: fit-content;
   display: grid;
   justify-content: center;
 }
-
-/*barra de busqueda*/
-.contain {
-  height: 100%;
-  width: 87.5%;
-  position: absolute;
-  margin-left: 10%;
-  background-color: #191257;
-  grid-area: contain;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: auto;
-  gap: 10px;
-}
 .row {
-  grid-column: 1/6;
   justify-content: center;
-}
+} 
 .row input {
   width: 50%;
 }
