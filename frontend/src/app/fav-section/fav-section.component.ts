@@ -59,13 +59,9 @@ export class FavSectionComponent implements OnInit {
     );
   }
 
-playMoviesFav(movie){
-this.peliculaaReproducirService.getMovie().subscribe((response={})=>{
-  this.peliculaaReproducirService.setMovie(response)
-  console.log("cual ees", response)
-}) 
+playMoviesFav(peliculaFav){
+this.peliculaaReproducirService.setMovie(peliculaFav);
 }
-
 
   ngOnInit() {
     this.user = this.userInformationService.getUser();
