@@ -2,38 +2,24 @@
 <div class="fondo">
     <app-nav></app-nav>
 </div>
+
 <!--Contiene la imagen del fondo de página-->
 <div class="wrapper">
     <header class="rbt-300 white">
-        <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>
-        <!--BARRA DE BUSQUEDA TITULO Y FILTRO POR GENERO, VISTA DE CONTENIDO-->
-
+ 
+        <!--BARRA DE BUSQUEDA TITULO-->
         <div class="contain white">
             <div class="row medium">
-
-                <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>
-                
-                <!-- Búsqueda:
-                <br>
-                <input type="text" class="movieSelector form-control normal" placeholder="Ingrese su búsqueda">
-                <br>
-                Género:
-                <select class="form-control normal" ng-model="busqueda.genero">
-                    <option value="">General</option>
-                    <option value="drama">Drama</option>
-                    <option value="romance">Romance</option>
-                    <option value="comedia">Comedia</option>
-                    <option value="anime">Anime</option>
-                </select>
-                <br>
-                <br> -->
+                <app-search-bar (onSelectedOption)="onSelectedOption($event)"></app-search-bar>   
             </div>
             <!--Cuerpo Peliculas-->
             <div class="content">
                 <div class="padding20">
                     <p class="white medium rbt-300 genreTitle">Resultado de la búsqueda</p>
                     <div class="gridPeliculas">
-                        <div *ngFor="let movie of infoMovies" class="pelicula" (click)="mostrarPelicula(pelicula)">
+                        <div *ngFor="let movie of infoMovies" 
+                                class="pelicula" 
+                               >
                             <img src="images/{{movie.image}}" alt="" class="imgPeliculas" id="0" />
                             <p class="titulo white small rbt-300"> {{ movie.title }} </p>
                             <p class="director white small rbt-300">{{ movie.director }}</p>

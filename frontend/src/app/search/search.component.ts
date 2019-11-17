@@ -1,7 +1,6 @@
-import { from } from 'rxjs';
-//import { GetMovieService } from './../services/getMovie/get-movie.service';
 import { Component, OnInit } from "@angular/core";
-import { SearchService } from './../services/searchMovie/search.service';
+import { SearchService } from "./../services/searchMovie/search.service";
+
 
 @Component({
   selector: "app-search",
@@ -9,18 +8,20 @@ import { SearchService } from './../services/searchMovie/search.service';
   styleUrls: ["./search.component.css"]
 })
 export class SearchComponent implements OnInit {
-  infoMovies: any [];
+  public infoMovies: any = [];
    
+
   constructor(
-    private searchService: SearchService
+    private searchService: SearchService,
+    
   ) { }
 
 //Llamando al servicio
 ngOnInit() {
-  this.searchService.getMovie().subscribe(movies => {
+  this.searchService.getMovie().subscribe((movies => {
     this.infoMovies = movies
     this.searchService.infoMovies = movies
-  });
+  }));
 }
 
 onSelectedOption(e) {
@@ -33,20 +34,10 @@ getFilteredExpenseList() {
   else {
     this.infoMovies = this.searchService.infoMovies;
   }
-
-  console.log(this.infoMovies)
 }
 
-  // getInfoMovie() {
-  //   this.getMovieService.getMovie().subscribe((res = {}) => {
-  //     this.infoMovies = res;
-  //     //console.log("respuesta", this.infoMovies);
-  //   });
-  // }
-  //copiado
-  //
-  //fin copiado
-  // ngOnInit() {
-  //   this.getInfoMovie();
-  // }
+
+
+
+
 }
