@@ -19,6 +19,7 @@
 }
 .movieImg {
   width: 100%;
+  height: 180px;
   margin-bottom: 5%;
 }
 .movieDesc {
@@ -64,4 +65,9 @@
 }
 .favIcon2:hover {
   cursor: pointer;
+}
+.movieImg:hover {
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid white;
 }
