@@ -32,7 +32,9 @@ a:hover {
     color: #ff1180;
 }
 
-
-/* button {
-  border: none;
-} */
+.perfilWhite {
+    color: white !important;
+}
+.perfilWhite:hover {
+    color: #ff1180 !important;
+}

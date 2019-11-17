@@ -3,6 +3,8 @@
 const express = require("express");
 const usuariosRoute = express.Router();
 const Usuarios = require("../models/usuarios");
+const formidable = require('formidable');
+const fs = require('fs');
 
 //POST
 usuariosRoute.post("/usuarios", (req, res, next) => {
@@ -79,6 +81,27 @@ usuariosRoute.patch("/usuarios/:email/movies", (req, res, next) => {
     })
     .catch(next);
 });
+
+usuariosRoute.post("/usuarios/:email/imagen", (req, res, next) => {
+  const form = new formidable.IncomingForm();
+ 
+  form.parse(req, (err, fields, files) => {
+    console.log(files)
+    console.log(__dirname)
+    fs.copyFileSync(files.image.path, `${__dirname}/../public/${files.image.name}`);
+    Usuarios.findOneAndUpdate(
+      {
+        email:req.params.email
+      },
+      {
+        image:files.image.name
+      }
+    ).then(usuario => {
+      res.json({files, usuario});
+    })
+    
+  });
+})
 
 //DELETE PARA SACAR LAS PELICULAS DE FAVORITOS
 usuariosRoute.delete("/usuarios/:email/movies/:movieId", (req, res, next) => {

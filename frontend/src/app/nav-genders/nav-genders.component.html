@@ -6,7 +6,7 @@
     <a href="#Anime" class="white">Anime</a>
     <a routerLink="/fav-section" class="white">Ver mis favoritos</a>
     <a routerLink="/search" class="logIn white">Buscar</a>
-    <button mat-button [matMenuTriggerFor]="menu" class="userBtn">{{userName}}</button>
+    <a mat-button [matMenuTriggerFor]="menu" class="perfilWhite">{{userName}}</a>
     <mat-menu #menu="matMenu">
         <button mat-menu-item routerLink="/perfil">Perfil</button>
         <button mat-menu-item routerLink="/home">Cerrar Sesión</button>

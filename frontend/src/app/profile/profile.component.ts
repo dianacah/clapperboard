@@ -25,12 +25,22 @@ export class ProfileComponent implements OnInit {
   public carga: boolean = true;
   public description;
   public popup;
+  public files: FileList;
+  public imagenUsuario = "../../assets/profile/avatar.png";
 
   constructor(
-    private builder: FormBuilder,
+    private formBuilder: FormBuilder,
     private dialog: MatDialog,
     private userInformationService: UserInformationService
-  ) {}
+  ) { 
+    this.imageChange()
+  }
+
+  imageChange(){
+    this.perfilForm = this.formBuilder.group({
+      cambiarImagen: ['']
+    })
+  }
 
   getUser() {
     setTimeout(() => {
@@ -42,6 +52,7 @@ export class ProfileComponent implements OnInit {
       this.date = this.user.date;
       this.password = this.user.password;
       this.description = this.user.description;
+      this.imagenUsuario = `http://localhost:3000/public/${this.user.image}`
       console.log("nombre", this.name, "bandera", this.carga);
       this.carga = false;
     }, 0);
@@ -73,6 +84,30 @@ export class ProfileComponent implements OnInit {
         });
     });
   }
+
+  saveImageProfile(){
+
+    let formData: FormData = new FormData();
+    Array.from(this.files).forEach(file => {
+      formData.append('image', file, file.name);
+    });
+    console.log('file', this.files)
+    console.log('formData', formData)
+
+    this.userInformationService.changeImage(this.email, formData).subscribe(res => {
+      console.log("resppppp", res)
+    })
+  }
+
+  openFileBrowser($event) {
+    const element: HTMLElement = document.getElementById('fileInput') as HTMLElement;
+    element.click();
+  }
+
+  filesChosen($event) {
+    this.files = $event.target.files;
+  }
+
   mostrarInfo(user) {
     this.userInformationService.getUser().subscribe(res => {
       this.ngOnInit();

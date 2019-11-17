@@ -46,6 +46,8 @@ app.use((err, req, res, next) => {
   res.status(422).json({ error: err.menssage });
 });
 
+app.use('/public', express.static(__dirname + '/public'));
+
 app.listen(PORT, () => {
   console.log(`Cuidado, estamos usando el puerto ${PORT}`);
 });

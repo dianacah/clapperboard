@@ -21,4 +21,8 @@ export class UserInformationService {
   putUser(email,data) {
     return this.http.put(this.URL+ email, data)
   }
-}
+
+  changeImage(email: string, formData: FormData){
+    const profileImage = `${this.URL}${email}/imagen`;
+    return this.http.post(profileImage, formData);
+  }}

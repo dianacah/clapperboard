@@ -33,6 +33,12 @@
   width: 70%;
   justify-self: end;
 }
+.buttonChange {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  width: 100%;
+}
 .favButton {
   border: 1px solid #ff1180;
   background-color: rgb(25, 18, 87);
@@ -46,10 +52,14 @@
   justify-self: end;
 }
 
+
 .profilePic {
   border-radius: 50%;
   width: 200px;
+  height: 200px;
   margin-top: 10%;
+  display: block;
+  margin: auto;
 }
 a {
   text-decoration: none;
@@ -106,10 +116,15 @@ div{
   background: rgba(235, 234, 243, 0.3);
   padding: 5vh 3vw;
   height: 99%;
- width: 80%;
- position:relative;
- padding: 5%;
+  width: 80%;
+  position:relative;
+  padding: 5%;
  }
+
+ .datosUsuario{
+  color: rgba(255, 255, 255, 0.6);
+ }
+ 
 div#act{
   margin: auto;
   /* margin-top: 50px; */
@@ -117,8 +132,13 @@ div#act{
   margin-left: 35%;
 }
 
-
 hr {
    
   height: 1px;
 }
+.ocultar{
+  display: none;
+}
+ .avatar{
+   width: 100%;
+ }
