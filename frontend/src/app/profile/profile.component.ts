@@ -8,7 +8,7 @@ import {
   MatTableDataSource
 } from "@angular/material";
 import { from } from "rxjs";
-import { any } from 'prop-types';
+import { any } from "prop-types";
 import { Router } from "@angular/router";
 
 @Component({
@@ -36,13 +36,13 @@ export class ProfileComponent implements OnInit {
     private userInformationService: UserInformationService,
     private router: Router
   ) {
-    this.imageChange()
+    this.imageChange();
   }
 
-  imageChange(){
+  imageChange() {
     this.perfilForm = this.formBuilder.group({
-      cambiarImagen: ['']
-    })
+      cambiarImagen: [""]
+    });
   }
 
   getUser() {
@@ -55,7 +55,9 @@ export class ProfileComponent implements OnInit {
       this.date = this.user.date;
       this.password = this.user.password;
       this.description = this.user.description;
-      this.imagenUsuario = this.user.image? `http://localhost:3000/public/${this.user.image}` : this.imagenUsuario;
+      this.imagenUsuario = this.user.image
+        ? `http://localhost:3000/public/${this.user.image}`
+        : this.imagenUsuario;
       console.log("nombre", this.name, "bandera", this.carga);
       this.carga = false;
     }, 0);
@@ -88,25 +90,27 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  saveImageProfile(){
-
+  saveImageProfile() {
     let formData: FormData = new FormData();
     Array.from(this.files).forEach(file => {
-      formData.append('image', file, file.name);
+      formData.append("image", file, file.name);
     });
-    console.log('file', this.files)
-    console.log('formData', formData)
+    console.log("file", this.files);
+    console.log("formData", formData);
 
-    this.userInformationService.changeImage(this.email, formData).subscribe((res: any) => {
-      console.log("resppppp", res)
-      this.userInformationService.setUser(res.usuario)
-      this.imagenUsuario = `http://localhost:3000/public/${res.usuario.image}`
-
-    })
+    this.userInformationService
+      .changeImage(this.email, formData)
+      .subscribe((res: any) => {
+        console.log("resppppp", res);
+        this.userInformationService.setUser(res.usuario);
+        this.imagenUsuario = `http://localhost:3000/public/${res.usuario.image}`;
+      });
   }
 
   openFileBrowser($event) {
-    const element: HTMLElement = document.getElementById('fileInput') as HTMLElement;
+    const element: HTMLElement = document.getElementById(
+      "fileInput"
+    ) as HTMLElement;
     element.click();
   }
 
@@ -124,8 +128,8 @@ export class ProfileComponent implements OnInit {
     this.getUser();
   }
 
-  logOut(){
-    this.userInformationService.cleanUser()
-    this.router.navigate(['/home'])
+  logOut() {
+    this.userInformationService.cleanUser();
+    this.router.navigate(["/home"]);
   }
 }

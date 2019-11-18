@@ -28,6 +28,10 @@ export class NavGendersComponent implements OnInit {
       this.showGenders = false;
       this.showArrow = true;
     }
+    if (this.router.url == "/admin") {
+      this.showArrow = false;
+      this.showGenders = false;
+    }
   }
 
   ngOnInit() {
