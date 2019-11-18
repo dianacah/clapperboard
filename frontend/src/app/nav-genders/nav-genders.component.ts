@@ -13,11 +13,22 @@ export class NavGendersComponent implements OnInit {
   public navName;
   public userImage;
   public showAvatar = false;
+  public showGenders: boolean = true;
+  public showArrow: boolean = false;
 
   constructor(
     private userInformationService: UserInformationService,
     private router: Router
-  ) {}
+  ) {
+    if (
+      this.router.url === "/fav-section" ||
+      this.router.url == "/search" ||
+      this.router.url == "/reproductor"
+    ) {
+      this.showGenders = false;
+      this.showArrow = true;
+    }
+  }
 
   ngOnInit() {
     this.user = this.userInformationService.getUser();

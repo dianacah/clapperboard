@@ -49,7 +49,6 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { PopupEditUserComponent } from "./popup-edit-user/popup-edit-user.component";
 import { SearchBarComponent } from "./search-bar/search-bar.component";
 import { AutoGuardService } from "./services/autoGuard/auto-guard.service";
-import { InNavComponent } from "./in-nav/in-nav.component";
 
 const routes: Routes = [
   {
@@ -70,7 +69,7 @@ const routes: Routes = [
     path: "reproductor",
     component: MovieComponent,
     canActivate: [AutoGuardService]
-   },
+  },
   {
     path: "admin",
     component: AdminComponent,
@@ -129,8 +128,7 @@ const routes: Routes = [
     PopupNewFavComponent,
     NavGendersComponent,
     PopupEditUserComponent,
-    SearchBarComponent,
-    InNavComponent
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

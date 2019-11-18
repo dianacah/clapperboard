@@ -188,7 +188,7 @@
 		"trailer":"https://youtube.com/embed/UxER50XHW-I"
 	},
 	{		
-		"title":"The babysister",
+		"title":"The babysitter",
 		"director":"Joseph McGinty Nichol",
 		"duration":"1:25",
 		"genre":"Comedia",
@@ -375,7 +375,7 @@
 		"trailer":"https://youtube.com/embed/as4XBR9uhMc"
 	},
 	{
-		"title":"Lo que el viento se llevo",
+		"title":"Lo que el viento se llevó",
 		"director":"Victor Fleming",
 		"duration":"3:58",
 		"genre":"Romance",
@@ -420,7 +420,7 @@
 		"trailer":"https://youtube.com/embed/q40GxY5n2Dg"
 	},
 	{
-		"title":"Cuestion De Tiempo",
+		"title":"Cuestión De Tiempo",
 		"director":"Richard Curtis",
 		"duration":"1:23",
 		"genre":"Romance",
@@ -519,28 +519,6 @@
 		"trailer":"https://youtube.com/embed/uefIQcwabBg"
 	},
 	{
-		"title":"Joker",
-		"director":"Todd Phillips",
-		"duration":"1:23",
-		"genre":"Drama",
-		"actors":"Joaquin Phoenix,Robert De Niro",
-		"file":"https://youtube.com/embed/IfB65qjLbwc",
-		"image":"../../assets/home/images/Drama/joker.jpg",
-		"synopsis":"La pasión de Arthur Fleck, un hombre ignorado por la sociedad, es hacer reír a la gente. Sin embargo, una serie de trágicos sucesos harán que su visión del mundo se distorsione considerablemente convirtiéndolo en un brillante criminal.",
-		"trailer":"https://youtube.com/embed/EIyZqNbZQI8"
-	},
-	{
-		"title":"Siempre a tu lado",
-		"director":"Lasse Hallström",
-		"duration":"93",
-		"genre":"Drama",
-		"actors":"Richard Gere,Joan Allen",
-		"file":"https://youtube.com/embed/pypFfRYMgvM",
-		"image":"../../assets/home/images/Drama/SiempreAtuLado.jpg",
-		"synopsis":"Un perro fiel llamado Hachiko acompaña cada mañana a su amo a la estación de tren y regresa cada tarde para darle la bienvenida después del trabajo. Sin embargo, esta rutina se ve rota por una desgracia.",
-		"trailer":"https://youtube.com/embed/ie1CmJBMHsI"
-	},
-	{
 		"title":"la vida es bella",
 		"director":"Roberto Benigni",
 		"duration":"93",
@@ -550,17 +528,6 @@
 		"image":"../../assets/home/images/Drama/LaVidaEsBella.jpg",
 		"synopsis":"Un perro fiel llamado Hachiko acompaña cada mañana a su amo a la estación de tren y regresa cada tarde para darle la bienvenida después del trabajo. Sin embargo, esta rutina se ve rota por una desgracia.",
 		"trailer":"https://youtube.com/embed/Tw33Xs4Q2r4"
-	},
-	{
-		"title":"la vida es bella",
-		"director":"Eric Bress",
-		"duration":"1:20",
-		"genre":"Drama",
-		"actors":"Ashton Kutcher,Amy Smart",
-		"file":"https://youtuube.com/embed/9sAU7RkGHAk",
-		"image":"../../assets/home/images/Drama/ElEfectoMariposa.jpg",
-		"synopsis":"Un joven estudiante de psicología viaja en el tiempo para transformar el pasado y alterar el futuro de sus amigos.",
-		"trailer":"https://youtuube.com/embed/9sAU7RkGHAk"
 	},
 	{
 		"title":"Desde mi cielo",
@@ -605,17 +572,6 @@
 		"image":"../../assets/home/images/Drama/SiNoDespierto.jpg",
 		"synopsis":"Después de un trágico accidente automovilístico, una adolescente despierta para descubrir que está condenada a vivir el día de su muerte una y otra vez.",
 		"trailer":"https://youtube.com/embed/gc6Kz64HeUE"
-	},
-	{
-		"title":"En busca de la felicidad",
-		"director":"Omar Montes",
-		"duration":"1:17",
-		"genre":"Drama",
-		"actors":"Will Smith,Jaden Smith",
-		"file":"https://youtube.com/embed/8uDS8U9xxTM",
-		"image":"../../assets/home/images/Drama/EnBuscaDeLaFelicidad.jpg",
-		"synopsis":"La vida es una lucha para Chris Gardner. Expulsado de su apartamento, él y su joven hijo se encuentran solos sin ningún lugar a donde ir. A pesar de que Chris eventualmente consigue trabajo como interno en una prestigiada firma financiera, la posición no le da dinero. El dúo debe vivir en un albergue y enfrentar muchas dificultades, pero Chris no se da por vencido y lucha por conseguir una vida mejor para él y su hijo.",
-		"trailer":"https://youtube.com/embed/7Tm7i563eMo"
 	},
 	{
 		"title":"Un paseo para recordar",

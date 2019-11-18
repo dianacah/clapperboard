@@ -23,12 +23,13 @@ header {
   background-position: center;
   height: 88.7vh;
   min-width: fit-content;
+
   display: grid;
   justify-content: center;
 }
 .row {
   justify-content: center;
-} 
+}
 .row input {
   width: 50%;
 }
@@ -39,6 +40,7 @@ header {
 .content {
   height: auto;
   background-color: #191257;
+  min-height: calc(100vh - 70px - 122px);
 }
 .gridPeliculas {
   display: grid;

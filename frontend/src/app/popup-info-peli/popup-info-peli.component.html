@@ -1,8 +1,8 @@
 <div class="contenedorPopUpInfo">
-  <div class ="encabezadoPopup">
-    <h1 class="nombrePelicula margin5 medium">{{ movie.title | titlecase }}</h1>
+  <div class="encabezadoPopup">
+    <h1 class="nombrePelicula margin5 normal">{{ movie.title | titlecase }}</h1>
     <div class="agregarFav">
-      <div class ="icons">
+      <div class="icons">
         <div
           class="favIcon1"
           (click)="enviarFavorito(movie)"
@@ -18,13 +18,11 @@
     </div>
   </div>
   <br />
-  <p class="margin5 small"><b>Género:</b> {{ movie.genre }}</p>
-  <p class="margin5"><b>Director:</b> {{ movie.director }}</p>
-  <p class="margin5"><b>Actores:</b> {{ movie.actors }}</p>
-  <p class="margin5"><b>Duración:</b> {{ movie.duration }}</p>
-  <p class="margin5 intermedioSize text">
-    <b>Sinopsis:</b> {{ movie.synopsis }}
-  </p>
+  <p class="margin5 very-small"><b>Género:</b> {{ movie.genre }}</p>
+  <p class="margin5 very-small"><b>Director:</b> {{ movie.director }}</p>
+  <p class="margin5 very-small"><b>Actores:</b> {{ movie.actors }}</p>
+  <p class="margin5 very-small"><b>Duración:</b> {{ movie.duration }}</p>
+  <p class="margin5 very-small text"><b>Sinopsis:</b> {{ movie.synopsis }}</p>
   <iframe
     width="75%"
     height="310px"

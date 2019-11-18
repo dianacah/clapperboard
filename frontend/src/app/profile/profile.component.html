@@ -1,11 +1,10 @@
 <body>
-<<<<<<< HEAD
   <nav>
     <a routerLink="/ver-peliculas"
       ><img class="logo" src="../../assets/logo.png" alt=""
     /></a>
-    <a routerLink="/ver-peliculas" class="logIn white">Ver Peliculas</a>
-    <a routerLink="/home" class="white">Cerrar Sesión</a>
+    <a routerLink="/ver-peliculas" class="logIn white">Ver Películas</a>
+    <a (click)="logOut()" class="cerrarSesion">Cerrar Sesión</a>
   </nav>
   <div class="wrapper">
     <div class="picImg">
@@ -33,7 +32,7 @@
             srcset=""
           />
         </button>
-        <button class="submitButton buttonChange white" type="submit">
+        <button class="submitButton buttonChange white rbt-300" type="submit">
           Cambiar imagen
         </button>
       </form>
@@ -60,26 +59,5 @@
         </button>
       </div>
     </div>
-=======
-<nav>
-  <a routerLink="/ver-peliculas"
-    ><img class="logo" src="../../assets/logo.png" alt=""
-  /></a>
-  <a routerLink="/ver-peliculas" class="logIn white">Ver Peliculas</a>
-  <a (click)="logOut()" class="cerrarSesion">Cerrar Sesión</a>
-</nav>
-<div class="wrapper">
-  <div class="picImg">
-    <p class="white rbt-300 medium">¡Hola {{userForm}}!</p>
-    <form class="add-file" [formGroup]="perfilForm" (ngSubmit)="saveImageProfile()">
-
-      <input (change)="filesChosen($event)" id="fileInput" type="file" class="ocultar">
-      <button (click)="openFileBrowser($event)" class="btns button_green ic_upload profilePic" type="button">
-        <img class="avatar profilePic" [src]="imagenUsuario" alt="" srcset="">
-      </button>
-      <button class="submitButton buttonChange white" type="submit" >Cambiar imagen</button>
-    </form>
-
->>>>>>> e3469f1b6e150509120e4b442478b4ce5f0a3b05
   </div>
 </body>

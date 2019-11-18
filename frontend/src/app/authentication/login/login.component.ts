@@ -41,7 +41,6 @@ export class LoginComponent implements OnInit {
           this.wrongPass = true;
         } else {
           this.userInformationService.setUser(response);
-          console.log("respuuueeee", response)
           this.role = response.role;
           if (this.role == "normal") {
             this.router.navigate(["/ver-peliculas"]);

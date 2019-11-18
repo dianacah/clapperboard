@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   padding: 5vh 3vw;
-
+  height: calc(100vh - 70px);
   justify-items: center;
   align-items: center;
 }
@@ -99,7 +99,7 @@ body {
       rgba(25, 18, 87, 0.5),
       rgba(25, 18, 87, 0.5)
     ),
-    url(../../assets/profile/fondoPerfil.jpg);
+    url(../../assets/home/images/2467499.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;

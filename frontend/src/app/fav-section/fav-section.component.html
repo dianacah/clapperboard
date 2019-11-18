@@ -1,62 +1,57 @@
 <div class="fondoNav">
-  <app-in-nav></app-in-nav>
-</div>
-<main class="main">
-  <div class="title">
-    <p class="sectionTitle medium rbt-300">
-      Favoritos
-    </p>
-    <hr />
-  </div>
-  <div class="moviesFav">
-    <div *ngFor="let peliculaFavorita of peliculasFavoritas" class="pelicula">
-      <img
-        [src]="peliculaFavorita.image"
-        alt=" "
-        class="imgFav "
-        (click)="mostrarInfoPeliculaFav(peliculaFavorita)"
-      />
-      <h1 class="nombre rbt-400 small">
-        {{ peliculaFavorita.title | titlecase }}
-      </h1>
-      <div class="movieName">
-        <p class="movieTitle rbt-300 small">
-          {{ peliculaFavorita.genre | titlecase }}
+  <app-nav-genders></app-nav-genders>
+  <main class="main">
+    <div class="title">
+      <p class="sectionTitle medium rbt-300">
+        Favoritos
+      </p>
+      <hr />
+    </div>
+    <div class="moviesFav">
+      <div *ngFor="let peliculaFavorita of peliculasFavoritas" class="pelicula">
+        <img
+          [src]="peliculaFavorita.image"
+          alt=" "
+          class="imgFav "
+          (click)="mostrarInfoPeliculaFav(peliculaFavorita)"
+        />
+        <h1 class="nombre rbt-400 small">
+          {{ peliculaFavorita.title | titlecase }}
+        </h1>
+        <div class="movieName">
+          <p class="movieTitle rbt-300 small">
+            {{ peliculaFavorita.genre | titlecase }}
+          </p>
+          <div class="favIcon1" (click)="deleteMovie(peliculaFavorita)"></div>
+        </div>
+      </div>
+    </div>
+    <div class="movieReproductor">
+      <p class="movieName rbt-700">{{ peliculaFav.title | titlecase }}</p>
+      <div class="playMovie">
+        <iframe
+          *ngIf="isTrue"
+          width="100%"
+          height="350px"
+          [src]="trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="margin5"
+        ></iframe>
+        <p class="synopsis1 very-small rbt-300">
+          {{ peliculaFav.synopsis }}
         </p>
       </div>
-      <div class="favIcon1" (click)="deleteMovie(peliculaFavorita)"></div>
-    </div>
-  </div>
-  <div class="movieReproductor">
-    <p class="movieName rbt-700">{{ peliculaFav.title }}</p>
-    <div class="playMovie">
-      <!-- <video
-        src="../../assets/home/videos/video.mp4"
-        controls
-        class="movie"
-      ></video> -->
-      <iframe
+      <br />
+      <button
         *ngIf="isTrue"
-        width="100%"
-        height="350px"
-        [src]="trailer"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        class="margin5"
-      ></iframe>
-      <p class="synopsis1 rbt-300">
-        {{ peliculaFav.synopsis }}
-      </p>
+        class="botonReproducir rbt-400 small"
+        (click)="playMoviesFav(peliculaFav)"
+        routerLink="/reproductor"
+      >
+        Reproducir
+      </button>
     </div>
-    <br />
-    <button
-      *ngIf="isTrue"
-      class="botonReproducir rbt-400"
-      (click)="playMoviesFav(peliculaFav)"
-      routerLink="/reproductor"
-    >
-      Reproducir
-    </button>
-  </div>
-</main>
+  </main>
+</div>

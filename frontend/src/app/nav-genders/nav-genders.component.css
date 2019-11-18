@@ -18,7 +18,7 @@ a {
   cursor: pointer;
 }
 .logIn {
-  grid-column: 9 / 10;
+  grid-column: 9 / 11;
 }
 .search {
   grid-column: 8/9;
@@ -40,10 +40,20 @@ a:hover {
 }
 .profilePic {
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
   border-width: 0px;
-  grid-column: 10 / 11;
   grid-row: 1/2;
-  margin-top: 10px;
+  justify-self: center;
+}
+mat-icon {
+  color: white;
+  font-size: 16px;
+}
+mat-icon:hover {
+  color: #ff1180;
+  font-size: 16px;
+}
+.hideGender {
+  display: none;
 }

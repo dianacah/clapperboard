@@ -28,8 +28,12 @@
                 id="0"
                 (click)="mostrarPelicula(movie)"
               />
-              <p class="titulo white small rbt-400">{{ movie.title }}</p>
-              <p class="director white small rbt-300">{{ movie.director }}</p>
+              <p class="titulo white small rbt-400">
+                {{ movie.title | titlecase }}
+              </p>
+              <p class="director white small rbt-300">
+                {{ movie.director | titlecase }}
+              </p>
             </div>
           </div>
         </div>
