@@ -141,3 +141,10 @@ hr {
 .avatar {
   width: 100%;
 }
+
+.cerrarSesion {
+  color: white !important;
+}
+.cerrarSesion:hover {
+  color: #ff1180 !important;
+}

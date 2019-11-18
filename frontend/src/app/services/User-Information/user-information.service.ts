@@ -11,11 +11,11 @@ export class UserInformationService {
   constructor(private http : HttpClient) { }
 
   setUser(user) {
-    this.userInfo = user;
+    localStorage.setItem('user', JSON.stringify(user))
   }
 
   getUser() {
-    return this.userInfo;
+    return JSON.parse(localStorage.getItem('user'))
   }
 
   putUser(email,data) {
@@ -25,4 +25,13 @@ export class UserInformationService {
   changeImage(email: string, formData: FormData){
     const profileImage = `${this.URL}${email}/imagen`;
     return this.http.post(profileImage, formData);
-  }}
+  }
+
+  cleanUser(){
+    console.log("cleanUser")
+    localStorage.removeItem('user');
+  }
+
+}
+
+

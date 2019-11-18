@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
     let user = usuario.value;
     let email = user.email;
     this.loginService.getLogin(email).subscribe((response: any) => {
-      localStorage.setItem('id', response._id);
       if (response == null) {
         this.wrongPass = false;
         this.noRegistrado = false;
@@ -42,6 +41,7 @@ export class LoginComponent implements OnInit {
           this.wrongPass = true;
         } else {
           this.userInformationService.setUser(response);
+          console.log("respuuueeee", response)
           this.role = response.role;
           if (this.role == "normal") {
             this.router.navigate(["/ver-peliculas"]);

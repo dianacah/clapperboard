@@ -84,7 +84,7 @@ usuariosRoute.patch("/usuarios/:email/movies", (req, res, next) => {
 
 usuariosRoute.post("/usuarios/:email/imagen", (req, res, next) => {
   const form = new formidable.IncomingForm();
- 
+
   form.parse(req, (err, fields, files) => {
     console.log(files)
     console.log(__dirname)
@@ -95,11 +95,15 @@ usuariosRoute.post("/usuarios/:email/imagen", (req, res, next) => {
       },
       {
         image:files.image.name
+      },
+      {
+        new: true,
+        useFindAndModify: false
       }
     ).then(usuario => {
       res.json({files, usuario});
     })
-    
+
   });
 })
 

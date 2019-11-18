@@ -63,16 +63,23 @@ const routes: Routes = [
   },
   {
     path: "fav-section",
-    component: FavSectionComponent
+    component: FavSectionComponent,
+    canActivate: [AutoGuardService]
   },
-  { path: "reproductor", component: MovieComponent },
+  {
+    path: "reproductor",
+    component: MovieComponent,
+    canActivate: [AutoGuardService]
+   },
   {
     path: "admin",
-    component: AdminComponent
+    component: AdminComponent,
+    canActivate: [AutoGuardService]
   },
   {
     path: "peliculas",
-    component: SearchComponent
+    component: SearchComponent,
+    canActivate: [AutoGuardService]
   },
   {
     path: "welcome",
@@ -85,15 +92,18 @@ const routes: Routes = [
   },
   {
     path: "perfil",
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AutoGuardService]
   },
   {
     path: "releases",
-    component: ReleasesComponent
+    component: ReleasesComponent,
+    canActivate: [AutoGuardService]
   },
   {
     path: "search",
-    component: SearchComponent
+    component: SearchComponent,
+    canActivate: [AutoGuardService]
   }
 ];
 

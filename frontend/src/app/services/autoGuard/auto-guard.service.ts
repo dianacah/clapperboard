@@ -11,7 +11,9 @@ export class AutoGuardService {
   constructor(private router: Router) { }
 
   canActivate() {
-    if (!localStorage.getItem('id')) {
+    console.log("canActive",localStorage.getItem('user'))
+
+    if (!localStorage.getItem('user')) {
         console.log('No estás logueado');
         this.router.navigate(['/']);
         return false;
