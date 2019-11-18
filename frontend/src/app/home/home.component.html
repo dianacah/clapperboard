@@ -62,18 +62,16 @@
   </div>
   <div class="about" id="aboutAnchor">
     <div class="mision">
-      <p class="medium rbt-500 white">Misión</p>
+      <p class="medium rbt-500 white">Lo que nos mueve</p>
       <p class="normal rbt-300 white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fuga culpa,
-        ut ipsam dolor doloremque et quos repudiandae nesciunt explicabo.
+        Ayudar a las organizaciones a llevar sus ideas a soluciones tecnológicas
       </p>
     </div>
     <div class="vision">
-      <p class="medium rbt-500 white">Visión</p>
+      <p class="medium rbt-500 white">A donde queremos llegar</p>
       <p class="normal rbt-300 white">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
-        voluptas repudiandae ratione quibusdam, odio error nulla neque nihil
-        suscipit necessitatibus!
+        Ser la empresa que brinde soluciones óptimas y alineadas con las
+        tendencias y exigencias del mundo tecnológico
       </p>
     </div>
     <div class="team">
@@ -83,7 +81,9 @@
       <div class="teamMember" *ngFor="let member of team">
         <img class="teamMemberPic" [src]="member.image" alt="" />
         <p class="white rbt-500 text-align-center">{{ member.name }}</p>
-        <p class="white rbt-300 text-align-center">{{ member.role }}</p>
+        <p class="white rbt-300 small text-align-center">
+          {{ member.role }}
+        </p>
       </div>
     </div>
   </div>

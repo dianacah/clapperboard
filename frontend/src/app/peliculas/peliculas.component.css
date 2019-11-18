@@ -63,3 +63,9 @@
 .movieWrapper {
   width: 100px;
 }
+mat-icon {
+  color: rgba(255, 17, 128, 1);
+}
+mat-icon:hover {
+  color: rgba(255, 17, 128, 0.6);
+}

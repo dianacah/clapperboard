@@ -48,7 +48,8 @@ import { NavGendersComponent } from "./nav-genders/nav-genders.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { PopupEditUserComponent } from "./popup-edit-user/popup-edit-user.component";
 import { SearchBarComponent } from "./search-bar/search-bar.component";
-import { AutoGuardService } from "./services/autoGuard/auto-guard.service"
+import { AutoGuardService } from "./services/autoGuard/auto-guard.service";
+import { InNavComponent } from "./in-nav/in-nav.component";
 
 const routes: Routes = [
   {
@@ -77,7 +78,11 @@ const routes: Routes = [
     path: "welcome",
     component: AuthenticationComponent
   },
-  { path: "ver-peliculas", component: PeliculasComponent, canActivate: [AutoGuardService] },
+  {
+    path: "ver-peliculas",
+    component: PeliculasComponent,
+    canActivate: [AutoGuardService]
+  },
   {
     path: "perfil",
     component: ProfileComponent
@@ -114,7 +119,8 @@ const routes: Routes = [
     PopupNewFavComponent,
     NavGendersComponent,
     PopupEditUserComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    InNavComponent
   ],
   imports: [
     BrowserModule,
@@ -137,7 +143,7 @@ const routes: Routes = [
     MatAutocompleteModule,
     MatChipsModule,
     MatFormFieldModule,
-    MatSlideToggleModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent],

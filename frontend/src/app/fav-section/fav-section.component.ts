@@ -8,7 +8,7 @@ import {
 import { PutFavoritosService } from "./../services/putfavoritos/put-favoritos.service";
 import { DeleteFavMovieService } from "../services/deleteFavMovie/delete-fav-movie.service";
 import { DomSanitizer } from "@angular/platform-browser";
-import { PeliculaAReproducirService } from '../services/PeliculaAReproducir/pelicula-areproducir.service';
+import { PeliculaAReproducirService } from "../services/PeliculaAReproducir/pelicula-areproducir.service";
 
 @Component({
   selector: "fav-section",
@@ -22,8 +22,8 @@ export class FavSectionComponent implements OnInit {
     private userInformationService: UserInformationService,
     private putFavoritosService: PutFavoritosService,
     private deleteFavMovieService: DeleteFavMovieService,
-    private peliculaaReproducirService: PeliculaAReproducirService,
-    ) { }
+    private peliculaaReproducirService: PeliculaAReproducirService
+  ) {}
 
   public popup;
   public user;
@@ -52,16 +52,15 @@ export class FavSectionComponent implements OnInit {
       });
   }
   mostrarInfoPeliculaFav(peliculaFavorita) {
-    this.isTrue = true,
-      this.peliculaFav = peliculaFavorita;
+    (this.isTrue = true), (this.peliculaFav = peliculaFavorita);
     this.trailer = this.sanitizer.bypassSecurityTrustResourceUrl(
-      this.peliculaFav.trailer,
+      this.peliculaFav.trailer
     );
   }
 
-playMoviesFav(peliculaFav){
-this.peliculaaReproducirService.setMovie(peliculaFav);
-}
+  playMoviesFav(peliculaFav) {
+    this.peliculaaReproducirService.setMovie(peliculaFav);
+  }
 
   ngOnInit() {
     this.user = this.userInformationService.getUser();

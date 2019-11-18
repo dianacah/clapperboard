@@ -93,6 +93,13 @@ button {
   grid-column: 1 / 3;
   justify-items: center;
 }
+.teamMember {
+  display: grid;
+  align-content: center;
+}
+.teamMember > p {
+  margin-bottom: 0;
+}
 .teamTitle {
   grid-column: 1 / 9;
   justify-self: left;

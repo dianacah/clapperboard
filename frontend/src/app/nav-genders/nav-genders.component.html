@@ -1,14 +1,22 @@
 <nav>
-    <a routerLink="/ver-peliculas"><img class="logo" src="../../assets/logo.png" alt="" /></a>
-    <a href="#Drama" class="white">Drama</a>
-    <a href="#Comedia" class="white">Comedia</a>
-    <a href="#Romance" class="white">Romance</a>
-    <a href="#Anime" class="white">Anime</a>
-    <a routerLink="/fav-section" class="white">Ver mis favoritos</a>
-    <a routerLink="/search" class="logIn white">Buscar</a>
-    <a mat-button [matMenuTriggerFor]="menu" class="perfilWhite">{{userName}}</a>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/perfil">Perfil</button>
-        <button mat-menu-item routerLink="/home">Cerrar Sesión</button>
-    </mat-menu>
+  <a routerLink="/ver-peliculas"
+    ><img class="logo" src="../../assets/logo.png" alt=""
+  /></a>
+  <a href="#Drama" class="white">Drama</a>
+  <a href="#Comedia" class="white">Comedia</a>
+  <a href="#Romance" class="white">Romance</a>
+  <a href="#Anime" class="white">Anime</a>
+  <a routerLink="/search" class="logIn white">
+    <mat-icon class="small">search</mat-icon>
+    Buscar</a
+  >
+  <a mat-button [matMenuTriggerFor]="menu" class="perfilWhite"
+    >Hola, {{ navName }}</a
+  >
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/perfil">Perfil</button>
+    <button mat-menu-item routerLink="/fav-section">Favoritos</button>
+
+    <button mat-menu-item routerLink="/home">Cerrar Sesión</button>
+  </mat-menu>
 </nav>

@@ -1,5 +1,10 @@
 <form class="signupForm" [formGroup]="signupForm">
-  <input placeholder="Nombre" type="text" formControlName="name" />
+  <input
+    placeholder="Nombre"
+    type="text"
+    formControlName="name"
+    class="very-small"
+  />
   <small
     class="error"
     *ngIf="
@@ -12,6 +17,7 @@
     placeholder="Correo electrónico"
     type="email"
     formControlName="email"
+    class="very-small"
   />
   <small
     class="error"
@@ -24,7 +30,12 @@
   <small class="error" *ngIf="signupForm.get('email').hasError('email')">
     Ingresa un correo valido
   </small>
-  <input placeholder="Fecha de nacimiento" type="date" formControlName="date" />
+  <input
+    placeholder="Fecha de nacimiento"
+    type="date"
+    formControlName="date"
+    class="very-small"
+  />
   <small
     class="error"
     *ngIf="
@@ -33,7 +44,12 @@
     "
     >Ups, por favor ingresa los datos para continuar</small
   >
-  <input placeholder="Contraseña" type="password" formControlName="password" />
+  <input
+    placeholder="Contraseña"
+    type="password"
+    formControlName="password"
+    class="very-small"
+  />
   <small
     class="error"
     *ngIf="

@@ -3,6 +3,7 @@
     placeholder="Correo electrónico"
     type="email"
     formControlName="email"
+    class="very-small"
   />
   <small
     class="error"
@@ -16,7 +17,12 @@
     Ingresa un correo valido
   </small>
   <br />
-  <input placeholder="Contraseña" type="password" formControlName="password" />
+  <input
+    placeholder="Contraseña"
+    type="password"
+    formControlName="password"
+    class="very-small"
+  />
   <small
     class="error"
     *ngIf="

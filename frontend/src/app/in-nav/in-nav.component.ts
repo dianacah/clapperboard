@@ -1,12 +1,12 @@
 import { Component, OnInit } from "@angular/core";
-import { UserInformationService } from "./../services/User-Information/user-information.service";
+import { UserInformationService } from "../services/User-Information/user-information.service";
 
 @Component({
-  selector: "app-nav-genders",
-  templateUrl: "./nav-genders.component.html",
-  styleUrls: ["./nav-genders.component.css"]
+  selector: "app-in-nav",
+  templateUrl: "./in-nav.component.html",
+  styleUrls: ["./in-nav.component.css"]
 })
-export class NavGendersComponent implements OnInit {
+export class InNavComponent implements OnInit {
   public user;
   public userName;
   public navName;

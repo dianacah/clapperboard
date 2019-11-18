@@ -1,44 +1,63 @@
 <body>
-<nav>
-  <a routerLink="/ver-peliculas"
-    ><img class="logo" src="../../assets/logo.png" alt=""
-  /></a>
-  <a routerLink="/ver-peliculas" class="logIn white">Ver Peliculas</a>
-  <a routerLink="/home" class="white">Cerrar Sesión</a>
-</nav>
-<div class="wrapper">
-  <div class="picImg">
-    <p class="white rbt-300 medium">¡Hola {{userForm}}!</p>
-    <form class="add-file" [formGroup]="perfilForm" (ngSubmit)="saveImageProfile()">
-
-      <input (change)="filesChosen($event)" id="fileInput" type="file" class="ocultar">
-      <button (click)="openFileBrowser($event)" class="btns button_green ic_upload profilePic" type="button">
-        <img class="avatar profilePic" [src]="imagenUsuario" alt="" srcset="">
-      </button>
-      <button class="submitButton buttonChange white" type="submit" >Cambiar imagen</button>
-    </form>
-
+  <nav>
+    <a routerLink="/ver-peliculas"
+      ><img class="logo" src="../../assets/logo.png" alt=""
+    /></a>
+    <a routerLink="/ver-peliculas" class="logIn white">Ver Peliculas</a>
+    <a routerLink="/home" class="white">Cerrar Sesión</a>
+  </nav>
+  <div class="wrapper">
+    <div class="picImg">
+      <p class="white rbt-300 medium">¡Hola {{ userForm }}!</p>
+      <form
+        class="add-file"
+        [formGroup]="perfilForm"
+        (ngSubmit)="saveImageProfile()"
+      >
+        <input
+          (change)="filesChosen($event)"
+          id="fileInput"
+          type="file"
+          class="ocultar"
+        />
+        <button
+          (click)="openFileBrowser($event)"
+          class="btns button_green ic_upload profilePic"
+          type="button"
+        >
+          <img
+            class="avatar profilePic"
+            [src]="imagenUsuario"
+            alt=""
+            srcset=""
+          />
+        </button>
+        <button class="submitButton buttonChange white" type="submit">
+          Cambiar imagen
+        </button>
+      </form>
+    </div>
+    <div class="datos">
+      <div class="datosUsuario" id="name">Nombre</div>
+      <div>{{ name }}</div>
+      <hr />
+      <div class="datosUsuario" id="email">Email</div>
+      <div>{{ email }}</div>
+      <hr />
+      <div class="datosUsuario">Fecha de nacimiento</div>
+      <div>{{ date }}</div>
+      <hr />
+      <div class="datosUsuario">Descripción</div>
+      <div>{{ description }}</div>
+      <hr />
+      <div id="act">
+        <button
+          class="white rbt-300 small submitButton "
+          (click)="mostarUsuario()"
+        >
+          Actualizar
+        </button>
+      </div>
+    </div>
   </div>
-  <div class="datos" >
-    <div class="datosUsuario" id="name">Nombre</div>
-    <hr>
-    <div>{{name}}</div>
-    <hr>
-    <div class="datosUsuario" id="email">Email</div>
-    <hr>
-    <div>{{email}}</div>
-    <hr>
-    <div class="datosUsuario">Fecha de nacimiento</div>
-    <hr>
-    <div>{{date}}</div>
-    <hr>
-    <div class="datosUsuario">Descripción</div>
-    <hr>
-    <div>{{description}}</div>
-    <hr>
-   <div id="act"> <button  class="white rbt-300 small submitButton " (click)="mostarUsuario()">
-      Actualizar
-    </button></div>
-  </div>
-</div>
 </body>
