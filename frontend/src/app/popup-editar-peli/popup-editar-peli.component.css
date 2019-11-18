@@ -33,3 +33,6 @@ input {
 :host ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
   background-color: rgb(255, 17, 128);
 }
+p {
+  margin-bottom: 0;
+}
