@@ -5,10 +5,11 @@
     <a href="#Romance" class="white">Romance</a>
     <a href="#Anime" class="white">Anime</a>
     <a routerLink="/fav-section" class="white">Ver mis favoritos</a>
-    <a routerLink="/search" class="logIn white">Buscar</a>
-    <a mat-button [matMenuTriggerFor]="menu" class="perfilWhite">{{userName}}</a>
+    <a routerLink="/search" class="search white">Buscar</a>
+    <a mat-button [matMenuTriggerFor]="menu" class="logIn perfilWhite">{{userName}}</a>
     <mat-menu #menu="matMenu">
         <button mat-menu-item routerLink="/perfil">Perfil</button>
-        <button mat-menu-item routerLink="/home">Cerrar Sesión</button>
+        <button mat-menu-item (click)="logOut()">Cerrar Sesión</button>
     </mat-menu>
+    <img *ngIf="showAvatar" class="profilePic" [src]="userImage">
 </nav>

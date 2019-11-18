@@ -3,7 +3,7 @@ nav {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     padding: 0 3vw;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     align-items: center;
     justify-items: center;
 }
@@ -19,8 +19,11 @@ a {
 }
 
 .logIn {
-    grid-column: 8 / 9;
+    grid-column: 9 / 10;
 }
+ .search {
+   grid-column: 8/9;
+ }
 
 .userBtn {
     background-color: grey;
@@ -37,4 +40,13 @@ a:hover {
 }
 .perfilWhite:hover {
     color: #ff1180 !important;
+}
+.profilePic {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  border-width: 0px;
+  grid-column: 10 / 11;
+  grid-row: 1/2;
+  margin-top: 10px
 }

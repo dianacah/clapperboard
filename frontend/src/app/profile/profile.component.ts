@@ -8,6 +8,8 @@ import {
   MatTableDataSource
 } from "@angular/material";
 import { from } from "rxjs";
+import { any } from 'prop-types';
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-profile",
@@ -31,8 +33,9 @@ export class ProfileComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private dialog: MatDialog,
-    private userInformationService: UserInformationService
-  ) { 
+    private userInformationService: UserInformationService,
+    private router: Router
+  ) {
     this.imageChange()
   }
 
@@ -52,7 +55,7 @@ export class ProfileComponent implements OnInit {
       this.date = this.user.date;
       this.password = this.user.password;
       this.description = this.user.description;
-      this.imagenUsuario = `http://localhost:3000/public/${this.user.image}`
+      this.imagenUsuario = this.user.image? `http://localhost:3000/public/${this.user.image}` : this.imagenUsuario;
       console.log("nombre", this.name, "bandera", this.carga);
       this.carga = false;
     }, 0);
@@ -94,8 +97,11 @@ export class ProfileComponent implements OnInit {
     console.log('file', this.files)
     console.log('formData', formData)
 
-    this.userInformationService.changeImage(this.email, formData).subscribe(res => {
+    this.userInformationService.changeImage(this.email, formData).subscribe((res: any) => {
       console.log("resppppp", res)
+      this.userInformationService.setUser(res.usuario)
+      this.imagenUsuario = `http://localhost:3000/public/${res.usuario.image}`
+
     })
   }
 
@@ -116,5 +122,10 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.getUser();
+  }
+
+  logOut(){
+    this.userInformationService.cleanUser()
+    this.router.navigate(['/home'])
   }
 }

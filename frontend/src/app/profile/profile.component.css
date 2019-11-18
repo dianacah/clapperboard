@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1.5fr 2fr;
   padding: 5vh 3vw;
- 
+
   justify-items: center;
   align-items: center;
 }
@@ -52,7 +52,6 @@
   justify-self: end;
 }
 
-
 .profilePic {
   border-radius: 50%;
   width: 200px;
@@ -60,6 +59,7 @@
   margin-top: 10%;
   display: block;
   margin: auto;
+  border-width: 0px;
 }
 a {
   text-decoration: none;
@@ -100,12 +100,11 @@ body{
     rgba(25, 18, 87, 0.5)
   ),
   url(../../assets/profile/fondoPerfil.jpg);
-background-size: cover;
-background-position: center;
-height: 100vh; 
-min-width: fit-content; 
-justify-content: center;
-
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-width: fit-content;
+  justify-content: center;
 }
 div{
   color: #fff;
@@ -124,7 +123,7 @@ div{
  .datosUsuario{
   color: rgba(255, 255, 255, 0.6);
  }
- 
+
 div#act{
   margin: auto;
   /* margin-top: 50px; */
@@ -133,7 +132,7 @@ div#act{
 }
 
 hr {
-   
+
   height: 1px;
 }
 .ocultar{
@@ -142,3 +141,10 @@ hr {
  .avatar{
    width: 100%;
  }
+
+.cerrarSesion {
+  color: white !important;
+}
+.cerrarSesion:hover{
+  color: #ff1180 !important;
+}
